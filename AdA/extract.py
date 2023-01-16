@@ -1,4 +1,4 @@
-# script to read the xls sheets of all permanent and temporary stations and to generate files with stations having specific properties for plotting by GMT
+# script to read the xls sheets of all permanent and temporary stations and to generate text files with stations having specific properties for plotting by GMT
 import pandas as pd
 import numpy as np
 import math
@@ -50,40 +50,40 @@ outBB40   = open("PERM/pBB40.txt"         , "w")
 labBB40   = open("PERM/pBB40label.txt"    , "w")
 outBB40o  = open("PERM/pBB40o.txt"        , "w")
 labBB40o  = open("PERM/pBB40olabel.txt"   , "w")
-csvBB40   = open("GOOG/pBB40.csv"         , "w")  # csv for stations IN the area
-csvBB4030 = open("GOOG/pBB40-30.csv"      , "w")  # csv for stations IN the area 30 km
-csvBB4040 = open("GOOG/pBB40-40.csv"      , "w")  # csv for stations IN the area 40 km
+csvBB40   = open("GOOG/pBB40.csv"         , "w")
+csvBB4030 = open("GOOG/pBB40-30.csv"      , "w")
+csvBB4040 = open("GOOG/pBB40-40.csv"      , "w")
 outBB60   = open("PERM/pBB60.txt"         , "w")
 labBB60   = open("PERM/pBB60label.txt"    , "w")
 outBB60o  = open("PERM/pBB60o.txt"        , "w")
 labBB60o  = open("PERM/pBB60olabel.txt"   , "w")
-csvBB60   = open("GOOG/pBB60.csv"         , "w")  # csv for stations IN the area
-csvBB6030 = open("GOOG/pBB60-30.csv"      , "w")  # csv for stations IN the area 30 km
-csvBB6040 = open("GOOG/pBB60-40.csv"      , "w")  # csv for stations IN the area 40 km
+csvBB60   = open("GOOG/pBB60.csv"         , "w")
+csvBB6030 = open("GOOG/pBB60-30.csv"      , "w")
+csvBB6040 = open("GOOG/pBB60-40.csv"      , "w")
 outUNKN   = open("PERM/pUNKN.txt"         , "w")
 labUNKN   = open("PERM/pUNKNlabel.txt"    , "w")
 outUNKNo  = open("PERM/pUNKNo.txt"        , "w")
 labUNKNo  = open("PERM/pUNKNolabel.txt"   , "w")
-csvUNKN   = open("GOOG/pUNKN.csv"         , "w")  # csv for stations IN the area
+csvUNKN   = open("GOOG/pUNKN.csv"         , "w")
 outSPOT   = open("PERM/pSPOT.txt"         , "w")
 labSPOT   = open("PERM/pSPOTlabel.txt"    , "w")
 outSPOTo  = open("PERM/pSPOTo.txt"        , "w")
 labSPOTo  = open("PERM/pSPOTolabel.txt"   , "w")
-csvSPOT   = open("GOOG/pSPOT.csv"         , "w")  # csv plain
-csvSPOT30 = open("GOOG/pSPOT-30.csv"      , "w")  # csv 30 km
-csvSPOT40 = open("GOOG/pSPOT-40.csv"      , "w")  # csv 40 km
+csvSPOT   = open("GOOG/pSPOT.csv"         , "w")
+csvSPOT30 = open("GOOG/pSPOT-30.csv"      , "w")
+csvSPOT40 = open("GOOG/pSPOT-40.csv"      , "w")
 outFUTU   = open("PERM/pFUTU.txt"         , "w")  # FUTUre permanent stations
 labFUTU   = open("PERM/pFUTUlabel.txt"    , "w")
 outFUTUo  = open("PERM/pFUTUo.txt"        , "w")
 labFUTUo  = open("PERM/pFUTUolabel.txt"   , "w")
-csvFUTU   = open("GOOG/pFUTU.csv"         , "w")  # csv plain
-csvFUTU30 = open("GOOG/pFUTU-30.csv"      , "w")  # csv 30 km
-csvFUTU40 = open("GOOG/pFUTU-40.csv"      , "w")  # csv 40 km
+csvFUTU   = open("GOOG/pFUTU.csv"         , "w")
+csvFUTU30 = open("GOOG/pFUTU-30.csv"      , "w")
+csvFUTU40 = open("GOOG/pFUTU-40.csv"      , "w")
 outUPGR   = open("PERM/pUPGR.txt"         , "w")
 labUPGR   = open("PERM/pUPGRlabel.txt"    , "w")
-csvUPGR   = open("GOOG/pUPGR.csv"         , "w")  # csv plain
-csvUPGR30 = open("GOOG/pUPGR-30.csv"      , "w")  # csv 30 km
-csvUPGR40 = open("GOOG/pUPGR-40.csv"      , "w")  # csv 40 km
+csvUPGR   = open("GOOG/pUPGR.csv"         , "w")
+csvUPGR30 = open("GOOG/pUPGR-30.csv"      , "w")
+csvUPGR40 = open("GOOG/pUPGR-40.csv"      , "w")
 outNOSP   = open("PERM/pNOSP.txt"         , "w")
 labNOSP   = open("PERM/pNOSPlabel.txt"    , "w")
 outWHIT   = open("PERM/pWHIT.txt"         , "w")
@@ -98,21 +98,21 @@ EIDAnoBB  = open("PERM/EIDAnoBB.txt"      , "w") # not in EIDA - BB only
 labEInoBB = open("PERM/pEIDAnoBBlabel.txt", "w")
 EIDAysBB  = open("PERM/EIDAysBB.txt"      , "w") # in EIDA - BB only
 
-# BB30, BB40, BB60, UNKN, WHIT have two options based on column 5 inside or outside of AdA area
+# BB30, BB40, BB60, UNKN, WHIT have two options based on column 0: inside or outside of AdA area
 # SPOT, UPGR, NOSP dont have these options, because by definition, these are always inside
 
 for n in inventoryP.index:                     # loop over all lines in the xls sheet
     if (not math.isnan(inventoryP.iloc[n,3])): # the last loop is going over the last line
         counterTOTL = counterTOTL + 1
         # BB30 in
-        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,11] < 40: # the 1st column (0 here) says, if it is IN the region (=1) or out (=0)
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,11] < 40: # the 1st column (0th here) says, if it is IN the region (=1) or out (=0)
             counterBB30 = counterBB30 + 1                                                            # the 10th column (11 here) contains the corner periods
             outBB30.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))  # station coordinates for GMT psxy
             csvBB30.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvBB3030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB3040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB30.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2]))) # station labels for GMT pstext
-            if inventoryP.iloc[n,19] == 0: # 20th column (19 here) has a flag = 1 if in EIDA, = 0 if not in EIDA
+            if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
                 labEInoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -134,7 +134,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             labBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
-                EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))  # station coordinates for GMT psxy
+                EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
                 labEInoBB.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
             if inventoryP.iloc[n,19] == 1: # IN the region, corner period >= 40 and < 59 s, in EIDA
                 counterEIDAysBB = counterEIDAysBB + 1
@@ -169,7 +169,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             counterUNKN = counterUNKN + 1
             outUNKN.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labUNKN.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            csvUNKN.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # station coordinates CSV for GoogleEarth
+            csvUNKN.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # csv plain
         # UNKN out
         if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and math.isnan(inventoryP.iloc[n,12]): # unknown out of the region
             counterUNKNo = counterUNKNo + 1
@@ -225,7 +225,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             counterWHITo = counterWHITo + 1
             outWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            csvWHIT.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # station coordinates CSV for GoogleEarth        
+            csvWHIT.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # csv plain
         # EIDA no
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,19] == 0: # IN the region, not ZZZ (unequipped spot), and NOT in EIDA
             counterEIDAno = counterEIDAno + 1
@@ -448,7 +448,7 @@ netXX      = open("AUXI/netXX.txt"       , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls sheet
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
-        # subgroups
+        # regional subgroups
         if inventoryT.iloc[n,25] == 'WEST':
             counterWEST = counterWEST + 1
             west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
@@ -751,3 +751,4 @@ print ('deployed             = ', counterDPLO)
 
 percent = (counterDPLO/(sumGROUPS))*100
 numofdep.write('18.3 41.15 18 0 0 TL ' + (str(counterDPLO)) + ' / ' + (str(sumGROUPS)) + ' ('+ str('{:.1f}'.format(percent))+'%)' )
+# the file numofdep.txt is used to plot the number of deployed stations, the number of all planned stations and the percentage to the title of the map 13
