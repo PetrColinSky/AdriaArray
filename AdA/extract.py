@@ -60,6 +60,9 @@ labBB60o  = open("PERM/pBB60olabel.txt"   , "w")
 csvBB60   = open("GOOG/pBB60.csv"         , "w")
 csvBB6030 = open("GOOG/pBB60-30.csv"      , "w")
 csvBB6040 = open("GOOG/pBB60-40.csv"      , "w")
+pBB060120 = open("PERM/pBB060-120.txt"    , "w")
+pBB120240 = open("PERM/pBB120-240.txt"    , "w")
+pBB240    = open("PERM/pBB240.txt"        , "w")
 outUNKN   = open("PERM/pUNKN.txt"         , "w")
 labUNKN   = open("PERM/pUNKNlabel.txt"    , "w")
 outUNKNo  = open("PERM/pUNKNo.txt"        , "w")
@@ -144,7 +147,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             counterBB40o = counterBB40o + 1
             outBB40o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labBB40o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-        # BB 60 in
+        # BB 60 in - includes all longer then 60s
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 59: # IN the region, corner period >= 59 s
             counterBB60 = counterBB60 + 1
             outBB60.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -159,11 +162,20 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             if inventoryP.iloc[n,19] == 1: # IN the region, corner period >= 59 s, in EIDA
                 counterEIDAysBB = counterEIDAysBB + 1
                 EIDAysBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-        # BB 60 out
+        # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
             outBB60o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labBB60o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+        # BB 060 - 120 in
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 59 and inventoryP.iloc[n,11] < 120: # IN the region, corner period >= 59 s and < 120 s
+            pBB060120.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+        # BB 120 - 240 in
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 120 and inventoryP.iloc[n,11] < 240: # IN the region, corner period >= 120 s and < 240 s
+            pBB120240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))            
+        # BB 240 in
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 240: # IN the region, corner period >= 240 s
+            pBB240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))            
         # UNKN in
         if inventoryP.iloc[n,0] == 1 and math.isnan(inventoryP.iloc[n,11]) and math.isnan(inventoryP.iloc[n,12]): # if corner period is empty and possible spot is also empty, then it is unknown
             counterUNKN = counterUNKN + 1
@@ -300,6 +312,9 @@ labBB60o.close()
 csvBB60.close()
 csvBB6030.close()
 csvBB6040.close()
+pBB060120.close()
+pBB120240.close()
+pBB240.close()
 outUNKN.close()
 labUNKN.close()
 outUNKNo.close()
@@ -445,6 +460,12 @@ netY8      = open("AUXI/netY8.txt"       , "w")
 netZ6      = open("AUXI/netZ6.txt"       , "w")
 netRF      = open("AUXI/netRF.txt"       , "w")
 netXX      = open("AUXI/netXX.txt"       , "w")
+tmpBB030   = open("TEMP/tBB030.txt"      , "w")
+tmpBB040   = open("TEMP/tBB040.txt"      , "w")
+tmpBB060   = open("TEMP/tBB060-120.txt"  , "w")
+tmpBB120   = open("TEMP/tBB120-240.txt"  , "w")
+tmpBB240   = open("TEMP/tBB240.txt"      , "w")
+notDepl    = open("TEMP/notDepl.txt"     , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls sheet
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
@@ -633,8 +654,21 @@ for n in inventoryT.index:                        # loop over all lines in the x
             netZ6.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'RSF': # to be RESIF network in the future
             netRF.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-        if inventoryT.iloc[n,1] == 'AL' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'x' or inventoryT.iloc[n,1] == 'TV':
+        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'x' or inventoryT.iloc[n,1] == 'TV':
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+        
+        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
+            tmpBB030.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  40 and inventoryT.iloc[n,11] <  60: # if the station is deployed already and corner is between 40 and 60 s
+            tmpBB040.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  60 and inventoryT.iloc[n,11] < 120: # if the station is deployed already and corner is between 60 and 120 s
+            tmpBB060.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 120 and inventoryT.iloc[n,11] < 240: # if the station is deployed already and corner is between 120 and 240 s
+            tmpBB120.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
+        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 240:                                 # if the station is deployed already and corner is 240 s and longer (which case does not exist)
+            tmpBB240.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
+        if inventoryT.iloc[n,0] == 0:   # if not yet deployed
+            notDepl.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
 # end of the loop over all the lines in the sheet
 
 west.close()
@@ -705,6 +739,12 @@ netY8.close()
 netZ6.close()
 netRF.close()
 netXX.close()
+tmpBB030.close()
+tmpBB040.close()
+tmpBB060.close()
+tmpBB120.close()
+tmpBB240.close()
+notDepl.close()
 
 sumGROUPS = counterEAST + counterNORT + counterCENT + counterSTEA + counterWEST
 sumPOOLS  = counterIGCZ + counterAARH + counterBARC + counterBOCH + counterBOLO + counterCSSC + counterETHZ + counterRESF + counterHELS + counterEPSS + counterIRSM + counterKIEL + counterMUNI + counterTWEN + counterBRZG + counterOGSI + counterOULU + counterPOLA + counterWIEN + counterMNEP + counterKOSV + counterNIEP + counterKITP
