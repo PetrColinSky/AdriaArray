@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import math
 import os
+import simplekml
 
 # the two inventories need to be in the same folder as the script itself
 inventoryP   = pd.read_excel("InventoryPermanent.xls", sep=",", header=[2]) # the inventory is read as DataFrame, the header of the sheet has 3 rows (0,1,2)
@@ -10,6 +11,27 @@ inventoryT   = pd.read_excel("InventoryTemporary.xls", sep=",", header=[2]) # so
 # it creates 3 folders, if they don't exist: PERM, TEMP, GOOG and saves ASCII text files into these folders
 
 ts = '1.5'  # text size of station-name labels for GMT
+kmlPerm030 = simplekml.Kml()
+kmlPerm040 = simplekml.Kml()
+kmlPerm060 = simplekml.Kml()
+kmlPerm120 = simplekml.Kml()
+kmlPerm240 = simplekml.Kml()
+kmlPermUNKN  = simplekml.Kml()
+kmlPermSPOT  = simplekml.Kml()
+kmlPermNOSP  = simplekml.Kml()
+kmlPermFUTU  = simplekml.Kml()
+kmlPermUPGR  = simplekml.Kml()
+kmlPermWHIT  = simplekml.Kml()
+kmlTemp030 = simplekml.Kml()
+kmlTemp040 = simplekml.Kml()
+kmlTemp060 = simplekml.Kml()
+kmlTemp120 = simplekml.Kml()
+kmlTemp240 = simplekml.Kml()
+kmlPermAll = simplekml.Kml()
+kmlTempAll = simplekml.Kml()
+kmlPermOut = simplekml.Kml()
+kmlTempDep = simplekml.Kml()
+kmlTempNot = simplekml.Kml()
 
 counterTOTL   = 0
 counterBB30   = 0
@@ -43,21 +65,18 @@ outBB30   = open("PERM/pBB30.txt"         , "w")  # output files for inputing to
 labBB30   = open("PERM/pBB30label.txt"    , "w")
 outBB30o  = open("PERM/pBB30o.txt"        , "w")  # "o" means "out" of the AdA region
 labBB30o  = open("PERM/pBB30olabel.txt"   , "w")
-csvBB30   = open("GOOG/pBB30.csv"         , "w")  # csv for stations IN the area
 csvBB3030 = open("GOOG/pBB30-30.csv"      , "w")  # csv for stations IN the area 30 km
 csvBB3040 = open("GOOG/pBB30-40.csv"      , "w")  # csv for stations IN the area 40 km
 outBB40   = open("PERM/pBB40.txt"         , "w")
 labBB40   = open("PERM/pBB40label.txt"    , "w")
 outBB40o  = open("PERM/pBB40o.txt"        , "w")
 labBB40o  = open("PERM/pBB40olabel.txt"   , "w")
-csvBB40   = open("GOOG/pBB40.csv"         , "w")
 csvBB4030 = open("GOOG/pBB40-30.csv"      , "w")
 csvBB4040 = open("GOOG/pBB40-40.csv"      , "w")
 outBB60   = open("PERM/pBB60.txt"         , "w")
 labBB60   = open("PERM/pBB60label.txt"    , "w")
 outBB60o  = open("PERM/pBB60o.txt"        , "w")
 labBB60o  = open("PERM/pBB60olabel.txt"   , "w")
-csvBB60   = open("GOOG/pBB60.csv"         , "w")
 csvBB6030 = open("GOOG/pBB60-30.csv"      , "w")
 csvBB6040 = open("GOOG/pBB60-40.csv"      , "w")
 pBB060120 = open("PERM/pBB060-120.txt"    , "w")
@@ -67,24 +86,20 @@ outUNKN   = open("PERM/pUNKN.txt"         , "w")
 labUNKN   = open("PERM/pUNKNlabel.txt"    , "w")
 outUNKNo  = open("PERM/pUNKNo.txt"        , "w")
 labUNKNo  = open("PERM/pUNKNolabel.txt"   , "w")
-csvUNKN   = open("GOOG/pUNKN.csv"         , "w")
 outSPOT   = open("PERM/pSPOT.txt"         , "w")
 labSPOT   = open("PERM/pSPOTlabel.txt"    , "w")
 outSPOTo  = open("PERM/pSPOTo.txt"        , "w")
 labSPOTo  = open("PERM/pSPOTolabel.txt"   , "w")
-csvSPOT   = open("GOOG/pSPOT.csv"         , "w")
 csvSPOT30 = open("GOOG/pSPOT-30.csv"      , "w")
 csvSPOT40 = open("GOOG/pSPOT-40.csv"      , "w")
 outFUTU   = open("PERM/pFUTU.txt"         , "w")  # FUTUre permanent stations
 labFUTU   = open("PERM/pFUTUlabel.txt"    , "w")
 outFUTUo  = open("PERM/pFUTUo.txt"        , "w")
 labFUTUo  = open("PERM/pFUTUolabel.txt"   , "w")
-csvFUTU   = open("GOOG/pFUTU.csv"         , "w")
 csvFUTU30 = open("GOOG/pFUTU-30.csv"      , "w")
 csvFUTU40 = open("GOOG/pFUTU-40.csv"      , "w")
 outUPGR   = open("PERM/pUPGR.txt"         , "w")
 labUPGR   = open("PERM/pUPGRlabel.txt"    , "w")
-csvUPGR   = open("GOOG/pUPGR.csv"         , "w")
 csvUPGR30 = open("GOOG/pUPGR-30.csv"      , "w")
 csvUPGR40 = open("GOOG/pUPGR-40.csv"      , "w")
 outNOSP   = open("PERM/pNOSP.txt"         , "w")
@@ -93,7 +108,6 @@ outWHIT   = open("PERM/pWHIT.txt"         , "w")
 labWHIT   = open("PERM/pWHITlabel.txt"    , "w")
 outWHITo  = open("PERM/pWHITo.txt"        , "w")
 labWHITo  = open("PERM/pWHITolabel.txt"   , "w")
-csvWHIT   = open("GOOG/pWHIT.csv"         , "w")
 EIDAno    = open("PERM/EIDAno.txt"        , "w") # not in EIDA all stations
 EIDAys    = open("PERM/EIDAys.txt"        , "w") # in EIDA all stations
 EIDAzz    = open("PERM/EIDAzz.txt"        , "w") # not known
@@ -111,10 +125,15 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,11] < 40: # the 1st column (0th here) says, if it is IN the region (=1) or out (=0)
             counterBB30 = counterBB30 + 1                                                            # the 10th column (11 here) contains the corner periods
             outBB30.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))  # station coordinates for GMT psxy
-            csvBB30.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvBB3030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB3040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB30.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2]))) # station labels for GMT pstext
+            pnt = kmlPerm030.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,255,0) # yellow
+            pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -127,14 +146,22 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             counterBB30o = counterBB30o + 1
             outBB30o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labBB30o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey
         # BB 40 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 40 and inventoryP.iloc[n,11] < 59: # IN the region, corner period >= 40 and < 59 s
             counterBB40 = counterBB40 + 1
-            outBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            csvBB40.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
+            outBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))            
             csvBB4030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB4040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPerm040.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,174,0) # orange
+            pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red            
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -147,11 +174,13 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             counterBB40o = counterBB40o + 1
             outBB40o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labBB40o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
         # BB 60 in - includes all longer then 60s
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 59: # IN the region, corner period >= 59 s
             counterBB60 = counterBB60 + 1
             outBB60.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            csvBB60.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvBB6030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB6040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB60.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -162,39 +191,64 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
             if inventoryP.iloc[n,19] == 1: # IN the region, corner period >= 59 s, in EIDA
                 counterEIDAysBB = counterEIDAysBB + 1
                 EIDAysBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red                
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
             outBB60o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labBB60o.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
         # BB 060 - 120 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 59 and inventoryP.iloc[n,11] < 120: # IN the region, corner period >= 59 s and < 120 s
             pBB060120.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            pnt = kmlPerm060.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
         # BB 120 - 240 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 120 and inventoryP.iloc[n,11] < 240: # IN the region, corner period >= 120 s and < 240 s
-            pBB120240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))            
+            pBB120240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            pnt = kmlPerm120.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(166,16,76) # dark red
         # BB 240 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 240: # IN the region, corner period >= 240 s
-            pBB240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))            
+            pBB240.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            pnt = kmlPerm240.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(135,0,135) # purple
         # UNKN in
         if inventoryP.iloc[n,0] == 1 and math.isnan(inventoryP.iloc[n,11]) and math.isnan(inventoryP.iloc[n,12]): # if corner period is empty and possible spot is also empty, then it is unknown
             counterUNKN = counterUNKN + 1
             outUNKN.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labUNKN.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            csvUNKN.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # csv plain
+            pnt = kmlPermUNKN.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
+            pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
         # UNKN out
         if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and math.isnan(inventoryP.iloc[n,12]): # unknown out of the region
             counterUNKNo = counterUNKNo + 1
             outUNKNo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labUNKNo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
         # SPOT in
         if inventoryP.iloc[n,0] == 1 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 1: # if corner is empty and possible spot =1, then it is unequipped spot
             counterSPOT = counterSPOT + 1
             outSPOT.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            csvSPOT.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvSPOT30.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvSPOT40.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labSPOT.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermSPOT.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,255) # cyan
         # SPOT out
         if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 1: # unequipped spots OUT of the region
             counterSPOTo = counterSPOTo + 1
@@ -204,40 +258,51 @@ for n in inventoryP.index:                     # loop over all lines in the xls 
         if inventoryP.iloc[n,0] == 1 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 2: # if corner period is empty and possible spot = 2, then this is a future station
             counterFUTU = counterFUTU + 1
             outFUTU.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            csvFUTU.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvFUTU30.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvFUTU40.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labFUTU.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermFUTU.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,150,0) # dark green
         # FUTU out
         if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 2: # future stations OUT of the region
             counterFUTUo = counterFUTUo + 1
             outFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
         # UPGR - always in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] < 30 and inventoryP.iloc[n,12] == 1: # if corner period < 30 s and possible spot = 1, then this is a station for upgrade
             counterUPGR = counterUPGR + 1
             outUPGR.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            csvUPGR.write  ("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ','    + str(inventoryP.iloc[n,2])))  # csv plain
             csvUPGR30.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvUPGR40.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labUPGR.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermUPGR.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
         # NOSP - always in
         if inventoryP.iloc[n,11] < 30 and inventoryP.iloc[n,12] == 0:               # if corner period < 30 s and possible spot = 0, then this is a station not available or suitable for upgrade
             counterNOSP = counterNOSP + 1
             outNOSP.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labNOSP.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermNOSP.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(150,150,150) # grey
         # WHIT in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] < 30 and math.isnan(inventoryP.iloc[n,12]): # if corner < 30 s and possible spot is empty, then it is SP/SM station not needed for upgrade
             counterWHIT = counterWHIT + 1
             outWHIT.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labWHIT.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            csvWHIT.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # station coordinates CSV for GoogleEarth
+            pnt = kmlPermWHIT.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,255,255) # white
         # WHIT out
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] < 30 and math.isnan(inventoryP.iloc[n,12]): # station not needed for upgrade OUT of the region
             counterWHITo = counterWHITo + 1
             outWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            csvWHIT.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',' + str(inventoryP.iloc[n,2])))  # csv plain
         # EIDA no
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,19] == 0: # IN the region, not ZZZ (unequipped spot), and NOT in EIDA
             counterEIDAno = counterEIDAno + 1
@@ -295,21 +360,18 @@ outBB30.close()
 labBB30.close()
 outBB30o.close()
 labBB30o.close()
-csvBB30.close()
 csvBB3030.close()
 csvBB3040.close()
 outBB40.close()
 labBB40.close()
 outBB40o.close()
 labBB40o.close()
-csvBB40.close()
 csvBB4030.close()
 csvBB4040.close()
 outBB60.close()
 labBB60.close()
 outBB60o.close()
 labBB60o.close()
-csvBB60.close()
 csvBB6030.close()
 csvBB6040.close()
 pBB060120.close()
@@ -319,24 +381,20 @@ outUNKN.close()
 labUNKN.close()
 outUNKNo.close()
 labUNKNo.close()
-csvUNKN.close()
 outSPOT.close()
 labSPOT.close()
 outSPOTo.close()
 labSPOTo.close()
-csvSPOT.close()
 csvSPOT30.close()
 csvSPOT40.close()
 outFUTU.close()
 labFUTU.close()
 outFUTUo.close()
 labFUTUo.close()
-csvFUTU.close()
 csvFUTU30.close()
 csvFUTU40.close()
 outUPGR.close()
 labUPGR.close()
-csvUPGR.close()
 csvUPGR30.close()
 csvUPGR40.close()
 outNOSP.close()
@@ -345,7 +403,6 @@ outWHIT.close()
 labWHIT.close()
 outWHITo.close()
 labWHITo.close()
-csvWHIT.close()
 EIDAno.close()
 EIDAys.close()
 EIDAzz.close()
@@ -474,22 +531,37 @@ for n in inventoryT.index:                        # loop over all lines in the x
             counterWEST = counterWEST + 1
             west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
             westlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+            pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
         if inventoryT.iloc[n,25] == 'SOUTHEAST':
             counterSTEA = counterSTEA + 1
             stea.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             stealabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,25] == 'CENTER':
             counterCENT = counterCENT + 1
             cent.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             centlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,25] == 'NORTH':
             counterNORT = counterNORT + 1
             nort.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             nortlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,25] == 'EAST':
             counterEAST = counterEAST + 1
             east.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             eastlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         # particular mobile pools
         if inventoryT.iloc[n,16] == 'IG CAS CZ':
             igcz.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
@@ -659,16 +731,49 @@ for n in inventoryT.index:                        # loop over all lines in the x
         
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
             tmpBB030.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTemp030.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,255,0) # yellow
+            pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  40 and inventoryT.iloc[n,11] <  60: # if the station is deployed already and corner is between 40 and 60 s
             tmpBB040.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTemp040.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,174,0) # orange
+            pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  60 and inventoryT.iloc[n,11] < 120: # if the station is deployed already and corner is between 60 and 120 s
             tmpBB060.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTemp060.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
+            pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 120 and inventoryT.iloc[n,11] < 240: # if the station is deployed already and corner is between 120 and 240 s
-            tmpBB120.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
+            tmpBB120.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTemp120.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(166,16,76) # dark red
+            pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 240:                                 # if the station is deployed already and corner is 240 s and longer (which case does not exist)
-            tmpBB240.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
+            tmpBB240.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTemp240.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(135,0,135) # purple
+            pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
         if inventoryT.iloc[n,0] == 0:   # if not yet deployed
             notDepl.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            pnt = kmlTempNot.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = os.getcwd()+"/GOOG/triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
 # end of the loop over all the lines in the sheet
 
 west.close()
@@ -792,3 +897,25 @@ print ('deployed             = ', counterDPLO)
 percent = (counterDPLO/(sumGROUPS))*100
 numofdep.write('18.3 41.15 18 0 0 TL ' + (str(counterDPLO)) + ' / ' + (str(sumGROUPS)) + ' ('+ str('{:.1f}'.format(percent))+'%)' )
 # the file numofdep.txt is used to plot the number of deployed stations, the number of all planned stations and the percentage to the title of the map 13
+
+kmlPerm030.save("GOOG/permBB030-040.kml")
+kmlPerm040.save("GOOG/permBB040-060.kml")
+kmlPerm060.save("GOOG/permBB060-120.kml")
+kmlPerm120.save("GOOG/permBB120-240.kml")
+kmlPerm240.save("GOOG/permBB240-longer.kml")
+kmlPermUNKN.save("GOOG/permUNKN.kml")
+kmlPermSPOT.save("GOOG/permSPOT.kml")
+kmlPermNOSP.save("GOOG/permNOSP.kml")
+kmlPermFUTU.save("GOOG/permBBFuture.kml")
+kmlPermUPGR.save("GOOG/permUPGR.kml")
+kmlPermWHIT.save("GOOG/permWHIT.kml")
+kmlTemp030.save("GOOG/temp030-040.kml")
+kmlTemp040.save("GOOG/temp040-060.kml")
+kmlTemp060.save("GOOG/temp060-120.kml")
+kmlTemp120.save("GOOG/temp120-240.kml")
+kmlTemp240.save("GOOG/temp240-longer.kml")
+kmlPermAll.save("GOOG/permBBAllIn.kml")
+kmlTempAll.save("GOOG/tempAll.kml")
+kmlPermOut.save("GOOG/permOutside.kml")
+kmlTempDep.save("GOOG/tempDeployed.kml")
+kmlTempNot.save("GOOG/tempNotDepl.kml")

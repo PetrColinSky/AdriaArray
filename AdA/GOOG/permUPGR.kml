@@ -1,0 +1,4541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="19">
+        <Style id="4649">
+            <IconStyle id="4650">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="4651">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="9839">
+            <IconStyle id="9840">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="9841">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="10964">
+            <IconStyle id="10965">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="10966">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="10984">
+            <IconStyle id="10985">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="10986">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11049">
+            <IconStyle id="11050">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11051">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11059">
+            <IconStyle id="11060">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11061">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11084">
+            <IconStyle id="11085">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11086">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11089">
+            <IconStyle id="11090">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11091">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11119">
+            <IconStyle id="11120">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11121">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11134">
+            <IconStyle id="11135">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11136">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11139">
+            <IconStyle id="11140">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11141">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11164">
+            <IconStyle id="11165">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11166">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11169">
+            <IconStyle id="11170">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11171">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11204">
+            <IconStyle id="11205">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11206">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11209">
+            <IconStyle id="11210">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11211">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11224">
+            <IconStyle id="11225">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11226">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11264">
+            <IconStyle id="11265">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11266">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11279">
+            <IconStyle id="11280">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11281">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11299">
+            <IconStyle id="11300">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11301">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11309">
+            <IconStyle id="11310">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11311">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11314">
+            <IconStyle id="11315">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11316">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11364">
+            <IconStyle id="11365">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11366">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11379">
+            <IconStyle id="11380">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11381">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11394">
+            <IconStyle id="11395">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11396">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11414">
+            <IconStyle id="11415">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11416">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11439">
+            <IconStyle id="11440">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11441">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11444">
+            <IconStyle id="11445">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11446">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11464">
+            <IconStyle id="11465">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11466">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11469">
+            <IconStyle id="11470">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11471">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11494">
+            <IconStyle id="11495">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11496">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11519">
+            <IconStyle id="11520">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11521">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11524">
+            <IconStyle id="11525">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11526">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11534">
+            <IconStyle id="11535">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11536">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11539">
+            <IconStyle id="11540">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11541">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11549">
+            <IconStyle id="11550">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11551">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11564">
+            <IconStyle id="11565">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11566">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11569">
+            <IconStyle id="11570">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11571">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11574">
+            <IconStyle id="11575">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11576">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11584">
+            <IconStyle id="11585">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11586">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11589">
+            <IconStyle id="11590">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11591">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11594">
+            <IconStyle id="11595">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11596">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11659">
+            <IconStyle id="11660">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11661">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11664">
+            <IconStyle id="11665">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11666">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11694">
+            <IconStyle id="11695">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11696">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11709">
+            <IconStyle id="11710">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11711">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11714">
+            <IconStyle id="11715">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11716">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11739">
+            <IconStyle id="11740">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11741">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11769">
+            <IconStyle id="11770">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11771">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11774">
+            <IconStyle id="11775">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11776">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11779">
+            <IconStyle id="11780">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11781">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11804">
+            <IconStyle id="11805">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11806">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11814">
+            <IconStyle id="11815">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11816">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11819">
+            <IconStyle id="11820">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11821">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11824">
+            <IconStyle id="11825">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11826">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11849">
+            <IconStyle id="11850">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11851">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11854">
+            <IconStyle id="11855">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11856">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11869">
+            <IconStyle id="11870">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11871">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11874">
+            <IconStyle id="11875">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11876">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11879">
+            <IconStyle id="11880">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11881">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11904">
+            <IconStyle id="11905">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11906">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11909">
+            <IconStyle id="11910">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11911">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11929">
+            <IconStyle id="11930">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11931">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11934">
+            <IconStyle id="11935">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11936">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11949">
+            <IconStyle id="11950">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11951">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11954">
+            <IconStyle id="11955">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11956">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11959">
+            <IconStyle id="11960">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11961">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11979">
+            <IconStyle id="11980">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11981">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11984">
+            <IconStyle id="11985">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11986">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11989">
+            <IconStyle id="11990">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11991">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11994">
+            <IconStyle id="11995">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="11996">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="11999">
+            <IconStyle id="12000">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12001">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12014">
+            <IconStyle id="12015">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12016">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12019">
+            <IconStyle id="12020">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12021">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12054">
+            <IconStyle id="12055">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12056">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12059">
+            <IconStyle id="12060">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12061">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12074">
+            <IconStyle id="12075">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12076">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12079">
+            <IconStyle id="12080">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12081">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12099">
+            <IconStyle id="12100">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12101">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12119">
+            <IconStyle id="12120">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12121">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12124">
+            <IconStyle id="12125">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12126">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12129">
+            <IconStyle id="12130">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12131">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12154">
+            <IconStyle id="12155">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12156">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12159">
+            <IconStyle id="12160">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12161">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12174">
+            <IconStyle id="12175">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12176">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12219">
+            <IconStyle id="12220">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12221">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12234">
+            <IconStyle id="12235">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12236">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12239">
+            <IconStyle id="12240">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12241">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12244">
+            <IconStyle id="12245">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12246">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12249">
+            <IconStyle id="12250">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12251">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12284">
+            <IconStyle id="12285">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12286">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12289">
+            <IconStyle id="12290">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12291">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12339">
+            <IconStyle id="12340">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12341">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12434">
+            <IconStyle id="12435">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12436">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12459">
+            <IconStyle id="12460">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12461">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12474">
+            <IconStyle id="12475">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12476">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12489">
+            <IconStyle id="12490">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12491">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12494">
+            <IconStyle id="12495">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12496">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12499">
+            <IconStyle id="12500">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12501">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12519">
+            <IconStyle id="12520">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12521">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12524">
+            <IconStyle id="12525">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12526">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12529">
+            <IconStyle id="12530">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12531">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12544">
+            <IconStyle id="12545">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12546">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12549">
+            <IconStyle id="12550">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12551">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12554">
+            <IconStyle id="12555">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12556">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12559">
+            <IconStyle id="12560">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12561">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12614">
+            <IconStyle id="12615">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12616">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12644">
+            <IconStyle id="12645">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12646">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12649">
+            <IconStyle id="12650">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12651">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12654">
+            <IconStyle id="12655">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12656">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12669">
+            <IconStyle id="12670">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12671">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12674">
+            <IconStyle id="12675">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12676">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12699">
+            <IconStyle id="12700">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12701">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12714">
+            <IconStyle id="12715">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12716">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12719">
+            <IconStyle id="12720">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12721">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12724">
+            <IconStyle id="12725">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12726">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12749">
+            <IconStyle id="12750">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12751">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12759">
+            <IconStyle id="12760">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12761">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12779">
+            <IconStyle id="12780">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12781">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12794">
+            <IconStyle id="12795">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12796">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12809">
+            <IconStyle id="12810">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12811">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12814">
+            <IconStyle id="12815">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12816">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12829">
+            <IconStyle id="12830">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12831">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12834">
+            <IconStyle id="12835">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12836">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12839">
+            <IconStyle id="12840">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12841">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12844">
+            <IconStyle id="12845">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12846">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12849">
+            <IconStyle id="12850">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12851">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12854">
+            <IconStyle id="12855">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12856">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12869">
+            <IconStyle id="12870">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12871">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12904">
+            <IconStyle id="12905">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12906">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12939">
+            <IconStyle id="12940">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12941">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12944">
+            <IconStyle id="12945">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12946">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12959">
+            <IconStyle id="12960">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12961">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12994">
+            <IconStyle id="12995">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12996">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12999">
+            <IconStyle id="13000">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13001">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13034">
+            <IconStyle id="13035">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13036">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13074">
+            <IconStyle id="13075">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13076">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13109">
+            <IconStyle id="13110">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13111">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13129">
+            <IconStyle id="13130">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13131">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13184">
+            <IconStyle id="13185">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13186">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13234">
+            <IconStyle id="13235">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13236">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13239">
+            <IconStyle id="13240">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13241">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13344">
+            <IconStyle id="13345">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13346">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13349">
+            <IconStyle id="13350">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13351">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13354">
+            <IconStyle id="13355">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13356">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13379">
+            <IconStyle id="13380">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13381">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13404">
+            <IconStyle id="13405">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13406">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13409">
+            <IconStyle id="13410">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13411">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13424">
+            <IconStyle id="13425">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13426">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13429">
+            <IconStyle id="13430">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13431">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13434">
+            <IconStyle id="13435">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13436">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13459">
+            <IconStyle id="13460">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13461">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13464">
+            <IconStyle id="13465">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13466">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13469">
+            <IconStyle id="13470">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13471">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13474">
+            <IconStyle id="13475">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13476">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13489">
+            <IconStyle id="13490">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13491">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13534">
+            <IconStyle id="13535">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13536">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13559">
+            <IconStyle id="13560">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13561">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13609">
+            <IconStyle id="13610">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13611">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13654">
+            <IconStyle id="13655">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13656">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13694">
+            <IconStyle id="13695">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13696">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13714">
+            <IconStyle id="13715">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13716">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13719">
+            <IconStyle id="13720">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13721">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13744">
+            <IconStyle id="13745">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13746">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13759">
+            <IconStyle id="13760">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13761">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13769">
+            <IconStyle id="13770">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13771">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13774">
+            <IconStyle id="13775">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13776">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13779">
+            <IconStyle id="13780">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13781">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13784">
+            <IconStyle id="13785">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13786">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13804">
+            <IconStyle id="13805">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13806">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13819">
+            <IconStyle id="13820">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13821">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13834">
+            <IconStyle id="13835">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13836">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13839">
+            <IconStyle id="13840">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13841">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13869">
+            <IconStyle id="13870">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13871">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13884">
+            <IconStyle id="13885">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13886">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13919">
+            <IconStyle id="13920">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13921">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13934">
+            <IconStyle id="13935">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13936">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13949">
+            <IconStyle id="13950">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13951">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13964">
+            <IconStyle id="13965">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13966">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14019">
+            <IconStyle id="14020">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14021">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14144">
+            <IconStyle id="14145">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14146">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14189">
+            <IconStyle id="14190">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14191">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14214">
+            <IconStyle id="14215">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14216">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14229">
+            <IconStyle id="14230">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14231">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14249">
+            <IconStyle id="14250">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14251">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14254">
+            <IconStyle id="14255">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14256">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14399">
+            <IconStyle id="14400">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14401">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14439">
+            <IconStyle id="14440">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14441">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14454">
+            <IconStyle id="14455">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14456">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14494">
+            <IconStyle id="14495">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14496">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14499">
+            <IconStyle id="14500">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14501">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14574">
+            <IconStyle id="14575">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14576">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14579">
+            <IconStyle id="14580">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14581">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14584">
+            <IconStyle id="14585">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14586">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14609">
+            <IconStyle id="14610">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14611">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14614">
+            <IconStyle id="14615">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14616">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14669">
+            <IconStyle id="14670">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14671">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14694">
+            <IconStyle id="14695">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14696">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14699">
+            <IconStyle id="14700">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14701">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14714">
+            <IconStyle id="14715">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14716">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14719">
+            <IconStyle id="14720">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14721">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14724">
+            <IconStyle id="14725">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14726">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14739">
+            <IconStyle id="14740">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14741">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14749">
+            <IconStyle id="14750">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14751">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14754">
+            <IconStyle id="14755">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14756">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14759">
+            <IconStyle id="14760">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14761">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14764">
+            <IconStyle id="14765">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14766">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14779">
+            <IconStyle id="14780">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14781">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14794">
+            <IconStyle id="14795">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14796">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14799">
+            <IconStyle id="14800">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14801">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14804">
+            <IconStyle id="14805">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14806">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14809">
+            <IconStyle id="14810">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14811">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14824">
+            <IconStyle id="14825">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14826">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14829">
+            <IconStyle id="14830">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14831">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14844">
+            <IconStyle id="14845">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14846">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14849">
+            <IconStyle id="14850">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14851">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14854">
+            <IconStyle id="14855">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14856">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14864">
+            <IconStyle id="14865">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14866">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14869">
+            <IconStyle id="14870">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14871">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14889">
+            <IconStyle id="14890">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14891">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14894">
+            <IconStyle id="14895">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14896">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14899">
+            <IconStyle id="14900">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14901">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14909">
+            <IconStyle id="14910">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14911">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14934">
+            <IconStyle id="14935">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14936">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14949">
+            <IconStyle id="14950">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14951">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14959">
+            <IconStyle id="14960">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14961">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14984">
+            <IconStyle id="14985">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14986">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14999">
+            <IconStyle id="15000">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15001">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15004">
+            <IconStyle id="15005">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15006">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15114">
+            <IconStyle id="15115">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15116">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15199">
+            <IconStyle id="15200">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15201">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15234">
+            <IconStyle id="15235">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15236">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15239">
+            <IconStyle id="15240">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15241">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15244">
+            <IconStyle id="15245">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15246">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15289">
+            <IconStyle id="15290">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15291">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15389">
+            <IconStyle id="15390">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15391">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15419">
+            <IconStyle id="15420">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15421">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15474">
+            <IconStyle id="15475">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15476">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15479">
+            <IconStyle id="15480">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15481">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15484">
+            <IconStyle id="15485">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15486">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15499">
+            <IconStyle id="15500">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15501">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15524">
+            <IconStyle id="15525">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15526">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15534">
+            <IconStyle id="15535">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15536">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15624">
+            <IconStyle id="15625">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15626">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15729">
+            <IconStyle id="15730">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15731">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15814">
+            <IconStyle id="15815">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15816">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15829">
+            <IconStyle id="15830">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15831">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15869">
+            <IconStyle id="15870">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15871">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15919">
+            <IconStyle id="15920">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15921">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16019">
+            <IconStyle id="16020">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16021">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16049">
+            <IconStyle id="16050">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16051">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16059">
+            <IconStyle id="16060">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16061">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16114">
+            <IconStyle id="16115">
+                <color>ff00ff00</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16116">
+                    <href>D:\16AdriaArray\AdA/GOOG/triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="4648">
+            <name>BOZZ</name>
+            <styleUrl>#4649</styleUrl>
+            <Point id="4647">
+                <coordinates>10.482,45.1071,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9838">
+            <name>ZIRJ</name>
+            <styleUrl>#9839</styleUrl>
+            <Point id="9837">
+                <coordinates>15.643891,43.654255,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10963">
+            <name>ZENIC</name>
+            <styleUrl>#10964</styleUrl>
+            <Point id="10962">
+                <coordinates>17.9,44.2016667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10983">
+            <name>DOB</name>
+            <styleUrl>#10984</styleUrl>
+            <Point id="10982">
+                <coordinates>18.1,44.733,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11048">
+            <name>TREB</name>
+            <styleUrl>#11049</styleUrl>
+            <Point id="11047">
+                <coordinates>18.35,42.717,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11058">
+            <name>SARAJ</name>
+            <styleUrl>#11059</styleUrl>
+            <Point id="11057">
+                <coordinates>18.4227778,43.8677778,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11083">
+            <name>HCY</name>
+            <styleUrl>#11084</styleUrl>
+            <Point id="11082">
+                <coordinates>18.49836,42.44749,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11088">
+            <name>BRY</name>
+            <styleUrl>#11089</styleUrl>
+            <Point id="11087">
+                <coordinates>18.54394,42.90072,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11118">
+            <name>TUZLA</name>
+            <styleUrl>#11119</styleUrl>
+            <Point id="11117">
+                <coordinates>18.685,44.5419444,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11133">
+            <name>BUM</name>
+            <styleUrl>#11134</styleUrl>
+            <Point id="11132">
+                <coordinates>18.898600000000002,42.3008,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11138">
+            <name>UPM</name>
+            <styleUrl>#11139</styleUrl>
+            <Point id="11137">
+                <coordinates>18.91,43.2029,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11163">
+            <name>NKME</name>
+            <styleUrl>#11164</styleUrl>
+            <Point id="11162">
+                <coordinates>18.9529,42.7669,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11168">
+            <name>NKY</name>
+            <styleUrl>#11169</styleUrl>
+            <Point id="11167">
+                <coordinates>18.998170000000002,42.81285,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11203">
+            <name>RUDO</name>
+            <styleUrl>#11204</styleUrl>
+            <Point id="11202">
+                <coordinates>19.37,43.618,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11208">
+            <name>PLE</name>
+            <styleUrl>#11209</styleUrl>
+            <Point id="11207">
+                <coordinates>19.39426,43.32987,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11223">
+            <name>PERA1</name>
+            <styleUrl>#11224</styleUrl>
+            <Point id="11222">
+                <coordinates>19.4104,43.9646,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11263">
+            <name>TEKS</name>
+            <styleUrl>#11264</styleUrl>
+            <Point id="11262">
+                <coordinates>19.528069,44.549344,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11278">
+            <name>SUBS</name>
+            <styleUrl>#11279</styleUrl>
+            <Point id="11277">
+                <coordinates>19.6506,46.11175,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11298">
+            <name>VRUA</name>
+            <styleUrl>#11299</styleUrl>
+            <Point id="11297">
+                <coordinates>19.7098,43.8492,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11308">
+            <name>LACI</name>
+            <styleUrl>#11309</styleUrl>
+            <Point id="11307">
+                <coordinates>19.7199,41.6359,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11313">
+            <name>ROVA1</name>
+            <styleUrl>#11314</styleUrl>
+            <Point id="11312">
+                <coordinates>19.753,44.2417,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11363">
+            <name>VALA</name>
+            <styleUrl>#11364</styleUrl>
+            <Point id="11362">
+                <coordinates>19.883,44.2726,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11378">
+            <name>BEY</name>
+            <styleUrl>#11379</styleUrl>
+            <Point id="11377">
+                <coordinates>19.89811,42.87175,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11393">
+            <name>KASA</name>
+            <styleUrl>#11394</styleUrl>
+            <Point id="11392">
+                <coordinates>19.93542,39.74628,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11413">
+            <name>PVY</name>
+            <styleUrl>#11414</styleUrl>
+            <Point id="11412">
+                <coordinates>19.9735,42.595,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11438">
+            <name>TPE</name>
+            <styleUrl>#11439</styleUrl>
+            <Point id="11437">
+                <coordinates>20.02,40.2947,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11443">
+            <name>LFKM</name>
+            <styleUrl>#11444</styleUrl>
+            <Point id="11442">
+                <coordinates>20.0608,39.4465,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11463">
+            <name>IVAS</name>
+            <styleUrl>#11464</styleUrl>
+            <Point id="11462">
+                <coordinates>20.152395,43.576676,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11468">
+            <name>CACA</name>
+            <styleUrl>#11469</styleUrl>
+            <Point id="11467">
+                <coordinates>20.1863,43.898,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11493">
+            <name>PEJK</name>
+            <styleUrl>#11494</styleUrl>
+            <Point id="11492">
+                <coordinates>20.2783,42.64,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11518">
+            <name>KEF3</name>
+            <styleUrl>#11519</styleUrl>
+            <Point id="11517">
+                <coordinates>20.3482,38.2031,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11523">
+            <name>DMLN</name>
+            <styleUrl>#11524</styleUrl>
+            <Point id="11522">
+                <coordinates>20.3734,38.2385,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11533">
+            <name>TRUS</name>
+            <styleUrl>#11534</styleUrl>
+            <Point id="11532">
+                <coordinates>20.406266,44.223525,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11538">
+            <name>KKS</name>
+            <styleUrl>#11539</styleUrl>
+            <Point id="11537">
+                <coordinates>20.4113,42.0756,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11548">
+            <name>LXRA</name>
+            <styleUrl>#11549</styleUrl>
+            <Point id="11547">
+                <coordinates>20.43718,38.20006,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11563">
+            <name>BEO</name>
+            <styleUrl>#11564</styleUrl>
+            <Point id="11562">
+                <coordinates>20.471419,44.809297,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11568">
+            <name>BDVA</name>
+            <styleUrl>#11569</styleUrl>
+            <Point id="11567">
+                <coordinates>20.4744,45.5376,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11573">
+            <name>RUDA</name>
+            <styleUrl>#11574</styleUrl>
+            <Point id="11572">
+                <coordinates>20.4833,44.105,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11583">
+            <name>AVAS</name>
+            <styleUrl>#11584</styleUrl>
+            <Point id="11582">
+                <coordinates>20.51315,44.69595,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11588">
+            <name>PAZA</name>
+            <styleUrl>#11589</styleUrl>
+            <Point id="11587">
+                <coordinates>20.5451,43.1576,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11593">
+            <name>ZUPA</name>
+            <styleUrl>#11594</styleUrl>
+            <Point id="11592">
+                <coordinates>20.5571,41.4788,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11658">
+            <name>SNMR</name>
+            <styleUrl>#11659</styleUrl>
+            <Point id="11657">
+                <coordinates>20.601736,46.071346,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11663">
+            <name>TSLK</name>
+            <styleUrl>#11664</styleUrl>
+            <Point id="11662">
+                <coordinates>20.6554,38.8249,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11693">
+            <name>KRAA</name>
+            <styleUrl>#11694</styleUrl>
+            <Point id="11692">
+                <coordinates>20.6878,43.7248,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11708">
+            <name>NYDR</name>
+            <styleUrl>#11709</styleUrl>
+            <Point id="11707">
+                <coordinates>20.6983,38.7135,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11713">
+            <name>JIMR</name>
+            <styleUrl>#11714</styleUrl>
+            <Point id="11712">
+                <coordinates>20.702421,45.78178,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11738">
+            <name>PRZK</name>
+            <styleUrl>#11739</styleUrl>
+            <Point id="11737">
+                <coordinates>20.75812,42.21076,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11768">
+            <name>MGNA</name>
+            <styleUrl>#11769</styleUrl>
+            <Point id="11767">
+                <coordinates>20.79116,38.65606,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11773">
+            <name>OHR</name>
+            <styleUrl>#11774</styleUrl>
+            <Point id="11772">
+                <coordinates>20.7989,41.1114,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11778">
+            <name>KOSL</name>
+            <styleUrl>#11779</styleUrl>
+            <Point id="11777">
+                <coordinates>20.8354,41.1705,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11803">
+            <name>SS01</name>
+            <styleUrl>#11804</styleUrl>
+            <Point id="11802">
+                <coordinates>20.8603333333333,39.0866666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11813">
+            <name>GOCS</name>
+            <styleUrl>#11814</styleUrl>
+            <Point id="11812">
+                <coordinates>20.87342,43.56244,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11818">
+            <name>SS11</name>
+            <styleUrl>#11819</styleUrl>
+            <Point id="11817">
+                <coordinates>20.9526666666667,38.7068333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11823">
+            <name>SS08</name>
+            <styleUrl>#11824</styleUrl>
+            <Point id="11822">
+                <coordinates>20.9776666666667,38.856,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11848">
+            <name>SS09</name>
+            <styleUrl>#11849</styleUrl>
+            <Point id="11847">
+                <coordinates>21.0761666666667,38.8238333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11853">
+            <name>SS17</name>
+            <styleUrl>#11854</styleUrl>
+            <Point id="11852">
+                <coordinates>21.0905,38.5815,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11868">
+            <name>SELS</name>
+            <styleUrl>#11869</styleUrl>
+            <Point id="11867">
+                <coordinates>21.120913,43.214253,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11873">
+            <name>KMIA</name>
+            <styleUrl>#11874</styleUrl>
+            <Point id="11872">
+                <coordinates>21.1263,43.1277,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11878">
+            <name>SS02</name>
+            <styleUrl>#11879</styleUrl>
+            <Point id="11877">
+                <coordinates>21.1311666666667,39.1106666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11903">
+            <name>SAMO</name>
+            <styleUrl>#11904</styleUrl>
+            <Point id="11902">
+                <coordinates>21.1392,41.6928,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11908">
+            <name>SS06</name>
+            <styleUrl>#11909</styleUrl>
+            <Point id="11907">
+                <coordinates>21.155,38.8643333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11928">
+            <name>KOZJ</name>
+            <styleUrl>#11929</styleUrl>
+            <Point id="11927">
+                <coordinates>21.19505,41.87795,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11933">
+            <name>CELA</name>
+            <styleUrl>#11934</styleUrl>
+            <Point id="11932">
+                <coordinates>21.1962,43.4186,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11948">
+            <name>SVIS</name>
+            <styleUrl>#11949</styleUrl>
+            <Point id="11947">
+                <coordinates>21.215175,44.265486,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11953">
+            <name>GMRK</name>
+            <styleUrl>#11954</styleUrl>
+            <Point id="11952">
+                <coordinates>21.2197,42.6588,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11958">
+            <name>TIM</name>
+            <styleUrl>#11959</styleUrl>
+            <Point id="11957">
+                <coordinates>21.2211,45.7365,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11978">
+            <name>SS24</name>
+            <styleUrl>#11979</styleUrl>
+            <Point id="11977">
+                <coordinates>21.2488333333333,38.4848333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11983">
+            <name>KRUS</name>
+            <styleUrl>#11984</styleUrl>
+            <Point id="11982">
+                <coordinates>21.2489,41.3689,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11988">
+            <name>SVPE</name>
+            <styleUrl>#11989</styleUrl>
+            <Point id="11987">
+                <coordinates>21.2595,41.9217,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11993">
+            <name>JAGA</name>
+            <styleUrl>#11994</styleUrl>
+            <Point id="11992">
+                <coordinates>21.26,43.971,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11998">
+            <name>BELI</name>
+            <styleUrl>#11999</styleUrl>
+            <Point id="11997">
+                <coordinates>21.2743,41.6827,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12013">
+            <name>BIA</name>
+            <styleUrl>#12014</styleUrl>
+            <Point id="12012">
+                <coordinates>21.3239,41.0194,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12018">
+            <name>VRSS</name>
+            <styleUrl>#12019</styleUrl>
+            <Point id="12017">
+                <coordinates>21.32477,45.12276,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12053">
+            <name>SS16</name>
+            <styleUrl>#12054</styleUrl>
+            <Point id="12052">
+                <coordinates>21.39,38.6141666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12058">
+            <name>SS25</name>
+            <styleUrl>#12059</styleUrl>
+            <Point id="12057">
+                <coordinates>21.4071666666667,38.4123333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12073">
+            <name>SKO</name>
+            <styleUrl>#12074</styleUrl>
+            <Point id="12072">
+                <coordinates>21.4396,41.9721,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12078">
+            <name>SS13</name>
+            <styleUrl>#12079</styleUrl>
+            <Point id="12077">
+                <coordinates>21.444,38.7041666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12098">
+            <name>SS22</name>
+            <styleUrl>#12099</styleUrl>
+            <Point id="12097">
+                <coordinates>21.5143333333333,38.435,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12118">
+            <name>SS23</name>
+            <styleUrl>#12119</styleUrl>
+            <Point id="12117">
+                <coordinates>21.6046666666667,38.7026666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12123">
+            <name>SS21</name>
+            <styleUrl>#12124</styleUrl>
+            <Point id="12122">
+                <coordinates>21.6048333333333,38.7001666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12128">
+            <name>LISI</name>
+            <styleUrl>#12129</styleUrl>
+            <Point id="12127">
+                <coordinates>21.6123,41.6786,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12153">
+            <name>SS20</name>
+            <styleUrl>#12154</styleUrl>
+            <Point id="12152">
+                <coordinates>21.6693333333333,38.5943333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12158">
+            <name>KUBS</name>
+            <styleUrl>#12159</styleUrl>
+            <Point id="12157">
+                <coordinates>21.67489,44.41226,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12173">
+            <name>SS19</name>
+            <styleUrl>#12174</styleUrl>
+            <Point id="12172">
+                <coordinates>21.706,38.4945,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12218">
+            <name>PATG</name>
+            <styleUrl>#12219</styleUrl>
+            <Point id="12217">
+                <coordinates>21.72657,38.23865,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12233">
+            <name>OTOV</name>
+            <styleUrl>#12234</styleUrl>
+            <Point id="12232">
+                <coordinates>21.7531,41.7795,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12238">
+            <name>PATC</name>
+            <styleUrl>#12239</styleUrl>
+            <Point id="12237">
+                <coordinates>21.76001,38.26933,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12243">
+            <name>ARIA</name>
+            <styleUrl>#12244</styleUrl>
+            <Point id="12242">
+                <coordinates>21.76206,38.33358,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12248">
+            <name>TRKA</name>
+            <styleUrl>#12249</styleUrl>
+            <Point id="12247">
+                <coordinates>21.76624,39.55381,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12283">
+            <name>RIOA</name>
+            <styleUrl>#12284</styleUrl>
+            <Point id="12282">
+                <coordinates>21.79118,38.29585,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12288">
+            <name>LAZA</name>
+            <styleUrl>#12289</styleUrl>
+            <Point id="12287">
+                <coordinates>21.8069,44.2409,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12338">
+            <name>RSTR</name>
+            <styleUrl>#12339</styleUrl>
+            <Point id="12337">
+                <coordinates>21.8751,45.2987,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12433">
+            <name>ZIRI</name>
+            <styleUrl>#12434</styleUrl>
+            <Point id="12432">
+                <coordinates>21.94761,38.30519,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12458">
+            <name>BOLA</name>
+            <styleUrl>#12459</styleUrl>
+            <Point id="12457">
+                <coordinates>21.9532,43.8289,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12473">
+            <name>VALY</name>
+            <styleUrl>#12474</styleUrl>
+            <Point id="12472">
+                <coordinates>21.9836,37.1641,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12488">
+            <name>PYRG</name>
+            <styleUrl>#12489</styleUrl>
+            <Point id="12487">
+                <coordinates>22.0168,38.41021,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12493">
+            <name>BORS</name>
+            <styleUrl>#12494</styleUrl>
+            <Point id="12492">
+                <coordinates>22.01765,44.09043,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12498">
+            <name>KANL</name>
+            <styleUrl>#12499</styleUrl>
+            <Point id="12497">
+                <coordinates>22.0247,39.8334,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12518">
+            <name>AIOA</name>
+            <styleUrl>#12519</styleUrl>
+            <Point id="12517">
+                <coordinates>22.05873,38.19386,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12523">
+            <name>AGEO</name>
+            <styleUrl>#12524</styleUrl>
+            <Point id="12522">
+                <coordinates>22.06354,38.26488,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12528">
+            <name>AAMF</name>
+            <styleUrl>#12529</styleUrl>
+            <Point id="12527">
+                <coordinates>22.068923,37.107022,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12543">
+            <name>AIGS</name>
+            <styleUrl>#12544</styleUrl>
+            <Point id="12542">
+                <coordinates>22.0878,38.25001,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12548">
+            <name>SOFA</name>
+            <styleUrl>#12549</styleUrl>
+            <Point id="12547">
+                <coordinates>22.09691,39.33773,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12553">
+            <name>ALIK</name>
+            <styleUrl>#12554</styleUrl>
+            <Point id="12552">
+                <coordinates>22.11135,38.26051,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12558">
+            <name>TEME</name>
+            <styleUrl>#12559</styleUrl>
+            <Point id="12557">
+                <coordinates>22.11811,38.23165,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12613">
+            <name>PSAR</name>
+            <styleUrl>#12614</styleUrl>
+            <Point id="12612">
+                <coordinates>22.17519,38.33194,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12643">
+            <name>ZAGS</name>
+            <styleUrl>#12644</styleUrl>
+            <Point id="12642">
+                <coordinates>22.232787,43.812589,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12648">
+            <name>CRBR</name>
+            <styleUrl>#12649</styleUrl>
+            <Point id="12647">
+                <coordinates>22.2383,45.4108,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12653">
+            <name>PANR</name>
+            <styleUrl>#12654</styleUrl>
+            <Point id="12652">
+                <coordinates>22.24975,38.37352,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12668">
+            <name>UZH</name>
+            <styleUrl>#12669</styleUrl>
+            <Point id="12667">
+                <coordinates>22.2908,48.6289,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12673">
+            <name>KNE</name>
+            <styleUrl>#12674</styleUrl>
+            <Point id="12672">
+                <coordinates>22.3068,42.1091,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12698">
+            <name>KPJ</name>
+            <styleUrl>#12699</styleUrl>
+            <Point id="12697">
+                <coordinates>22.3617,42.2092,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12713">
+            <name>HOLU</name>
+            <styleUrl>#12714</styleUrl>
+            <Point id="12712">
+                <coordinates>22.38442,48.52705,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12718">
+            <name>GINA</name>
+            <styleUrl>#12719</styleUrl>
+            <Point id="12717">
+                <coordinates>22.389,39.66886,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12723">
+            <name>LRSO</name>
+            <styleUrl>#12724</styleUrl>
+            <Point id="12722">
+                <coordinates>22.3917,39.6713,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12748">
+            <name>STIP</name>
+            <styleUrl>#12749</styleUrl>
+            <Point id="12747">
+                <coordinates>22.4382,41.7754,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12758">
+            <name>BOSS</name>
+            <styleUrl>#12759</styleUrl>
+            <Point id="12757">
+                <coordinates>22.46101,42.49825,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12778">
+            <name>DLFA</name>
+            <styleUrl>#12779</styleUrl>
+            <Point id="12777">
+                <coordinates>22.49583,38.47836,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12793">
+            <name>DJES</name>
+            <styleUrl>#12794</styleUrl>
+            <Point id="12792">
+                <coordinates>22.519669,44.667165,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12808">
+            <name>DJES2</name>
+            <styleUrl>#12809</styleUrl>
+            <Point id="12807">
+                <coordinates>22.5278,44.6698,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12813">
+            <name>DJES1</name>
+            <styleUrl>#12814</styleUrl>
+            <Point id="12812">
+                <coordinates>22.5289,44.6711,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12828">
+            <name>NESN</name>
+            <styleUrl>#12829</styleUrl>
+            <Point id="12827">
+                <coordinates>22.539882,39.726662,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12833">
+            <name>VAY</name>
+            <styleUrl>#12834</styleUrl>
+            <Point id="12832">
+                <coordinates>22.5701,41.3211,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12838">
+            <name>STZU</name>
+            <styleUrl>#12839</styleUrl>
+            <Point id="12837">
+                <coordinates>22.6212,49.0159,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12843">
+            <name>ZAPS</name>
+            <styleUrl>#12844</styleUrl>
+            <Point id="12842">
+                <coordinates>22.633529,43.273577,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12848">
+            <name>XLKS</name>
+            <styleUrl>#12849</styleUrl>
+            <Point id="12847">
+                <coordinates>22.6361,38.0772,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12853">
+            <name>BERU</name>
+            <styleUrl>#12854</styleUrl>
+            <Point id="12852">
+                <coordinates>22.6464,48.2336,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12868">
+            <name>MHISU</name>
+            <styleUrl>#12869</styleUrl>
+            <Point id="12867">
+                <coordinates>22.6535,44.6227,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12903">
+            <name>MUKU</name>
+            <styleUrl>#12904</styleUrl>
+            <Point id="12902">
+                <coordinates>22.6874,48.4536,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12938">
+            <name>KIAS</name>
+            <styleUrl>#12939</styleUrl>
+            <Point id="12937">
+                <coordinates>22.7543,37.9875,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12943">
+            <name>VELA</name>
+            <styleUrl>#12944</styleUrl>
+            <Point id="12942">
+                <coordinates>22.766063,37.974944,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12958">
+            <name>PLVAM</name>
+            <styleUrl>#12959</styleUrl>
+            <Point id="12957">
+                <coordinates>22.8502,43.9523,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12993">
+            <name>PEHC</name>
+            <styleUrl>#12994</styleUrl>
+            <Point id="12992">
+                <coordinates>22.898009,41.776282,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12998">
+            <name>PROD</name>
+            <styleUrl>#12999</styleUrl>
+            <Point id="12997">
+                <coordinates>22.9006,38.2589,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13033">
+            <name>TRSU</name>
+            <styleUrl>#13034</styleUrl>
+            <Point id="13032">
+                <coordinates>22.957,48.095,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13073">
+            <name>LTRS</name>
+            <styleUrl>#13074</styleUrl>
+            <Point id="13072">
+                <coordinates>22.9765,37.97528,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13108">
+            <name>BRIU</name>
+            <styleUrl>#13109</styleUrl>
+            <Point id="13107">
+                <coordinates>23.0203,48.338,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13128">
+            <name>MNVA</name>
+            <styleUrl>#13129</styleUrl>
+            <Point id="13127">
+                <coordinates>23.03734,36.68709,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13183">
+            <name>KORU</name>
+            <styleUrl>#13184</styleUrl>
+            <Point id="13182">
+                <coordinates>23.1339,48.1573,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13233">
+            <name>MNNAM</name>
+            <styleUrl>#13234</styleUrl>
+            <Point id="13232">
+                <coordinates>23.2262,43.4111,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13238">
+            <name>MET3</name>
+            <styleUrl>#13239</styleUrl>
+            <Point id="13237">
+                <coordinates>23.226907,37.575889,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13343">
+            <name>MET6</name>
+            <styleUrl>#13344</styleUrl>
+            <Point id="13342">
+                <coordinates>23.356067,37.59165,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13348">
+            <name>MET5</name>
+            <styleUrl>#13349</styleUrl>
+            <Point id="13347">
+                <coordinates>23.35775,37.62181,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13353">
+            <name>SHIU</name>
+            <styleUrl>#13354</styleUrl>
+            <Point id="13352">
+                <coordinates>23.3621,49.2234,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13378">
+            <name>MET4</name>
+            <styleUrl>#13379</styleUrl>
+            <Point id="13377">
+                <coordinates>23.39955,37.622783,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13403">
+            <name>VLD</name>
+            <styleUrl>#13404</styleUrl>
+            <Point id="13402">
+                <coordinates>23.4356,43.6899,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13408">
+            <name>AIGN</name>
+            <styleUrl>#13409</styleUrl>
+            <Point id="13407">
+                <coordinates>23.44356,37.74806,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13423">
+            <name>NSLU</name>
+            <styleUrl>#13424</styleUrl>
+            <Point id="13422">
+                <coordinates>23.4571,48.1976,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13428">
+            <name>PARN2</name>
+            <styleUrl>#13429</styleUrl>
+            <Point id="13427">
+                <coordinates>23.45793,38.19227,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13433">
+            <name>YDRA</name>
+            <styleUrl>#13434</styleUrl>
+            <Point id="13432">
+                <coordinates>23.46525,37.34923,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13458">
+            <name>PARN3</name>
+            <styleUrl>#13459</styleUrl>
+            <Point id="13457">
+                <coordinates>23.50326,38.07109,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13463">
+            <name>MEZ</name>
+            <styleUrl>#13464</styleUrl>
+            <Point id="13462">
+                <coordinates>23.5121,48.512,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13468">
+            <name>STFN</name>
+            <styleUrl>#13469</styleUrl>
+            <Point id="13467">
+                <coordinates>23.544045,38.176616,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13473">
+            <name>CBBR</name>
+            <styleUrl>#13474</styleUrl>
+            <Point id="13472">
+                <coordinates>23.5501,46.7683,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13488">
+            <name>ALBR</name>
+            <styleUrl>#13489</styleUrl>
+            <Point id="13487">
+                <coordinates>23.5635,46.0657,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13533">
+            <name>PARN1</name>
+            <styleUrl>#13534</styleUrl>
+            <Point id="13532">
+                <coordinates>23.66927,38.10259,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13558">
+            <name>NOAC</name>
+            <styleUrl>#13559</styleUrl>
+            <Point id="13557">
+                <coordinates>23.71767,37.97384,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13608">
+            <name>ATHP</name>
+            <styleUrl>#13609</styleUrl>
+            <Point id="13607">
+                <coordinates>23.773487,38.000799,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13653">
+            <name>DJISU</name>
+            <styleUrl>#13654</styleUrl>
+            <Point id="13652">
+                <coordinates>23.8363,44.2971,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13693">
+            <name>MORS</name>
+            <styleUrl>#13694</styleUrl>
+            <Point id="13692">
+                <coordinates>23.876,49.124,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13713">
+            <name>MRTH</name>
+            <styleUrl>#13714</styleUrl>
+            <Point id="13712">
+                <coordinates>23.94087,38.12253,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13718">
+            <name>ORH</name>
+            <styleUrl>#13719</styleUrl>
+            <Point id="13717">
+                <coordinates>23.9664,43.7263,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13743">
+            <name>PERI</name>
+            <styleUrl>#13744</styleUrl>
+            <Point id="13742">
+                <coordinates>23.9928,35.4825,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13758">
+            <name>ABEA</name>
+            <styleUrl>#13759</styleUrl>
+            <Point id="13757">
+                <coordinates>24.0113,35.5163,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13768">
+            <name>MULT</name>
+            <styleUrl>#13769</styleUrl>
+            <Point id="13767">
+                <coordinates>24.0118,35.5091,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13773">
+            <name>PASK</name>
+            <styleUrl>#13774</styleUrl>
+            <Point id="13772">
+                <coordinates>24.0121,35.4996,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13778">
+            <name>DEYA</name>
+            <styleUrl>#13779</styleUrl>
+            <Point id="13777">
+                <coordinates>24.014,35.4825,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13783">
+            <name>G0LD</name>
+            <styleUrl>#13784</styleUrl>
+            <Point id="13782">
+                <coordinates>24.0306,35.4955,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13803">
+            <name>NERO</name>
+            <styleUrl>#13804</styleUrl>
+            <Point id="13802">
+                <coordinates>24.0423,35.474,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13818">
+            <name>ATEI</name>
+            <styleUrl>#13819</styleUrl>
+            <Point id="13817">
+                <coordinates>24.0432,35.5193,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13833">
+            <name>POLY</name>
+            <styleUrl>#13834</styleUrl>
+            <Point id="13832">
+                <coordinates>24.0602,35.5226,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13838">
+            <name>SOUD</name>
+            <styleUrl>#13839</styleUrl>
+            <Point id="13837">
+                <coordinates>24.0678,35.4878,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13868">
+            <name>RAKU</name>
+            <styleUrl>#13869</styleUrl>
+            <Point id="13867">
+                <coordinates>24.1663,48.0259,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13883">
+            <name>SIBR</name>
+            <styleUrl>#13884</styleUrl>
+            <Point id="13882">
+                <coordinates>24.1757,45.8099,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13918">
+            <name>RMVG</name>
+            <styleUrl>#13919</styleUrl>
+            <Point id="13917">
+                <coordinates>24.2848,45.0363,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13933">
+            <name>GMCR</name>
+            <styleUrl>#13934</styleUrl>
+            <Point id="13932">
+                <coordinates>24.3419,44.1088,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13948">
+            <name>OTISU</name>
+            <styleUrl>#13949</styleUrl>
+            <Point id="13947">
+                <coordinates>24.3755,44.4278,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13963">
+            <name>KVLA</name>
+            <styleUrl>#13964</styleUrl>
+            <Point id="13962">
+                <coordinates>24.38591,40.93704,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14018">
+            <name>STAU</name>
+            <styleUrl>#14019</styleUrl>
+            <Point id="14017">
+                <coordinates>24.5014,48.7106,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14143">
+            <name>PITR</name>
+            <styleUrl>#14144</styleUrl>
+            <Point id="14142">
+                <coordinates>24.8812,44.8558,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14188">
+            <name>EFSA</name>
+            <styleUrl>#14189</styleUrl>
+            <Point id="14187">
+                <coordinates>24.98864,39.54015,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14213">
+            <name>KSV</name>
+            <styleUrl>#14214</styleUrl>
+            <Point id="14212">
+                <coordinates>25.0648,48.3137,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14228">
+            <name>MTUR</name>
+            <styleUrl>#14229</styleUrl>
+            <Point id="14227">
+                <coordinates>25.0739,45.2349,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14248">
+            <name>RAZAM</name>
+            <styleUrl>#14249</styleUrl>
+            <Point id="14247">
+                <coordinates>25.1243,43.6451,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14253">
+            <name>TNSA</name>
+            <styleUrl>#14254</styleUrl>
+            <Point id="14252">
+                <coordinates>25.1631,37.53942,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14398">
+            <name>TRISU</name>
+            <styleUrl>#14399</styleUrl>
+            <Point id="14397">
+                <coordinates>25.3296,43.9719,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14438">
+            <name>SAP4</name>
+            <styleUrl>#14439</styleUrl>
+            <Point id="14437">
+                <coordinates>25.37244,36.47337,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14453">
+            <name>SNT5</name>
+            <styleUrl>#14454</styleUrl>
+            <Point id="14452">
+                <coordinates>25.3953,36.4037,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14493">
+            <name>THRA</name>
+            <styleUrl>#14494</styleUrl>
+            <Point id="14492">
+                <coordinates>25.43244,36.41502,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14498">
+            <name>TRGR</name>
+            <styleUrl>#14499</styleUrl>
+            <Point id="14497">
+                <coordinates>25.4563,44.9361,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14573">
+            <name>SINR</name>
+            <styleUrl>#14574</styleUrl>
+            <Point id="14572">
+                <coordinates>25.5526,45.355,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14578">
+            <name>PSRA</name>
+            <styleUrl>#14579</styleUrl>
+            <Point id="14577">
+                <coordinates>25.56202,38.53978,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14583">
+            <name>DIM</name>
+            <styleUrl>#14584</styleUrl>
+            <Point id="14582">
+                <coordinates>25.5779,42.0457,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14608">
+            <name>ZOBR</name>
+            <styleUrl>#14609</styleUrl>
+            <Point id="14607">
+                <coordinates>25.6347,45.6131,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14613">
+            <name>VETAM</name>
+            <styleUrl>#14614</styleUrl>
+            <Point id="14612">
+                <coordinates>25.6367,43.0805,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14668">
+            <name>CIOR</name>
+            <styleUrl>#14669</styleUrl>
+            <Point id="14667">
+                <coordinates>25.8799,44.4489,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14693">
+            <name>CHR</name>
+            <styleUrl>#14694</styleUrl>
+            <Point id="14692">
+                <coordinates>25.9217,48.2975,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14698">
+            <name>CLIR</name>
+            <styleUrl>#14699</styleUrl>
+            <Point id="14697">
+                <coordinates>25.9414,44.3784,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14713">
+            <name>GRISU</name>
+            <styleUrl>#14714</styleUrl>
+            <Point id="14712">
+                <coordinates>25.9518,43.8898,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14718">
+            <name>RUSAM</name>
+            <styleUrl>#14719</styleUrl>
+            <Point id="14717">
+                <coordinates>25.9612,43.8462,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14723">
+            <name>SGRR</name>
+            <styleUrl>#14724</styleUrl>
+            <Point id="14722">
+                <coordinates>25.9743,44.2228,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14738">
+            <name>PMGR</name>
+            <styleUrl>#14739</styleUrl>
+            <Point id="14737">
+                <coordinates>25.9937,44.5275,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14748">
+            <name>BDTR</name>
+            <styleUrl>#14749</styleUrl>
+            <Point id="14747">
+                <coordinates>26.0224,44.4142,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14753">
+            <name>GSMB</name>
+            <styleUrl>#14754</styleUrl>
+            <Point id="14752">
+                <coordinates>26.0273,44.4813,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14758">
+            <name>PLAR</name>
+            <styleUrl>#14759</styleUrl>
+            <Point id="14757">
+                <coordinates>26.0274,44.9142,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14763">
+            <name>BUC1</name>
+            <styleUrl>#14764</styleUrl>
+            <Point id="14762">
+                <coordinates>26.0281,44.3479,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14778">
+            <name>BPLR</name>
+            <styleUrl>#14779</styleUrl>
+            <Point id="14777">
+                <coordinates>26.05,44.43,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14793">
+            <name>ARCB</name>
+            <styleUrl>#14794</styleUrl>
+            <Point id="14792">
+                <coordinates>26.0758,44.4667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14798">
+            <name>BFER</name>
+            <styleUrl>#14799</styleUrl>
+            <Point id="14797">
+                <coordinates>26.0771,44.4049,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14803">
+            <name>INMR</name>
+            <styleUrl>#14804</styleUrl>
+            <Point id="14802">
+                <coordinates>26.0773,44.5118,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14808">
+            <name>ASE</name>
+            <styleUrl>#14809</styleUrl>
+            <Point id="14807">
+                <coordinates>26.0904,44.4445,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14823">
+            <name>BUC</name>
+            <styleUrl>#14824</styleUrl>
+            <Point id="14822">
+                <coordinates>26.0938,44.4107,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14828">
+            <name>BSTR</name>
+            <styleUrl>#14829</styleUrl>
+            <Point id="14827">
+                <coordinates>26.0984,44.4458,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14843">
+            <name>BTMR</name>
+            <styleUrl>#14844</styleUrl>
+            <Point id="14842">
+                <coordinates>26.1067,44.437,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14848">
+            <name>BVES</name>
+            <styleUrl>#14849</styleUrl>
+            <Point id="14847">
+                <coordinates>26.1069,44.3862,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14853">
+            <name>BAPR</name>
+            <styleUrl>#14854</styleUrl>
+            <Point id="14852">
+                <coordinates>26.119,44.4059,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14863">
+            <name>SGEB</name>
+            <styleUrl>#14864</styleUrl>
+            <Point id="14862">
+                <coordinates>26.1369,44.3812,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14868">
+            <name>BPO</name>
+            <styleUrl>#14869</styleUrl>
+            <Point id="14867">
+                <coordinates>26.1378,44.4483,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14888">
+            <name>INCR</name>
+            <styleUrl>#14889</styleUrl>
+            <Point id="14887">
+                <coordinates>26.1611,44.441,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14893">
+            <name>COPR</name>
+            <styleUrl>#14894</styleUrl>
+            <Point id="14892">
+                <coordinates>26.1687,45.8442,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14898">
+            <name>BBER</name>
+            <styleUrl>#14899</styleUrl>
+            <Point id="14897">
+                <coordinates>26.1899,44.3085,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14908">
+            <name>BISC</name>
+            <styleUrl>#14909</styleUrl>
+            <Point id="14907">
+                <coordinates>26.2135,44.4328,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14933">
+            <name>SUVR</name>
+            <styleUrl>#14934</styleUrl>
+            <Point id="14932">
+                <coordinates>26.244778,47.640218,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14948">
+            <name>CNCR</name>
+            <styleUrl>#14949</styleUrl>
+            <Point id="14947">
+                <coordinates>26.2619,44.4439,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14958">
+            <name>IKRA</name>
+            <styleUrl>#14959</styleUrl>
+            <Point id="14957">
+                <coordinates>26.29283,37.61117,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14983">
+            <name>ASTA</name>
+            <styleUrl>#14984</styleUrl>
+            <Point id="14982">
+                <coordinates>26.35295,36.54552,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14998">
+            <name>HORU</name>
+            <styleUrl>#14999</styleUrl>
+            <Point id="14997">
+                <coordinates>26.4263,49.2138,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15003">
+            <name>KMPU</name>
+            <styleUrl>#15004</styleUrl>
+            <Point id="15002">
+                <coordinates>26.46,48.563,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15113">
+            <name>OLTR</name>
+            <styleUrl>#15114</styleUrl>
+            <Point id="15112">
+                <coordinates>26.6382,44.0772,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15198">
+            <name>BUZR</name>
+            <styleUrl>#15199</styleUrl>
+            <Point id="15197">
+                <coordinates>26.8099,45.1503,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15233">
+            <name>BAC</name>
+            <styleUrl>#15234</styleUrl>
+            <Point id="15232">
+                <coordinates>26.9124,46.5669,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15238">
+            <name>KOSD</name>
+            <styleUrl>#15239</styleUrl>
+            <Point id="15237">
+                <coordinates>26.94695,36.70273,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15243">
+            <name>KLNA</name>
+            <styleUrl>#15244</styleUrl>
+            <Point id="15242">
+                <coordinates>26.97274,36.95708,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15288">
+            <name>RMSR</name>
+            <styleUrl>#15289</styleUrl>
+            <Point id="15287">
+                <coordinates>27.0384,45.3906,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15388">
+            <name>ADJ</name>
+            <styleUrl>#15389</styleUrl>
+            <Point id="15387">
+                <coordinates>27.182,46.0952,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15418">
+            <name>SILAM</name>
+            <styleUrl>#15419</styleUrl>
+            <Point id="15417">
+                <coordinates>27.2665,44.1046,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15473">
+            <name>CLISU</name>
+            <styleUrl>#15474</styleUrl>
+            <Point id="15472">
+                <coordinates>27.3557,44.1901,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15478">
+            <name>NDNU</name>
+            <styleUrl>#15479</styleUrl>
+            <Point id="15477">
+                <coordinates>27.3664,48.5947,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15483">
+            <name>ROIA</name>
+            <styleUrl>#15484</styleUrl>
+            <Point id="15482">
+                <coordinates>27.3778,43.0934,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15498">
+            <name>TECR</name>
+            <styleUrl>#15499</styleUrl>
+            <Point id="15497">
+                <coordinates>27.4089,45.8416,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15523">
+            <name>DOB</name>
+            <styleUrl>#15524</styleUrl>
+            <Point id="15522">
+                <coordinates>27.4628,43.179,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15533">
+            <name>IACR</name>
+            <styleUrl>#15534</styleUrl>
+            <Point id="15532">
+                <coordinates>27.480232,45.135824,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15623">
+            <name>AVR</name>
+            <styleUrl>#15624</styleUrl>
+            <Point id="15622">
+                <coordinates>27.6691,43.1196,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15728">
+            <name>DOBAM</name>
+            <styleUrl>#15729</styleUrl>
+            <Point id="15727">
+                <coordinates>27.831,43.5811,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15813">
+            <name>ADCR</name>
+            <styleUrl>#15814</styleUrl>
+            <Point id="15812">
+                <coordinates>27.9657,44.0882,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15828">
+            <name>CVDP</name>
+            <styleUrl>#15829</styleUrl>
+            <Point id="15827">
+                <coordinates>28.033,44.3421,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15868">
+            <name>GISR</name>
+            <styleUrl>#15869</styleUrl>
+            <Point id="15867">
+                <coordinates>28.0541,45.4411,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15918">
+            <name>GIUM</name>
+            <styleUrl>#15919</styleUrl>
+            <Point id="15917">
+                <coordinates>28.2081,45.485,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16018">
+            <name>TSMN</name>
+            <styleUrl>#16019</styleUrl>
+            <Point id="16017">
+                <coordinates>28.595,43.8011,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16048">
+            <name>CTISU</name>
+            <styleUrl>#16049</styleUrl>
+            <Point id="16047">
+                <coordinates>28.6491,44.184,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16058">
+            <name>TSCT</name>
+            <styleUrl>#16059</styleUrl>
+            <Point id="16057">
+                <coordinates>28.6572,44.1608,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16113">
+            <name>JURR</name>
+            <styleUrl>#16114</styleUrl>
+            <Point id="16112">
+                <coordinates>28.8769,44.7661,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

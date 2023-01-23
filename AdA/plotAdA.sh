@@ -222,6 +222,7 @@ psxy     PERM/pSPOTo.txt              -R -JL -St$sizeot         -W$thot/$spot -K
 psxy     PERM/pSPOTo.txt              -R -JL -St$sizeot         -W$thot/$spot -K -O >> $psfile10
 
 # BB stations planned to be deployed in near future
+dos2unix PERM/pFUTU.txt
 psxy     PERM/pFUTU.txt               -R -JL -St$sizeps  -G$futu -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pFUTUo.txt              -R -JL -St$sizeot          -W$thot/$futu -K -O >> $psfile01
 psxy     PERM/pFUTU.txt               -R -JL -St$sizeps  -G$futu -W$thps/$blck -K -O >> $psfile02
@@ -246,6 +247,7 @@ psxy     AUXI/AlpArrayTemp.txt        -R -JL -St$sizepsA -G$temp -W$thps/$blck -
 psxy     AUXI/stations-PACASE.txt     -R -JL -St$sizepsA -G$temp -W$thps/$blck -K -O >> $psfile14
 
 # stations with unknown sensor
+dos2unix PERM/pUNKN.txt
 psxy     PERM/pUNKN.txt               -R -JL -St$sizeps -G$unkn -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pUNKN.txt               -R -JL -St$sizeps -G$unkn -W$thps/$blck -K -O >> $psfile10
 psxy     PERM/pUNKNo.txt              -R -JL -St$sizeot         -W$thot/$unkn -K -O >> $psfile01
@@ -260,11 +262,13 @@ psxy     PERM/pUPGR.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K
 psxy     PERM/pUPGR.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile10
 
 # PACASE stations which will stay for AdriaArray
+dos2unix AUXI/PACASEstay.txt
 awk '{print $3, $2}' AUXI/PACASEstay.txt > AUXI/stations-PACASEstay.txt
 psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile01 # if you delete "stay", and keep the file as "stations-PACASE.txt", it plots all PACASE stations
 psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile02
 
 # BB stations with corner period from 30 to 40 s
+dos2unix PERM/pBB30.txt
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pBB30o.txt          -R -JL -St$sizeot           -W$thot/$bb30 -K -O >> $psfile01
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile02
@@ -286,6 +290,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PER
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pBB30.txt > PERM/circlesBB3040.dat
 
 # BB stations with corner period from 40 to 60 s
+dos2unix PERM/pBB40.txt
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pBB40o.txt          -R -JL -St$sizeot           -W$thot/$bb40 -K -O >> $psfile01
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile10
@@ -307,6 +312,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PER
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pBB40.txt > PERM/circlesBB4040.dat
 
 # BB stations with corner period 60 s and longer
+dos2unix PERM/pBB60.txt
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pBB60o.txt          -R -JL -St$sizeot           -W$thot/$bb60 -K -O >> $psfile01
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile10
@@ -334,7 +340,8 @@ psxy     TEMP/tBB120-240.txt      -R -JL -St$sizeps  -G$bb120 -W$thps/$blck -K -
 psxy     PERM/pBB240.txt          -R -JL -St$sizeps  -G$bb240 -W$thps/$blck -K -O >> $psfile17
 psxy     TEMP/tBB240.txt          -R -JL -St$sizeps  -G$bb240 -W$thps/$blck -K -O >> $psfile17
 
- # mobile stations - subgroup CENTER
+# mobile stations - subgroup CENTER
+dos2unix TEMP/mcent.txt
 psxy     TEMP/mcent.txt          -R -JL -St$sizemb          -W$thmb/$centP -K -O >> $psfile01
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mcent.txt          -R -JL -St$sizemb          -W$thmb/$cent  -K -O >> $psfile02
@@ -349,6 +356,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEM
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mcent.txt > TEMP/circlesCENT40.dat
 
 # mobile stations - subgroup EAST
+dos2unix TEMP/meast.txt
 psxy     TEMP/meast.txt          -R -JL -St$sizemb          -W$thmb/$eastP -K -O >> $psfile01
 psxy     TEMP/meast.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/meast.txt          -R -JL -St$sizemb          -W$thmb/$east  -K -O >> $psfile02
@@ -363,6 +371,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEM
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/meast.txt > TEMP/circlesEAST40.dat
 
 # mobile stations - subgroup WEST
+dos2unix TEMP/mwest.txt
 psxy     TEMP/mwest.txt          -R -JL -St$sizemb          -W$thmb/$westP -K -O >> $psfile01
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mwest.txt          -R -JL -St$sizemb          -W$thmb/$west  -K -O >> $psfile02
@@ -377,6 +386,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEM
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mwest.txt > TEMP/circlesWEST40.dat
 
 # mobile stations - subgroup NORTH
+dos2unix TEMP/mnort.txt
 psxy     TEMP/mnort.txt          -R -JL -St$sizemb          -W$thmb/$nortP -K -O >> $psfile01
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mnort.txt          -R -JL -St$sizemb          -W$thmb/$nort  -K -O >> $psfile02
@@ -391,6 +401,7 @@ awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEM
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mnort.txt > TEMP/circlesNORT40.dat
 
 # mobile stations - subgroup SOUTHEAST
+dos2unix TEMP/mstea.txt
 psxy     TEMP/mstea.txt          -R -JL -St$sizemb          -W$thmb/$steaP -K -O >> $psfile01
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mstea.txt          -R -JL -St$sizemb          -W$thmb/$stea  -K -O >> $psfile02
