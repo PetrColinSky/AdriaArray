@@ -21,7 +21,7 @@ maps-legend.pdf explains how the AdriaArray network was planned and what can be 
 
 maps-manual.pdf talks about the scripts and how to produce the maps from the station inventories. This could be useful when you are about to modify the scripts and produce your own maps.
 
-Enjoy
+Enjoy!
 
 Petr
 
