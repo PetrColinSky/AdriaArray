@@ -13,7 +13,7 @@ AdA/ - contains
 
 If you are about to take the maps provided, go to AdA/MAPS/.
 
-If you want to display the stations in GoogleEarth, go to AdA/GOOG/.
+If you want to display the stations in GoogleEarth, go to AdA/GOOG/ and take the *.kml files.
 
 In AdA/, there are two pdf files with documentation.
 
