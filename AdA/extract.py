@@ -524,35 +524,35 @@ notDepl    = open("TEMP/notDepl.txt"     , "w")
 for n in inventoryT.index:                        # loop over all lines in the xls sheet
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
-        if inventoryT.iloc[n,25] == 'WEST':
+        if inventoryT.iloc[n,24] == 'WEST':
             counterWEST = counterWEST + 1
             west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
             westlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
-        if inventoryT.iloc[n,25] == 'SOUTHEAST':
+        if inventoryT.iloc[n,24] == 'SOUTHEAST':
             counterSTEA = counterSTEA + 1
             stea.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             stealabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,25] == 'CENTER':
+        if inventoryT.iloc[n,24] == 'CENTER':
             counterCENT = counterCENT + 1
             cent.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             centlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,25] == 'NORTH':
+        if inventoryT.iloc[n,24] == 'NORTH':
             counterNORT = counterNORT + 1
             nort.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             nortlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,25] == 'EAST':
+        if inventoryT.iloc[n,24] == 'EAST':
             counterEAST = counterEAST + 1
             east.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             eastlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
