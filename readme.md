@@ -15,7 +15,7 @@ If you are about to take the maps provided, go to AdA/MAPS/.
 
 If you want to display the stations in GoogleEarth, go to AdA/GOOG/ and take the *.kml files.
 
-In AdA/, there are two pdf files with documentation.
+In AdA/, there are two pdf files with documentation:
 
 maps-legend.pdf explains how the AdriaArray network was planned and what can be seen on the maps. It is enough to read this text to understand the maps provided.
 
