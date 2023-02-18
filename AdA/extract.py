@@ -512,7 +512,7 @@ net9H      = open("AUXI/net9H.txt"       , "w")
 netY5      = open("AUXI/netY5.txt"       , "w")
 netY8      = open("AUXI/netY8.txt"       , "w")
 netZ6      = open("AUXI/netZ6.txt"       , "w")
-netRF      = open("AUXI/netRF.txt"       , "w")
+netXP      = open("AUXI/netXP.txt"       , "w")
 netXX      = open("AUXI/netXX.txt"       , "w")
 tmpBB030   = open("TEMP/tBB030.txt"      , "w")
 tmpBB040   = open("TEMP/tBB040.txt"      , "w")
@@ -559,7 +559,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        # particular mobile pools
+        # individual mobile pools
         if inventoryT.iloc[n,16] == 'IG CAS CZ':
             igcz.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
             counterIGCZ = counterIGCZ + 1
@@ -721,8 +721,8 @@ for n in inventoryT.index:                        # loop over all lines in the x
             netY8.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'Z6':
             netZ6.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-        if inventoryT.iloc[n,1] == 'RSF': # to be RESIF network in the future
-            netRF.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+        if inventoryT.iloc[n,1] == 'XP':
+            netXP.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'x' or inventoryT.iloc[n,1] == 'TV':
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         
@@ -839,7 +839,7 @@ net9H.close()
 netY5.close()
 netY8.close()
 netZ6.close()
-netRF.close()
+netXP.close()
 netXX.close()
 tmpBB030.close()
 tmpBB040.close()

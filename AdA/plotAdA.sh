@@ -653,8 +653,8 @@ psxy AUXI/netY8.txt -R -JL -St$sizeps -G$clrY8         -K -O >> $psfile16
 psxy AUXI/netY8.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 psxy AUXI/netZ6.txt -R -JL -St$sizeps -G$clrZ6         -K -O >> $psfile16
 psxy AUXI/netZ6.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
-psxy AUXI/netRF.txt -R -JL -St$sizeps -G$clrRF         -K -O >> $psfile16
-psxy AUXI/netRF.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
+psxy AUXI/netXP.txt -R -JL -St$sizeps -G$clrRF         -K -O >> $psfile16
+psxy AUXI/netXP.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 psxy AUXI/netXX.txt -R -JL -St$sizeps -G$clrXX         -K -O >> $psfile16
 psxy AUXI/netXX.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 
@@ -1786,7 +1786,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile16
 18.3 43.10 8 0 0 TL Y5 (ETHZ)
 18.3 42.60 8 0 0 TL Y8 (NIEP)
 18.3 42.10 8 0 0 TL Z6 (LMU)
-18.3 41.60 8 0 0 TL ?? (RESIF)
+18.3 41.60 8 0 0 TL XP (RESIF)
 18.3 41.10 8 0 0 TL other / unassigned
 end
 # end of legend to map 16
