@@ -5347,6 +5347,17 @@
                 </Icon>
             </IconStyle>
         </Style>
+        <Style id="16509">
+            <IconStyle id="16510">
+                <color>ff4c10a6</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16511">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
         <Placemark id="128">
             <name>SDA</name>
             <styleUrl>#129</styleUrl>
@@ -8747,6 +8758,13 @@
             <styleUrl>#16474</styleUrl>
             <Point id="16472">
                 <coordinates>14.22011,36.032335,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16508">
+            <name>MSDA</name>
+            <styleUrl>#16509</styleUrl>
+            <Point id="16507">
+                <coordinates>14.483952,35.901233,0.0</coordinates>
             </Point>
         </Placemark>
     </Document>

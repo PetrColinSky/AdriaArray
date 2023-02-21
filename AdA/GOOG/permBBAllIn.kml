@@ -10913,6 +10913,17 @@
                 </Icon>
             </IconStyle>
         </Style>
+        <Style id="16504">
+            <IconStyle id="16505">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16506">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
         <Placemark id="48">
             <name>BCI</name>
             <styleUrl>#49</styleUrl>
@@ -17855,6 +17866,13 @@
             <styleUrl>#16469</styleUrl>
             <Point id="16467">
                 <coordinates>14.22011,36.032335,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16503">
+            <name>MSDA</name>
+            <styleUrl>#16504</styleUrl>
+            <Point id="16502">
+                <coordinates>14.483952,35.901233,0.0</coordinates>
             </Point>
         </Placemark>
     </Document>
