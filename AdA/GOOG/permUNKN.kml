@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="11">
-        <Style id="8474">
-            <IconStyle id="8475">
+        <Style id="8484">
+            <IconStyle id="8485">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="8476">
+                <Icon id="8486">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="8473">
+        <Placemark id="8483">
             <name>FERC</name>
-            <styleUrl>#8474</styleUrl>
-            <Point id="8472">
+            <styleUrl>#8484</styleUrl>
+            <Point id="8482">
                 <coordinates>16.12807,38.45271,0.0</coordinates>
             </Point>
         </Placemark>
