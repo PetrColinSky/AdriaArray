@@ -4698,6 +4698,17 @@
                 </Icon>
             </IconStyle>
         </Style>
+        <Style id="16734">
+            <IconStyle id="16735">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16736">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
         <Placemark id="2053">
             <name>CRLU</name>
             <styleUrl>#2054</styleUrl>
@@ -7685,6 +7696,13 @@
             <styleUrl>#5544</styleUrl>
             <Point id="5542">
                 <coordinates>23.331963,38.29896,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16733">
+            <name>HAR1</name>
+            <styleUrl>#16734</styleUrl>
+            <Point id="16732">
+                <coordinates>5.66899,44.939935,0.0</coordinates>
             </Point>
         </Placemark>
     </Document>
