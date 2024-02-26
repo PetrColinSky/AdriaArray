@@ -2,7 +2,7 @@ Here you find maps of AdriaArray Seismic Network, codes to draw them, input file
 
 There are four folders here in the AdriaArray repository.
 
-Sofia2024/ - contains program of the AdriaArray Workshop in Sofia, plus some additional files with information about the city and a template of the 1-mins lightning poster talk.
+Sofia2024/ - contains program of the AdriaArray Workshop in Sofia, plus some additional files with information about the city and a template of the 1-minute poster talk.
 
 presentations/ - contains slides and posters about AdA from last years.
 
@@ -41,4 +41,4 @@ Enjoy!
 
 Petr
 
-4. February 2024
+26. February 2024
