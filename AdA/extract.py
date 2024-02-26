@@ -5,8 +5,8 @@ import os
 import simplekml
 
 # the two inventories need to be in the same folder as the script itself
-inventoryP   = pd.read_excel("InventoryPermanent.xls", sep=",", header=[2]) # the inventory is read as DataFrame, the header of the sheet has 3 rows (0,1,2)
-inventoryT   = pd.read_excel("InventoryTemporary.xls", sep=",", header=[2]) # so the sheet is read from the 4th row on
+inventoryP   = pd.read_excel("InventoryPermanent.ods", header=[2]) # the inventory is read as DataFrame, the header of the sheet has 3 rows (0,1,2)
+inventoryT   = pd.read_excel("InventoryTemporary.ods", header=[2]) # so the sheet is read from the 4th row on
 # it creates 3 folders, if they don't exist: PERM, TEMP, GOOG and saves ASCII text files into these folders
 
 ts = '1.5'  # text size of station-name labels for GMT
@@ -437,6 +437,10 @@ counterBARC   = 0
 counterBOCH   = 0
 BOCHname      = ['']
 BOCHnameSet   = {}
+RESFname      = ['']
+RESFnameSet   = {}
+KIELname      = ['']
+KIELnameSet   = {}
 counterBOLO   = 0
 counterCSSC   = 0
 counterETHZ   = 0
@@ -647,6 +651,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 ethzD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Resif-Sismob':
+            RESFname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
             resf.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             counterRESF = counterRESF + 1
             if inventoryT.iloc[n,0] == 1:
@@ -669,6 +674,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             if inventoryT.iloc[n,0] == 1:
                 irsmD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'Kiel':
+            KIELname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
             kiel.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             counterKIEL = counterKIEL + 1
             if inventoryT.iloc[n,0] == 1:
@@ -862,6 +868,16 @@ if len(BOCHname) != len(BOCHnameSet):
     counterBOCH = counterBOCH - (len(BOCHname) - len(BOCHnameSet))
     counterDPLO = counterDPLO - (len(BOCHname) - len(BOCHnameSet))
     counterSTEA = counterSTEA - (len(BOCHname) - len(BOCHnameSet))
+RESFnameSet = set(RESFname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
+if len(RESFname) != len(RESFnameSet):
+    counterRESF = counterRESF - (len(RESFname) - len(RESFnameSet))
+    counterDPLO = counterDPLO - (len(RESFname) - len(RESFnameSet))
+    counterWEST = counterWEST - (len(RESFname) - len(RESFnameSet))
+KIELnameSet = set(KIELname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
+if len(KIELname) != len(KIELnameSet):
+    counterKIEL = counterKIEL - (len(KIELname) - len(KIELnameSet))
+    counterDPLO = counterDPLO - (len(KIELname) - len(KIELnameSet))
+    counterNORT = counterNORT - (len(KIELname) - len(KIELnameSet))
 
 west.close()
 westlabel.close()
