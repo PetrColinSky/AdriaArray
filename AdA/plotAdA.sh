@@ -30,14 +30,14 @@ diam30='60'
 diam40='80'
 
 mapborder='-01.0/+33.0/34.0/51.5'  # for station maps
-mapbordeB='-03.0/+35.0/34.0/66.5'  # for AdAmembers
+mapbordeB='-03.0/+35.0/34.0/66.5'  # for AdAmembers - bigger map showing the institutions
 mapproj='16.0/90/38/48/23.0c'      # for station maps
-mapproB='16.0/90/38/58/17.3c'      # for AdAmembers
+mapproB='16.0/90/38/58/17.3c'      # for AdAmembers - bigger map showing the institutions
 mapnet='a120mf120m/a60mf60m'       # for station maps
-mapneB='WEnSa120mf120m/a120mf120m' # for AdAmembers
+mapneB='WEnSa120mf120m/a120mf120m' # for AdAmembers - bigger map showing the institutions
 sizemb='0.2'              # size of mobile stations
 sizeps='0.3'              # size of permanent stations
-sizepsA='0.25'            # size of permanent stations for map 14AA+AdA+PCS
+sizepsA='0.25'            # size of permanent stations for the map 14: AA+AdA+PCS
 sizes2='0.25'             # size of empty triangles in map 13
 sizeot='0.2'              # size of stations OUT of the region
 thmb='1.2p'               # thickness of triangle contour for mobile stations
@@ -49,33 +49,33 @@ thickLM='3.0p'            # thickness of empty triangles in the legend for mobil
 thickLC='2.0p'            # thickness of empty circles in the legend for mobile pools
 thickE='1.0p'             # thickness of empty circles in the 07 and 12 maps - mobile pools
 thickX='1.0p'             # thickness of elipses for local experiments
-bb240='135/000/135'       # BB > 60s - purple
-bb120='166/016/076'       # BB > 120s - dark red
-bb60='255/000/000'        # BB > 60s - red
-bb40='255/174/000'        # BB > 40s - orange
-bb30='255/255/000'        # BB > 30s - yellow
-pcse='000/000/255'        # PACASE - blue
+bb240='135/000/135'       # BB => 240s - purple
+bb120='166/016/076'       # BB => 120s - dark red
+bb60='255/000/000'        # BB =>  60s - red
+bb40='255/174/000'        # BB =   40s - orange
+bb30='255/255/000'        # BB =   30s - yellow
+pcse='000/000/255'        # PACASE stations - blue
 upgr='000/255/000'        # permanent short period - green
-unkn='000/000/000'        # sensor unknown
-spot='000/255/255'        # possible spot
-futu='000/150/000'        # future permanent station
-grey='150/150/150'        # permanent stations for map 13 and not yet deployed temporary for map 17 and 18
-whit='255/255/255'        # stations not meant for upgrade
-nosp='150/150/150'        # stations not suitable / available for upgrade
+unkn='000/000/000'        # sensor unknown - black
+spot='000/255/255'        # possible spot - cyan
+futu='000/150/000'        # future permanent station - dark green
+grey='150/150/150'        # permanent stations for map 13 and not yet deployed temporary stations for maps 17 and 18 - grey
+whit='255/255/255'        # stations not meant for upgrade - white
+nosp='150/150/150'        # stations not suitable / available for upgrade - grey
 perm='255/000/000'        # simplified map permanent - red
 temp='000/255/000'        # simplified map temporary - green
 outs='100/100/100'        # simplified outer stations BB - grey
-outsA='150/150/250'       # outer BB stations for AA+AdA+PCS
-centP='248/024/148'       # color CENTRAL hot pink ---------------# pinkish set for mobiles
-eastP='255/000/255'       # color EAST purple
-nortP='255/110/199'       # color NORTH blacklight purple
-steaP='223/082/134'       # color SOUTHEAST fandago
-westP='150/000/150'       # color WEST neon pink ------------
-cent='255/000/255'        # color CENTRAL -----------------# colorful set for mobiles
+outsA='150/150/250'       # outer BB stations for map 14: AA+AdA+PCS
+centP='248/024/148'       # pinkish color CENTRAL hot pink
+eastP='255/000/255'       # pinkish color EAST purple
+nortP='255/110/199'       # pinkish color NORTH blacklight purple
+steaP='223/082/134'       # pinkish color SOUTHEAST fandago
+westP='150/000/150'       # pinkish color WEST neon pink
+cent='255/000/255'        # color CENTRAL
 east='000/192/255'        # color EAST
 nort='000/255/000'        # color NORTH
 stea='000/000/200'        # color SOUTHEAST
-west='150/000/150'        # color WEST ----------------
+west='150/000/150'        # color WEST
 blck='000/000/000'        # black contour of the triangles
 labcolorW='255/255/255'   # label color - white
 labcolorB='000/000/000'   # label color - black
@@ -117,9 +117,9 @@ clrY5='255/000/255'       # Y5
 clrY8='070/255/190'       # Y8
 clrZ6='172/085/000'       # Z6
 clrRF='255/255/000'       # RF
-clrRS='080/080/080'       # RS
-clrXX='255/255/255'       # XX
-eidaclr='255/000/255'     # colors of squares in map 15 - members
+clrRS='080/080/080'       # RS - code for Serbia not known yet
+clrXX='255/255/255'       # XX - not assigned yet or using permanent code
+eidaclr='255/000/255'     # colors of squares in map 15 showing the institutions
 membclr='000/255/000'     # members
 pendclr='240/240/000'     # membership pending
 candclr='000/150/255'     # interested institutions - candidates for membership
@@ -196,7 +196,7 @@ psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfi
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile18
 psxy AUXI/kosovo-border.dat -R$mapbordeB -JL$mapproB -W0.2p/0/0/0 -K -O >> $psfile15
 
-# outline of the AdriaArray region split in pieces to plot it differently for onland and offshore
+# outline of the AdriaArray region split in pieces to plot it differently onland and offshore
 psxy AUXI/borderLandA.dat -R$mapborder -JL$mapproj -W1.0p/255/255/000            -K -O >> $psfile01
 psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile01
 psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile01
@@ -249,10 +249,10 @@ psxy     PERM/pFUTU.txt               -R -JL -St$sizes2          -W$ths2/$grey -
 psxy     PERM/pFUTU.txt               -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile13
 psxy     PERM/pFUTU.txt               -R -JL -St$sizepsA -G$futu -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pFUTUo.txt              -R -JL -St$sizepsA -G$futu -W$thps/$blck -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pFUTU.txt > PERM/circlesFUTU30.dat
+awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pFUTU.txt > PERM/circlesFUTU30.dat # creating circles for plotting the coverage
 awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pFUTU.txt > PERM/circlesFUTU40.dat
 
-# AlpArray, Ivrea and PACASE temporary stations
+# EASI, AlpArray, Ivrea and PACASE temporary stations
 psxy     AUXI/AlpArrayTemp.txt        -R -JL -St$sizepsA -G$temp    -W$thps/$blck -K -O >> $psfile14
 psxy     AUXI/stations-PACASE.txt     -R -JL -St$sizepsA -G$temp    -W$thps/$blck -K -O >> $psfile14
 psxy     AUXI/ivrea.txt               -R -JL -St$sizepsA -G$temp    -W$thps/$blck -K -O >> $psfile14
@@ -895,16 +895,16 @@ psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile04
 psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile05
 
 # map of institutions
-psxy AUXI/eida-perm.txt  -R$mapbordeB -JL$mapproB -Ss0.4 -W1.5p/$eidaclr -K -O >> $psfile15
-psxy AUXI/eida-perm.txt  -R           -JL         -Ss0.5 -W0.6p/$blck -K -O >> $psfile15
-psxy AUXI/eidanodes.txt  -R           -JL         -Ss0.5 -G$eidaclr -W0.6p/$blck -K -O >> $psfile15
-psxy AUXI/candidates.txt -R           -JL         -Ss0.4 -G$candclr -W0.6p/$blck -K -O >> $psfile15
-psxy AUXI/pending.txt    -R           -JL         -Ss0.4 -G$pendclr -W0.6p/$blck -K -O >> $psfile15
-psxy AUXI/members.txt    -R           -JL         -Ss0.4 -G$membclr -W0.6p/$blck -K -O >> $psfile15
+psxy AUXI/eida-perm.txt  -R$mapbordeB -JL$mapproB -Ss0.4            -W1.5p/$eidaclr -K -O >> $psfile15
+psxy AUXI/eida-perm.txt  -R           -JL         -Ss0.5            -W0.6p/$blck    -K -O >> $psfile15
+psxy AUXI/eidanodes.txt  -R           -JL         -Ss0.5 -G$eidaclr -W0.6p/$blck    -K -O >> $psfile15
+psxy AUXI/candidates.txt -R           -JL         -Ss0.4 -G$candclr -W0.6p/$blck    -K -O >> $psfile15
+psxy AUXI/pending.txt    -R           -JL         -Ss0.4 -G$pendclr -W0.6p/$blck    -K -O >> $psfile15
+psxy AUXI/members.txt    -R           -JL         -Ss0.4 -G$membclr -W0.6p/$blck    -K -O >> $psfile15
 
 # --------------------------------------------------------------------- LEGENDS -------------------------------
 
-# plotting another "map" to each file, where only the legend will be located, map 15 - AdAmembers
+# plotting another "map" to each file, where only the legend will be located, map 15 - AdA members
 pscoast -R17.6/21.8/40.70/43.8 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile15
 psxy -R -JM -Ss0.6 -G$membclr -W$thickL/$blck -K -O << end >> $psfile15
 17.95 43.50
@@ -924,7 +924,6 @@ end
 psxy -R -JM -Ss0.6 -W$thickL/$blck -K -O << end >> $psfile15
 17.95 41.50
 end
-
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile15
 18.3 43.60 8 0 0 TL AdriaArray members
@@ -935,7 +934,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile15
 18.3 41.20 8 0 0 TL locations of all branches of the
 18.3 40.92 8 0 0 TL member institutions are shown
 end
-# end of legend psfile 15
+# end of the legend to map 15
 
 # legend to map 01
 pscoast -R17.6/21.8/40.70/48.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile01
@@ -1036,7 +1035,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile01
 18.3 41.60 8 0 0 TL mobile East
 18.3 41.10 8 0 0 TL mobile Southeast
 end
-# end of legend to map 01
+# end of the legend to map 01
 
 # legend to map 10
 pscoast -R17.6/21.8/43.30/47.90 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile10
@@ -1094,7 +1093,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile10
 
 18.3 43.60 8 0 0 TL planned permanent stations
 end
-# end of legend to map 10
+# end of the legend to map 10
 
 # legend to map 04
 pscoast -R17.6/21.8/40.70/45.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile04
@@ -1144,7 +1143,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile04
 18.3 41.60 8 0 0 TL mobile East
 18.3 41.10 8 0 0 TL mobile Southeast
 end
-# end of legend to map 04
+# end of the legend to map 04
 
 # legend to map 05
 pscoast -R17.6/21.8/40.70/45.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile05
@@ -1194,7 +1193,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile05
 18.3 41.60 8 0 0 TL mobile East
 18.3 41.10 8 0 0 TL mobile Southeast
 end
-# end of legend to map 05
+# end of the legend to map 05
 
 # legend to map 02
 pscoast -R17.6/21.8/40.70/46.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile02
@@ -1271,7 +1270,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile02
 18.3 41.60 8 0 0 TL mobile East
 18.3 41.10 8 0 0 TL mobile Southeast
 end
-# end of legend to map 02
+# end of the legend to map 02
 
 # legend to map 17
 pscoast -R17.6/21.8/40.70/43.90 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile17
@@ -1309,7 +1308,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile17
 
 18.3 41.10 8 0 0 TL not deployed yet
 end
-# end of legend to map 17
+# end of the legend to map 17
 
 # legend to map 06
 pscoast -R17.6/21.8/40.70/42.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile06
@@ -1329,7 +1328,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile06
 18.3 41.60 8 0 0 TL planned permanent stations
 18.3 41.10 8 0 0 TL mobile BB stations
 end
-# end of legend to map 06
+# end of the legend to map 06
 
 # legend to map 09
 pscoast -R17.6/21.8/40.70/42.90 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile09
@@ -1352,7 +1351,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile09
 18.3 41.60 8 0 0 TL mobile BB stations
 18.3 41.10 8 0 0 TL additional BB stations
 end
-# end of legend to map 09
+# end of the legend to map 09
 
 # legend to map 11
 pscoast -R17.6/21.8/40.70/41.90 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile11
@@ -1367,7 +1366,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile11
 18.3 41.60 8 0 0 TL BB stations in EIDA
 18.3 41.10 8 0 0 TL BB stations not in EIDA
 end
-# end of legend to map 11
+# end of the legend to map 11
 
 # legend to map 18
 pscoast -R17.6/21.8/40.70/42.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile18
@@ -1387,7 +1386,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile18
 18.8 41.40 8 0 0 TL with station names
 18.3 41.10 8 0 0 TL not deployed yet
 end
-# end of legend to map 18
+# end of the legend to map 18
 
 # legend to map 03
 pscoast -R17.6/21.8/40.70/44.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile03
@@ -1423,7 +1422,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile03
 18.3 41.60 8 0 0 TL mobile East
 18.3 41.10 8 0 0 TL mobile Southeast
 end
-# end of legend to map 03
+# end of the legend to map 03
 
 # legend to map 07
 circsize='0.4'
@@ -1567,7 +1566,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile07
 18.3 41.60 7.5 0 0 TL mobile East
 18.3 41.10 7.5 0 0 TL mobile Southeast
 end
-# end of legend to map 07
+# end of the legend to map 07
 
 # legend to map 12
 pscoast -R17.6/22.9/40.8/55.30 -Dc -JM20/60/4.0c -G150/150/150 -S150/150/150 -Y+0.2 -X+24.0 -K -O >> $psfile12
@@ -1693,9 +1692,9 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile12
 18.3 41.60 7.5 0 0 TL planned permanent stations
 18.3 41.10 7.5 0 0 TL mobile BB stations
 end
-# end of legend to map 12
+# end of the legend to map 12
 
-# legend to map 13      - odect 49
+# legend to map 13
 pscoast -R17.6/22.9/-8.2/8.4 -Dc -JM20/60/6.0c -G150/150/150 -S150/150/150 -Y-0.1 -X+24.0 -K -O >> $psfile13
 # mobile stations - triangles / circle
 #psxy -R -JM -Sc$circsize            -W$thickL/$noneclr -K -O << end >> $psfile13 # not assigned - circle
@@ -1853,9 +1852,9 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile13
 18.3 -7.70 7.5 0 0 TL full triangles: operating
 18.3 -7.95 7.5 0 0 TL empty triangles: planned
 end
-# end of legend to map 13
+# end of the legend to map 13
 
-# legend to AA+AdA+PACASE map 14
+# legend to map 14 - AA+AdA+PACASE
 pscoast -R17.6/21.8/40.70/42.90 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+10.0 -X+23.1 -K -O >> $psfile14
 psxy -R -JM -St0.6 -G$perm -W$thickL/$blck -K -O << end >> $psfile14
 17.95 42.50
@@ -1881,7 +1880,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile14
 
 18.3 41.10 8 0 0 TL additional BB stations
 end
-# end of legend to map 14
+# end of the legend to map 14
 
 # legend to map 16
 pscoast -R17.6/21.8/40.70/46.40 -Dc -JM20/60/4.89c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile16
@@ -1932,7 +1931,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile16
 18.3 41.60 8 0 0 TL ?? (GFZ)
 18.3 41.10 8 0 0 TL other / unassigned
 end
-# end of legend to map 16
+# end of the legend to map 16
 
 # date stamp
 datum=$(date +%d" "%B" "%Y)
@@ -2004,13 +2003,13 @@ pscoast -R17.6/22.5/47.50/47.70 -Dc -JM20/60/6.2c -G255/255/255 -S255/255/255 -Y
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile18
 20.0 47.70 10 0 0 TL $datum
 end
-# end of date stamp
+# end of the date stamp
 
-# one more map to plot the legend with the numbers of how many stations are deployed / planned
+# one more map to plot the legend with the numbers of how many stations are deployed / planned to map 13
 pscoast -R18.3/22.3/41.0/41.5 -Dc -JM20/60/1.0c -G255/255/255 -S255/255/255 -Y+15.69 -X-8.5 -K -O >> $psfile13
 pstext AUXI/numofdep.txt -R -JL -G$textcolor -K -O >> $psfile13
 
-# the last command just to close the ps file
+# the last command just to close the ps files
 psxy -R -JL << end -O >> $psfile01
 0.0 0.0
 end
