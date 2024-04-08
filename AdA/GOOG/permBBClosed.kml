@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="19">
+        <Style id="4953">
+            <IconStyle id="4954">
+                <color>ff000000</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="4955">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="5963">
+            <IconStyle id="5964">
+                <color>ff000000</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="5965">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="5968">
+            <IconStyle id="5969">
+                <color>ff000000</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="5970">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="5993">
+            <IconStyle id="5994">
+                <color>ff000000</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="5995">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="12058">
+            <IconStyle id="12059">
+                <color>ff000000</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="12060">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="4952">
+            <name>GEC2X</name>
+            <styleUrl>#4953</styleUrl>
+            <Point id="4951">
+                <coordinates>13.700627,48.844303,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5962">
+            <name>CRE1</name>
+            <styleUrl>#5963</styleUrl>
+            <Point id="5961">
+                <coordinates>25.24974,35.22672,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5967">
+            <name>CRE3</name>
+            <styleUrl>#5968</styleUrl>
+            <Point id="5966">
+                <coordinates>25.24623,35.07685,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5992">
+            <name>ELAT</name>
+            <styleUrl>#5993</styleUrl>
+            <Point id="5991">
+                <coordinates>22.791108,38.627687,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12057">
+            <name>KOME</name>
+            <styleUrl>#12058</styleUrl>
+            <Point id="12056">
+                <coordinates>19.5152,42.8505,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
