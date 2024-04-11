@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="19">
-        <Style id="4953">
-            <IconStyle id="4954">
+        <Style id="15728">
+            <IconStyle id="15729">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="4955">
+                <Icon id="15730">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="5963">
-            <IconStyle id="5964">
+        <Style id="15733">
+            <IconStyle id="15734">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="5965">
+                <Icon id="15735">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="5968">
-            <IconStyle id="5969">
+        <Style id="15738">
+            <IconStyle id="15739">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="5970">
+                <Icon id="15740">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="5993">
-            <IconStyle id="5994">
+        <Style id="15743">
+            <IconStyle id="15744">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="5995">
+                <Icon id="15745">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12058">
-            <IconStyle id="12059">
+        <Style id="15748">
+            <IconStyle id="15749">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12060">
+                <Icon id="15750">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="4952">
+        <Placemark id="15727">
             <name>GEC2X</name>
-            <styleUrl>#4953</styleUrl>
-            <Point id="4951">
+            <styleUrl>#15728</styleUrl>
+            <Point id="15726">
                 <coordinates>13.700627,48.844303,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="5962">
+        <Placemark id="15732">
             <name>CRE1</name>
-            <styleUrl>#5963</styleUrl>
-            <Point id="5961">
+            <styleUrl>#15733</styleUrl>
+            <Point id="15731">
                 <coordinates>25.24974,35.22672,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="5967">
+        <Placemark id="15737">
             <name>CRE3</name>
-            <styleUrl>#5968</styleUrl>
-            <Point id="5966">
+            <styleUrl>#15738</styleUrl>
+            <Point id="15736">
                 <coordinates>25.24623,35.07685,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="5992">
+        <Placemark id="15742">
             <name>ELAT</name>
-            <styleUrl>#5993</styleUrl>
-            <Point id="5991">
+            <styleUrl>#15743</styleUrl>
+            <Point id="15741">
                 <coordinates>22.791108,38.627687,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12057">
+        <Placemark id="15747">
             <name>KOME</name>
-            <styleUrl>#12058</styleUrl>
-            <Point id="12056">
+            <styleUrl>#15748</styleUrl>
+            <Point id="15746">
                 <coordinates>19.5152,42.8505,0.0</coordinates>
             </Point>
         </Placemark>
