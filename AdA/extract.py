@@ -23,6 +23,7 @@ kmlPermFUTU  = simplekml.Kml()
 kmlPermCLOS  = simplekml.Kml()
 kmlPermUPGR  = simplekml.Kml()
 kmlPermWHIT  = simplekml.Kml()
+kmlPermWHITout  = simplekml.Kml()
 kmlPermOut   = simplekml.Kml()
 kmlPermAll   = simplekml.Kml()
 kmlTemp030   = simplekml.Kml()
@@ -47,8 +48,9 @@ counterUNKNo  = 0
 counterSPOT   = 0
 counterSPOTo  = 0
 counterFUTU   = 0
-counterCLOS   = 0
 counterFUTUo  = 0
+counterCLOS   = 0
+counterCLOSo  = 0
 counterUPGR   = 0
 counterNOSP   = 0
 counterWHIT   = 0
@@ -95,10 +97,12 @@ csvSPOT30 = open("GOOG/pSPOT-30.csv"      , "w")
 csvSPOT40 = open("GOOG/pSPOT-40.csv"      , "w")
 outFUTU   = open("PERM/pFUTU.txt"         , "w")  # FUTUre permanent stations
 labFUTU   = open("PERM/pFUTUlabel.txt"    , "w")
-outCLOS   = open("PERM/pCLOS.txt"         , "w")  # CLOSed permanent stations
-labCLOS   = open("PERM/pCLOSlabel.txt"    , "w")
 outFUTUo  = open("PERM/pFUTUo.txt"        , "w")
 labFUTUo  = open("PERM/pFUTUolabel.txt"   , "w")
+outCLOS   = open("PERM/pCLOS.txt"         , "w")  # CLOSed permanent stations
+labCLOS   = open("PERM/pCLOSlabel.txt"    , "w")
+outCLOSo  = open("PERM/pCLOSo.txt"        , "w")  # CLOSed permanent stations
+labCLOSo  = open("PERM/pCLOSolabel.txt"   , "w")
 csvFUTU30 = open("GOOG/pFUTU-30.csv"      , "w")
 csvFUTU40 = open("GOOG/pFUTU-40.csv"      , "w")
 csvCLOS30 = open("GOOG/pCLOS-30.csv"      , "w")
@@ -257,7 +261,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             counterUNKNo = counterUNKNo + 1
             outUNKNo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labUNKNo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt = kmlPermUNKN.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
         # SPOT in
@@ -285,8 +289,16 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermFUTU.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,150,0) # dark green
-        # CLOS in (considering only in)
-        if inventoryP.iloc[n,0] == 1 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 3: # if corner period is empty and possible spot = 3, then this is a closed station
+        # FUTU out
+        if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 2: # future stations OUT of the region
+            counterFUTUo = counterFUTUo + 1
+            outFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            labFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermFUTU.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = "triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,150,0) # grey
+        # CLOS in
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,12] == 3: # if corner period is empty and possible spot = 3, then this is a closed station
             counterCLOS = counterCLOS + 1
             outCLOS.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             csvCLOS30.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
@@ -295,14 +307,14 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermCLOS.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
-        # FUTU out
-        if inventoryP.iloc[n,0] == 0 and math.isnan(inventoryP.iloc[n,11]) and inventoryP.iloc[n,12] == 2: # future stations OUT of the region
-            counterFUTUo = counterFUTUo + 1
-            outFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            labFUTUo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
-            pnt = kmlPermOut.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+        # CLOS out
+        if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,12] == 3: # if corner period is empty and possible spot = 3, then this is a closed station
+            counterCLOSo = counterCLOSo + 1
+            outCLOSo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            labCLOSo.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermCLOS.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
-            pnt.style.iconstyle.color = simplekml.Color.rgb(100,100,100) # grey            
+            pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
         # UPGR - always in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] < 30 and inventoryP.iloc[n,12] == 1: # if corner period < 30 s and possible spot = 1, then this is a station for upgrade
             counterUPGR = counterUPGR + 1
@@ -314,7 +326,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
         # NOSP - always in
-        if inventoryP.iloc[n,11] < 30 and inventoryP.iloc[n,12] == 0:               # if corner period < 30 s and possible spot = 0, then this is a station not available or suitable for upgrade
+        if inventoryP.iloc[n,12] == 0 and inventoryP.iloc[n,11] < 30: # if corner period < 30 s and possible spot = 0, then this is a station not available or suitable for upgrade
             counterNOSP = counterNOSP + 1
             outNOSP.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labNOSP.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -322,7 +334,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(150,150,150) # grey
         # WHIT in
-        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] < 30 and math.isnan(inventoryP.iloc[n,12]): # if corner < 30 s and possible spot is empty, then it is SP/SM station not needed for upgrade
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] < 30 and (math.isnan(inventoryP.iloc[n,12]) or inventoryP.iloc[n,12] == 3): # if corner < 30 s and possible spot is empty or = 3, then it is SP/SM station not needed for upgrade
             counterWHIT = counterWHIT + 1
             outWHIT.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labWHIT.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -330,10 +342,13 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,255,255) # white
         # WHIT out
-        if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] < 30 and math.isnan(inventoryP.iloc[n,12]): # station not needed for upgrade OUT of the region
+        if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] < 30: # station not needed for upgrade OUT of the region
             counterWHITo = counterWHITo + 1
             outWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             labWHITo.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+            pnt = kmlPermWHITout.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
+            pnt.style.iconstyle.icon.href = "triangle.png"
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,255,255) # white
         # EIDA no
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,19] == 0: # IN the region, not ZZZ (unequipped spot), and NOT in EIDA
             counterEIDAno = counterEIDAno + 1
@@ -348,11 +363,12 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             EIDAzz.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
 # end of the loop over all the lines in the sheet
 
-sumcounter   = counterBB30 + counterBB30o + counterBB40 + counterBB40o + counterBB60 + counterBB60o + counterUNKN + counterUNKNo + counterSPOT + counterSPOTo + counterFUTU + counterFUTUo + counterUPGR + counterNOSP + counterWHIT + counterWHITo + counterCLOS
-sumcounterIN = counterBB30 +                counterBB40 +                counterBB60 +                counterUNKN +                                                                          counterUPGR + counterNOSP + counterWHIT
-sumEIDA      = counterEIDAys   + counterEIDAno + counterEIDAzz
-sumEIDAbb    = counterEIDAnoBB + counterEIDAysBB
-sumBBin      = counterBB30 +                counterBB40 +                counterBB60
+sumcounter    = counterBB30 + counterBB30o + counterBB40 + counterBB40o + counterBB60 + counterBB60o + counterUNKN + counterUNKNo + counterSPOT + counterSPOTo + counterFUTU + counterFUTUo + counterUPGR + counterNOSP + counterWHIT + counterWHITo
+sumcounterIN  = counterBB30 +                counterBB40 +                counterBB60 +                counterUNKN +              + counterSPOT                + counterFUTU                + counterUPGR + counterNOSP + counterWHIT
+sumcounterOUT =               counterBB30o               + counterBB40o               + counterBB60o               + counterUNKNo               + counterSPOTo               + counterFUTUo                                           + counterWHITo
+sumEIDA       = counterEIDAys   + counterEIDAno + counterEIDAzz
+sumEIDAbb     = counterEIDAnoBB + counterEIDAysBB
+sumBBin       = counterBB30 +                counterBB40 +                counterBB60
 
 print (' ')
 print ('---------- PERMANENT STATIONS ---')
@@ -369,6 +385,7 @@ print ('SPOT out = ', counterSPOTo)
 print ('FUTU     = ', counterFUTU)
 print ('FUTU out = ', counterFUTUo)
 print ('CLOS     = ', counterCLOS)
+print ('CLOS out = ', counterCLOSo)
 print ('UPGR     = ', counterUPGR)
 print ('NoSP     = ', counterNOSP)
 print ('WHIT     = ', counterWHIT)
@@ -378,6 +395,7 @@ print ('counting the lines   = ', counterTOTL)
 print ('length of inventory  = ', len(inventoryP))
 print ('sum of categories    = ', sumcounter)
 print ('sum of IN AdA region = ', sumcounterIN)
+print ('sum of OUT AdA region = ', sumcounterOUT)
 print ('--------------------')
 print ('EIDA yes (all) = ', counterEIDAys)
 print ('EIDA no (all)  = ', counterEIDAno)
@@ -421,10 +439,12 @@ csvSPOT30.close()
 csvSPOT40.close()
 outFUTU.close()
 labFUTU.close()
-outCLOS.close()
-labCLOS.close()
 outFUTUo.close()
 labFUTUo.close()
+outCLOS.close()
+labCLOS.close()
+outCLOSo.close()
+labCLOSo.close()
 csvFUTU30.close()
 csvFUTU40.close()
 csvCLOS30.close()
@@ -596,35 +616,35 @@ closedTlab = open("TEMP/closedT-label.txt" , "w")
 for n in inventoryT.index:                        # loop over all lines in the xls/ods sheet
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
-        if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 3:
+        if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
             counterWEST = counterWEST + 1
             west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
             westlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
-        if inventoryT.iloc[n,24] == 'SOUTHEAST' and inventoryT.iloc[n,0] != 3:
+        if inventoryT.iloc[n,24] == 'SOUTHEAST' and inventoryT.iloc[n,0] != 4:
             counterSTEA = counterSTEA + 1
             stea.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             stealabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,24] == 'CENTER' and inventoryT.iloc[n,0] != 3:
+        if inventoryT.iloc[n,24] == 'CENTER' and inventoryT.iloc[n,0] != 4:
             counterCENT = counterCENT + 1
             cent.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             centlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,24] == 'NORTH' and inventoryT.iloc[n,0] != 3:
+        if inventoryT.iloc[n,24] == 'NORTH' and inventoryT.iloc[n,0] != 4:
             counterNORT = counterNORT + 1
             nort.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             nortlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
-        if inventoryT.iloc[n,24] == 'EAST' and inventoryT.iloc[n,0] != 3:
+        if inventoryT.iloc[n,24] == 'EAST' and inventoryT.iloc[n,0] != 4:
             counterEAST = counterEAST + 1
             east.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             eastlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
@@ -633,206 +653,206 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         # individual mobile pools
         if inventoryT.iloc[n,16] == 'IG CAS CZ':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 igcz.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
                 counterIGCZ = counterIGCZ + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     igczD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Denmark':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 aarh.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterAARH = counterAARH + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     aarhD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Barcelona':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 barc.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterBARC = counterBARC + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     barcD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Bochum' or inventoryT.iloc[n,16] == 'Bochum+Frankfurt':
             BOCHname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 boch.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))        
                 counterBOCH = counterBOCH + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     bochD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1       
         if inventoryT.iloc[n,16] == 'Bochum+Frankfurt':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 frnk.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     frnkD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'Bologna':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 bolo.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterBOLO = counterBOLO + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     boloD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'CSS':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 cssc.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterCSSC = counterCSSC + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     csscD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'ETH':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 ethz.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterETHZ = counterETHZ + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     ethzD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Resif-Sismob':
             RESFname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 resf.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterRESF = counterRESF + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     resfD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'Helsinki' or inventoryT.iloc[n,16] == 'Helsinki+IRSM':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 hels.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterHELS = counterHELS + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     helsD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'EPSS':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 epss.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterEPSS = counterEPSS + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     epssD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Helsinki+IRSM' or inventoryT.iloc[n,16] == 'GIPP+IRSM':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 irsm.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     irsmD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'Kiel':
             KIELname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 kiel.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterKIEL = counterKIEL + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     kielD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Munich':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 muni.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterMUNI = counterMUNI + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     muniD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'Twente':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 twen.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterTWEN = counterTWEN + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     twenD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'BerZag':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 brzg.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterBRZG = counterBRZG + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     brzgD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'OGS':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 ogsi.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterOGSI = counterOGSI + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     ogsiD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'Oulu' or inventoryT.iloc[n,16] == 'Oulu+UniWien':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 oulu.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterOULU = counterOULU + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     ouluD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Oulu+UniWien':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 ouwi.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     ouwiD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'PL':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 pola.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterPOLA = counterPOLA + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     polaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
         if inventoryT.iloc[n,16] == 'UniWien':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 wien.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterWIEN = counterWIEN + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     wienD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'MNE pool':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 mnep.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterMNEP = counterMNEP + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     mnepD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                
         if inventoryT.iloc[n,16] == 'Kosovo pool':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 kosv.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterKOSV = counterKOSV + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     kosvD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                
         if inventoryT.iloc[n,16] == 'NIEP':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 niep.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterNIEP = counterNIEP + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     niepD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                
         if inventoryT.iloc[n,16] == 'KIT':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 kitp.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterKITP = counterKITP + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     kitpD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                
         if inventoryT.iloc[n,16] == 'GIPP' or inventoryT.iloc[n,16] == 'GIPP+IRSM' or inventoryT.iloc[n,16] == 'GIPP+CarP' or inventoryT.iloc[n,16] == 'GIPP+GeoAz':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 gipp.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterGIPP = counterGIPP + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     gippD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                
         if inventoryT.iloc[n,16] == 'GIPP+CarP':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 gica.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     gicaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'GIPP+GeoAz':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 gige.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     gigeD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                
         if inventoryT.iloc[n,16] == 'Jena':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 jena.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterJENA = counterJENA + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     jenaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                                
         if inventoryT.iloc[n,16] == 'SerbianPool':
-            if inventoryT.iloc[n,0] != 3:
+            if inventoryT.iloc[n,0] != 4:
                 serb.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterSERB = counterSERB + 1
-                if inventoryT.iloc[n,0] == 1:
+                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     serbD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                                                
         if inventoryT.iloc[n,16] == 'N-A': # not assigned to any pool in the moment
@@ -912,7 +932,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempNot.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
-        if inventoryT.iloc[n,0] == 1:   # if deployed
+        if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:   # if deployed
             if inventoryT.iloc[n,19] == 1: # in EIDA
                 tmpEIDAy.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterTempEIDAy = counterTempEIDAy + 1
@@ -1071,7 +1091,6 @@ print ('  not assigned       = ', counterNONE)
 print ('length of inventory  = ', len(inventoryT))
 print ('sum of the subgroups = ', sumGROUPS)
 print ('sum of the pools     = ', sumPOOLS)
-print ('planned              = ', sumGROUPS)
 print ('moved A --> B        = ', counterA2B)
 print ('diff = not asssigned = ', sumGROUPS-sumPOOLS)
 print ('deployed             = ', counterDPLO)
@@ -1094,6 +1113,7 @@ kmlPermFUTU.save("GOOG/permBBFuture.kml")
 kmlPermCLOS.save("GOOG/permBBClosed.kml")
 kmlPermUPGR.save("GOOG/permUPGR.kml")
 kmlPermWHIT.save("GOOG/permWHIT.kml")
+kmlPermWHITout.save("GOOG/permWHITout.kml")
 kmlPermAll.save("GOOG/permBBAllIn.kml")
 kmlPermOut.save("GOOG/permBBoutside.kml")
 kmlTemp030.save("GOOG/temp030-040.kml")
