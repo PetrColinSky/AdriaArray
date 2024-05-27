@@ -1,129 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="47">
-        <Style id="22015">
-            <IconStyle id="22016">
+        <Style id="22000">
+            <IconStyle id="22001">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="22017">
+                <Icon id="22002">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24605">
-            <IconStyle id="24606">
+        <Style id="24590">
+            <IconStyle id="24591">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24607">
+                <Icon id="24592">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25500">
-            <IconStyle id="25501">
+        <Style id="25485">
+            <IconStyle id="25486">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25502">
+                <Icon id="25487">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25600">
-            <IconStyle id="25601">
+        <Style id="25585">
+            <IconStyle id="25586">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25602">
+                <Icon id="25587">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25775">
-            <IconStyle id="25776">
+        <Style id="25760">
+            <IconStyle id="25761">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25777">
+                <Icon id="25762">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="26055">
-            <IconStyle id="26056">
+        <Style id="26040">
+            <IconStyle id="26041">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="26057">
+                <Icon id="26042">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="26725">
-            <IconStyle id="26726">
+        <Style id="26710">
+            <IconStyle id="26711">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="26727">
+                <Icon id="26712">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="22014">
+        <Placemark id="21999">
             <name>IT05A/A289A</name>
-            <styleUrl>#22015</styleUrl>
-            <Point id="22013">
+            <styleUrl>#22000</styleUrl>
+            <Point id="21998">
                 <coordinates>9.761312,46.047153,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24604">
+        <Placemark id="24589">
             <name>PL25A</name>
-            <styleUrl>#24605</styleUrl>
-            <Point id="24603">
+            <styleUrl>#24590</styleUrl>
+            <Point id="24588">
                 <coordinates>19.52794,49.918193,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25499">
+        <Placemark id="25484">
             <name>A032A</name>
-            <styleUrl>#25500</styleUrl>
-            <Point id="25498">
+            <styleUrl>#25485</styleUrl>
+            <Point id="25483">
                 <coordinates>13.306443,48.122971,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25599">
+        <Placemark id="25584">
             <name>A078A</name>
-            <styleUrl>#25600</styleUrl>
-            <Point id="25598">
+            <styleUrl>#25585</styleUrl>
+            <Point id="25583">
                 <coordinates>14.2845,48.864,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25774">
+        <Placemark id="25759">
             <name>A090A</name>
-            <styleUrl>#25775</styleUrl>
-            <Point id="25773">
+            <styleUrl>#25760</styleUrl>
+            <Point id="25758">
                 <coordinates>17.8278,49.3655,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="26054">
+        <Placemark id="26039">
             <name>A367A</name>
-            <styleUrl>#26055</styleUrl>
-            <Point id="26053">
+            <styleUrl>#26040</styleUrl>
+            <Point id="26038">
                 <coordinates>11.9233,48.3067,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="26724">
+        <Placemark id="26709">
             <name>HU23A</name>
-            <styleUrl>#26725</styleUrl>
-            <Point id="26723">
+            <styleUrl>#26710</styleUrl>
+            <Point id="26708">
                 <coordinates>20.2496,47.6389,0.0</coordinates>
             </Point>
         </Placemark>

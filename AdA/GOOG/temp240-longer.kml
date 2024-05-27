@@ -12,13 +12,24 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23015">
-            <IconStyle id="23016">
+        <Style id="23000">
+            <IconStyle id="23001">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23017">
+                <Icon id="23002">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="23975">
+            <IconStyle id="23976">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="23977">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -67,13 +78,13 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24050">
-            <IconStyle id="24051">
+        <Style id="24095">
+            <IconStyle id="24096">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24052">
+                <Icon id="24097">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -111,13 +122,13 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24155">
-            <IconStyle id="24156">
+        <Style id="24170">
+            <IconStyle id="24171">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24157">
+                <Icon id="24172">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -155,13 +166,13 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24230">
-            <IconStyle id="24231">
+        <Style id="24825">
+            <IconStyle id="24826">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24232">
+                <Icon id="24827">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -177,13 +188,13 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24855">
-            <IconStyle id="24856">
+        <Style id="24960">
+            <IconStyle id="24961">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24857">
+                <Icon id="24962">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -199,24 +210,13 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24990">
-            <IconStyle id="24991">
+        <Style id="25335">
+            <IconStyle id="25336">
                 <color>ff870087</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24992">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="25350">
-            <IconStyle id="25351">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="25352">
+                <Icon id="25337">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -228,136 +228,136 @@
                 <coordinates>23.524965,42.047733,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23014">
+        <Placemark id="22999">
             <name>DIVS</name>
-            <styleUrl>#23015</styleUrl>
-            <Point id="23013">
+            <styleUrl>#23000</styleUrl>
+            <Point id="22998">
                 <coordinates>19.991711,44.098236,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23989">
+        <Placemark id="23974">
             <name>BG06A</name>
-            <styleUrl>#23990</styleUrl>
-            <Point id="23988">
+            <styleUrl>#23975</styleUrl>
+            <Point id="23973">
                 <coordinates>23.63689,42.991448,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24004">
+        <Placemark id="23989">
             <name>BG07A</name>
-            <styleUrl>#24005</styleUrl>
-            <Point id="24003">
+            <styleUrl>#23990</styleUrl>
+            <Point id="23988">
                 <coordinates>24.49,42.96,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24019">
+        <Placemark id="24004">
             <name>BG08A</name>
-            <styleUrl>#24020</styleUrl>
-            <Point id="24018">
+            <styleUrl>#24005</styleUrl>
+            <Point id="24003">
                 <coordinates>24.76,42.59,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24034">
+        <Placemark id="24019">
             <name>BG09A</name>
-            <styleUrl>#24035</styleUrl>
-            <Point id="24033">
+            <styleUrl>#24020</styleUrl>
+            <Point id="24018">
                 <coordinates>25.331197,42.531642,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24049">
+        <Placemark id="24034">
             <name>BG10A</name>
-            <styleUrl>#24050</styleUrl>
-            <Point id="24048">
+            <styleUrl>#24035</styleUrl>
+            <Point id="24033">
                 <coordinates>25.804958,42.413133,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24109">
+        <Placemark id="24094">
             <name>BG14A</name>
-            <styleUrl>#24110</styleUrl>
-            <Point id="24108">
+            <styleUrl>#24095</styleUrl>
+            <Point id="24093">
                 <coordinates>22.831374,42.288958,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24124">
+        <Placemark id="24109">
             <name>BG16A</name>
-            <styleUrl>#24125</styleUrl>
-            <Point id="24123">
+            <styleUrl>#24110</styleUrl>
+            <Point id="24108">
                 <coordinates>23.988035,42.192493,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24139">
+        <Placemark id="24124">
             <name>BG17A</name>
-            <styleUrl>#24140</styleUrl>
-            <Point id="24138">
+            <styleUrl>#24125</styleUrl>
+            <Point id="24123">
                 <coordinates>24.145215,41.766003,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24154">
+        <Placemark id="24139">
             <name>BG18A</name>
-            <styleUrl>#24155</styleUrl>
-            <Point id="24153">
+            <styleUrl>#24140</styleUrl>
+            <Point id="24138">
                 <coordinates>25.807248,41.520753,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24184">
+        <Placemark id="24169">
             <name>BG20A</name>
-            <styleUrl>#24185</styleUrl>
-            <Point id="24183">
+            <styleUrl>#24170</styleUrl>
+            <Point id="24168">
                 <coordinates>22.797826,43.879918,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24199">
+        <Placemark id="24184">
             <name>BG21A</name>
-            <styleUrl>#24200</styleUrl>
-            <Point id="24198">
+            <styleUrl>#24185</styleUrl>
+            <Point id="24183">
                 <coordinates>23.116078,43.405501,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24214">
+        <Placemark id="24199">
             <name>BG22A</name>
-            <styleUrl>#24215</styleUrl>
-            <Point id="24213">
+            <styleUrl>#24200</styleUrl>
+            <Point id="24198">
                 <coordinates>24.0802,43.6474,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24229">
+        <Placemark id="24214">
             <name>DIM</name>
-            <styleUrl>#24230</styleUrl>
-            <Point id="24228">
+            <styleUrl>#24215</styleUrl>
+            <Point id="24213">
                 <coordinates>25.5778,42.0457,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24839">
+        <Placemark id="24824">
             <name>RO10A</name>
-            <styleUrl>#24840</styleUrl>
-            <Point id="24838">
+            <styleUrl>#24825</styleUrl>
+            <Point id="24823">
                 <coordinates>21.7778656,45.1564886,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24854">
+        <Placemark id="24839">
             <name>RO11A</name>
-            <styleUrl>#24855</styleUrl>
-            <Point id="24853">
+            <styleUrl>#24840</styleUrl>
+            <Point id="24838">
                 <coordinates>22.8129,44.9836,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24974">
+        <Placemark id="24959">
             <name>RO19A</name>
-            <styleUrl>#24975</styleUrl>
-            <Point id="24973">
+            <styleUrl>#24960</styleUrl>
+            <Point id="24958">
                 <coordinates>23.31579,45.15239,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24989">
+        <Placemark id="24974">
             <name>RO20A</name>
-            <styleUrl>#24990</styleUrl>
-            <Point id="24988">
+            <styleUrl>#24975</styleUrl>
+            <Point id="24973">
                 <coordinates>22.0971517,45.3875322,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25349">
+        <Placemark id="25334">
             <name>VLD</name>
-            <styleUrl>#25350</styleUrl>
-            <Point id="25348">
+            <styleUrl>#25335</styleUrl>
+            <Point id="25333">
                 <coordinates>23.4355,43.6898,0.0</coordinates>
             </Point>
         </Placemark>
