@@ -606,6 +606,7 @@ tmpBB060   = open("TEMP/tBB060-120.txt"  , "w")
 tmpBB120   = open("TEMP/tBB120-240.txt"  , "w")
 tmpBB240   = open("TEMP/tBB240.txt"      , "w")
 notDepl    = open("TEMP/notDepl.txt"     , "w")
+labNotDepl = open("TEMP/notDepllabel.txt", "w")
 yesDepl    = open("TEMP/yesDepl.txt"     , "w")
 tmpEIDAy   = open("TEMP/tempEIDAyes.txt" , "w")
 tmpEIDAn   = open("TEMP/tempEIDAno.txt"  , "w")
@@ -929,6 +930,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
         if inventoryT.iloc[n,0] == 0:   # if not yet deployed
             notDepl.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+            labNotDepl.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempNot.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
@@ -1046,6 +1048,7 @@ tmpBB060.close()
 tmpBB120.close()
 tmpBB240.close()
 notDepl.close()
+labNotDepl.close()
 yesDepl.close()
 tmpEIDAy.close()
 tmpEIDAn.close()

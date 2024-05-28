@@ -864,6 +864,7 @@ pstext TEMP/mstea-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile11 # labels for BB non-EIDA stations - permanent
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - permanent
 pstext TEMP/tEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - temporary
+pstext TEMP/notDepllabel.txt        -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - temporary
 
 pstext PERM/pNOSPlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pWHITlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
