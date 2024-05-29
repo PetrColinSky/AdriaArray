@@ -508,6 +508,7 @@ counterKITP   = 0
 counterGIPP   = 0
 counterJENA   = 0
 counterSERB   = 0
+counterRP0X   = 0
 counterDPLO   = 0
 counterNONE   = 0
 counterTempEIDAy  = 0
@@ -517,7 +518,7 @@ counterA2B = 0
 if not os.path.exists('TEMP'):
     os.makedirs('TEMP')
 
-west       = open("TEMP/mwest.txt"       , "w")   # output files for inputing to the GMT
+west       = open("TEMP/mwest.txt"       , "w")   # saved files used then as an input for the GMT
 westlabel  = open("TEMP/mwest-label.txt" , "w")
 stea       = open("TEMP/mstea.txt"       , "w")
 stealabel  = open("TEMP/mstea-label.txt" , "w")
@@ -587,6 +588,9 @@ jena       = open("TEMP/jena.txt"        , "w")
 jenaD      = open("TEMP/jenaD.txt"       , "w")
 serb       = open("TEMP/serb.txt"        , "w")
 serbD      = open("TEMP/serbD.txt"       , "w")
+rpBB       = open("TEMP/rpBB.txt"        , "w")
+rpSP       = open("TEMP/rpSP.txt"        , "w")
+rplabel    = open("TEMP/rplabel.txt"     , "w")
 none       = open("TEMP/none.txt"        , "w")
 numofdep   = open("AUXI/numofdep.txt"    , "w")
 net1Y      = open("AUXI/net1Y.txt"       , "w")
@@ -619,36 +623,41 @@ for n in inventoryT.index:                        # loop over all lines in the x
         # regional subgroups
         if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
             counterWEST = counterWEST + 1
-            west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
-            westlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+            if inventoryT.iloc[n,0] != 3: # to not include closed stations
+                west.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
+                westlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green
         if inventoryT.iloc[n,24] == 'SOUTHEAST' and inventoryT.iloc[n,0] != 4:
             counterSTEA = counterSTEA + 1
-            stea.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-            stealabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            if inventoryT.iloc[n,0] != 3: # to not include closed stations
+                stea.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                stealabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,24] == 'CENTER' and inventoryT.iloc[n,0] != 4:
             counterCENT = counterCENT + 1
-            cent.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-            centlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            if inventoryT.iloc[n,0] != 3: # to not include closed stations
+                cent.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                centlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,24] == 'NORTH' and inventoryT.iloc[n,0] != 4:
             counterNORT = counterNORT + 1
-            nort.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-            nortlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            if inventoryT.iloc[n,0] != 3: # to not include closed stations
+                nort.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                nortlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
         if inventoryT.iloc[n,24] == 'EAST' and inventoryT.iloc[n,0] != 4:
             counterEAST = counterEAST + 1
-            east.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-            eastlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
+            if inventoryT.iloc[n,0] != 3: # to not include closed stations
+                east.write       ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                eastlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
             pnt = kmlTempAll.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,255,0) # green            
@@ -856,6 +865,15 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     serbD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                                                
+        
+        if inventoryT.iloc[n,16] == 'RP0X':
+            if inventoryT.iloc[n,0] != 4:
+                if inventoryT.iloc[n,11] >= 30:
+                    rpBB.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                if inventoryT.iloc[n,11] < 30:
+                    rpSP.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                    
+                counterRP0X = counterRP0X + 1
+                rplabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2])))
         if inventoryT.iloc[n,16] == 'N-A': # not assigned to any pool in the moment
             none.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             counterNONE = counterNONE + 1
@@ -1030,6 +1048,9 @@ jena.close()
 jenaD.close()
 serb.close()
 serbD.close()
+rpBB.close()
+rpSP.close()
+rplabel.close()
 none.close()
 net1Y.close()
 net2Y.close()

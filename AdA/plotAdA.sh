@@ -232,11 +232,23 @@ psxy     PERM/pSPOT.txt               -R -JL -St$sizeps -G$spot -W$thps/$blck -K
 psxy     PERM/pSPOTo.txt              -R -JL -St$sizeot         -W$thot/$spot -K -O >> $psfile01
 psxy     PERM/pSPOTo.txt              -R -JL -St$sizeot         -W$thot/$spot -K -O >> $psfile10
 
+# stations 5B - Peloponnese - temporary, but not in AdA yet
+psxy     TEMP/rpBB.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile01
+psxy     TEMP/rpBB.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile01
+psxy     TEMP/rpSP.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile01
+psxy     TEMP/rpSP.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile01
+psxy     TEMP/rpBB.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile02
+psxy     TEMP/rpBB.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile02
+psxy     TEMP/rpBB.txt                -R -JL -St$sizeps  -G$outs  -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/rpBB.txt                -R -JL -St$sizepsA -G$outsA -W$thps/$blck  -K -O >> $psfile14
+
 # BB stations working during the AdA time frame (since May 2022) but closed already
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile01
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile01
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb          -W$thmb/$blck -K -O >> $psfile01
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile02
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile02
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb          -W$thmb/$blck -K -O >> $psfile02
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile02
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile03
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile03
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile06
@@ -861,6 +873,7 @@ pstext TEMP/meast-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mwest-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mnort-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mstea-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
+pstext TEMP/rplabel.txt             -R -JL -G$labcolorW -K -O >> $psfile01 # labels for BB non-EIDA stations - temporary
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile11 # labels for BB non-EIDA stations - permanent
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - permanent
 pstext TEMP/tEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - temporary
@@ -922,7 +935,7 @@ psxy AUXI/members.txt    -R           -JL         -Ss0.4 -G$membclr -W0.6p/$blck
 # plotting another "map" to each file, where only the legend will be placed
 
 # legend to map 01
-pscoast -R17.6/21.5/-3.9/4.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile01
+pscoast -R17.6/21.5/-4.4/4.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile01
 psxy -R -JM -St0.6 -G$bb60 -W$thickL/$blck -K -O << end >> $psfile01
 17.95  3.50
 end
@@ -969,6 +982,9 @@ end
 psxy -R -JM -St0.4 -W$thickLM/$steaP -K -O << end >> $psfile01
 17.95 -3.50
 end
+psxy -R -JM -St0.4 -W$thickLM/$outs -K -O << end >> $psfile01
+17.95 -4.00
+end
 # mobile stations - contours
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 17.95 -1.50
@@ -984,6 +1000,9 @@ psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 end
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 17.95 -3.50
+end
+psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
+17.95 -4.00
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile01
@@ -1018,11 +1037,12 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile01
 18.3 -2.40 8 0 0 TL mobile North
 18.3 -2.90 8 0 0 TL mobile East
 18.3 -3.40 8 0 0 TL mobile Southeast
+18.3 -3.90 8 0 0 TL mobile other
 end
 # end of the legend to map 01
 
 # legend to map 02
-pscoast -R17.6/21.5/-2.9/3.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile02
+pscoast -R17.6/21.5/-3.4/3.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile02
 psxy -R -JM -St0.6 -G$bb60 -W$thickL/$blck -K -O << end >> $psfile02
 17.95  2.50
 end
@@ -1057,6 +1077,9 @@ end
 psxy -R -JM -St0.4 -W$thickLM/$stea -K -O << end >> $psfile02
 17.95 -2.50
 end
+psxy -R -JM -St0.4 -W$thickLM/$outs -K -O << end >> $psfile02
+17.95 -3.00
+end
 # mobile stations - contours
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
 17.95 -0.50
@@ -1073,6 +1096,10 @@ end
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
 17.95 -2.50
 end
+psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
+17.95 -3.00
+end
+
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile02
 18.3  2.6 8 0 0 TL permanent BB >= 60s
@@ -1095,6 +1122,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile02
 18.3 -1.40 8 0 0 TL mobile North
 18.3 -1.90 8 0 0 TL mobile East
 18.3 -2.40 8 0 0 TL mobile Southeast
+18.3 -2.90 8 0 0 TL mobile other
 end
 # end of the legend to map 02
 
