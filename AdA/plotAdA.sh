@@ -26,8 +26,16 @@ psfile15=MAPS/15AdAmembers.ps
 psfile16=MAPS/16AdAnetwork.ps
 psfile17=MAPS/17AdAcorners.ps
 psfile18=MAPS/18AdAEIDAall.ps
+psfile19=MAPS/19AdAcolorTP.ps
+psfile20=MAPS/20AdAcoverP.ps
+psfile21=MAPS/21AdAcoverPT.ps
+psfile22=MAPS/22AdAcomplet.ps
+psfile23=MAPS/22AdAvirtual.ps
+diam10='20'
+diam20='40'
 diam30='60'
 diam40='80'
+diam50='100'
 
 mapborder='-01.0/+33.0/34.0/51.5'  # for station maps
 mapbordeB='-03.0/+35.0/34.0/66.5'  # for AdAmembers - bigger map showing the institutions
@@ -35,17 +43,18 @@ mapproj='16.0/90/38/48/23.0c'      # for station maps
 mapproB='16.0/90/38/58/17.3c'      # for AdAmembers - bigger map showing the institutions
 mapnet='a120mf120m/a60mf60m'       # for station maps
 mapneB='WEnSa120mf120m/a120mf120m' # for AdAmembers - bigger map showing the institutions
-sizemb='0.2'              # size of mobile stations
+sizemb='0.2'              # size of temporary stations
 sizeps='0.3'              # size of permanent stations
 sizepsA='0.25'            # size of permanent stations for the map 14: AA+AdA+PCS
 sizes2='0.25'             # size of empty triangles in map 13
 sizeot='0.2'              # size of stations OUT of the region
-thmb='1.2p'               # thickness of triangle contour for mobile stations
+sizetp='0.15'              # size of stations for colored topo map
+thmb='1.2p'               # thickness of triangle contour for temporary stations
 thps='0.3p'               # thickness of triangle contour for permanent stations
 thot='0.5p'               # thickness of empty triangles for stations outside of the region
 ths2='1.0p'               # thickness of empty triangles for map 13 - planned stations (not yet deployed)
 thickL='1.3p'             # thickness of triangles contour in the legend
-thickLM='3.0p'            # thickness of empty triangles in the legend for mobile stations
+thickLM='3.0p'            # thickness of empty triangles in the legend for temporary stations
 thickLC='2.0p'            # thickness of empty circles in the legend for mobile pools
 thickE='1.0p'             # thickness of empty circles in the 07 and 12 maps - mobile pools
 thickX='1.0p'             # thickness of elipses for local experiments
@@ -54,6 +63,10 @@ bb120='166/016/076'       # BB => 120s - dark red
 bb60='255/000/000'        # BB =>  60s - red
 bb40='255/174/000'        # BB =   40s - orange
 bb30='255/255/000'        # BB =   30s - yellow
+ci10='135/000/135'        # purple
+ci20='166/016/076'        # dark red
+ci30='255/100/100'        # light red
+ci40='255/255/000'        # yellow
 pcse='000/000/255'        # PACASE stations - blue
 upgr='000/255/000'        # permanent short period - green
 unkn='000/000/000'        # sensor unknown - black
@@ -77,6 +90,7 @@ nort='000/255/000'        # color NORTH
 stea='000/000/200'        # color SOUTHEAST
 west='150/000/150'        # color WEST
 blck='000/000/000'        # black contour of the triangles
+topo='000/000/000'        # stations in colored topography map
 labcolorW='255/255/255'   # label color - white
 labcolorB='000/000/000'   # label color - black
 irsmclr='255/000/000'     # IRSM CAS CZ ----------- individual mobile pools ----------------
@@ -136,16 +150,22 @@ pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all BB stations s
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all permanent stations":         -X+1.3 -Y+1.2 -W0.1p -K > $psfile10
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - permanent BB stations in EIDA":  -X+1.3 -Y+1.2 -W0.1p -K > $psfile11
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB + mobile pools":              -X+1.3 -Y+1.2 -W0.1p -K > $psfile12
-pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdA - deployed mobile stations                                 ": -X+1.3 -Y+1.2 -W0.1p -K > $psfile13
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdA - deployed temp. stations                              ": -X+1.3 -Y+1.2 -W0.1p -K > $psfile13
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."passive seismic experiments 2015 - 2025":     -X+1.3 -Y+1.2 -W0.1p -K > $psfile14
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - temporary networks":             -X+1.3 -Y+1.2 -W0.1p -K > $psfile16
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB stations by corner period":   -X+1.3 -Y+1.2 -W0.1p -K > $psfile17
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all BB stations in EIDA":        -X+1.3 -Y+1.2 -W0.1p -K > $psfile18
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile19
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile20
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile21
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile22
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile23
 pscoast -R$mapbordeB -Di -JL$mapproB -B$mapneB/:."AdriaArray institutions":                     -X+1.3 -Y+1.2 -W0.1p -K > $psfile15
 
 # greyshaded topography taken from
 # https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/netcdf/
 makecpt -CAUXI/twoshades -T-3000/+3000/100 -Z -V > AUXI/bw.cpt
+makecpt -CAUXI/GMT_globe -T-4500/+4500/100 -Z -V > AUXI/cl.cpt
 grdimage AUXI/AdAtopo.grd -R$mapborder -JL$mapproj -K -O -CAUXI/bw.cpt >> $psfile01
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile02
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile03
@@ -162,6 +182,11 @@ grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfil
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile16
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile17
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile18
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/cl.cpt >> $psfile19
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile20
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile21
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile22
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile23
 grdimage AUXI/AdAtopo.grd -R$mapbordeB -JL$mapproB -K -O -CAUXI/bw.cpt >> $psfile15
 
 # to plot borders over the topography
@@ -179,6 +204,8 @@ pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile14
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile16
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile17
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile18
+pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile22
+pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile23
 pscoast -R$mapbordeB -Di -N1/0.2p -W0.2p -JL$mapproB -K -O >> $psfile15
 psxy AUXI/kosovo-border.dat -R$mapborder -JL$mapproj -W0.2p/0/0/0 -K -O >> $psfile01
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile02
@@ -194,6 +221,8 @@ psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfi
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile16
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile17
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile18
+psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile22
+psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile23
 psxy AUXI/kosovo-border.dat -R$mapbordeB -JL$mapproB -W0.2p/0/0/0 -K -O >> $psfile15
 
 # outline of the AdriaArray region split in pieces to plot it differently onland and offshore
@@ -215,16 +244,32 @@ psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000           
 psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
 psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
 psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
+psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
+#psxy AUXI/tectoniclines.txt -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60       -K -O >> $psfile19
 
 # SP/SM stations not suitable or available for upgrade
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile10
+psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile22
 
 # SP/SM stations not needed for upgrade
 psxy     PERM/pWHIT.txt               -R -JL -St$sizeps -G$whit -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pWHIT.txt               -R -JL -St$sizeps -G$whit -W$thps/$blck -K -O >> $psfile10
+psxy     PERM/pWHIT.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile22
 psxy     PERM/pWHITo.txt              -R -JL -St$sizeot         -W$thot/$whit -K -O >> $psfile01
 psxy     PERM/pWHITo.txt              -R -JL -St$sizeot         -W$thot/$whit -K -O >> $psfile10
+psxy     PERM/pWHITo.txt              -R -JL -St$sizeot         -W$thot/$upgr -K -O >> $psfile22
 
 # unequipped spots available for upgrade
 psxy     PERM/pSPOT.txt               -R -JL -St$sizeps -G$spot -W$thps/$blck -K -O >> $psfile01
@@ -240,32 +285,50 @@ psxy     TEMP/rpSP.txt                -R -JL -St$sizeps           -W$thps/$blck 
 psxy     TEMP/rpBB.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile02
 psxy     TEMP/rpBB.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile02
 psxy     TEMP/rpBB.txt                -R -JL -St$sizeps  -G$outs  -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/rpBB.txt                -R -JL -St$sizetp  -G$topo  -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/rpBB.txt                -R -JL -St$sizepsA -G$outsA -W$thps/$blck  -K -O >> $psfile14
+psxy     TEMP/rpBB.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile22
+psxy     TEMP/rpBB.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile22
+psxy     TEMP/rpSP.txt                -R -JL -St$sizemb           -W$thmb/$outs  -K -O >> $psfile22
+psxy     TEMP/rpSP.txt                -R -JL -St$sizeps           -W$thps/$blck  -K -O >> $psfile22
+
+# PACASE stations which will stay for AdriaArray
+awk '{print $3, $2}' AUXI/PACASEstay.txt > AUXI/stations-PACASEstay.txt
+psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile01 # if you delete "stay", and keep the file as "stations-PACASE.txt", it plots all PACASE stations
+psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile02
+psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile22
 
 # BB stations working during the AdA time frame (since May 2022) but closed already
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile01
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb          -W$thmb/$blck -K -O >> $psfile01
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile01
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile02
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb          -W$thmb/$blck -K -O >> $psfile02
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile02
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile03
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile03
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile06
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile06
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile07
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile07
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile09
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile09
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile10 # in this map, temporary are not shown at all
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile12
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck -W$thps/$blck -K -O >> $psfile12
-psxy     PERM/pCLOS.txt               -R -JL -St$sizepsA -G$blck -W$thps/$blck -K -O >> $psfile14
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck -K -O >> $psfile14 # closed temporary have the same color as other temporary, as in this map, many temporary are closed from the old experiments
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pCLOS.txt > PERM/circlesCLOS30.dat # creating circles for plotting the coverage
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pCLOS.txt > PERM/circlesCLOS40.dat
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/closedTemp.txt > TEMP/circlesCLOS30.dat # creating circles for plotting the coverage
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/closedTemp.txt > TEMP/circlesCLOS40.dat
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile01
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot           -W$thot/$blck -K -O >> $psfile01
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb           -W$thmb/$blck -K -O >> $psfile01
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps           -W$thps/$blck -K -O >> $psfile01
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile02
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot           -W$thot/$blck -K -O >> $psfile02
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb           -W$thmb/$blck -K -O >> $psfile02
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps           -W$thps/$blck -K -O >> $psfile02
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile03
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile03
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile06
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile06
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile07
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile07
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot  -G$blck  -W$thot/$blck -K -O >> $psfile09
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pCLOS.txt               -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile10 # in this map, temporary are not shown at all
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot           -W$thot/$blck -K -O >> $psfile10
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile12
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile12
+psxy     PERM/pCLOS.txt               -R -JL -St$sizepsA -G$blck  -W$thps/$blck -K -O >> $psfile14
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizepsA -G$outsA -W$thps/$blck  -K -O >> $psfile14
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizepsA -G$temp  -W$thps/$blck -K -O >> $psfile14 # closed temporary have the same color as other temporary, as in this map, many temporary are closed from the old experiments
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck  -W$thps/$blck -K -O >> $psfile22
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot           -W$thps/$blck -K -O >> $psfile22
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb           -W$thmb/$blck -K -O >> $psfile22
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps           -W$thps/$blck -K -O >> $psfile22
 
 # BB stations planned to be deployed in near future
 psxy     PERM/pFUTU.txt               -R -JL -St$sizeps  -G$futu -W$thps/$blck -K -O >> $psfile01
@@ -284,8 +347,8 @@ psxy     PERM/pFUTU.txt               -R -JL -St$sizes2          -W$ths2/$grey -
 psxy     PERM/pFUTU.txt               -R -JL -St$sizeps          -W$thps/$blck -K -O >> $psfile13
 psxy     PERM/pFUTU.txt               -R -JL -St$sizepsA -G$futu -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pFUTUo.txt              -R -JL -St$sizepsA -G$futu -W$thps/$blck -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pFUTU.txt > PERM/circlesFUTU30.dat # creating circles for plotting the coverage
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pFUTU.txt > PERM/circlesFUTU40.dat
+psxy     PERM/pFUTU.txt               -R -JL -St$sizeps  -G$futu -W$thps/$blck -K -O >> $psfile22
+psxy     PERM/pFUTUo.txt              -R -JL -St$sizeot          -W$thot/$futu -K -O >> $psfile22
 
 # EASI, AlpArray, Ivrea and PACASE temporary stations
 psxy     AUXI/AlpArrayTemp.txt        -R -JL -St$sizepsA -G$temp    -W$thps/$blck -K -O >> $psfile14
@@ -300,17 +363,11 @@ psxy     AUXI/easi.txt                -R -JL -St$sizepsA -G$temp    -W$thps/$blc
 #psxy     PERM/pUNKNo.txt              -R -JL -St$sizeot         -W$thot/$unkn -K -O >> $psfile10
 #psxy     PERM/pUNKN.txt               -R -JL -St$sizeps -G$unkn -W$thps/$blck -K -O >> $psfile02
 #psxy     PERM/pUNKNo.txt              -R -JL -St$sizeot         -W$thot/$unkn -K -O >> $psfile02
-#awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pUNKN.txt > PERM/circlesUNKN30.dat
-#awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pUNKN.txt > PERM/circlesUNKN40.dat
 
 # SP/SM stations available for upgrade
 psxy     PERM/pUPGR.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pUPGR.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile10
-
-# PACASE stations which will stay for AdriaArray
-awk '{print $3, $2}' AUXI/PACASEstay.txt > AUXI/stations-PACASEstay.txt
-psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile01 # if you delete "stay", and keep the file as "stations-PACASE.txt", it plots all PACASE stations
-psxy   AUXI/stations-PACASEstay.txt -R -JL -St$sizeps -G$pcse -W$thps/$blck -K -O >> $psfile02
+psxy     PERM/pUPGR.txt               -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile22
 
 # BB stations with corner period from 30 to 40 s
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile01
@@ -322,6 +379,8 @@ psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile07
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile09
 psxy     PERM/pBB30o.txt          -R -JL -St$sizeot  -G$outs  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pBB30.txt           -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
+psxy     PERM/pBB30o.txt          -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile10
 psxy     PERM/pBB30o.txt          -R -JL -St$sizeot           -W$thot/$bb30 -K -O >> $psfile10
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile12
@@ -330,8 +389,9 @@ psxy     PERM/pBB30o.txt          -R -JL -St$sizepsA -G$outsA -W$thps/$blck -K -
 psxy     PERM/pBB30.txt           -R -JL -St$sizepsA -G$perm  -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile17
 psxy     TEMP/tBB030.txt          -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile17
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pBB30.txt > PERM/circlesBB3030.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pBB30.txt > PERM/circlesBB3040.dat
+psxy     PERM/pBB30.txt           -R -JL -St$sizeps  -G$bb30  -W$thps/$blck -K -O >> $psfile22
+psxy     PERM/pBB30o.txt          -R -JL -St$sizeot           -W$thot/$bb30 -K -O >> $psfile22
+
 
 # BB stations with corner period from 40 to 60 s
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile01
@@ -339,20 +399,23 @@ psxy     PERM/pBB40o.txt          -R -JL -St$sizeot           -W$thot/$bb40 -K -
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile10
 psxy     PERM/pBB40o.txt          -R -JL -St$sizeot           -W$thot/$bb40 -K -O >> $psfile10
 psxy     PERM/pBB40o.txt          -R -JL -St$sizeot  -G$outs  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pBB40o.txt          -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile02
 psxy     PERM/pBB40o.txt          -R -JL -St$sizeot           -W$thot/$bb40 -K -O >> $psfile02
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile06
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile03
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile07
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pBB40.txt           -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile12
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$grey  -W$thps/$blck -K -O >> $psfile13
 psxy     PERM/pBB40o.txt          -R -JL -St$sizepsA -G$outsA -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pBB40.txt           -R -JL -St$sizepsA -G$perm  -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile17
 psxy     TEMP/tBB040.txt          -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile17
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pBB40.txt > PERM/circlesBB4030.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pBB40.txt > PERM/circlesBB4040.dat
+psxy     PERM/pBB40.txt           -R -JL -St$sizeps  -G$bb40  -W$thps/$blck -K -O >> $psfile22
+psxy     PERM/pBB40o.txt          -R -JL -St$sizeot           -W$thot/$bb40 -K -O >> $psfile22
+
 
 # BB stations with corner period 60 s and longer
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile01
@@ -360,18 +423,21 @@ psxy     PERM/pBB60o.txt          -R -JL -St$sizeot           -W$thot/$bb60 -K -
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile10
 psxy     PERM/pBB60o.txt          -R -JL -St$sizeot           -W$thot/$bb60 -K -O >> $psfile10
 psxy     PERM/pBB60o.txt          -R -JL -St$sizeot  -G$outs  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pBB60o.txt          -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile02
 psxy     PERM/pBB60o.txt          -R -JL -St$sizeot           -W$thot/$bb60 -K -O >> $psfile02
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile06
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile03
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile07
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile09
+psxy     PERM/pBB60.txt           -R -JL -St$sizetp  -G$topo  -W$thps/$blck -K -O >> $psfile19
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$perm  -W$thps/$blck -K -O >> $psfile12
 psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$grey  -W$thps/$blck -K -O >> $psfile13
 psxy     PERM/pBB60o.txt          -R -JL -St$sizepsA -G$outsA -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pBB60.txt           -R -JL -St$sizepsA -G$perm  -W$thps/$blck -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' PERM/pBB60.txt > PERM/circlesBB6030.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' PERM/pBB60.txt > PERM/circlesBB6040.dat
+psxy     PERM/pBB60.txt           -R -JL -St$sizeps  -G$bb60  -W$thps/$blck -K -O >> $psfile22
+psxy     PERM/pBB60o.txt          -R -JL -St$sizeot           -W$thot/$bb60 -K -O >> $psfile22
+
 
 # finer split by corner period for map 17 and not yet deployed temporary stations for map 17
 psxy     TEMP/notDepl.txt         -R -JL -St$sizeps  -G$grey  -W$thps/$blck -K -O >> $psfile17
@@ -382,7 +448,7 @@ psxy     TEMP/tBB120-240.txt      -R -JL -St$sizeps  -G$bb120 -W$thps/$blck -K -
 psxy     PERM/pBB240.txt          -R -JL -St$sizeps  -G$bb240 -W$thps/$blck -K -O >> $psfile17
 psxy     TEMP/tBB240.txt          -R -JL -St$sizeps  -G$bb240 -W$thps/$blck -K -O >> $psfile17
 
-# mobile stations - subgroup CENTER
+# temp stations - subgroup CENTER
 psxy     TEMP/mcent.txt          -R -JL -St$sizemb          -W$thmb/$centP -K -O >> $psfile01
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mcent.txt          -R -JL -St$sizemb          -W$thmb/$cent  -K -O >> $psfile02
@@ -391,12 +457,14 @@ psxy     TEMP/mcent.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps  -G$cent -W$thps/$blck  -K -O >> $psfile03
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps  -G$cent -W$thps/$blck  -K -O >> $psfile07
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/mcent.txt          -R -JL -St$sizetp  -G$topo -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/mcent.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile12
 psxy     TEMP/mcent.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck  -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/mcent.txt > TEMP/circlesCENT30.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mcent.txt > TEMP/circlesCENT40.dat
+psxy     TEMP/mcent.txt          -R -JL -St$sizemb          -W$thmb/$centP -K -O >> $psfile22
+psxy     TEMP/mcent.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile22
 
-# mobile stations - subgroup EAST
+
+# temp stations - subgroup EAST
 psxy     TEMP/meast.txt          -R -JL -St$sizemb          -W$thmb/$eastP -K -O >> $psfile01
 psxy     TEMP/meast.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/meast.txt          -R -JL -St$sizemb          -W$thmb/$east  -K -O >> $psfile02
@@ -405,12 +473,13 @@ psxy     TEMP/meast.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O
 psxy     TEMP/meast.txt          -R -JL -St$sizeps  -G$east -W$thps/$blck  -K -O >> $psfile03
 psxy     TEMP/meast.txt          -R -JL -St$sizeps  -G$east -W$thps/$blck  -K -O >> $psfile07
 psxy     TEMP/meast.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/meast.txt          -R -JL -St$sizetp  -G$topo -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/meast.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile12
 psxy     TEMP/meast.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck  -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/meast.txt > TEMP/circlesEAST30.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/meast.txt > TEMP/circlesEAST40.dat
+psxy     TEMP/meast.txt          -R -JL -St$sizemb          -W$thmb/$eastP -K -O >> $psfile22
+psxy     TEMP/meast.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile22
 
-# mobile stations - subgroup WEST
+# temp stations - subgroup WEST
 psxy     TEMP/mwest.txt          -R -JL -St$sizemb          -W$thmb/$westP -K -O >> $psfile01
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mwest.txt          -R -JL -St$sizemb          -W$thmb/$west  -K -O >> $psfile02
@@ -419,12 +488,13 @@ psxy     TEMP/mwest.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps  -G$west -W$thps/$blck  -K -O >> $psfile03
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps  -G$west -W$thps/$blck  -K -O >> $psfile07
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/mwest.txt          -R -JL -St$sizetp  -G$topo -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/mwest.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile12
 psxy     TEMP/mwest.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck  -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/mwest.txt > TEMP/circlesWEST30.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mwest.txt > TEMP/circlesWEST40.dat
+psxy     TEMP/mwest.txt          -R -JL -St$sizemb          -W$thmb/$westP -K -O >> $psfile22
+psxy     TEMP/mwest.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile22
 
-# mobile stations - subgroup NORTH
+# temp stations - subgroup NORTH
 psxy     TEMP/mnort.txt          -R -JL -St$sizemb          -W$thmb/$nortP -K -O >> $psfile01
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mnort.txt          -R -JL -St$sizemb          -W$thmb/$nort  -K -O >> $psfile02
@@ -433,12 +503,13 @@ psxy     TEMP/mnort.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps  -G$nort -W$thps/$blck  -K -O >> $psfile03
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps  -G$nort -W$thps/$blck  -K -O >> $psfile07
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/mnort.txt          -R -JL -St$sizetp  -G$topo -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/mnort.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile12
 psxy     TEMP/mnort.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck  -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/mnort.txt > TEMP/circlesNORT30.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mnort.txt > TEMP/circlesNORT40.dat
+psxy     TEMP/mnort.txt          -R -JL -St$sizemb          -W$thmb/$nortP -K -O >> $psfile22
+psxy     TEMP/mnort.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile22
 
-# mobile stations - subgroup SOUTHEAST
+# temp stations - subgroup SOUTHEAST
 psxy     TEMP/mstea.txt          -R -JL -St$sizemb          -W$thmb/$steaP -K -O >> $psfile01
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile01
 psxy     TEMP/mstea.txt          -R -JL -St$sizemb          -W$thmb/$stea  -K -O >> $psfile02
@@ -447,10 +518,11 @@ psxy     TEMP/mstea.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps  -G$stea -W$thps/$blck  -K -O >> $psfile03
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps  -G$stea -W$thps/$blck  -K -O >> $psfile07
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile09
+psxy     TEMP/mstea.txt          -R -JL -St$sizetp  -G$topo -W$thps/$blck  -K -O >> $psfile19
 psxy     TEMP/mstea.txt          -R -JL -St$sizeps  -G$temp -W$thps/$blck  -K -O >> $psfile12
 psxy     TEMP/mstea.txt          -R -JL -St$sizepsA -G$temp -W$thps/$blck  -K -O >> $psfile14
-awk -v awk_diam30=$diam30 '{print $1, $2, "0.0 " awk_diam30 " " awk_diam30}' TEMP/mstea.txt > TEMP/circlesSTEA30.dat
-awk -v awk_diam40=$diam40 '{print $1, $2, "0.0 " awk_diam40 " " awk_diam40}' TEMP/mstea.txt > TEMP/circlesSTEA40.dat
+psxy     TEMP/mstea.txt          -R -JL -St$sizemb          -W$thmb/$steaP -K -O >> $psfile22
+psxy     TEMP/mstea.txt          -R -JL -St$sizeps          -W$thps/$blck  -K -O >> $psfile22
 
 # experiment outlines for map 14
 psxy AUXI/AlpArrayOutline.dat -R -JL -W1.3p/255/255/255            -K -O >> $psfile14
@@ -476,32 +548,30 @@ pstext -R -JL -G255/255/000 -K -O << end >> $psfile14
 end
 
 # circles of 30 km radius
-#psxy PERM/circlesUNKN30.dat  -R -JL -G$unkn -SE -K -O >> $psfile04
-psxy PERM/circlesCLOS30.dat  -R -JL -G$blck -SE -K -O >> $psfile04
-psxy TEMP/circlesCLOS30.dat  -R -JL -G$blck -SE -K -O >> $psfile04
-psxy PERM/circlesFUTU30.dat  -R -JL -G$futu -SE -K -O >> $psfile04
-psxy PERM/circlesBB3030.dat  -R -JL -G$bb30 -SE -K -O >> $psfile04
-psxy PERM/circlesBB4030.dat  -R -JL -G$bb40 -SE -K -O >> $psfile04
-psxy PERM/circlesBB6030.dat  -R -JL -G$bb60 -SE -K -O >> $psfile04
-psxy TEMP/circlesWEST30.dat  -R -JL -G$west -SE -K -O >> $psfile04
-psxy TEMP/circlesCENT30.dat  -R -JL -G$cent -SE -K -O >> $psfile04
-psxy TEMP/circlesNORT30.dat  -R -JL -G$nort -SE -K -O >> $psfile04
-psxy TEMP/circlesEAST30.dat  -R -JL -G$east -SE -K -O >> $psfile04
-psxy TEMP/circlesSTEA30.dat  -R -JL -G$stea -SE -K -O >> $psfile04
+psxy PERM/circlesCLOS30.txt  -R -JL -G$blck -SE -K -O >> $psfile04
+psxy TEMP/circlesCLOS30.txt  -R -JL -G$blck -SE -K -O >> $psfile04
+psxy PERM/circlesFUTU30.txt  -R -JL -G$futu -SE -K -O >> $psfile04
+psxy PERM/circlesBB3030.txt  -R -JL -G$bb30 -SE -K -O >> $psfile04
+psxy PERM/circlesBB4030.txt  -R -JL -G$bb40 -SE -K -O >> $psfile04
+psxy PERM/circlesBB6030.txt  -R -JL -G$bb60 -SE -K -O >> $psfile04
+psxy TEMP/circlesWEST30.txt  -R -JL -G$west -SE -K -O >> $psfile04
+psxy TEMP/circlesCENT30.txt  -R -JL -G$cent -SE -K -O >> $psfile04
+psxy TEMP/circlesNORT30.txt  -R -JL -G$nort -SE -K -O >> $psfile04
+psxy TEMP/circlesEAST30.txt  -R -JL -G$east -SE -K -O >> $psfile04
+psxy TEMP/circlesSTEA30.txt  -R -JL -G$stea -SE -K -O >> $psfile04
 
 # circles of 40 km radius
-#psxy PERM/circlesUNKN40.dat  -R -JL -G$unkn -SE -K -O >> $psfile05
-psxy PERM/circlesCLOS40.dat  -R -JL -G$blck -SE -K -O >> $psfile05
-psxy TEMP/circlesCLOS40.dat  -R -JL -G$blck -SE -K -O >> $psfile05
-psxy PERM/circlesFUTU40.dat  -R -JL -G$futu -SE -K -O >> $psfile05
-psxy PERM/circlesBB3040.dat  -R -JL -G$bb30 -SE -K -O >> $psfile05
-psxy PERM/circlesBB4040.dat  -R -JL -G$bb40 -SE -K -O >> $psfile05
-psxy PERM/circlesBB6040.dat  -R -JL -G$bb60 -SE -K -O >> $psfile05
-psxy TEMP/circlesWEST40.dat  -R -JL -G$west -SE -K -O >> $psfile05
-psxy TEMP/circlesCENT40.dat  -R -JL -G$cent -SE -K -O >> $psfile05
-psxy TEMP/circlesNORT40.dat  -R -JL -G$nort -SE -K -O >> $psfile05
-psxy TEMP/circlesEAST40.dat  -R -JL -G$east -SE -K -O >> $psfile05
-psxy TEMP/circlesSTEA40.dat  -R -JL -G$stea -SE -K -O >> $psfile05
+psxy PERM/circlesCLOS40.txt  -R -JL -G$blck -SE -K -O >> $psfile05
+psxy TEMP/circlesCLOS40.txt  -R -JL -G$blck -SE -K -O >> $psfile05
+psxy PERM/circlesFUTU40.txt  -R -JL -G$futu -SE -K -O >> $psfile05
+psxy PERM/circlesBB3040.txt  -R -JL -G$bb30 -SE -K -O >> $psfile05
+psxy PERM/circlesBB4040.txt  -R -JL -G$bb40 -SE -K -O >> $psfile05
+psxy PERM/circlesBB6040.txt  -R -JL -G$bb60 -SE -K -O >> $psfile05
+psxy TEMP/circlesWEST40.txt  -R -JL -G$west -SE -K -O >> $psfile05
+psxy TEMP/circlesCENT40.txt  -R -JL -G$cent -SE -K -O >> $psfile05
+psxy TEMP/circlesNORT40.txt  -R -JL -G$nort -SE -K -O >> $psfile05
+psxy TEMP/circlesEAST40.txt  -R -JL -G$east -SE -K -O >> $psfile05
+psxy TEMP/circlesSTEA40.txt  -R -JL -G$stea -SE -K -O >> $psfile05
 
 # stations which are / are not in EIDA
 psxy PERM/EIDAysBB.txt    -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile11
@@ -513,6 +583,34 @@ psxy PERM/EIDAysBB.txt    -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfi
 psxy TEMP/tempEIDAyes.txt -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile18
 psxy PERM/EIDAzz.txt      -R -JL -St$sizeps -G$unkn -W$thps/$blck -K -O >> $psfile18
 psxy TEMP/notDepl.txt     -R -JL -St$sizeps -G$blck -W$thps/$blck -K -O >> $psfile18
+
+# backbone vs. virtual network
+psxy PERM/perm10plusIN.txt -R -JL -St$sizeps -G$bb60 -W$thps/$blck -K -O >> $psfile23 # virtual _ADARRAY
+psxy PERM/perm30plusIN.txt -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile23 # backbone permanent
+psxy TEMP/yesDepl.txt      -R -JL -St$sizeps -G$upgr -W$thps/$blck -K -O >> $psfile23 # backbone temporary, deployed
+
+# coverage of all permanent stations in EIDA
+psxy PERM/perm30io40.txt  -R -JL -G$ci40 -SE -K -O >> $psfile20
+psxy PERM/perm30io30.txt  -R -JL -G$ci30 -SE -K -O >> $psfile20
+psxy PERM/perm30io20.txt  -R -JL -G$ci20 -SE -K -O >> $psfile20
+psxy PERM/perm30io10.txt  -R -JL -G$ci10 -SE -K -O >> $psfile20
+psxy PERM/EIDAnoBB.txt    -R -JL -St$sizetp -G$blck -W$thps/$blck -K -O >> $psfile20
+pscoast                   -R -JL -Di -N1/0.2p -W0.2p              -K -O >> $psfile20
+psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0                   -K -O >> $psfile20
+
+# coverage of all permanent stations in EIDA
+psxy PERM/perm30io40.txt -R -JL -G$ci40 -SE -K -O >> $psfile21
+psxy TEMP/tEIDA40.txt    -R -JL -G$ci40 -SE -K -O >> $psfile21
+psxy PERM/perm30io30.txt -R -JL -G$ci30 -SE -K -O >> $psfile21
+psxy TEMP/tEIDA30.txt    -R -JL -G$ci30 -SE -K -O >> $psfile21
+psxy PERM/perm30io20.txt -R -JL -G$ci20 -SE -K -O >> $psfile21
+psxy TEMP/tEIDA20.txt    -R -JL -G$ci20 -SE -K -O >> $psfile21
+psxy PERM/perm30io10.txt -R -JL -G$ci10 -SE -K -O >> $psfile21
+psxy TEMP/tEIDA10.txt    -R -JL -G$ci10 -SE -K -O >> $psfile21
+psxy PERM/EIDAnoBB.txt   -R -JL -St$sizetp -G$blck -W$thps/$blck -K -O >> $psfile21
+psxy TEMP/tempEIDAno.txt -R -JL -St$sizetp -G$blck -W$thps/$blck -K -O >> $psfile21
+pscoast                  -R -JL -Di -N1/0.2p -W0.2p              -K -O >> $psfile21
+psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0                  -K -O >> $psfile21
 
 # individual mobile pools
 # GIPP
@@ -856,11 +954,12 @@ pstext PERM/pWHITlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pWHITolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pSPOTlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pSPOTolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile01
+pstext TEMP/closedT-label.txt       -R -JL -G$labcolorW -K -O >> $psfile01
 pstext PERM/pCLOSlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile01
 pstext PERM/pFUTUlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pFUTUolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile01
-pstext PERM/pUNKNlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile01
-pstext PERM/pUNKNolabel.txt         -R -JL -G$labcolorW -K -O >> $psfile01
+#pstext PERM/pUNKNlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile01
+#pstext PERM/pUNKNolabel.txt         -R -JL -G$labcolorW -K -O >> $psfile01
 pstext PERM/pUPGRlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pBB30label.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pBB30olabel.txt         -R -JL -G$labcolorB -K -O >> $psfile01
@@ -873,12 +972,11 @@ pstext TEMP/meast-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mwest-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mnort-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
 pstext TEMP/mstea-label.txt         -R -JL -G$labcolorB -K -O >> $psfile01
-pstext TEMP/rplabel.txt             -R -JL -G$labcolorW -K -O >> $psfile01 # labels for BB non-EIDA stations - temporary
+pstext TEMP/rplabel.txt             -R -JL -G$labcolorW -K -O >> $psfile01
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile11 # labels for BB non-EIDA stations - permanent
 pstext PERM/pEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - permanent
 pstext TEMP/tEIDAnoBBlabel.txt      -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - temporary
-pstext TEMP/notDepllabel.txt        -R -JL -G$labcolorW -K -O >> $psfile18 # labels for BB non-EIDA stations - temporary
-
+pstext TEMP/notDepllabel.txt        -R -JL -G$labcolorW -K -O >> $psfile18 # labels for not-deployed stations
 pstext PERM/pNOSPlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pWHITlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pWHITolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile10
@@ -887,8 +985,8 @@ pstext PERM/pSPOTolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pCLOSlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile10
 pstext PERM/pFUTUlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pFUTUolabel.txt         -R -JL -G$labcolorB -K -O >> $psfile10
-pstext PERM/pUNKNlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile10
-pstext PERM/pUNKNolabel.txt         -R -JL -G$labcolorW -K -O >> $psfile10
+#pstext PERM/pUNKNlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile10
+#pstext PERM/pUNKNolabel.txt         -R -JL -G$labcolorW -K -O >> $psfile10
 pstext PERM/pUPGRlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pBB30label.txt          -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pBB30olabel.txt         -R -JL -G$labcolorB -K -O >> $psfile10
@@ -897,6 +995,7 @@ pstext PERM/pBB40olabel.txt         -R -JL -G$labcolorB -K -O >> $psfile10
 pstext PERM/pBB60label.txt          -R -JL -G$labcolorW -K -O >> $psfile10
 pstext PERM/pBB60olabel.txt         -R -JL -G$labcolorW -K -O >> $psfile10
 pstext PERM/pCLOSlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile04
+pstext TEMP/closedT-label.txt       -R -JL -G$labcolorW -K -O >> $psfile04
 pstext PERM/pFUTUlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile04
 pstext PERM/pBB30label.txt          -R -JL -G$labcolorB -K -O >> $psfile04
 pstext PERM/pBB40label.txt          -R -JL -G$labcolorB -K -O >> $psfile04
@@ -907,6 +1006,7 @@ pstext TEMP/mwest-label.txt         -R -JL -G$labcolorB -K -O >> $psfile04
 pstext TEMP/mnort-label.txt         -R -JL -G$labcolorB -K -O >> $psfile04
 pstext TEMP/mstea-label.txt         -R -JL -G$labcolorB -K -O >> $psfile04
 pstext PERM/pCLOSlabel.txt          -R -JL -G$labcolorW -K -O >> $psfile05
+pstext TEMP/closedT-label.txt       -R -JL -G$labcolorW -K -O >> $psfile05
 pstext PERM/pFUTUlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile05
 pstext PERM/pBB30label.txt          -R -JL -G$labcolorB -K -O >> $psfile05
 pstext PERM/pBB40label.txt          -R -JL -G$labcolorB -K -O >> $psfile05
@@ -935,7 +1035,7 @@ psxy AUXI/members.txt    -R           -JL         -Ss0.4 -G$membclr -W0.6p/$blck
 # plotting another "map" to each file, where only the legend will be placed
 
 # legend to map 01
-pscoast -R17.6/21.5/-4.4/4.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile01
+pscoast -R17.6/21.5/-4.9/4.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile01
 psxy -R -JM -St0.6 -G$bb60 -W$thickL/$blck -K -O << end >> $psfile01
 17.95  3.50
 end
@@ -966,7 +1066,7 @@ end
 psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfile01
 17.95 -1.00
 end
-# mobile stations - colors
+# temp stations - colors
 psxy -R -JM -St0.4 -W$thickLM/$westP -K -O << end >> $psfile01
 17.95 -1.50
 end
@@ -985,7 +1085,10 @@ end
 psxy -R -JM -St0.4 -W$thickLM/$outs -K -O << end >> $psfile01
 17.95 -4.00
 end
-# mobile stations - contours
+psxy -R -JM -St0.4 -W$thickLM/$blck -K -O << end >> $psfile01
+17.95 -4.50
+end
+# temp stations - contours
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 17.95 -1.50
 end
@@ -1003,6 +1106,9 @@ psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 end
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
 17.95 -4.00
+end
+psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile01
+17.95 -4.50
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile01
@@ -1029,20 +1135,23 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile01
 
 18.3 -0.40 8 0 0 TL planned permanent station
 
-18.3 -0.77 8 0 0 TL stations operational after
+18.3 -0.77 8 0 0 TL perm stations operational after
 18.3 -1.00 8 0 0 TL May 2022 but closed now
 
-18.3 -1.40 8 0 0 TL mobile West
-18.3 -1.90 8 0 0 TL mobile Center
-18.3 -2.40 8 0 0 TL mobile North
-18.3 -2.90 8 0 0 TL mobile East
-18.3 -3.40 8 0 0 TL mobile Southeast
-18.3 -3.90 8 0 0 TL mobile other
+18.3 -1.40 8 0 0 TL temporary West
+18.3 -1.90 8 0 0 TL temporary Center
+18.3 -2.40 8 0 0 TL temporary North
+18.3 -2.90 8 0 0 TL temporary East
+18.3 -3.40 8 0 0 TL temporary Southeast
+18.3 -3.90 8 0 0 TL temporary other
+
+18.3 -4.27 8 0 0 TL temp stations operational after
+18.3 -4.50 8 0 0 TL May 2022 but closed now
 end
 # end of the legend to map 01
 
 # legend to map 02
-pscoast -R17.6/21.5/-3.4/3.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile02
+pscoast -R17.6/21.5/-3.9/3.0 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile02
 psxy -R -JM -St0.6 -G$bb60 -W$thickL/$blck -K -O << end >> $psfile02
 17.95  2.50
 end
@@ -1061,7 +1170,7 @@ end
 psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfile02
 17.95  0.00
 end
-# mobile stations - colors
+# temporary stations - colors
 psxy -R -JM -St0.4 -W$thickLM/$west -K -O << end >> $psfile02
 17.95 -0.50
 end
@@ -1080,7 +1189,10 @@ end
 psxy -R -JM -St0.4 -W$thickLM/$outs -K -O << end >> $psfile02
 17.95 -3.00
 end
-# mobile stations - contours
+psxy -R -JM -St0.4 -W$thickLM/$blck -K -O << end >> $psfile02
+17.95 -3.50
+end
+# temporary stations - contours
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
 17.95 -0.50
 end
@@ -1099,6 +1211,9 @@ end
 psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
 17.95 -3.00
 end
+psxy -R -JM -St0.6 -W$thickL/$blck -K -O << end >> $psfile02
+17.95 -3.50
+end
 
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile02
@@ -1114,15 +1229,18 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile02
 
 18.3  0.60 8 0 0 TL planned permanent station
 
-18.3  0.23 8 0 0 TL stations operational after
+18.3  0.23 8 0 0 TL perm stations operational after
 18.3  0.00 8 0 0 TL May 2022 but closed now
 
-18.3 -0.40 8 0 0 TL mobile West
-18.3 -0.90 8 0 0 TL mobile Center
-18.3 -1.40 8 0 0 TL mobile North
-18.3 -1.90 8 0 0 TL mobile East
-18.3 -2.40 8 0 0 TL mobile Southeast
-18.3 -2.90 8 0 0 TL mobile other
+18.3 -0.40 8 0 0 TL temporary West
+18.3 -0.90 8 0 0 TL temporary Center
+18.3 -1.40 8 0 0 TL temporary North
+18.3 -1.90 8 0 0 TL temporary East
+18.3 -2.40 8 0 0 TL temporary Southeast
+18.3 -2.90 8 0 0 TL temporary other
+
+18.3 -3.27 8 0 0 TL temp stations operational after
+18.3 -3.50 8 0 0 TL May 2022 but closed now
 end
 # end of the legend to map 02
 
@@ -1137,7 +1255,7 @@ end
 psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfile03
 17.95  0.50
 end
-# mobile stations - colors
+# temporary stations - colors
 psxy -R -JM -St0.6 -G$west -W$thickL/$blck -K -O << end >> $psfile03
 17.95  0.00
 end
@@ -1161,11 +1279,11 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile03
 18.3  0.73 8 0 0 TL stations operational after
 18.3  0.50 8 0 0 TL May 2022 but closed now
 
-18.3  0.10 8 0 0 TL mobile West
-18.3 -0.40 8 0 0 TL mobile Center
-18.3 -0.90 8 0 0 TL mobile North
-18.3 -1.40 8 0 0 TL mobile East
-18.3 -1.90 8 0 0 TL mobile Southeast
+18.3  0.10 8 0 0 TL temporary West
+18.3 -0.40 8 0 0 TL temporary Center
+18.3 -0.90 8 0 0 TL temporary North
+18.3 -1.40 8 0 0 TL temporary East
+18.3 -1.90 8 0 0 TL temporary Southeast
 end
 # end of the legend to map 03
 
@@ -1216,11 +1334,11 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile04
 18.3  0.23 8 0 0 TL stations operational after
 18.3  0.00 8 0 0 TL May 2022 but closed now
 
-18.3 -0.40 8 0 0 TL mobile West
-18.3 -0.90 8 0 0 TL mobile Center
-18.3 -1.40 8 0 0 TL mobile North
-18.3 -1.90 8 0 0 TL mobile East
-18.3 -2.40 8 0 0 TL mobile Southeast
+18.3 -0.40 8 0 0 TL temporary West
+18.3 -0.90 8 0 0 TL temporary Center
+18.3 -1.40 8 0 0 TL temporary North
+18.3 -1.90 8 0 0 TL temporary East
+18.3 -2.40 8 0 0 TL temporary Southeast
 end
 # end of the legend to map 04
 
@@ -1271,11 +1389,11 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile05
 18.3  0.23 8 0 0 TL stations operational after
 18.3  0.00 8 0 0 TL May 2022 but closed now
 
-18.3 -0.40 8 0 0 TL mobile West
-18.3 -0.90 8 0 0 TL mobile Center
-18.3 -1.40 8 0 0 TL mobile North
-18.3 -1.90 8 0 0 TL mobile East
-18.3 -2.40 8 0 0 TL mobile Southeast
+18.3 -0.40 8 0 0 TL temporary West
+18.3 -0.90 8 0 0 TL temporary Center
+18.3 -1.40 8 0 0 TL temporary North
+18.3 -1.90 8 0 0 TL temporary East
+18.3 -2.40 8 0 0 TL temporary Southeast
 end
 # end of the legend to map 05
 
@@ -1303,7 +1421,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile06
 18.3 -0.27 8 0 0 TL stations operational after
 18.3 -0.50 8 0 0 TL May 2022 but closed now
 
-18.3 -0.90 8 0 0 TL mobile BB stations
+18.3 -0.90 8 0 0 TL temporary BB stations
 end
 # end of the legend to map 06
 
@@ -1311,7 +1429,7 @@ end
 circsize='0.4'
 triasize='0.5'
 pscoast -R17.6/21.5/-8.8/8.3 -Dc -JM20/60/4.3c -G150/150/150 -S150/150/150 -Y+0.2 -X+24.0 -K -O >> $psfile07
-# mobile stations - circles
+# temporary stations - circles
 psxy -R -JM -Sc$circsize -W$thickLC/$serbclr -K -O << end >> $psfile07 # Serbian Pool
 17.95  8.0
 end
@@ -1400,7 +1518,7 @@ end
 psxy -R -JM -St$triasize -G$blck -W$thickL/$blck -K -O << end >> $psfile07
 17.95 -6.0
 end
-# triangles - mobile stations
+# triangles - temporary stations
 psxy -R -JM -St$triasize -G$west -W$thickL/$blck -K -O << end >> $psfile07
 17.95 -6.5
 end
@@ -1447,11 +1565,11 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile07
 18.3 -4.9 7.5 0 0 TL permanent BB stations
 18.3 -5.4 7.5 0 0 TL planned permanent stations
 18.3 -5.9 7.5 0 0 TL closed stations
-18.3 -6.4 7.5 0 0 TL mobile West
-18.3 -6.9 7.5 0 0 TL mobile Center
-18.3 -7.4 7.5 0 0 TL mobile North
-18.3 -7.9 7.5 0 0 TL mobile East
-18.3 -8.4 7.5 0 0 TL mobile Southeast
+18.3 -6.4 7.5 0 0 TL temporary West
+18.3 -6.9 7.5 0 0 TL temporary Center
+18.3 -7.4 7.5 0 0 TL temporary North
+18.3 -7.9 7.5 0 0 TL temporary East
+18.3 -8.4 7.5 0 0 TL temporary Southeast
 end
 # end of the legend to map 07
 
@@ -1480,7 +1598,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile09
 18.3  0.23 8 0 0 TL stations operational after
 18.3  0.00 8 0 0 TL May 2022 but closed now
 
-18.3 -0.4 8 0 0 TL mobile BB stations
+18.3 -0.4 8 0 0 TL temporary BB stations
 18.3 -0.9 8 0 0 TL additional BB stations
 end
 # end of the legend to map 09
@@ -1559,7 +1677,7 @@ end
 
 # legend to map 12
 pscoast -R17.6/21.5/-7.8/7.3 -Dc -JM20/60/4.3c -G150/150/150 -S150/150/150 -Y+0.2 -X+24.0 -K -O >> $psfile12
-# mobile stations - circles
+# temporary stations - circles
 psxy -R -JM -Sc$circsize -W$thickLC/$serbclr -K -O << end >> $psfile12 # Serbian Pool
 17.95  7.0
 end
@@ -1648,7 +1766,7 @@ end
 psxy -R -JM -St$triasize -G$blck -W$thickL/$blck -K -O << end >> $psfile12
 17.95 -7.0
 end
-# triangles - mobile stations
+# triangles - temporary stations
 psxy -R -JM -St$triasize -G$temp -W$thickL/$blck -K -O << end >> $psfile12
 17.95 -7.5
 end
@@ -1683,7 +1801,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile12
 18.3 -5.9 7.5 0 0 TL permanent BB stations
 18.3 -6.4 7.5 0 0 TL planned permanent stations
 18.3 -6.9 7.5 0 0 TL closed stations
-18.3 -7.4 7.5 0 0 TL mobile BB stations
+18.3 -7.4 7.5 0 0 TL temporary BB stations
 end
 # end of the legend to map 12
 
@@ -2139,6 +2257,21 @@ end
 psxy -R -JL << end -O >> $psfile18
 0.0 0.0
 end
+psxy -R -JL << end -O >> $psfile19
+0.0 0.0
+end
+psxy -R -JL << end -O >> $psfile20
+0.0 0.0
+end
+psxy -R -JL << end -O >> $psfile21
+0.0 0.0
+end
+psxy -R -JL << end -O >> $psfile22
+0.0 0.0
+end
+psxy -R -JL << end -O >> $psfile23
+0.0 0.0
+end
 
 # saving pdf and png files
 gs -o MAPS/01AdriaTotal.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile01
@@ -2158,6 +2291,11 @@ gs -o MAPS/15AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage 
 gs -o MAPS/16AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile16
 gs -o MAPS/17AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile17
 gs -o MAPS/18AdAEIDAall.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile18
+gs -o MAPS/19AdAcolorTP.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile19
+gs -o MAPS/20AdAcoverP.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile20
+gs -o MAPS/21AdAcoverPT.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile21
+gs -o MAPS/22AdAcomplet.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile22
+gs -o MAPS/23AdAvirtual.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile23
 gs -o MAPS/01AdriaTotal.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile01
 gs -o MAPS/02AdriaBBonl.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile02
 gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
@@ -2175,3 +2313,8 @@ gs -o MAPS/15AdAmembers.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpage
 gs -o MAPS/16AdAnetwork.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile16
 gs -o MAPS/17AdAcorners.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile17
 gs -o MAPS/18AdAEIDAall.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile18
+gs -o MAPS/19AdAcolorTP.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile19
+gs -o MAPS/20AdAcoverP.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile20
+gs -o MAPS/21AdAcoverPT.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile21
+gs -o MAPS/22AdAcomplet.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile22
+gs -o MAPS/23AdAvirtual.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile23
