@@ -1,992 +1,827 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="5">
-        <Style id="1160">
-            <IconStyle id="1161">
+        <Style id="795">
+            <IconStyle id="796">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1162">
+                <Icon id="797">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="1170">
-            <IconStyle id="1171">
+        <Style id="920">
+            <IconStyle id="921">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1172">
+                <Icon id="922">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="1180">
-            <IconStyle id="1181">
+        <Style id="995">
+            <IconStyle id="996">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1182">
+                <Icon id="997">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="1190">
-            <IconStyle id="1191">
+        <Style id="1035">
+            <IconStyle id="1036">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1192">
+                <Icon id="1037">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="1200">
-            <IconStyle id="1201">
+        <Style id="1165">
+            <IconStyle id="1166">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1202">
+                <Icon id="1167">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="1240">
-            <IconStyle id="1241">
+        <Style id="1250">
+            <IconStyle id="1251">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="1242">
+                <Icon id="1252">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11505">
-            <IconStyle id="11506">
+        <Style id="2920">
+            <IconStyle id="2921">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11507">
+                <Icon id="2922">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11515">
-            <IconStyle id="11516">
+        <Style id="5625">
+            <IconStyle id="5626">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11517">
+                <Icon id="5627">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11525">
-            <IconStyle id="11526">
+        <Style id="5635">
+            <IconStyle id="5636">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11527">
+                <Icon id="5637">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11535">
-            <IconStyle id="11536">
+        <Style id="5705">
+            <IconStyle id="5706">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11537">
+                <Icon id="5707">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11545">
-            <IconStyle id="11546">
+        <Style id="5830">
+            <IconStyle id="5831">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11547">
+                <Icon id="5832">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11555">
-            <IconStyle id="11556">
+        <Style id="6025">
+            <IconStyle id="6026">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11557">
+                <Icon id="6027">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11565">
-            <IconStyle id="11566">
+        <Style id="6325">
+            <IconStyle id="6326">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11567">
+                <Icon id="6327">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11575">
-            <IconStyle id="11576">
+        <Style id="6395">
+            <IconStyle id="6396">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11577">
+                <Icon id="6397">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11585">
-            <IconStyle id="11586">
+        <Style id="7085">
+            <IconStyle id="7086">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11587">
+                <Icon id="7087">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11595">
-            <IconStyle id="11596">
+        <Style id="7145">
+            <IconStyle id="7146">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11597">
+                <Icon id="7147">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11605">
-            <IconStyle id="11606">
+        <Style id="8420">
+            <IconStyle id="8421">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11607">
+                <Icon id="8422">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11615">
-            <IconStyle id="11616">
+        <Style id="8445">
+            <IconStyle id="8446">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11617">
+                <Icon id="8447">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11625">
-            <IconStyle id="11626">
+        <Style id="8485">
+            <IconStyle id="8486">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11627">
+                <Icon id="8487">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11635">
-            <IconStyle id="11636">
+        <Style id="8645">
+            <IconStyle id="8646">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11637">
+                <Icon id="8647">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11655">
-            <IconStyle id="11656">
+        <Style id="8665">
+            <IconStyle id="8666">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11657">
+                <Icon id="8667">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11665">
-            <IconStyle id="11666">
+        <Style id="8675">
+            <IconStyle id="8676">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11667">
+                <Icon id="8677">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11675">
-            <IconStyle id="11676">
+        <Style id="8685">
+            <IconStyle id="8686">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11677">
+                <Icon id="8687">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11685">
-            <IconStyle id="11686">
+        <Style id="8710">
+            <IconStyle id="8711">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11687">
+                <Icon id="8712">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11695">
-            <IconStyle id="11696">
+        <Style id="8790">
+            <IconStyle id="8791">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11697">
+                <Icon id="8792">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11735">
-            <IconStyle id="11736">
+        <Style id="9400">
+            <IconStyle id="9401">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11737">
+                <Icon id="9402">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11745">
-            <IconStyle id="11746">
+        <Style id="9460">
+            <IconStyle id="9461">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11747">
+                <Icon id="9462">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11755">
-            <IconStyle id="11756">
+        <Style id="9550">
+            <IconStyle id="9551">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11757">
+                <Icon id="9552">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11765">
-            <IconStyle id="11766">
+        <Style id="9630">
+            <IconStyle id="9631">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11767">
+                <Icon id="9632">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11775">
-            <IconStyle id="11776">
+        <Style id="9705">
+            <IconStyle id="9706">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11777">
+                <Icon id="9707">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11785">
-            <IconStyle id="11786">
+        <Style id="9725">
+            <IconStyle id="9726">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11787">
+                <Icon id="9727">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11795">
-            <IconStyle id="11796">
+        <Style id="9740">
+            <IconStyle id="9741">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11797">
+                <Icon id="9742">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11805">
-            <IconStyle id="11806">
+        <Style id="9770">
+            <IconStyle id="9771">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11807">
+                <Icon id="9772">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11815">
-            <IconStyle id="11816">
+        <Style id="9860">
+            <IconStyle id="9861">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11817">
+                <Icon id="9862">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11825">
-            <IconStyle id="11826">
+        <Style id="9930">
+            <IconStyle id="9931">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11827">
+                <Icon id="9932">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11835">
-            <IconStyle id="11836">
+        <Style id="10035">
+            <IconStyle id="10036">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11837">
+                <Icon id="10037">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11845">
-            <IconStyle id="11846">
+        <Style id="10085">
+            <IconStyle id="10086">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11847">
+                <Icon id="10087">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11860">
-            <IconStyle id="11861">
+        <Style id="10115">
+            <IconStyle id="10116">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11862">
+                <Icon id="10117">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11870">
-            <IconStyle id="11871">
+        <Style id="10130">
+            <IconStyle id="10131">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11872">
+                <Icon id="10132">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11880">
-            <IconStyle id="11881">
+        <Style id="10225">
+            <IconStyle id="10226">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11882">
+                <Icon id="10227">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11890">
-            <IconStyle id="11891">
+        <Style id="10490">
+            <IconStyle id="10491">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11892">
+                <Icon id="10492">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11900">
-            <IconStyle id="11901">
+        <Style id="10520">
+            <IconStyle id="10521">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11902">
+                <Icon id="10522">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11910">
-            <IconStyle id="11911">
+        <Style id="10535">
+            <IconStyle id="10536">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11912">
+                <Icon id="10537">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11925">
-            <IconStyle id="11926">
+        <Style id="10545">
+            <IconStyle id="10546">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11927">
+                <Icon id="10547">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11935">
-            <IconStyle id="11936">
+        <Style id="10685">
+            <IconStyle id="10686">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11937">
+                <Icon id="10687">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11945">
-            <IconStyle id="11946">
+        <Style id="10695">
+            <IconStyle id="10696">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11947">
+                <Icon id="10697">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11955">
-            <IconStyle id="11956">
+        <Style id="10705">
+            <IconStyle id="10706">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11957">
+                <Icon id="10707">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11965">
-            <IconStyle id="11966">
+        <Style id="10715">
+            <IconStyle id="10716">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11967">
+                <Icon id="10717">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11975">
-            <IconStyle id="11976">
+        <Style id="10735">
+            <IconStyle id="10736">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11977">
+                <Icon id="10737">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11985">
-            <IconStyle id="11986">
+        <Style id="10755">
+            <IconStyle id="10756">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11987">
+                <Icon id="10757">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="11995">
-            <IconStyle id="11996">
+        <Style id="10765">
+            <IconStyle id="10766">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="11997">
+                <Icon id="10767">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12005">
-            <IconStyle id="12006">
+        <Style id="10785">
+            <IconStyle id="10786">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12007">
+                <Icon id="10787">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12015">
-            <IconStyle id="12016">
+        <Style id="10795">
+            <IconStyle id="10796">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12017">
+                <Icon id="10797">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12025">
-            <IconStyle id="12026">
+        <Style id="10820">
+            <IconStyle id="10821">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12027">
+                <Icon id="10822">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12035">
-            <IconStyle id="12036">
+        <Style id="10835">
+            <IconStyle id="10836">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12037">
+                <Icon id="10837">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12045">
-            <IconStyle id="12046">
+        <Style id="10845">
+            <IconStyle id="10846">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12047">
+                <Icon id="10847">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12055">
-            <IconStyle id="12056">
+        <Style id="10875">
+            <IconStyle id="10876">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12057">
+                <Icon id="10877">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12065">
-            <IconStyle id="12066">
+        <Style id="10895">
+            <IconStyle id="10896">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12067">
+                <Icon id="10897">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12075">
-            <IconStyle id="12076">
+        <Style id="10915">
+            <IconStyle id="10916">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12077">
+                <Icon id="10917">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12085">
-            <IconStyle id="12086">
+        <Style id="11255">
+            <IconStyle id="11256">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12087">
+                <Icon id="11257">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12095">
-            <IconStyle id="12096">
+        <Style id="11295">
+            <IconStyle id="11296">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12097">
+                <Icon id="11297">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12105">
-            <IconStyle id="12106">
+        <Style id="11305">
+            <IconStyle id="11306">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12107">
+                <Icon id="11307">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12115">
-            <IconStyle id="12116">
+        <Style id="11315">
+            <IconStyle id="11316">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12117">
+                <Icon id="11317">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12125">
-            <IconStyle id="12126">
+        <Style id="11375">
+            <IconStyle id="11376">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12127">
+                <Icon id="11377">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12135">
-            <IconStyle id="12136">
+        <Style id="11385">
+            <IconStyle id="11386">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12137">
+                <Icon id="11387">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12145">
-            <IconStyle id="12146">
+        <Style id="11415">
+            <IconStyle id="11416">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12147">
+                <Icon id="11417">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12155">
-            <IconStyle id="12156">
+        <Style id="11425">
+            <IconStyle id="11426">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12157">
+                <Icon id="11427">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12165">
-            <IconStyle id="12166">
+        <Style id="11435">
+            <IconStyle id="11436">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12167">
+                <Icon id="11437">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12175">
-            <IconStyle id="12176">
+        <Style id="11680">
+            <IconStyle id="11681">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12177">
+                <Icon id="11682">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12185">
-            <IconStyle id="12186">
+        <Style id="11720">
+            <IconStyle id="11721">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12187">
+                <Icon id="11722">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12195">
-            <IconStyle id="12196">
+        <Style id="11780">
+            <IconStyle id="11781">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12197">
+                <Icon id="11782">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12205">
-            <IconStyle id="12206">
+        <Style id="11800">
+            <IconStyle id="11801">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12207">
+                <Icon id="11802">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12215">
-            <IconStyle id="12216">
+        <Style id="11830">
+            <IconStyle id="11831">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12217">
+                <Icon id="11832">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12225">
-            <IconStyle id="12226">
+        <Style id="11840">
+            <IconStyle id="11841">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12227">
+                <Icon id="11842">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12245">
-            <IconStyle id="12246">
+        <Style id="12290">
+            <IconStyle id="12291">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12247">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12255">
-            <IconStyle id="12256">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12257">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12265">
-            <IconStyle id="12266">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12267">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12275">
-            <IconStyle id="12276">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12277">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12285">
-            <IconStyle id="12286">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12287">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12295">
-            <IconStyle id="12296">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12297">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12415">
-            <IconStyle id="12416">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12417">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12425">
-            <IconStyle id="12426">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12427">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12450">
-            <IconStyle id="12451">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12452">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12460">
-            <IconStyle id="12461">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12462">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12470">
-            <IconStyle id="12471">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12472">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12480">
-            <IconStyle id="12481">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12482">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12490">
-            <IconStyle id="12491">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12492">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12500">
-            <IconStyle id="12501">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12502">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12510">
-            <IconStyle id="12511">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12512">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12520">
-            <IconStyle id="12521">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12522">
+                <Icon id="12292">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -1002,123 +837,46 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12540">
-            <IconStyle id="12541">
+        <Style id="12645">
+            <IconStyle id="12646">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12542">
+                <Icon id="12647">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12550">
-            <IconStyle id="12551">
+        <Style id="12675">
+            <IconStyle id="12676">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12552">
+                <Icon id="12677">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12560">
-            <IconStyle id="12561">
+        <Style id="12705">
+            <IconStyle id="12706">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12562">
+                <Icon id="12707">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12570">
-            <IconStyle id="12571">
+        <Style id="12715">
+            <IconStyle id="12716">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12572">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12580">
-            <IconStyle id="12581">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12582">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12590">
-            <IconStyle id="12591">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12592">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12600">
-            <IconStyle id="12601">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12602">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12610">
-            <IconStyle id="12611">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12612">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12620">
-            <IconStyle id="12621">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12622">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12630">
-            <IconStyle id="12631">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12632">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="12790">
-            <IconStyle id="12791">
-                <color>ff0000ff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="12792">
+                <Icon id="12717">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -1134,761 +892,1021 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12815">
-            <IconStyle id="12816">
+        <Style id="12810">
+            <IconStyle id="12811">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12817">
+                <Icon id="12812">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="12825">
-            <IconStyle id="12826">
+        <Style id="12845">
+            <IconStyle id="12846">
                 <color>ff0000ff</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="12827">
+                <Icon id="12847">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="1159">
-            <name>DUGI</name>
-            <styleUrl>#1160</styleUrl>
-            <Point id="1158">
-                <coordinates>15.05747,43.99191,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="1169">
-            <name>KALN</name>
-            <styleUrl>#1170</styleUrl>
-            <Point id="1168">
-                <coordinates>16.455717,46.131166,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="1179">
-            <name>PLIT</name>
-            <styleUrl>#1180</styleUrl>
-            <Point id="1178">
-                <coordinates>15.623055,44.878389,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="1189">
-            <name>PTJ</name>
-            <styleUrl>#1190</styleUrl>
-            <Point id="1188">
-                <coordinates>15.968193,45.907328,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="1199">
-            <name>RIC</name>
-            <styleUrl>#1200</styleUrl>
-            <Point id="1198">
-                <coordinates>17.133,43.4944,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="1239">
-            <name>HAPS</name>
-            <styleUrl>#1240</styleUrl>
-            <Point id="1238">
-                <coordinates>18.9507,44.0862,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11504">
-            <name>ARR</name>
-            <styleUrl>#11505</styleUrl>
-            <Point id="11503">
-                <coordinates>24.6332,45.3657,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11514">
-            <name>BZS</name>
-            <styleUrl>#11515</styleUrl>
-            <Point id="11513">
-                <coordinates>21.6401,45.6188,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11524">
+        <Style id="13595">
+            <IconStyle id="13596">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13597">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13620">
+            <IconStyle id="13621">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13622">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="13640">
+            <IconStyle id="13641">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13642">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="14165">
+            <IconStyle id="14166">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="14167">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15565">
+            <IconStyle id="15566">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15567">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15610">
+            <IconStyle id="15611">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15612">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15695">
+            <IconStyle id="15696">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15697">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15725">
+            <IconStyle id="15726">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15727">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16165">
+            <IconStyle id="16166">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16167">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16700">
+            <IconStyle id="16701">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16702">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16710">
+            <IconStyle id="16711">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16712">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="17785">
+            <IconStyle id="17786">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="17787">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="17870">
+            <IconStyle id="17871">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="17872">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18025">
+            <IconStyle id="18026">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18027">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18050">
+            <IconStyle id="18051">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18052">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18360">
+            <IconStyle id="18361">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18362">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18370">
+            <IconStyle id="18371">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18372">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18510">
+            <IconStyle id="18511">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18512">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18560">
+            <IconStyle id="18561">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18562">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18720">
+            <IconStyle id="18721">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18722">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="18900">
+            <IconStyle id="18901">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="18902">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="19635">
+            <IconStyle id="19636">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="19637">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20905">
+            <IconStyle id="20906">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20907">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="794">
             <name>KKB</name>
-            <styleUrl>#11525</styleUrl>
-            <Point id="11523">
+            <styleUrl>#795</styleUrl>
+            <Point id="793">
                 <coordinates>23.1287,41.841702,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11534">
+        <Placemark id="919">
             <name>PSN</name>
-            <styleUrl>#11535</styleUrl>
-            <Point id="11533">
+            <styleUrl>#920</styleUrl>
+            <Point id="918">
                 <coordinates>28.1359,43.637501,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11544">
+        <Placemark id="994">
             <name>SZH</name>
-            <styleUrl>#11545</styleUrl>
-            <Point id="11543">
+            <styleUrl>#995</styleUrl>
+            <Point id="993">
                 <coordinates>25.9762,43.265301,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11554">
+        <Placemark id="1034">
             <name>YUND</name>
-            <styleUrl>#11555</styleUrl>
-            <Point id="11553">
+            <styleUrl>#1035</styleUrl>
+            <Point id="1033">
                 <coordinates>23.853684,42.064757,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11564">
+        <Placemark id="1164">
+            <name>HAPS</name>
+            <styleUrl>#1165</styleUrl>
+            <Point id="1163">
+                <coordinates>18.9507,44.0862,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="1249">
             <name>CERN1</name>
-            <styleUrl>#11565</styleUrl>
-            <Point id="11563">
+            <styleUrl>#1250</styleUrl>
+            <Point id="1248">
                 <coordinates>6.054836,46.235876,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11574">
-            <name>CERN5</name>
-            <styleUrl>#11575</styleUrl>
-            <Point id="11573">
-                <coordinates>6.07608,46.309893,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11584">
-            <name>CERNS</name>
-            <styleUrl>#11585</styleUrl>
-            <Point id="11583">
-                <coordinates>6.066212,46.266947,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11594">
-            <name>BRJN</name>
-            <styleUrl>#11595</styleUrl>
-            <Point id="11593">
-                <coordinates>13.750296,44.905732,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11604">
-            <name>HVAR</name>
-            <styleUrl>#11605</styleUrl>
-            <Point id="11603">
-                <coordinates>16.4488,43.1776,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11614">
-            <name>MORI</name>
-            <styleUrl>#11615</styleUrl>
-            <Point id="11613">
-                <coordinates>15.707297,43.866017,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11624">
-            <name>MOSL</name>
-            <styleUrl>#11625</styleUrl>
-            <Point id="11623">
-                <coordinates>16.7544,45.6135,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11634">
+        <Placemark id="2919">
             <name>KRLC</name>
-            <styleUrl>#11635</styleUrl>
-            <Point id="11633">
+            <styleUrl>#2920</styleUrl>
+            <Point id="2918">
                 <coordinates>16.8341,50.0966,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11654">
+        <Placemark id="5624">
+            <name>CERN5</name>
+            <styleUrl>#5625</styleUrl>
+            <Point id="5623">
+                <coordinates>6.07608,46.309893,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5634">
+            <name>CERNS</name>
+            <styleUrl>#5635</styleUrl>
+            <Point id="5633">
+                <coordinates>6.066212,46.266947,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5704">
             <name>AJAC</name>
-            <styleUrl>#11655</styleUrl>
-            <Point id="11653">
+            <styleUrl>#5705</styleUrl>
+            <Point id="5703">
                 <coordinates>8.763,41.9279,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11664">
+        <Placemark id="5829">
             <name>BSTF</name>
-            <styleUrl>#11665</styleUrl>
-            <Point id="11663">
+            <styleUrl>#5830</styleUrl>
+            <Point id="5828">
                 <coordinates>5.6433,43.8009,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11674">
+        <Placemark id="6024">
             <name>ESCA</name>
-            <styleUrl>#11675</styleUrl>
-            <Point id="11673">
+            <styleUrl>#6025</styleUrl>
+            <Point id="6023">
                 <coordinates>7.3744,43.831,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11684">
+        <Placemark id="6324">
             <name>MON</name>
-            <styleUrl>#11685</styleUrl>
-            <Point id="11683">
+            <styleUrl>#6325</styleUrl>
+            <Point id="6323">
                 <coordinates>7.424688,43.730343,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11694">
+        <Placemark id="6394">
             <name>NIMR</name>
-            <styleUrl>#11695</styleUrl>
-            <Point id="11693">
+            <styleUrl>#6395</styleUrl>
+            <Point id="6393">
                 <coordinates>7.20276,43.6802,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="11734">
-            <name>EQUI</name>
-            <styleUrl>#11735</styleUrl>
-            <Point id="11733">
-                <coordinates>10.153,44.166,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11744">
-            <name>GRAM</name>
-            <styleUrl>#11745</styleUrl>
-            <Point id="11743">
-                <coordinates>10.0658,44.4913,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11754">
-            <name>NEGI</name>
-            <styleUrl>#11755</styleUrl>
-            <Point id="11753">
-                <coordinates>7.70267,43.84617,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11764">
-            <name>POPM</name>
-            <styleUrl>#11765</styleUrl>
-            <Point id="11763">
-                <coordinates>10.757,44.045,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11774">
-            <name>RNCA</name>
-            <styleUrl>#11775</styleUrl>
-            <Point id="11773">
-                <coordinates>8.9512,44.4712,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11784">
-            <name>ATHU</name>
-            <styleUrl>#11785</styleUrl>
-            <Point id="11783">
-                <coordinates>23.7845,37.9665,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11794">
-            <name>DOMV</name>
-            <styleUrl>#11795</styleUrl>
-            <Point id="11793">
-                <coordinates>22.9795,38.2569,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11804">
-            <name>KARY</name>
-            <styleUrl>#11805</styleUrl>
-            <Point id="11803">
-                <coordinates>24.437,38.0321,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11814">
-            <name>GVDS</name>
-            <styleUrl>#11815</styleUrl>
-            <Point id="11813">
-                <coordinates>24.0585,34.8389,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11824">
-            <name>IPPL</name>
-            <styleUrl>#11825</styleUrl>
-            <Point id="11823">
-                <coordinates>24.4632,35.3486,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11834">
-            <name>KNDR</name>
-            <styleUrl>#11835</styleUrl>
-            <Point id="11833">
-                <coordinates>23.6248,35.2348,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11844">
-            <name>KNSS</name>
-            <styleUrl>#11845</styleUrl>
-            <Point id="11843">
-                <coordinates>25.18017,35.304187,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11859">
-            <name>KTRS</name>
-            <styleUrl>#11860</styleUrl>
-            <Point id="11858">
-                <coordinates>22.136,36.9261,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11869">
-            <name>THNO</name>
-            <styleUrl>#11870</styleUrl>
-            <Point id="11868">
-                <coordinates>25.0221,37.6541,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11879">
-            <name>ANKY</name>
-            <styleUrl>#11880</styleUrl>
-            <Point id="11878">
-                <coordinates>23.30117,35.86704,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11889">
-            <name>CLEM</name>
-            <styleUrl>#11890</styleUrl>
-            <Point id="11888">
-                <coordinates>21.133032,37.890629,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11899">
-            <name>EVR</name>
-            <styleUrl>#11900</styleUrl>
-            <Point id="11898">
-                <coordinates>21.8105,38.91657,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11909">
-            <name>JAN</name>
-            <styleUrl>#11910</styleUrl>
-            <Point id="11908">
-                <coordinates>20.84874,39.65616,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11924">
-            <name>KSTE</name>
-            <styleUrl>#11925</styleUrl>
-            <Point id="11923">
-                <coordinates>25.3372,35.1801,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11934">
-            <name>KURT</name>
-            <styleUrl>#11935</styleUrl>
-            <Point id="11933">
-                <coordinates>21.327958,37.964976,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11944">
-            <name>KYMI</name>
-            <styleUrl>#11945</styleUrl>
-            <Point id="11943">
-                <coordinates>24.100138,38.633147,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11954">
-            <name>LIA</name>
-            <styleUrl>#11955</styleUrl>
-            <Point id="11953">
-                <coordinates>25.18055,39.89725,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11964">
-            <name>MRTH</name>
-            <styleUrl>#11965</styleUrl>
-            <Point id="11963">
-                <coordinates>21.576086,37.058679,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11974">
-            <name>NVR</name>
-            <styleUrl>#11975</styleUrl>
-            <Point id="11973">
-                <coordinates>23.86517,41.34846,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11984">
-            <name>RDO</name>
-            <styleUrl>#11985</styleUrl>
-            <Point id="11983">
-                <coordinates>25.53553,41.14503,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="11994">
-            <name>SIVA</name>
-            <styleUrl>#11995</styleUrl>
-            <Point id="11993">
-                <coordinates>24.81204,35.01777,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12004">
-            <name>SMTH</name>
-            <styleUrl>#12005</styleUrl>
-            <Point id="12003">
-                <coordinates>25.53045,40.47094,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12014">
-            <name>TETR</name>
-            <styleUrl>#12015</styleUrl>
-            <Point id="12013">
-                <coordinates>21.274667,39.3445,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12024">
-            <name>VLI</name>
-            <styleUrl>#12025</styleUrl>
-            <Point id="12023">
-                <coordinates>22.94686,36.71803,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12034">
-            <name>ACHL</name>
-            <styleUrl>#12035</styleUrl>
-            <Point id="12033">
-                <coordinates>22.95812,39.00831,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12044">
-            <name>ITHC</name>
-            <styleUrl>#12045</styleUrl>
-            <Point id="12043">
-                <coordinates>20.632,38.462231,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12054">
-            <name>CAAM</name>
-            <styleUrl>#12055</styleUrl>
-            <Point id="12053">
-                <coordinates>14.1407,40.82,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12064">
-            <name>CFMN</name>
-            <styleUrl>#12065</styleUrl>
-            <Point id="12063">
-                <coordinates>14.0935,40.8329,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12074">
-            <name>CMSN</name>
-            <styleUrl>#12075</styleUrl>
-            <Point id="12073">
-                <coordinates>14.1818,40.8382,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12084">
-            <name>COLB</name>
-            <styleUrl>#12085</styleUrl>
-            <Point id="12083">
-                <coordinates>14.1473,40.8187,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12094">
-            <name>CPIS</name>
-            <styleUrl>#12095</styleUrl>
-            <Point id="12093">
-                <coordinates>14.147,40.8292,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12104">
-            <name>CPOZ</name>
-            <styleUrl>#12105</styleUrl>
-            <Point id="12103">
-                <coordinates>14.1187,40.8211,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12114">
-            <name>CRTO</name>
-            <styleUrl>#12115</styleUrl>
-            <Point id="12113">
-                <coordinates>14.4223,40.8212,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12124">
-            <name>CSFT</name>
-            <styleUrl>#12125</styleUrl>
-            <Point id="12123">
-                <coordinates>14.1397,40.8291,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12134">
-            <name>CSOB</name>
-            <styleUrl>#12135</styleUrl>
-            <Point id="12133">
-                <coordinates>14.1443,40.8275,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12144">
-            <name>IFOR</name>
-            <styleUrl>#12145</styleUrl>
-            <Point id="12143">
-                <coordinates>13.8551,40.7115,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12154">
-            <name>IMTC</name>
-            <styleUrl>#12155</styleUrl>
-            <Point id="12153">
-                <coordinates>13.8758,40.7209,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12164">
-            <name>IOCA</name>
-            <styleUrl>#12165</styleUrl>
-            <Point id="12163">
-                <coordinates>13.9008,40.7458,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12174">
-            <name>VBKN</name>
-            <styleUrl>#12175</styleUrl>
-            <Point id="12173">
-                <coordinates>14.4299,40.83,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12184">
-            <name>VCRE</name>
-            <styleUrl>#12185</styleUrl>
-            <Point id="12183">
-                <coordinates>14.4314,40.819,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12194">
-            <name>VTIR</name>
-            <styleUrl>#12195</styleUrl>
-            <Point id="12193">
-                <coordinates>14.4242,40.8059,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12204">
-            <name>VVDG</name>
-            <styleUrl>#12205</styleUrl>
-            <Point id="12203">
-                <coordinates>14.4238,40.8356,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="12214">
+        <Placemark id="7084">
             <name>AVM</name>
-            <styleUrl>#12215</styleUrl>
-            <Point id="12213">
+            <styleUrl>#7085</styleUrl>
+            <Point id="7083">
                 <coordinates>5.675,44.9422,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12224">
+        <Placemark id="7144">
             <name>HAR2</name>
-            <styleUrl>#12225</styleUrl>
-            <Point id="12223">
+            <styleUrl>#7145</styleUrl>
+            <Point id="7143">
                 <coordinates>5.67059,44.939439,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12244">
-            <name>ISR</name>
-            <styleUrl>#12245</styleUrl>
-            <Point id="12243">
-                <coordinates>26.5432,45.1187,0.0</coordinates>
+        <Placemark id="8419">
+            <name>ATHU</name>
+            <styleUrl>#8420</styleUrl>
+            <Point id="8418">
+                <coordinates>23.7845,37.9665,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12254">
-            <name>IZVR</name>
-            <styleUrl>#12255</styleUrl>
-            <Point id="12253">
-                <coordinates>27.7655,45.5442,0.0</coordinates>
+        <Placemark id="8444">
+            <name>DOMV</name>
+            <styleUrl>#8445</styleUrl>
+            <Point id="8443">
+                <coordinates>22.9795,38.2569,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12264">
-            <name>NEGRR</name>
-            <styleUrl>#12265</styleUrl>
-            <Point id="12263">
-                <coordinates>27.8771,45.5373,0.0</coordinates>
+        <Placemark id="8484">
+            <name>KARY</name>
+            <styleUrl>#8485</styleUrl>
+            <Point id="8483">
+                <coordinates>24.437,38.0321,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12274">
-            <name>ONER</name>
-            <styleUrl>#12275</styleUrl>
-            <Point id="12273">
-                <coordinates>26.394,46.3349,0.0</coordinates>
+        <Placemark id="8644">
+            <name>GVDS</name>
+            <styleUrl>#8645</styleUrl>
+            <Point id="8643">
+                <coordinates>24.0585,34.8389,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12284">
-            <name>SCHLR</name>
-            <styleUrl>#12285</styleUrl>
-            <Point id="12283">
-                <coordinates>27.8314,45.4702,0.0</coordinates>
+        <Placemark id="8664">
+            <name>IPPL</name>
+            <styleUrl>#8665</styleUrl>
+            <Point id="8663">
+                <coordinates>24.4632,35.3486,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12294">
-            <name>VOJS</name>
-            <styleUrl>#12295</styleUrl>
-            <Point id="12293">
-                <coordinates>13.8877,46.0322,0.0</coordinates>
+        <Placemark id="8674">
+            <name>KNDR</name>
+            <styleUrl>#8675</styleUrl>
+            <Point id="8673">
+                <coordinates>23.6248,35.2348,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12414">
-            <name>VRG02</name>
-            <styleUrl>#12415</styleUrl>
-            <Point id="12413">
-                <coordinates>10.516896,43.65693,0.0</coordinates>
+        <Placemark id="8684">
+            <name>KNSS</name>
+            <styleUrl>#8685</styleUrl>
+            <Point id="8683">
+                <coordinates>25.18017,35.304187,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12424">
-            <name>VRG03</name>
-            <styleUrl>#12425</styleUrl>
-            <Point id="12423">
-                <coordinates>10.46937,43.640408,0.0</coordinates>
+        <Placemark id="8709">
+            <name>KTRS</name>
+            <styleUrl>#8710</styleUrl>
+            <Point id="8708">
+                <coordinates>22.136,36.9261,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12449">
-            <name>RORO</name>
-            <styleUrl>#12450</styleUrl>
-            <Point id="12448">
-                <coordinates>8.06617,44.11217,0.0</coordinates>
+        <Placemark id="8789">
+            <name>THNO</name>
+            <styleUrl>#8790</styleUrl>
+            <Point id="8788">
+                <coordinates>25.0221,37.6541,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12459">
+        <Placemark id="9399">
+            <name>ANKY</name>
+            <styleUrl>#9400</styleUrl>
+            <Point id="9398">
+                <coordinates>23.30117,35.86704,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9459">
+            <name>CLEM</name>
+            <styleUrl>#9460</styleUrl>
+            <Point id="9458">
+                <coordinates>21.133032,37.890629,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9549">
+            <name>EVR</name>
+            <styleUrl>#9550</styleUrl>
+            <Point id="9548">
+                <coordinates>21.8105,38.91657,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9629">
+            <name>JAN</name>
+            <styleUrl>#9630</styleUrl>
+            <Point id="9628">
+                <coordinates>20.84874,39.65616,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9704">
+            <name>KSTE</name>
+            <styleUrl>#9705</styleUrl>
+            <Point id="9703">
+                <coordinates>25.3372,35.1801,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9724">
+            <name>KURT</name>
+            <styleUrl>#9725</styleUrl>
+            <Point id="9723">
+                <coordinates>21.327958,37.964976,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9739">
+            <name>KYMI</name>
+            <styleUrl>#9740</styleUrl>
+            <Point id="9738">
+                <coordinates>24.100138,38.633147,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9769">
+            <name>LIA</name>
+            <styleUrl>#9770</styleUrl>
+            <Point id="9768">
+                <coordinates>25.18055,39.89725,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9859">
+            <name>MRTH</name>
+            <styleUrl>#9860</styleUrl>
+            <Point id="9858">
+                <coordinates>21.576086,37.058679,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9929">
+            <name>NVR</name>
+            <styleUrl>#9930</styleUrl>
+            <Point id="9928">
+                <coordinates>23.86517,41.34846,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10034">
+            <name>RDO</name>
+            <styleUrl>#10035</styleUrl>
+            <Point id="10033">
+                <coordinates>25.53553,41.14503,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10084">
+            <name>SIVA</name>
+            <styleUrl>#10085</styleUrl>
+            <Point id="10083">
+                <coordinates>24.81204,35.01777,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10114">
+            <name>SMTH</name>
+            <styleUrl>#10115</styleUrl>
+            <Point id="10113">
+                <coordinates>25.53045,40.47094,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10129">
+            <name>TETR</name>
+            <styleUrl>#10130</styleUrl>
+            <Point id="10128">
+                <coordinates>21.274667,39.3445,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10224">
+            <name>VLI</name>
+            <styleUrl>#10225</styleUrl>
+            <Point id="10223">
+                <coordinates>22.94686,36.71803,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10489">
+            <name>ACHL</name>
+            <styleUrl>#10490</styleUrl>
+            <Point id="10488">
+                <coordinates>22.95812,39.00831,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10519">
             <name>ALN</name>
-            <styleUrl>#12460</styleUrl>
-            <Point id="12458">
+            <styleUrl>#10520</styleUrl>
+            <Point id="10518">
                 <coordinates>26.046,40.885,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12469">
+        <Placemark id="10534">
             <name>AOS2</name>
-            <styleUrl>#12470</styleUrl>
-            <Point id="12468">
+            <styleUrl>#10535</styleUrl>
+            <Point id="10533">
                 <coordinates>23.8436,39.1478,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12479">
+        <Placemark id="10544">
             <name>CHOS</name>
-            <styleUrl>#12480</styleUrl>
-            <Point id="12478">
+            <styleUrl>#10545</styleUrl>
+            <Point id="10543">
                 <coordinates>26.0506,38.3869,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12489">
+        <Placemark id="10684">
             <name>GRG</name>
-            <styleUrl>#12490</styleUrl>
-            <Point id="12488">
+            <styleUrl>#10685</styleUrl>
+            <Point id="10683">
                 <coordinates>22.401,40.957,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12499">
+        <Placemark id="10694">
             <name>HORT</name>
-            <styleUrl>#12500</styleUrl>
-            <Point id="12498">
+            <styleUrl>#10695</styleUrl>
+            <Point id="10693">
                 <coordinates>23.0996,40.5978,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12509">
+        <Placemark id="10704">
             <name>IGT</name>
-            <styleUrl>#12510</styleUrl>
-            <Point id="12508">
+            <styleUrl>#10705</styleUrl>
+            <Point id="10703">
                 <coordinates>20.3299,39.5315,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12519">
+        <Placemark id="10714">
+            <name>ITHC</name>
+            <styleUrl>#10715</styleUrl>
+            <Point id="10713">
+                <coordinates>20.632,38.462231,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10734">
             <name>KNT</name>
-            <styleUrl>#12520</styleUrl>
-            <Point id="12518">
+            <styleUrl>#10735</styleUrl>
+            <Point id="10733">
                 <coordinates>22.898,41.162,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12529">
+        <Placemark id="10754">
             <name>KPRO</name>
-            <styleUrl>#12530</styleUrl>
-            <Point id="12528">
+            <styleUrl>#10755</styleUrl>
+            <Point id="10753">
                 <coordinates>21.36321,39.95495,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12539">
+        <Placemark id="10764">
             <name>KRND</name>
-            <styleUrl>#12540</styleUrl>
-            <Point id="12538">
+            <styleUrl>#10765</styleUrl>
+            <Point id="10763">
                 <coordinates>23.1502,37.383,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12549">
+        <Placemark id="10784">
             <name>LIT</name>
-            <styleUrl>#12550</styleUrl>
-            <Point id="12548">
+            <styleUrl>#10785</styleUrl>
+            <Point id="10783">
                 <coordinates>22.48916,40.10333,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12559">
+        <Placemark id="10794">
             <name>LKD2</name>
-            <styleUrl>#12560</styleUrl>
-            <Point id="12558">
+            <styleUrl>#10795</styleUrl>
+            <Point id="10793">
                 <coordinates>20.65779,38.78893,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12569">
+        <Placemark id="10819">
             <name>NIS1</name>
-            <styleUrl>#12570</styleUrl>
-            <Point id="12568">
+            <styleUrl>#10820</styleUrl>
+            <Point id="10818">
                 <coordinates>27.17817,36.60233,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12579">
+        <Placemark id="10834">
             <name>OUR</name>
-            <styleUrl>#12580</styleUrl>
-            <Point id="12578">
+            <styleUrl>#10835</styleUrl>
+            <Point id="10833">
                 <coordinates>23.9791,40.3325,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12589">
+        <Placemark id="10844">
             <name>PAIG</name>
-            <styleUrl>#12590</styleUrl>
-            <Point id="12588">
+            <styleUrl>#10845</styleUrl>
+            <Point id="10843">
                 <coordinates>23.6768,39.9363,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12599">
+        <Placemark id="10874">
             <name>SIGR</name>
-            <styleUrl>#12600</styleUrl>
-            <Point id="12598">
+            <styleUrl>#10875</styleUrl>
+            <Point id="10873">
                 <coordinates>25.8553,39.2114,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12609">
+        <Placemark id="10894">
             <name>SRS</name>
-            <styleUrl>#12610</styleUrl>
-            <Point id="12608">
+            <styleUrl>#10895</styleUrl>
+            <Point id="10893">
                 <coordinates>23.595,41.10866,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12619">
+        <Placemark id="10914">
             <name>THAS</name>
-            <styleUrl>#12620</styleUrl>
-            <Point id="12618">
+            <styleUrl>#10915</styleUrl>
+            <Point id="10913">
                 <coordinates>24.7194,40.6064,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12629">
-            <name>MMGO</name>
-            <styleUrl>#12630</styleUrl>
-            <Point id="12628">
-                <coordinates>12.97673,37.66195,0.0</coordinates>
+        <Placemark id="11254">
+            <name>BRJN</name>
+            <styleUrl>#11255</styleUrl>
+            <Point id="11253">
+                <coordinates>13.750296,44.905732,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12789">
-            <name>VINO</name>
-            <styleUrl>#12790</styleUrl>
-            <Point id="12788">
-                <coordinates>13.2755,46.25383,0.0</coordinates>
+        <Placemark id="11294">
+            <name>DUGI</name>
+            <styleUrl>#11295</styleUrl>
+            <Point id="11293">
+                <coordinates>15.05747,43.99191,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11304">
+            <name>HVAR</name>
+            <styleUrl>#11305</styleUrl>
+            <Point id="11303">
+                <coordinates>16.4488,43.1776,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11314">
+            <name>KALN</name>
+            <styleUrl>#11315</styleUrl>
+            <Point id="11313">
+                <coordinates>16.455717,46.131166,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11374">
+            <name>MORI</name>
+            <styleUrl>#11375</styleUrl>
+            <Point id="11373">
+                <coordinates>15.707297,43.866017,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11384">
+            <name>MOSL</name>
+            <styleUrl>#11385</styleUrl>
+            <Point id="11383">
+                <coordinates>16.7544,45.6135,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11414">
+            <name>PLIT</name>
+            <styleUrl>#11415</styleUrl>
+            <Point id="11413">
+                <coordinates>15.623055,44.878389,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11424">
+            <name>PTJ</name>
+            <styleUrl>#11425</styleUrl>
+            <Point id="11423">
+                <coordinates>15.968193,45.907328,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11434">
+            <name>RIC</name>
+            <styleUrl>#11435</styleUrl>
+            <Point id="11433">
+                <coordinates>17.133,43.4944,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11679">
+            <name>EQUI</name>
+            <styleUrl>#11680</styleUrl>
+            <Point id="11678">
+                <coordinates>10.153,44.166,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11719">
+            <name>GRAM</name>
+            <styleUrl>#11720</styleUrl>
+            <Point id="11718">
+                <coordinates>10.0658,44.4913,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11779">
+            <name>NEGI</name>
+            <styleUrl>#11780</styleUrl>
+            <Point id="11778">
+                <coordinates>7.70267,43.84617,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11799">
+            <name>POPM</name>
+            <styleUrl>#11800</styleUrl>
+            <Point id="11798">
+                <coordinates>10.757,44.045,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11829">
+            <name>RNCA</name>
+            <styleUrl>#11830</styleUrl>
+            <Point id="11828">
+                <coordinates>8.9512,44.4712,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11839">
+            <name>RORO</name>
+            <styleUrl>#11840</styleUrl>
+            <Point id="11838">
+                <coordinates>8.06617,44.11217,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12289">
+            <name>CAAM</name>
+            <styleUrl>#12290</styleUrl>
+            <Point id="12288">
+                <coordinates>14.1407,40.82,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12529">
+            <name>CFMN</name>
+            <styleUrl>#12530</styleUrl>
+            <Point id="12528">
+                <coordinates>14.0935,40.8329,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12644">
+            <name>CMSN</name>
+            <styleUrl>#12645</styleUrl>
+            <Point id="12643">
+                <coordinates>14.1818,40.8382,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12674">
+            <name>COLB</name>
+            <styleUrl>#12675</styleUrl>
+            <Point id="12673">
+                <coordinates>14.1473,40.8187,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12704">
+            <name>CPIS</name>
+            <styleUrl>#12705</styleUrl>
+            <Point id="12703">
+                <coordinates>14.147,40.8292,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12714">
+            <name>CPOZ</name>
+            <styleUrl>#12715</styleUrl>
+            <Point id="12713">
+                <coordinates>14.1187,40.8211,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="12799">
-            <name>CFR</name>
+            <name>CRTO</name>
             <styleUrl>#12800</styleUrl>
             <Point id="12798">
-                <coordinates>28.1362,45.178,0.0</coordinates>
+                <coordinates>14.4223,40.8212,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12814">
+        <Placemark id="12809">
+            <name>CSFT</name>
+            <styleUrl>#12810</styleUrl>
+            <Point id="12808">
+                <coordinates>14.1397,40.8291,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12844">
+            <name>CSOB</name>
+            <styleUrl>#12845</styleUrl>
+            <Point id="12843">
+                <coordinates>14.1443,40.8275,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13594">
+            <name>IFOR</name>
+            <styleUrl>#13595</styleUrl>
+            <Point id="13593">
+                <coordinates>13.8551,40.7115,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13619">
+            <name>IMTC</name>
+            <styleUrl>#13620</styleUrl>
+            <Point id="13618">
+                <coordinates>13.8758,40.7209,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13639">
+            <name>IOCA</name>
+            <styleUrl>#13640</styleUrl>
+            <Point id="13638">
+                <coordinates>13.9008,40.7458,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14164">
+            <name>MMGO</name>
+            <styleUrl>#14165</styleUrl>
+            <Point id="14163">
+                <coordinates>12.97673,37.66195,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15564">
+            <name>VBKN</name>
+            <styleUrl>#15565</styleUrl>
+            <Point id="15563">
+                <coordinates>14.4299,40.83,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15609">
+            <name>VCRE</name>
+            <styleUrl>#15610</styleUrl>
+            <Point id="15608">
+                <coordinates>14.4314,40.819,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15694">
+            <name>VTIR</name>
+            <styleUrl>#15695</styleUrl>
+            <Point id="15693">
+                <coordinates>14.4242,40.8059,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15724">
+            <name>VVDG</name>
+            <styleUrl>#15725</styleUrl>
+            <Point id="15723">
+                <coordinates>14.4238,40.8356,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16164">
+            <name>VINO</name>
+            <styleUrl>#16165</styleUrl>
+            <Point id="16163">
+                <coordinates>13.2755,46.25383,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16699">
+            <name>VRG02</name>
+            <styleUrl>#16700</styleUrl>
+            <Point id="16698">
+                <coordinates>10.516896,43.65693,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16709">
+            <name>VRG03</name>
+            <styleUrl>#16710</styleUrl>
+            <Point id="16708">
+                <coordinates>10.46937,43.640408,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="17784">
+            <name>ARR</name>
+            <styleUrl>#17785</styleUrl>
+            <Point id="17783">
+                <coordinates>24.6332,45.3657,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="17869">
             <name>BIZ</name>
-            <styleUrl>#12815</styleUrl>
-            <Point id="12813">
+            <styleUrl>#17870</styleUrl>
+            <Point id="17868">
                 <coordinates>26.1029,46.9387,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="12824">
+        <Placemark id="18024">
+            <name>BZS</name>
+            <styleUrl>#18025</styleUrl>
+            <Point id="18023">
+                <coordinates>21.6401,45.6188,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18049">
+            <name>CFR</name>
+            <styleUrl>#18050</styleUrl>
+            <Point id="18048">
+                <coordinates>28.1362,45.178,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18359">
+            <name>ISR</name>
+            <styleUrl>#18360</styleUrl>
+            <Point id="18358">
+                <coordinates>26.5432,45.1187,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18369">
+            <name>IZVR</name>
+            <styleUrl>#18370</styleUrl>
+            <Point id="18368">
+                <coordinates>27.7655,45.5442,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18509">
+            <name>NEGRR</name>
+            <styleUrl>#18510</styleUrl>
+            <Point id="18508">
+                <coordinates>27.8771,45.5373,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18559">
+            <name>ONER</name>
+            <styleUrl>#18560</styleUrl>
+            <Point id="18558">
+                <coordinates>26.394,46.3349,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18719">
+            <name>SCHLR</name>
+            <styleUrl>#18720</styleUrl>
+            <Point id="18718">
+                <coordinates>27.8314,45.4702,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18899">
             <name>TPGR</name>
-            <styleUrl>#12825</styleUrl>
-            <Point id="12823">
+            <styleUrl>#18900</styleUrl>
+            <Point id="18898">
                 <coordinates>28.4196,44.8565,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="19634">
+            <name>VOJS</name>
+            <styleUrl>#19635</styleUrl>
+            <Point id="19633">
+                <coordinates>13.8877,46.0322,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20904">
+            <name>KYPS</name>
+            <styleUrl>#20905</styleUrl>
+            <Point id="20903">
+                <coordinates>20.823419,37.818792,0.0</coordinates>
             </Point>
         </Placemark>
     </Document>

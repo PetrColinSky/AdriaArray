@@ -1045,7 +1045,7 @@ if len(RESFname) != len(RESFnameSet):
     counterA2B = counterA2B + 1
 KIELnameSet = set(KIELname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
 if len(KIELname) != len(KIELnameSet):
-    counterA2B = counterA2B + 1
+    counterA2B = counterA2B + (len(KIELname) - len(KIELnameSet))
 
 west.close()
 west30.close()

@@ -257,6 +257,7 @@ psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo      
 psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
 psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
 #psxy AUXI/tectoniclines.txt -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60       -K -O >> $psfile19
+#psxy AUXI/alcapadi_faults.gmt6 -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60       -K -O >> $psfile19
 
 # SP/SM stations not suitable or available for upgrade
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile01
