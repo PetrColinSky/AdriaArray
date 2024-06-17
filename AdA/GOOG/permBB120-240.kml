@@ -5787,17 +5787,6 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="20180">
-            <IconStyle id="20181">
-                <color>ff4c10a6</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="20182">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
         <Style id="20225">
             <IconStyle id="20226">
                 <color>ff4c10a6</color>
@@ -5805,6 +5794,17 @@
                 <scale>1</scale>
                 <heading>0</heading>
                 <Icon id="20227">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20520">
+            <IconStyle id="20521">
+                <color>ff4c10a6</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20522">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -9502,18 +9502,18 @@
                 <coordinates>26.153,40.7362,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20179">
-            <name>ERIK</name>
-            <styleUrl>#20180</styleUrl>
-            <Point id="20178">
-                <coordinates>26.5132,40.6708,0.0</coordinates>
-            </Point>
-        </Placemark>
         <Placemark id="20224">
             <name>GADA</name>
             <styleUrl>#20225</styleUrl>
             <Point id="20223">
                 <coordinates>25.8987,40.1908,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20519">
+            <name>PHSR</name>
+            <styleUrl>#20520</styleUrl>
+            <Point id="20518">
+                <coordinates>27.5238,41.6308,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="20924">

@@ -138,6 +138,7 @@ p30io10   = open("PERM/perm30io10.txt"    , "w")
 p30io20   = open("PERM/perm30io20.txt"    , "w")
 p30io30   = open("PERM/perm30io30.txt"    , "w")
 p30io40   = open("PERM/perm30io40.txt"    , "w")
+listP     = open("PERM/listP.txt"         , "w")
 
 # BB30, BB40, BB60, UNKN, WHIT have two options based on column 0: inside or outside of the AdA area
 # SPOT, UPGR, NOSP dont have these options, because by definition, these are always inside
@@ -169,6 +170,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -201,6 +203,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red            
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -236,7 +239,8 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
                 EIDAysBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
-            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red                
+            pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -505,6 +509,7 @@ p30io10.close()
 p30io20.close()
 p30io30.close()
 p30io40.close()
+listP.close()
 
 # ----- TEMPORARY STATIONS -----
 
@@ -671,8 +676,10 @@ tEIDA10    = open("TEMP/tEIDA10.txt"       , "w")
 tEIDA20    = open("TEMP/tEIDA20.txt"       , "w")
 tEIDA30    = open("TEMP/tEIDA30.txt"       , "w")
 tEIDA40    = open("TEMP/tEIDA40.txt"       , "w")
+listT      = open("TEMP/listT.txt"         , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls/ods sheet
+    listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]))) # list of permanent stations as code.name
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
         if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
@@ -1161,6 +1168,7 @@ tEIDA10.close()
 tEIDA20.close()
 tEIDA30.close()
 tEIDA40.close()
+listT.close()
 
 sumGROUPS = counterEAST + counterNORT + counterCENT + counterSTEA + counterWEST
 sumPOOLS  = counterIGCZ + counterAARH + counterBARC + counterBOCH + counterBOLO + counterCSSC + counterETHZ + counterRESF + counterHELS + counterEPSS + counterKIEL + counterMUNI + counterTWEN + counterBRZG + counterOGSI + counterOULU + counterPOLA + counterWIEN + counterMNEP + counterKOSV + counterNIEP + counterKITP + counterGIPP + counterJENA + counterSERB

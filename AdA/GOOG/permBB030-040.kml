@@ -1354,6 +1354,17 @@
                 </Icon>
             </IconStyle>
         </Style>
+        <Style id="20175">
+            <IconStyle id="20176">
+                <color>ff00ffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20177">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
         <Style id="20230">
             <IconStyle id="20231">
                 <color>ff00ffff</color>
@@ -1372,17 +1383,6 @@
                 <scale>1</scale>
                 <heading>0</heading>
                 <Icon id="20247">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="20515">
-            <IconStyle id="20516">
-                <color>ff00ffff</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="20517">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -2281,6 +2281,13 @@
                 <coordinates>27.736,41.129,0.0</coordinates>
             </Point>
         </Placemark>
+        <Placemark id="20174">
+            <name>ERIK</name>
+            <styleUrl>#20175</styleUrl>
+            <Point id="20173">
+                <coordinates>26.5132,40.6708,0.0</coordinates>
+            </Point>
+        </Placemark>
         <Placemark id="20229">
             <name>GAZK</name>
             <styleUrl>#20230</styleUrl>
@@ -2293,13 +2300,6 @@
             <styleUrl>#20245</styleUrl>
             <Point id="20243">
                 <coordinates>26.4742,40.398,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="20514">
-            <name>PHSR</name>
-            <styleUrl>#20515</styleUrl>
-            <Point id="20513">
-                <coordinates>27.5238,41.6308,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="20529">

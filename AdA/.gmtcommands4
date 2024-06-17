@@ -1,5 +1,5 @@
 # GMT common arguments shelf
--BWEnSa120mf120m/a120mf120m/:.AdriaArray institutions:
+-B2000.0f1000.0:altitude [m]:
 -JL16.0/90/38/58/17.3c
 -JM20/60/1.0c
 -R18.3/22.3/41.0/41.5
@@ -10,6 +10,8 @@
 -jL16.0/90/38/58/17.3c
 EOF
 F
+L16.0/90/38/48/23.0c
+EOF
 0c
 EOF
 

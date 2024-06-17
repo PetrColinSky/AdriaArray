@@ -31,6 +31,7 @@ psfile20=MAPS/20AdAcoverP.ps
 psfile21=MAPS/21AdAcoverPT.ps
 psfile22=MAPS/22AdAcomplet.ps
 psfile23=MAPS/22AdAvirtual.ps
+psfile24=MAPS/24AdAtectono.ps
 diam10='20'
 diam20='40'
 diam30='60'
@@ -58,15 +59,16 @@ thickLM='3.0p'            # thickness of empty triangles in the legend for tempo
 thickLC='2.0p'            # thickness of empty circles in the legend for mobile pools
 thickE='1.0p'             # thickness of empty circles in the 07 and 12 maps - mobile pools
 thickX='1.0p'             # thickness of elipses for local experiments
+olin='255/255/000'        # outline of the AdA region
 bb240='135/000/135'       # BB => 240s - purple
 bb120='166/016/076'       # BB => 120s - dark red
 bb60='255/000/000'        # BB =>  60s - red
 bb40='255/174/000'        # BB =   40s - orange
 bb30='255/255/000'        # BB =   30s - yellow
-ci10='135/000/135'        # purple
-ci20='166/016/076'        # dark red
-ci30='255/100/100'        # light red
-ci40='255/255/000'        # yellow
+ci10='090/000/090'        # circles of coverage - purple
+ci20='220/016/076'        # circles of coverage - dark red
+ci30='247/140/010'        # circles of coverage - orange
+ci40='255/255/000'        # circles of coverage - yellow
 pcse='000/000/255'        # PACASE stations - blue
 upgr='000/255/000'        # permanent short period - green
 unkn='000/000/000'        # sensor unknown - black
@@ -160,12 +162,13 @@ pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                            
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile21
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile22
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile23
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+1.3 -Y+1.2 -W0.1p -K > $psfile24
 pscoast -R$mapbordeB -Di -JL$mapproB -B$mapneB/:."AdriaArray institutions":                     -X+1.3 -Y+1.2 -W0.1p -K > $psfile15
 
 # greyshaded topography taken from
 # https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/netcdf/
 makecpt -CAUXI/twoshades -T-3000/+3000/100 -Z -V > AUXI/bw.cpt
-makecpt -CAUXI/GMT_globe -T-4500/+4500/100 -Z -V > AUXI/cl.cpt
+makecpt -CAUXI/GMT_globe -T-5100/+5100/1   -Z -V > AUXI/cl.cpt
 grdimage AUXI/AdAtopo.grd -R$mapborder -JL$mapproj -K -O -CAUXI/bw.cpt >> $psfile01
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile02
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile03
@@ -187,6 +190,7 @@ grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfil
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile21
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile22
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile23
+grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile24
 grdimage AUXI/AdAtopo.grd -R$mapbordeB -JL$mapproB -K -O -CAUXI/bw.cpt >> $psfile15
 
 # to plot borders over the topography
@@ -204,8 +208,10 @@ pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile14
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile16
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile17
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile18
+pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile19
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile22
 pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile23
+pscoast -R           -Di -N1/0.2p -W0.2p -JL         -K -O >> $psfile24
 pscoast -R$mapbordeB -Di -N1/0.2p -W0.2p -JL$mapproB -K -O >> $psfile15
 psxy AUXI/kosovo-border.dat -R$mapborder -JL$mapproj -W0.2p/0/0/0 -K -O >> $psfile01
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile02
@@ -223,41 +229,52 @@ psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfi
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile18
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile22
 psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile23
+psxy AUXI/kosovo-border.dat -R           -JL         -W0.2p/0/0/0 -K -O >> $psfile24
 psxy AUXI/kosovo-border.dat -R$mapbordeB -JL$mapproB -W0.2p/0/0/0 -K -O >> $psfile15
 
 # outline of the AdriaArray region split in pieces to plot it differently onland and offshore
-psxy AUXI/borderLandA.dat -R$mapborder -JL$mapproj -W1.0p/255/255/000            -K -O >> $psfile01
-psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile01
-psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile01
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile01
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile01
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile01
-psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile06
-psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile06
-psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile06
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile06
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile06
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile06
-psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile09
-psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile09
-psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile09
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile09
-psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
-psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
-psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/255/255/000            -K -O >> $psfile22
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile22
-psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
-psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
-psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$topo                  -K -O >> $psfile19
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$topo       -K -O >> $psfile19
-#psxy AUXI/tectoniclines.txt -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60       -K -O >> $psfile19
-#psxy AUXI/alcapadi_faults.gmt6 -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60       -K -O >> $psfile19
+psxy AUXI/borderLandA.dat -R$mapborder -JL$mapproj -W1.0p/$olin            -K -O >> $psfile01
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile01
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile01
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile01
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile01
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile01
+psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile06
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile06
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile06
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile06
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile06
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile06
+psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile09
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile09
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile09
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile09
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile09
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile09
+psxy AUXI/borderLandA.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile22
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile22
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfile22
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile22
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile22
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile22
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile19
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile19
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile19
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile19
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile19
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile19
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile24
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile24
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$olin            -K -O >> $psfile24
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile24
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile24
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfile24
+
+# tectonics
+#psxy AUXI/tectoniclines.txt    -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60 -K -O >> $psfile19
+psxy AUXI/alcapadi_faults.gmt  -R         -JL   -M    -W1.3p+t2.0_2.0:0/$BB60    -K -O >> $psfile24
+psxy AUXI/tec01.csv            -R         -JL   -M    -W1.3p+t2.0_2.0:0/$igczclr -K -O >> $psfile24
+psxy AUXI/balaton.csv          -R         -JL   -M    -W1.3p+t2.0_2.0:0/$igczclr -K -O >> $psfile24
 
 # SP/SM stations not suitable or available for upgrade
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile01
@@ -1023,6 +1040,29 @@ pscoast -R -Di -N1/0.2p -W0.2p -JL -K -O >> $psfile04
 pscoast -R -Di -N1/0.2p -W0.2p -JL -K -O >> $psfile05
 psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile04
 psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile05
+
+# AdA outline for coverage maps
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile20
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile20
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile20
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile20
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile20
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile20
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile21
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile21
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$olin                  -K -O >> $psfile21
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile21
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile21
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$olin       -K -O >> $psfile21
+
+# logo
+psimage AUXI/AdA_logo_bb.eps -W1.0c -C0.4/1.2 -K -O >> $psfile19
+psimage AUXI/AdA_logo_bb.eps -W1.0c -C0.4/1.2 -K -O >> $psfile20
+psimage AUXI/AdA_logo_bb.eps -W1.0c -C0.4/1.2 -K -O >> $psfile21
+psimage AUXI/AdA_logo_bb.eps -W1.0c -C0.4/1.2 -K -O >> $psfile22
+psimage AUXI/AdA_logo_bb.eps -W1.0c -C0.4/1.2 -K -O >> $psfile23
+
+psscale -CAUXI/cl.cpt -D+24.5/+15.0/06.0c/0.5ch -K -O -B2000.0f1000.0:"altitude [m]": >> $psfile19
 
 # map of institutions
 psxy AUXI/eida-perm.txt  -R$mapbordeB -JL$mapproB -Ss0.4            -W1.5p/$eidaclr -K -O >> $psfile15
@@ -2130,6 +2170,52 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfile18
 end
 # end of the legend to map 18
 
+# legend to map 20
+pscoast -R17.6/21.5/-0.9/1.4 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile20
+psxy -R -JM -Sc0.15 -G$ci10 -K -O << end >> $psfile20
+17.95 1.0
+end
+psxy -R -JM -Sc0.30 -G$ci20 -K -O << end >> $psfile20
+17.95 0.5
+end
+psxy -R -JM -Sc0.45 -G$ci30 -K -O << end >> $psfile20
+17.95 0.0
+end
+psxy -R -JM -Sc0.60 -G$ci40 -K -O << end >> $psfile20
+17.95 -0.5
+end
+# text of the legend
+pstext -R -JM -G0/0/0 -K -O << end >> $psfile20
+18.3  1.10 8 0 0 TL 10 km radius coverage
+18.3  0.60 8 0 0 TL 20 km radius coverage
+18.3  0.10 8 0 0 TL 30 km radius coverage
+18.3 -0.40 8 0 0 TL 40 km radius coverage
+end
+# end of the legend to map 20
+
+# legend to map 21
+pscoast -R17.6/21.5/-0.9/1.4 -Dc -JM20/60/4.95c -G150/150/150 -S150/150/150 -Y+5.2 -X+23.1 -K -O >> $psfile21
+psxy -R -JM -Sc0.15 -G$ci10 -K -O << end >> $psfile21
+17.95 1.0
+end
+psxy -R -JM -Sc0.30 -G$ci20 -K -O << end >> $psfile21
+17.95 0.5
+end
+psxy -R -JM -Sc0.45 -G$ci30 -K -O << end >> $psfile21
+17.95 0.0
+end
+psxy -R -JM -Sc0.60 -G$ci40 -K -O << end >> $psfile21
+17.95 -0.5
+end
+# text of the legend
+pstext -R -JM -G0/0/0 -K -O << end >> $psfile21
+18.3  1.10 8 0 0 TL 10 km radius coverage
+18.3  0.60 8 0 0 TL 20 km radius coverage
+18.3  0.10 8 0 0 TL 30 km radius coverage
+18.3 -0.40 8 0 0 TL 40 km radius coverage
+end
+# end of the legend to map 21
+
 # date stamp
 datum=$(date +%d" "%B" "%Y)
 pscoast -R17.6/22.5/47.50/47.70 -Dc -JM20/60/6.2c -G255/255/255 -S255/255/255 -Y-5.8 -X-1.3 -K -O >> $psfile01
@@ -2273,6 +2359,9 @@ end
 psxy -R -JL << end -O >> $psfile23
 0.0 0.0
 end
+psxy -R -JL << end -O >> $psfile24
+0.0 0.0
+end
 
 # saving pdf and png files
 gs -o MAPS/01AdriaTotal.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile01
@@ -2297,6 +2386,7 @@ gs -o MAPS/20AdAcoverP.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage 
 gs -o MAPS/21AdAcoverPT.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile21
 gs -o MAPS/22AdAcomplet.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile22
 gs -o MAPS/23AdAvirtual.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile23
+gs -o MAPS/24AdAtectono.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile24
 gs -o MAPS/01AdriaTotal.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile01
 gs -o MAPS/02AdriaBBonl.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile02
 gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
@@ -2319,3 +2409,4 @@ gs -o MAPS/20AdAcoverP.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpage
 gs -o MAPS/21AdAcoverPT.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile21
 gs -o MAPS/22AdAcomplet.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile22
 gs -o MAPS/23AdAvirtual.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile23
+gs -o MAPS/24AdAtectono.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile24
