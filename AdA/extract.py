@@ -159,8 +159,9 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             outBB30.write    ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))  # station coordinates for GMT psxy
             outBB3030.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 60 60'))
             outBB3040.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 80 80'))
-            p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            if inventoryP.iloc[n,19] == 1: # if in EIDA
+                p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+                p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             csvBB3030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB3040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB30.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2]))) # station labels for GMT pstext
@@ -170,7 +171,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -192,8 +193,9 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             outBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             outBB4030.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 60 60'))
             outBB4040.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 80 80'))
-            p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            if inventoryP.iloc[n,19] == 1: # if in EIDA
+                p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+                p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             csvBB4030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB4040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB40.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -203,7 +205,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red            
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -225,8 +227,9 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             outBB60.write    ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             outBB6030.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 60 60'))
             outBB6040.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 80 80'))
-            p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
-            p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            if inventoryP.iloc[n,19] == 1: # if in EIDA
+                p30plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+                p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             csvBB6030.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',30,' + str(inventoryP.iloc[n,2])))  # csv 30 km circles
             csvBB6040.write("%s\n" % (str(inventoryP.iloc[n,3]) + ',' + str(inventoryP.iloc[n,4]) + ',40,' + str(inventoryP.iloc[n,2])))  # csv 40 km circles
             labBB60.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + '\t' + ts + '\t' + '0' + '\t' + '0' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
@@ -240,7 +243,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]))) # list of permanent stations as code.name
+            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -524,12 +527,8 @@ counterIGCZ   = 0
 counterAARH   = 0
 counterBARC   = 0
 counterBOCH   = 0
-BOCHname      = ['']
-BOCHnameSet   = {}
-RESFname      = ['']
-RESFnameSet   = {}
-KIELname      = ['']
-KIELnameSet   = {}
+REPEname      = ['']
+REPEnameSet   = {}
 counterBOLO   = 0
 counterCSSC   = 0
 counterETHZ   = 0
@@ -679,7 +678,7 @@ tEIDA40    = open("TEMP/tEIDA40.txt"       , "w")
 listT      = open("TEMP/listT.txt"         , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls/ods sheet
-    listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]))) # list of permanent stations as code.name
+    listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0])) # list of temporary stations as code.name
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
         if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
@@ -755,7 +754,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
                     barcD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Bochum' or inventoryT.iloc[n,16] == 'Bochum+Frankfurt':
-            BOCHname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
             if inventoryT.iloc[n,0] != 4:
                 boch.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))        
                 counterBOCH = counterBOCH + 1
@@ -789,7 +787,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
                     ethzD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'Resif-Sismob':
-            RESFname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
             if inventoryT.iloc[n,0] != 4:
                 resf.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterRESF = counterRESF + 1
@@ -816,7 +813,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     irsmD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'Kiel':
-            KIELname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
             if inventoryT.iloc[n,0] != 4:
                 kiel.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 counterKIEL = counterKIEL + 1
@@ -968,7 +964,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             netXP.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'RS':
             netRS.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
-        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'x' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK':
+        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK': # upgrades of permanent
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         # stations by corner period        
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
@@ -1042,17 +1038,13 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempCLOS.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(0,0,0) # black
+        if inventoryT.iloc[n,0] != 0:   # if deployed
+            REPEname.append(str(inventoryT.iloc[n,2])[:4]) # list of station names - only the first 4 characters to find "A" / "B" duplicates
 # end of the loop over all the lines in the sheet
 
-BOCHnameSet = set(BOCHname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
-if len(BOCHname) != len(BOCHnameSet):
-    counterA2B = counterA2B + 1
-RESFnameSet = set(RESFname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
-if len(RESFname) != len(RESFnameSet):
-    counterA2B = counterA2B + 1
-KIELnameSet = set(KIELname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
-if len(KIELname) != len(KIELnameSet):
-    counterA2B = counterA2B + (len(KIELname) - len(KIELnameSet))
+REPEnameSet = set(REPEname) # to remove duplicates, if station was moved from its original "A" site to the "B" site
+if len(REPEname) != len(REPEnameSet):
+    counterA2B = counterA2B + (len(REPEname) - len(REPEnameSet))
 
 west.close()
 west30.close()
