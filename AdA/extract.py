@@ -139,6 +139,7 @@ p30io20   = open("PERM/perm30io20.txt"    , "w")
 p30io30   = open("PERM/perm30io30.txt"    , "w")
 p30io40   = open("PERM/perm30io40.txt"    , "w")
 listP     = open("PERM/listP.txt"         , "w")
+listALL   = open("AUXI/listALL.txt"       , "w")
 
 # BB30, BB40, BB60, UNKN, WHIT have two options based on column 0: inside or outside of the AdA area
 # SPOT, UPGR, NOSP dont have these options, because by definition, these are always inside
@@ -171,7 +172,10 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+            #if not math.isnan(int(inventoryP.iloc[n,1])): # if the network code is not NaN
+            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -205,7 +209,9 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red            
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -243,7 +249,9 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -549,7 +557,6 @@ counterNIEP   = 0
 counterKITP   = 0
 counterGIPP   = 0
 counterJENA   = 0
-counterSERB   = 0
 counterRP0X   = 0
 counterDPLO   = 0
 counterNONE   = 0
@@ -638,8 +645,6 @@ gipp       = open("TEMP/gipp.txt"          , "w")
 gippD      = open("TEMP/gippD.txt"         , "w")
 jena       = open("TEMP/jena.txt"          , "w")
 jenaD      = open("TEMP/jenaD.txt"         , "w")
-serb       = open("TEMP/serb.txt"          , "w")
-serbD      = open("TEMP/serbD.txt"         , "w")
 rpBB       = open("TEMP/rpBB.txt"          , "w")
 rpSP       = open("TEMP/rpSP.txt"          , "w")
 rplabel    = open("TEMP/rplabel.txt"       , "w")
@@ -654,7 +659,6 @@ netY5      = open("AUXI/netY5.txt"         , "w")
 netY8      = open("AUXI/netY8.txt"         , "w")
 netZ6      = open("AUXI/netZ6.txt"         , "w")
 netXP      = open("AUXI/netXP.txt"         , "w")
-netRS      = open("AUXI/netRS.txt"         , "w")
 netXX      = open("AUXI/netXX.txt"         , "w")
 tmpBB030   = open("TEMP/tBB030.txt"        , "w")
 tmpBB040   = open("TEMP/tBB040.txt"        , "w")
@@ -676,9 +680,14 @@ tEIDA20    = open("TEMP/tEIDA20.txt"       , "w")
 tEIDA30    = open("TEMP/tEIDA30.txt"       , "w")
 tEIDA40    = open("TEMP/tEIDA40.txt"       , "w")
 listT      = open("TEMP/listT.txt"         , "w")
+listTnoCZ  = open("TEMP/listTnoCZ.txt"     , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls/ods sheet
-    listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0])) # list of temporary stations as code.name
+    if inventoryT.iloc[n,1] != '5B': # if it is not 5B network, which is not part of AdA (yet)
+        listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0])) # list of temporary stations as code.name
+        if inventoryT.iloc[n,16] != 'IG CAS CZ': # if it is not a MOBNET station
+            listTnoCZ.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
+        listALL.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0]))
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
         if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
@@ -925,13 +934,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     jenaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                                
-        if inventoryT.iloc[n,16] == 'SerbianPool':
-            if inventoryT.iloc[n,0] != 4:
-                serb.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                counterSERB = counterSERB + 1
-                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
-                    serbD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                    counterDPLO = counterDPLO + 1
         if inventoryT.iloc[n,16] == 'RP0X':
             if inventoryT.iloc[n,0] != 4:
                 if inventoryT.iloc[n,11] >= 30:
@@ -962,9 +964,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             netZ6.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'XP':
             netXP.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-        if inventoryT.iloc[n,1] == 'RS':
-            netRS.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
-        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK': # upgrades of permanent
+        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK' or inventoryT.iloc[n,1] == 'SJ': # upgrades of permanent
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         # stations by corner period        
         if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
@@ -1124,8 +1124,6 @@ gipp.close()
 gippD.close()
 jena.close()
 jenaD.close()
-serb.close()
-serbD.close()
 rpBB.close()
 rpSP.close()
 rplabel.close()
@@ -1139,7 +1137,6 @@ netY5.close()
 netY8.close()
 netZ6.close()
 netXP.close()
-netRS.close()
 netXX.close()
 tmpBB030.close()
 tmpBB040.close()
@@ -1161,9 +1158,11 @@ tEIDA20.close()
 tEIDA30.close()
 tEIDA40.close()
 listT.close()
+listTnoCZ.close()
+listALL.close()
 
 sumGROUPS = counterEAST + counterNORT + counterCENT + counterSTEA + counterWEST
-sumPOOLS  = counterIGCZ + counterAARH + counterBARC + counterBOCH + counterBOLO + counterCSSC + counterETHZ + counterRESF + counterHELS + counterEPSS + counterKIEL + counterMUNI + counterTWEN + counterBRZG + counterOGSI + counterOULU + counterPOLA + counterWIEN + counterMNEP + counterKOSV + counterNIEP + counterKITP + counterGIPP + counterJENA + counterSERB
+sumPOOLS  = counterIGCZ + counterAARH + counterBARC + counterBOCH + counterBOLO + counterCSSC + counterETHZ + counterRESF + counterHELS + counterEPSS + counterKIEL + counterMUNI + counterTWEN + counterBRZG + counterOGSI + counterOULU + counterPOLA + counterWIEN + counterMNEP + counterKOSV + counterNIEP + counterKITP + counterGIPP + counterJENA
 
 print ('---------- TEMPORARY STATIONS ---')
 print ('subgroup EAST        = ', counterEAST)
@@ -1195,7 +1194,6 @@ print ('  NIEP Pool          = ', counterNIEP)
 print ('  KIT Pool           = ', counterKITP)
 print ('  GIPP               = ', counterGIPP)
 print ('  Uni Jena           = ', counterJENA)
-print ('  Serbian Pool       = ', counterSERB)
 print ('  not assigned       = ', counterNONE)
 print ('length of inventory  = ', len(inventoryT))
 print ('sum of the subgroups = ', sumGROUPS)

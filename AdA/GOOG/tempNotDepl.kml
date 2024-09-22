@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="45">
-        <Style id="20945">
-            <IconStyle id="20946">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="20947">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="20955">
-            <IconStyle id="20956">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="20957">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
         <Style id="20965">
             <IconStyle id="20966">
                 <color>ff000000</color>
@@ -232,241 +210,137 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="21155">
-            <IconStyle id="21156">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="21157">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="21165">
-            <IconStyle id="21166">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="21167">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="21175">
-            <IconStyle id="21176">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="21177">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="21185">
-            <IconStyle id="21186">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="21187">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="21195">
-            <IconStyle id="21196">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="21197">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Placemark id="20944">
+        <Placemark id="20964">
             <name>A290A</name>
-            <styleUrl>#20945</styleUrl>
-            <Point id="20943">
+            <styleUrl>#20965</styleUrl>
+            <Point id="20963">
                 <coordinates>10.928,46.5068,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20954">
+        <Placemark id="20974">
             <name>A291A</name>
-            <styleUrl>#20955</styleUrl>
-            <Point id="20953">
+            <styleUrl>#20975</styleUrl>
+            <Point id="20973">
                 <coordinates>11.8805,46.6246,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20964">
+        <Placemark id="20984">
             <name>APU01</name>
-            <styleUrl>#20965</styleUrl>
-            <Point id="20963">
+            <styleUrl>#20985</styleUrl>
+            <Point id="20983">
                 <coordinates>16.795743,40.34035,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20974">
+        <Placemark id="20994">
             <name>APU02</name>
-            <styleUrl>#20975</styleUrl>
-            <Point id="20973">
+            <styleUrl>#20995</styleUrl>
+            <Point id="20993">
                 <coordinates>17.82957,40.288668,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20984">
+        <Placemark id="21004">
             <name>APU03</name>
-            <styleUrl>#20985</styleUrl>
-            <Point id="20983">
+            <styleUrl>#21005</styleUrl>
+            <Point id="21003">
                 <coordinates>18.265048,40.400216,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="20994">
+        <Placemark id="21014">
             <name>APU04</name>
-            <styleUrl>#20995</styleUrl>
-            <Point id="20993">
+            <styleUrl>#21015</styleUrl>
+            <Point id="21013">
                 <coordinates>18.159089,39.880758,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21004">
+        <Placemark id="21024">
             <name>A012A</name>
-            <styleUrl>#21005</styleUrl>
-            <Point id="21003">
+            <styleUrl>#21025</styleUrl>
+            <Point id="21023">
                 <coordinates>15.585996,47.603986,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21014">
+        <Placemark id="21034">
             <name>HR16A</name>
-            <styleUrl>#21015</styleUrl>
-            <Point id="21013">
+            <styleUrl>#21035</styleUrl>
+            <Point id="21033">
                 <coordinates>18.404567,45.196685,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21024">
+        <Placemark id="21044">
             <name>HR17A</name>
-            <styleUrl>#21025</styleUrl>
-            <Point id="21023">
+            <styleUrl>#21045</styleUrl>
+            <Point id="21043">
                 <coordinates>19.044115,45.325987,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21034">
-            <name>AVAS</name>
-            <styleUrl>#21035</styleUrl>
-            <Point id="21033">
-                <coordinates>20.51315,44.69595,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21044">
-            <name>BORS</name>
-            <styleUrl>#21045</styleUrl>
-            <Point id="21043">
-                <coordinates>22.01765,44.09043,0.0</coordinates>
-            </Point>
-        </Placemark>
         <Placemark id="21054">
-            <name>IVAS</name>
+            <name>RS01A</name>
             <styleUrl>#21055</styleUrl>
             <Point id="21053">
-                <coordinates>20.152395,43.576676,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21064">
-            <name>RS01A</name>
-            <styleUrl>#21065</styleUrl>
-            <Point id="21063">
                 <coordinates>19.8,45.75,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21074">
+        <Placemark id="21064">
             <name>RS02A</name>
-            <styleUrl>#21075</styleUrl>
-            <Point id="21073">
+            <styleUrl>#21065</styleUrl>
+            <Point id="21063">
                 <coordinates>22.2,43.25,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21084">
+        <Placemark id="21074">
             <name>SAMOS</name>
-            <styleUrl>#21085</styleUrl>
-            <Point id="21083">
+            <styleUrl>#21075</styleUrl>
+            <Point id="21073">
                 <coordinates>20.7703554348915,45.188620289546,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21094">
+        <Placemark id="21084">
             <name>SELS</name>
-            <styleUrl>#21095</styleUrl>
-            <Point id="21093">
+            <styleUrl>#21085</styleUrl>
+            <Point id="21083">
                 <coordinates>21.120913,43.214253,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21104">
-            <name>SVIS</name>
-            <styleUrl>#21105</styleUrl>
-            <Point id="21103">
-                <coordinates>21.215175,44.265486,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21114">
-            <name>KSV</name>
-            <styleUrl>#21115</styleUrl>
-            <Point id="21113">
-                <coordinates>25.06454,48.3137,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21124">
-            <name>MD01</name>
-            <styleUrl>#21125</styleUrl>
-            <Point id="21123">
-                <coordinates>27.1119,48.0311,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21134">
-            <name>MD02</name>
-            <styleUrl>#21135</styleUrl>
-            <Point id="21133">
-                <coordinates>28.3517,47.4524,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21144">
-            <name>MD03</name>
-            <styleUrl>#21145</styleUrl>
-            <Point id="21143">
-                <coordinates>28.6553,46.3003,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21154">
-            <name>MEZ</name>
-            <styleUrl>#21155</styleUrl>
-            <Point id="21153">
-                <coordinates>23.51239,48.51207,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21164">
+        <Placemark id="21094">
             <name>NSLU</name>
-            <styleUrl>#21165</styleUrl>
-            <Point id="21163">
+            <styleUrl>#21095</styleUrl>
+            <Point id="21093">
                 <coordinates>23.45661,48.19759,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="21174">
-            <name>RAKU</name>
-            <styleUrl>#21175</styleUrl>
-            <Point id="21173">
-                <coordinates>24.16624,48.02591,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21184">
-            <name>RO08A</name>
-            <styleUrl>#21185</styleUrl>
-            <Point id="21183">
-                <coordinates>24.545,47.841,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="21194">
+        <Placemark id="21104">
             <name>STZU</name>
-            <styleUrl>#21195</styleUrl>
-            <Point id="21193">
+            <styleUrl>#21105</styleUrl>
+            <Point id="21103">
                 <coordinates>22.62305,49.01619,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21114">
+            <name>MD01</name>
+            <styleUrl>#21115</styleUrl>
+            <Point id="21113">
+                <coordinates>27.1119,48.0311,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21124">
+            <name>MD02</name>
+            <styleUrl>#21125</styleUrl>
+            <Point id="21123">
+                <coordinates>28.3517,47.4524,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21134">
+            <name>MD03</name>
+            <styleUrl>#21135</styleUrl>
+            <Point id="21133">
+                <coordinates>28.6553,46.3003,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21144">
+            <name>RO08A</name>
+            <styleUrl>#21145</styleUrl>
+            <Point id="21143">
+                <coordinates>24.545,47.841,0.0</coordinates>
             </Point>
         </Placemark>
     </Document>

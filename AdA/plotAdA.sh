@@ -41,6 +41,7 @@ psfilep09=PAPER/p09AdAcorners.ps
 psfilep10=PAPER/p10AdAnetwork.ps
 psfilep11=PAPER/p11AdAmembers.ps
 psfilep12=PAPER/p12AdAhistory.ps
+psfilep13=PAPER/p13EFEHRhazar.ps
 
 diam10='20'
 diam20='40'
@@ -134,7 +135,6 @@ gippclr='210/110/000'     # GIPP
 jenaclr='100/100/000'     # Uni Jena
 frnkclr='200/160/000'     # Uni Frankfurt
 gigeclr='255/000/000'     # Geoazur + GIPP
-serbclr='035/127/095'     # Serbian mobile pool
 noneclr='255/255/255'     # not assigned
 clr1Y='000/122/255'       # 1Y  ----------------- temporary networks --------------------
 clr2Y='135/000/135'       # 2Y
@@ -145,7 +145,6 @@ clrY5='255/000/255'       # Y5
 clrY8='070/255/190'       # Y8
 clrZ6='172/085/000'       # Z6
 clrRF='255/255/000'       # RF
-clrRS='080/080/080'       # RS - code for Serbia not known yet
 clrXX='255/255/255'       # XX - not assigned yet or using permanent code
 eidaclr='255/000/255'     # colors of squares in map 15 showing the institutions
 membclr='000/255/000'     # members
@@ -184,6 +183,7 @@ pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                            
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+0.8 -Y+5.4  -W0.1p -K > $psfilep09
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+0.8 -Y+5.4  -W0.1p -K > $psfilep10
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+0.8 -Y+5.4  -W0.1p -K > $psfilep12
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."":                                            -X+0.8 -Y+5.4  -W0.1p -K > $psfilep13
 pscoast -R$mapbordeB -Di -JL$mapproB -B$mapneB/:."AdriaArray institutions":                     -X+1.3 -Y+1.2  -W0.1p -K > $psfile15
 pscoast -R           -Di -JL$mapproB -B$mapneB/:."":                                            -X+0.8 -Y+2.52 -W0.1p -K > $psfilep11
 
@@ -218,6 +218,7 @@ grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfil
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep09
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep10
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep12
+grdimage AUXI/AdAtopo.grd -R -JL -IAUXI/shadow.grd -K -O -CAUXI/bw.cpt >> $psfilep13 # shaded colored topography
 grdimage AUXI/AdAtopo.grd -R$mapbordeB -JL$mapproB -K -O -CAUXI/bw.cpt >> $psfile15
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep11
 
@@ -297,33 +298,39 @@ psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O
 psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep07
 psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep07
 psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep07
-psxy AUXI/borderLandA.dat -R           -JL         -W1.9p/$olin            -K -O >> $psfilep03
-psxy AUXI/borderLandB.dat -R           -JL         -W1.9p/$olin            -K -O >> $psfilep03
-psxy AUXI/borderLandC.dat -R           -JL         -W1.9p/$olin            -K -O >> $psfilep03
-psxy AUXI/borderSeaA.dat  -R           -JL         -W1.9p+t2.0_2.0:0/$olin -K -O >> $psfilep03
-psxy AUXI/borderSeaB.dat  -R           -JL         -W1.9p+t2.0_2.0:0/$olin -K -O >> $psfilep03
-psxy AUXI/borderSeaC.dat  -R           -JL         -W1.9p+t2.0_2.0:0/$olin -K -O >> $psfilep03
+psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$bb60            -K -O >> $psfilep03
+psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$bb60            -K -O >> $psfilep03
+psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$bb60            -K -O >> $psfilep03
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$bb60 -K -O >> $psfilep03
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$bb60 -K -O >> $psfilep03
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$bb60 -K -O >> $psfilep03
 psxy AUXI/borderLandA.dat -R           -JL         -W1.3p/$whit            -K -O >> $psfilep01
 psxy AUXI/borderLandB.dat -R           -JL         -W1.3p/$whit            -K -O >> $psfilep01
 psxy AUXI/borderLandC.dat -R           -JL         -W1.3p/$whit            -K -O >> $psfilep01
 psxy AUXI/borderSeaA.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$whit -K -O >> $psfilep01
 psxy AUXI/borderSeaB.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$whit -K -O >> $psfilep01
 psxy AUXI/borderSeaC.dat  -R           -JL         -W1.3p+t2.0_2.0:0/$whit -K -O >> $psfilep01
+psxy AUXI/borderLandA.dat -R$mapbordeB -JL$mapproB -W1.0p/$olin            -K -O >> $psfilep11
+psxy AUXI/borderLandB.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfilep11
+psxy AUXI/borderLandC.dat -R           -JL         -W1.0p/$olin            -K -O >> $psfilep11
+psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep11
+psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep11
+psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep11
 
 # tectonics
 #psxy AUXI/alcapadi_faults.gmt -R -JL -M -W1.3p/$BB60 -K -O >> $psfilep01 # by 4DMB
-psxy AUXI/mainthrustR.dat     -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0prt:5p -G255/000/000 -K -O >> $psfilep01
-psxy AUXI/mainthrustL.dat     -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0plt:5p -G255/000/000 -K -O >> $psfilep01
-psxy AUXI/strikeslip.dat      -R -JL -M -W1.6p/$slips                                 -K -O >> $psfilep01
-psxy AUXI/minorthrustR.dat    -R -JL -M -W0.8p/$thrst -Sf+0.3/3.0prt:5p -G255/000/000 -K -O >> $psfilep01 # MediterraneanRidge-North only
-psxy AUXI/minorthrustL.dat    -R -JL -M -W0.8p/$thrst -Sf+0.3/3.0plt:5p -G255/000/000 -K -O >> $psfilep01 # Ligur only
-psxy AUXI/emptysquaresR.dat   -R -JL -M -W0.8p/$exten                                 -K -O >> $psfilep01
-psxy AUXI/emptysquaresR.dat   -R -JL -M -W0.4p/$exten -Sf+0.3/4.0prb:5p               -K -O >> $psfilep01
-psxy AUXI/emptysquaresL.dat   -R -JL -M -W0.8p/$exten                                 -K -O >> $psfilep01
-psxy AUXI/emptysquaresL.dat   -R -JL -M -W0.4p/$exten -Sf+0.3/4.0plb:5p               -K -O >> $psfilep01
-psxy AUXI/minorstrikeslip.dat -R -JL -M -W0.8p/$slips                                 -K -O >> $psfilep01
-psxy AUXI/extensionsR.dat     -R -JL -M -W0.8p/$exten -Sf+0.2/4.0prf:5p               -K -O >> $psfilep01
-psxy AUXI/extensionsL.dat     -R -JL -M -W0.8p/$exten -Sf+0.2/4.0plf:5p               -K -O >> $psfilep01
+psxy AUXI/mainthrustR.dat     -R$mapborder -JL$mapproj -M -W1.6p/$thrst -Sf+0.7/5.0prt:5p -G255/000/000 -K -O >> $psfilep01
+psxy AUXI/mainthrustL.dat     -R           -JL         -M -W1.6p/$thrst -Sf+0.7/5.0plt:5p -G255/000/000 -K -O >> $psfilep01
+psxy AUXI/strikeslip.dat      -R           -JL         -M -W1.6p/$slips                                 -K -O >> $psfilep01
+psxy AUXI/minorthrustR.dat    -R           -JL         -M -W0.8p/$thrst -Sf+0.3/3.0prt:5p -G255/000/000 -K -O >> $psfilep01 # MediterraneanRidge-North only
+psxy AUXI/minorthrustL.dat    -R           -JL         -M -W0.8p/$thrst -Sf+0.3/3.0plt:5p -G255/000/000 -K -O >> $psfilep01 # Ligur only
+psxy AUXI/emptysquaresR.dat   -R           -JL         -M -W0.8p/$exten                                 -K -O >> $psfilep01
+psxy AUXI/emptysquaresR.dat   -R           -JL         -M -W0.4p/$exten -Sf+0.3/4.0prb:5p               -K -O >> $psfilep01
+psxy AUXI/emptysquaresL.dat   -R           -JL         -M -W0.8p/$exten                                 -K -O >> $psfilep01
+psxy AUXI/emptysquaresL.dat   -R           -JL         -M -W0.4p/$exten -Sf+0.3/4.0plb:5p               -K -O >> $psfilep01
+psxy AUXI/minorstrikeslip.dat -R           -JL         -M -W0.8p/$slips                                 -K -O >> $psfilep01
+psxy AUXI/extensionsR.dat     -R           -JL         -M -W0.8p/$exten -Sf+0.2/4.0prf:5p               -K -O >> $psfilep01
+psxy AUXI/extensionsL.dat     -R           -JL         -M -W0.8p/$exten -Sf+0.2/4.0plf:5p               -K -O >> $psfilep01
 pstext -R -JL -G0/0/0 -K -O << end >> $psfilep01
 +16.0 +42.5 15 -35 1 MC ADRIA
 +11.5 +34.7 19   0 1 MC AFRICA
@@ -658,22 +665,22 @@ psxy     AUXI/cifalps.txt             -R -JL -St$szexp   -G$polaclr -W$thps/$blc
 psxy     AUXI/cifalps2.txt            -R -JL -St$szexp   -G$resfclr -W$thps/$blck -K -O >> $psfilep02
 
 # experiment outlines for map 14
-psxy AUXI/AlpArrayOutline.dat -R -JL -W1.3p/255/255/255            -K -O >> $psfile14
-psxy AUXI/PACASEoutline.dat   -R -JL -W1.3p/000/255/255            -K -O >> $psfile14
-psxy AUXI/borderLandA.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfile14
-psxy AUXI/borderLandB.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfile14
-psxy AUXI/borderLandC.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfile14
-psxy AUXI/borderSeaA.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile14
-psxy AUXI/borderSeaB.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile14
-psxy AUXI/borderSeaC.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfile14
-psxy AUXI/AlpArrayOutline.dat -R -JL -W1.3p/255/255/255            -K -O >> $psfilep02
-psxy AUXI/PACASEoutline.dat   -R -JL -W1.3p/000/100/255            -K -O >> $psfilep02
-psxy AUXI/borderLandA.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfilep02
-psxy AUXI/borderLandB.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfilep02
-psxy AUXI/borderLandC.dat     -R -JL -W1.0p/255/255/000            -K -O >> $psfilep02
-psxy AUXI/borderSeaA.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfilep02
-psxy AUXI/borderSeaB.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfilep02
-psxy AUXI/borderSeaC.dat      -R -JL -W1.0p+t2.0_2.0:0/255/255/000 -K -O >> $psfilep02
+psxy AUXI/AlpArrayOutline.dat -R -JL -W1.3p/255/255/255      -K -O >> $psfile14
+psxy AUXI/PACASEoutline.dat   -R -JL -W1.3p/000/255/255      -K -O >> $psfile14
+psxy AUXI/borderLandA.dat     -R -JL -W1.0p/$olin            -K -O >> $psfile14
+psxy AUXI/borderLandB.dat     -R -JL -W1.0p/$olin            -K -O >> $psfile14
+psxy AUXI/borderLandC.dat     -R -JL -W1.0p/$olin            -K -O >> $psfile14
+psxy AUXI/borderSeaA.dat      -R -JL -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile14
+psxy AUXI/borderSeaB.dat      -R -JL -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile14
+psxy AUXI/borderSeaC.dat      -R -JL -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfile14
+psxy AUXI/AlpArrayOutline.dat -R -JL -W1.3p/255/255/255      -K -O >> $psfilep02
+psxy AUXI/PACASEoutline.dat   -R -JL -W1.3p/000/100/255      -K -O >> $psfilep02
+psxy AUXI/borderLandA.dat     -R -JL -W1.3p/$olin            -K -O >> $psfilep02
+psxy AUXI/borderLandB.dat     -R -JL -W1.3p/$olin            -K -O >> $psfilep02
+psxy AUXI/borderLandC.dat     -R -JL -W1.3p/$olin            -K -O >> $psfilep02
+psxy AUXI/borderSeaA.dat      -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep02
+psxy AUXI/borderSeaB.dat      -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep02
+psxy AUXI/borderSeaC.dat      -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep02
 
 # labels for experiments
 pstext -R -JL -G000/255/255 -K -O << end >> $psfile14
@@ -1019,16 +1026,6 @@ psxy TEMP/kosv.txt  -R -JL -St$sizes2 -W$ths2/$kosvclr   -K -O >> $psfilep04
 psxy TEMP/kosvD.txt -R -JL -St$sizes2 -G$kosvclr         -K -O >> $psfilep04
 psxy TEMP/kosv.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
-# Serbian Pool
-psxy TEMP/serb.txt  -R -JL -Sc0.3     -W$thickE/$serbclr -K -O >> $psfile07
-psxy TEMP/serb.txt  -R -JL -Sc0.3     -W$thickE/$serbclr -K -O >> $psfile12
-psxy TEMP/serb.txt  -R -JL -St$sizes2 -W$ths2/$serbclr   -K -O >> $psfile13
-psxy TEMP/serbD.txt -R -JL -St$sizes2 -G$serbclr         -K -O >> $psfile13
-psxy TEMP/serb.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfile13
-psxy TEMP/serb.txt  -R -JL -St$sizes2 -W$ths2/$serbclr   -K -O >> $psfilep04
-psxy TEMP/serbD.txt -R -JL -St$sizes2 -G$serbclr         -K -O >> $psfilep04
-psxy TEMP/serb.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
-
 # NIEP Pool
 psxy TEMP/niep.txt  -R -JL -Sc0.3     -W$thickE/$niepclr -K -O >> $psfile07
 psxy TEMP/niep.txt  -R -JL -Sc0.3     -W$thickE/$niepclr -K -O >> $psfile12
@@ -1072,8 +1069,6 @@ psxy AUXI/netZ6.txt -R -JL -St$sizeps -G$clrZ6         -K -O >> $psfile16
 psxy AUXI/netZ6.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 psxy AUXI/netXP.txt -R -JL -St$sizeps -G$clrRF         -K -O >> $psfile16
 psxy AUXI/netXP.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
-psxy AUXI/netRS.txt -R -JL -St$sizeps -G$clrRS         -K -O >> $psfile16
-psxy AUXI/netRS.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 psxy AUXI/netXX.txt -R -JL -St$sizeps -G$clrXX         -K -O >> $psfile16
 psxy AUXI/netXX.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfile16
 psxy AUXI/net1Y.txt -R -JL -St$sizeps -G$clr1Y         -K -O >> $psfilep10
@@ -1094,8 +1089,6 @@ psxy AUXI/netZ6.txt -R -JL -St$sizeps -G$clrZ6         -K -O >> $psfilep10
 psxy AUXI/netZ6.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfilep10
 psxy AUXI/netXP.txt -R -JL -St$sizeps -G$clrRF         -K -O >> $psfilep10
 psxy AUXI/netXP.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfilep10
-psxy AUXI/netRS.txt -R -JL -St$sizeps -G$clrRS         -K -O >> $psfilep10
-psxy AUXI/netRS.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfilep10
 psxy AUXI/netXX.txt -R -JL -St$sizeps -G$clrXX         -K -O >> $psfilep10
 psxy AUXI/netXX.txt -R -JL -St$sizeps -W$thps/$blck    -K -O >> $psfilep10
 
@@ -1279,6 +1272,25 @@ pstext TEMP/mwest-label.txt         -R -JL -G$labcolorB -K -O >> $psfile05
 pstext TEMP/mnort-label.txt         -R -JL -G$labcolorB -K -O >> $psfile05
 pstext TEMP/mstea-label.txt         -R -JL -G$labcolorB -K -O >> $psfile05
 
+# ESMH20 hazard map by EFEHR taken using the following command:
+# http://appsrvr.share-eu.org:8080/share/map?id=81&lon1=-2&lat1=33&lon2=34&lat2=52.5&imt=PGA&hmapexceedprob=0.0021030&hmapexceedyears=1&soiltype=rock_vs30_800ms-1&aggregationtype=arithmetic&aggregationlevel=0.5
+# where annual frequency of exceedance = 0.0021030 means return period = 475 years which means 10 percent probability of exceedance in 50 years
+# maximum PGA for 475 years is = 0.74599 g
+makecpt -CAUXI/PGAscale-in.cpt -T-0.0/+0.6/0.001 -D > AUXI/PGAscale-out.cpt
+#psxy AUXI/EFEHR-475r.txt    -R -JL -Sr -CAUXI/PGAscale-out.cpt -K -O >> $psfilep13 # to plot the hazard map as rectangles at every grid node
+# the -R range is given in the nearneighbor command to match the range of the AdAtopo.grd and shadow.grd files
+nearneighbor AUXI/EFEHR-475.txt -R-3.1/+35.1/33.9/66.6 -GAUXI/EFEHR-475.grd -I0.01666666666666666666666 -S0.08d -N1
+grdimage AUXI/EFEHR-475.grd -R$mapborder -JL -CAUXI/PGAscale-out.cpt -IAUXI/shadow.grd -Q -K -O >> $psfilep13
+
+pscoast                     -R -JL -Di -N1/0.2p -W0.2p              -K -O >> $psfilep13
+psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0                     -K -O >> $psfilep13
+psxy AUXI/borderLandA.dat   -R -JL -W1.3p/$temp                     -K -O >> $psfilep13
+psxy AUXI/borderLandB.dat   -R -JL -W1.3p/$temp                     -K -O >> $psfilep13
+psxy AUXI/borderLandC.dat   -R -JL -W1.3p/$temp                     -K -O >> $psfilep13
+psxy AUXI/borderSeaA.dat    -R -JL -W1.3p+t2.0_2.0:0/$temp          -K -O >> $psfilep13
+psxy AUXI/borderSeaB.dat    -R -JL -W1.3p+t2.0_2.0:0/$temp          -K -O >> $psfilep13
+psxy AUXI/borderSeaC.dat    -R -JL -W1.3p+t2.0_2.0:0/$temp          -K -O >> $psfilep13
+
 # plotting borders over the coverage circles
 pscoast -R -Di -N1/0.2p -W0.2p -JL -K -O >> $psfile04
 pscoast -R -Di -N1/0.2p -W0.2p -JL -K -O >> $psfile05
@@ -1286,18 +1298,18 @@ psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile04
 psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0 -K -O >> $psfile05
 
 # AdA outline for coverage maps
-psxy AUXI/borderLandA.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep05
-psxy AUXI/borderLandB.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep05
-psxy AUXI/borderLandC.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep05
-psxy AUXI/borderSeaA.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep05
-psxy AUXI/borderSeaB.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep05
-psxy AUXI/borderSeaC.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep05
-psxy AUXI/borderLandA.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep06
-psxy AUXI/borderLandB.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep06
-psxy AUXI/borderLandC.dat -R -JL -W1.3p/$olin            -K -O >> $psfilep06
-psxy AUXI/borderSeaA.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep06
-psxy AUXI/borderSeaB.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep06
-psxy AUXI/borderSeaC.dat  -R -JL -W1.3p+t2.0_2.0:0/$olin -K -O >> $psfilep06
+psxy AUXI/borderLandA.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep05
+psxy AUXI/borderLandB.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep05
+psxy AUXI/borderLandC.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep05
+psxy AUXI/borderSeaA.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep05
+psxy AUXI/borderSeaB.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep05
+psxy AUXI/borderSeaC.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep05
+psxy AUXI/borderLandA.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep06
+psxy AUXI/borderLandB.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep06
+psxy AUXI/borderLandC.dat -R -JL -W1.3p/$temp            -K -O >> $psfilep06
+psxy AUXI/borderSeaA.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep06
+psxy AUXI/borderSeaB.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep06
+psxy AUXI/borderSeaC.dat  -R -JL -W1.3p+t2.0_2.0:0/$temp -K -O >> $psfilep06
 
 # logo
 psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.57 -K -O >> $psfilep01
@@ -1312,6 +1324,7 @@ psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.57 -K -O >> $psfilep09
 psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.57 -K -O >> $psfilep10
 psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.34 -K -O >> $psfilep11
 psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.57 -K -O >> $psfilep12
+psimage AUXI/AdA_logo_gb.eps -W1.0c -C0.0/-0.57 -K -O >> $psfilep13
 
 # map of institutions
 psxy AUXI/eidanodes-perm.txt  -R$mapbordeB -JL$mapproB -Ss0.4            -W1.5p/$eidaclr -K -O >> $psfile15
@@ -1345,7 +1358,7 @@ end
 psxy -R -JM -St0.6 -G$bb30 -W$thickL/$blck -K -O << end >> $psfile01
 17.95  2.50
 end
-psxy -R -JM -St0.6 -G$pcse -W$thickL/$red  -K -O << end >> $psfile01
+psxy -R -JM -St0.6 -G$pcse -W$thickL/$blck  -K -O << end >> $psfile01
 17.95  2.00
 end
 psxy -R -JM -St0.6 -G$upgr -W$thickL/$blck -K -O << end >> $psfile01
@@ -1450,7 +1463,7 @@ end
 psxy -R -JM -St0.6 -G$bb30 -W$thickL/$blck -K -O << end >> $psfile02
 17.95  1.50
 end
-psxy -R -JM -St0.6 -G$pcse -W$thickL/$red   -K -O << end >> $psfile02
+psxy -R -JM -St0.6 -G$pcse -W$thickL/$blck   -K -O << end >> $psfile02
 17.95  1.00
 end
 psxy -R -JM -St0.6 -G$futu -W$thickL/$blck -K -O << end >> $psfile02
@@ -1692,11 +1705,8 @@ end
 # end of the legend to map 06
 
 # legend to map 07
-pscoast -R17.6/21.5/-8.8/8.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
+pscoast -R17.6/21.5/-8.8/7.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
 # temporary stations - circles
-psxy -R -JM -Sc$circsize -W$thickLC/$serbclr -K -O << end >> $psfile07 # Serbian Pool
-17.95  8.0
-end
 psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile07 # Geoazur + GIPP
 17.95  7.5
 end
@@ -1800,7 +1810,6 @@ psxy -R -JM -St$triasize -G$stea -W$thickL/$blck -K -O << end >> $psfile07
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile07
-18.3  8.1 7.5 0 0 TL Serbian Pool
 18.3  7.6 7.5 0 0 TL Geoazur + GIPP
 18.3  7.1 7.5 0 0 TL Uni Jena, Germany
 18.3  6.6 7.5 0 0 TL GIPP, GFZ, Germany
@@ -1930,11 +1939,8 @@ end
 # end of the legend to map 11
 
 # legend to map 12
-pscoast -R17.6/21.5/-7.8/7.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
+pscoast -R17.6/21.5/-7.8/6.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
 # temporary stations - circles
-psxy -R -JM -Sc$circsize -W$thickLC/$serbclr -K -O << end >> $psfile12 # Serbian Pool
-17.95  7.0
-end
 psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile12 # Geoazur + GIPP
 17.95  6.5
 end
@@ -2026,7 +2032,6 @@ psxy -R -JM -St$triasize -G$temp -W$thickL/$blck -K -O << end >> $psfile12
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile12
-18.3  7.1 7.5 0 0 TL Serbian Pool
 18.3  6.6 7.5 0 0 TL Geoazur + GIPP
 18.3  6.1 7.5 0 0 TL Uni Jena, Germany
 18.3  5.6 7.5 0 0 TL GIPP, GFZ, Germany
@@ -2060,10 +2065,7 @@ end
 # end of the legend to map 12
 
 # legend to map 13
-pscoast -R17.6/21.5/-8.3/8.4 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile13
-psxy -R -JM -St$triasize -G$serbclr -W$thickL/$blck -K -O << end >> $psfile13 # Serbian Pool
-17.95  8.00
-end
+pscoast -R17.6/21.5/-8.3/7.9 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile13
 psxy -R -JM -St$triasize -G$gigeclr -W$thickL/$blck -K -O << end >> $psfile13 # Geoazur
 17.95  7.50
 end
@@ -2177,7 +2179,6 @@ psxy -R -JM -St$triasize -G$grey    -W$thickL/$blck -K -O << end >> $psfile13
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile13
-18.3  8.10 7.5 0 0 TL Serbian Pool
 18.3  7.60 7.5 0 0 TL Geoazur + GIPP
 18.3  7.10 7.5 0 0 TL Uni Jena, Germany
 18.3  6.60 7.5 0 0 TL GIPP, GFZ, Germany
@@ -2272,7 +2273,7 @@ end
 # end of the legend to map 15
 
 # legend to map 16
-pscoast -R17.6/21.5/-2.9/2.9 -Dc -JM20/60/4.95c -G$graylg -S$graylg -Y+5.2 -X+23.1 -K -O >> $psfile16
+pscoast -R17.6/21.5/-2.4/2.9 -Dc -JM20/60/4.95c -G$graylg -S$graylg -Y+5.2 -X+23.1 -K -O >> $psfile16
 psxy -R -JM -St0.6 -G$clr1Y -W$thickL/$blck -K -O << end >> $psfile16
 17.95  2.5
 end
@@ -2300,25 +2301,22 @@ end
 psxy -R -JM -St0.6 -G$clrRF -W$thickL/$blck -K -O << end >> $psfile16
 17.95 -1.5
 end
-psxy -R -JM -St0.6 -G$clrRS -W$thickL/$blck -K -O << end >> $psfile16
-17.95 -2.0
-end
 psxy -R -JM -St0.6 -G$clrXX -W$thickL/$blck -K -O << end >> $psfile16
-17.95 -2.5
+17.95 -2.0
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile16
-18.3  2.6 8 0 0 TL 1Y (NOA)
-18.3  2.1 8 0 0 TL 2Y (INGV)
-18.3  1.6 8 0 0 TL 4P (INGV)
-18.3  1.1 8 0 0 TL 7B (ODC)
-18.3  0.6 8 0 0 TL 9H (UIB-NORSAR)
-18.3  0.1 8 0 0 TL Y5 (ETHZ)
-18.3 -0.4 8 0 0 TL Y8 (NIEP)
-18.3 -0.9 8 0 0 TL Z6 (LMU)
-18.3 -1.4 8 0 0 TL XP (RESIF)
-18.3 -1.9 8 0 0 TL ?? (GFZ)
-18.3 -2.4 8 0 0 TL other / unassigned
+18.3  2.6  8 0 0 TL 1Y (NOA)
+18.3  2.1  8 0 0 TL 2Y (INGV)
+18.3  1.6  8 0 0 TL 4P (INGV)
+18.3  1.1  8 0 0 TL 7B (ODC)
+18.3  0.6  8 0 0 TL 9H (UIB-NORSAR)
+18.3  0.1  8 0 0 TL Y5 (ETHZ)
+18.3 -0.4  8 0 0 TL Y8 (NIEP)
+18.3 -0.9  8 0 0 TL Z6 (LMU)
+18.3 -1.4  8 0 0 TL XP (RESIF)
+18.3 -1.77 8 0 0 TL permanent codes used
+18.3 -2.0  8 0 0 TL for temporary equipment
 end
 # end of the legend to map 16
 
@@ -2601,9 +2599,6 @@ end
 psxy -R -JM -Sc0.16 -G$gippclr                      -K -O << end >> $psfilep04 # Geoazur + GIPP
 +3.2  -0.84
 end
-psxy -R -JM -St$triasize -G$serbclr -W$thickL/$blck -K -O << end >> $psfilep04 # Serbian Pool
-+3.2  -1.12
-end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep04
 -5.6 +0.94 10 0 0 TL permanent BB stations
@@ -2637,7 +2632,6 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep04
 +3.4 -0.18 10 0 0 TL GIPP, GFZ, Germany
 +3.4 -0.46 10 0 0 TL Uni Jena, Germany
 +3.4 -0.74 10 0 0 TL Geoazur + GIPP
-+3.4 -1.02 10 0 0 TL Serbian Pool
 end
 # end of the legend to map p04
 
@@ -2707,7 +2701,7 @@ end
 psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfilep07
 -2.8 -0.15
 end
-psxy -R -JM -St0.6 -G$pcse -W$thickL/$red  -K -O << end >> $psfilep07
+psxy -R -JM -St0.6 -G$pcse -W$thickL/$blck  -K -O << end >> $psfilep07
 -2.8 -0.6
 end
 psxy -R -JM -St0.4 -W$thickLM/$westP -K -O << end >> $psfilep07
@@ -2854,11 +2848,8 @@ end
 psxy -R -JM -St0.6 -G$clrRF -W$thickL/$blck -K -O << end >> $psfilep10
 +0.2 -0.3
 end
-psxy -R -JM -St0.6 -G$clrRS -W$thickL/$blck -K -O << end >> $psfilep10
-+3.2 +0.3
-end
 psxy -R -JM -St0.6 -G$clrXX -W$thickL/$blck -K -O << end >> $psfilep10
-+3.2 -0.15
++3.2  0.0
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep10
@@ -2871,9 +2862,8 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep10
 +0.45 +0.40 10 0 0 TL Y8 (NIEP)
 +0.45 +0.10 10 0 0 TL Z6 (LMU)
 +0.45 -0.20 10 0 0 TL XP (RESIF)
-+3.45 +0.40 10 0 0 TL ?? (GFZ)
-+3.45 +0.08 10 0 0 TL permanent codes used
-+3.45 -0.15 10 0 0 TL for temporary equipment
++3.45 +0.23 10 0 0 TL permanent codes used
++3.45 +0.00 10 0 0 TL for temporary equipment
 end
 # end of the legend to map p10
 
@@ -2908,6 +2898,14 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep11
 18.3 -1.63 8 0 0 TL member institutions are shown
 end
 # end of the legend to map p11
+
+# legend to map p13 - EFEHR hazard map - for paper
+pscoast -R-6.0/+6.0/-0.35/0.35 -Dc -JM0/0/23c -Bwesn -G$graylg -S$graylg -Y-2.05 -X+0.0 -K -O >> $psfilep13
+psscale -CAUXI/PGAscale-out.cpt -D+5.5c/1.08/10.0c/0.5ch -K -O -B0.1f0.05 >> $psfilep13
+pstext -R -JM -G0/0/0 -K -O << end >> $psfilep13
+-0.4  0.1 10 0 0 TL PGA [g], ESHM20 model by EFEHR, 10% exceedance probability in 50 years
+end
+# end of the legend to map p13
 
 # date stamp
 datum=$(date +%d" "%B" "%Y)
@@ -3073,6 +3071,9 @@ end
 psxy -R -JL << end -O >> $psfilep12
 0.0 0.0
 end
+psxy -R -JL << end -O >> $psfilep13
+0.0 0.0
+end
 
 # saving pdf and png files
 gs -o MAPS/01AdriaTotal.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile01
@@ -3104,6 +3105,7 @@ gs -o PAPER/p09AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPag
 gs -o PAPER/p10AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep10
 gs -o PAPER/p11AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep11
 gs -o PAPER/p12AdAhistory.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep12
+gs -o PAPER/p13EFEHRhazar.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep13
 gs -o MAPS/01AdriaTotal.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile01
 gs -o MAPS/02AdriaBBonl.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile02
 gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
@@ -3135,6 +3137,7 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep09.X -c "<</
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep10.X -c "<</Orientation 3>> setpagedevice" -f $psfilep10
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep11.X -c "<</Orientation 3>> setpagedevice" -f $psfilep11
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep12.X -c "<</Orientation 3>> setpagedevice" -f $psfilep12
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep13.X -c "<</Orientation 3>> setpagedevice" -f $psfilep13
 
 # the bounding boxes are used to crop the image in the next section
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep01.X 2>&1 | grep %%BoundingBox
@@ -3149,6 +3152,7 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep12.X -c "<</
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep10.X 2>&1 | grep %%BoundingBox
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep11.X 2>&1 | grep %%BoundingBox
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep12.X 2>&1 | grep %%BoundingBox
+#gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep13.X 2>&1 | grep %%BoundingBox
 
 # pngs are scaled by the bounding boxes given above and cropped in the Y dierction by different amounts as the legends are of different heights
 gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3535 -c '<</Install {0  -89 translate}>> setpagedevice' -f $psfilep01.X
@@ -3163,3 +3167,4 @@ gs -o PAPER/p09AdAcorners.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {
 gs -o PAPER/p10AdAnetwork.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep10.X
 gs -o PAPER/p11AdAmembers.png -sDEVICE=png16m -r504 -g3731x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep11.X
 gs -o PAPER/p12AdAhistory.png -sDEVICE=png16m -r504 -g4865x3206 -c '<</Install {0 -136 translate}>> setpagedevice' -f $psfilep12.X
+gs -o PAPER/p13EFEHRhazar.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep13.X
