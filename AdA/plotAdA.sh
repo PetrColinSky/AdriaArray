@@ -145,11 +145,11 @@ clrY5='255/000/255'       # Y5
 clrY8='070/255/190'       # Y8
 clrZ6='172/085/000'       # Z6
 clrRF='255/255/000'       # RF
-clrXX='255/255/255'       # XX - not assigned yet or using permanent code
+clrXX='255/255/255'       # XX - using permanent code
 eidaclr='255/000/255'     # colors of squares in map 15 showing the institutions
 membclr='000/255/000'     # members
 pendclr='240/240/000'     # membership pending
-candclr='000/150/255'     # interested institutions - candidates for membership
+candclr='000/150/255'     # candidates for membership
 graylg='200/200/200'      # background for legends
 thrst='255/000/000'       # tectonic faults - thrusts
 slips='020/020/255'       # tectonic faults - strike slips
@@ -424,7 +424,7 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # DuFAULT
 16.6 43.60 +30.0 110 250
@@ -1097,16 +1097,19 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile01 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile01 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile01 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile01 # Cephalonia
-21.05 38.90 -50.0 140 190
+20.65 39.50 +50.0 120 240
 end
-psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile01 # Marine
-19.7 38.4 +25.0 120 240
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile01 # Marine North
+19.5 41.5 -60.0 70 110
+end
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile01 # Marine South
+20.3 38.5 -60.0 70 110
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile01 # Italy
 14.59 41.49 +32.0 140 250
@@ -1119,16 +1122,19 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile02 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile02 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile02 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile02 # Cephalonia
-21.05 38.90 -50.0 140 190
+20.65 39.50 +50.0 120 240
 end
-psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile02 # Marine
-19.7 38.4 +25.0 120 240
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile02 # Marine North
+19.5 41.5 -60.0 70 110
+end
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile02 # Marine South
+20.3 38.5 -60.0 70 110
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile02 # Italy
 14.59 41.49 +32.0 140 250
@@ -1141,16 +1147,19 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile06 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile06 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile06 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile06 # Cephalonia
-21.05 38.90 -50.0 140 190
+20.65 39.50 +50.0 120 240
 end
-psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile06 # Marine
-19.7 38.4 +25.0 120 240
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile06 # Marine North
+19.5 41.5 -60.0 70 110
+end
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile06 # Marine South
+20.3 38.5 -60.0 70 110
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile06 # Italy
 14.59 41.49 +32.0 140 250
@@ -1163,16 +1172,19 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile03 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile03 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile03 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile03 # Cephalonia
-21.05 38.90 -50.0 140 190
+20.65 39.50 +50.0 120 240
 end
-psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile03 # Marine
-19.7 38.4 +25.0 120 240
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile03 # Marine North
+19.5 41.5 -60.0 70 110
+end
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile03 # Marine South
+20.3 38.5 -60.0 70 110
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile03 # Italy
 14.59 41.49 +32.0 140 250
@@ -1185,16 +1197,19 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # Vrancea
 26.49 45.78 0.0 240 270
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # Albania
-20.1 41.47 +30.0 130 170
+20.1 40.85 +30.0 120 160
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # Cephalonia
-21.05 38.90 -50.0 140 190
+20.65 39.50 +50.0 120 240
 end
-psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile09 # Marine
-19.7 38.4 +25.0 120 240
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile09 # Marine North
+19.5 41.5 -60.0 70 110
+end
+psxy -R -JL -W$thickX/000/135/255  -SE <<end -K -O >> $psfile09 # Marine South
+20.3 38.5 -60.0 70 110
 end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # Italy
 14.59 41.49 +32.0 140 250
