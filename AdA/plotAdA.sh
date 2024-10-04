@@ -379,6 +379,11 @@ psclip -C -O -K >> $psfilep01
 psclip AUXI/units/IberiaPink.txt              -R$mapborder -JL$mapproj -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/pinks.cpt >> $psfilep01
 psclip -C -O -K >> $psfilep01
+fill='p300/17:F150/150/150B-'
+psxy AUXI/units/AdriaDeformed.txt -R -JL   -G$fill                -K -O >> $psfilep01
+psclip AUXI/units/AdriaUndeforDarkBrown.txt   -R$mapborder -JL$mapproj -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/browD.cpt >> $psfilep01
+psclip -C -O -K >> $psfilep01
 
 pscoast                       -R -JL    -W0.3p -Di -N1/0.3p                      -K -O >> $psfilep01
 psxy AUXI/kosovo-border.dat   -R -JL    -W0.3p/0/0/0                             -K -O >> $psfilep01
@@ -411,8 +416,8 @@ pstext                        -R -JL    -G0/0/0                           -K -O 
 +20.0 +47.3 11   0 0 MC Pannonian
 +20.0 +46.6 11   0 0 MC Basin
 +24.0 +48.2 11 -37 0 MC C a r p a t h i a n s
-+12.5 +44.1 11 -45 0 MC Northern Apennines
-+16.6 +41.1 11 -35 0 MC S. Apennines
++11.5 +44.1 11 -45 0 MC Northern Apennines
++16.8 +41.1 11 -35 0 MC S. Apennines
  +9.6  49.2 11   0 0 MC Rhine
  +9.6  48.7 11   0 0 MC Graben
 +25.1  46.0 11   0 0 MC Vrancea
@@ -2489,7 +2494,7 @@ end
 # end of the legend to map 18
 
 # legend to map p01 - TECTONICS - for paper
-pscoast -R-6.0/+6.0/-0.80/0.60 -Dc -JM0/0/23c -Bwesn -G$graylg -S$graylg -Y-3.38 -X+0.0 -K -O >> $psfilep01
+pscoast -R-6.0/+6.0/-1.10/0.60 -Dc -JM0/0/23c -Bwesn -G$graylg -S$graylg -Y-3.96 -X+0.0 -K -O >> $psfilep01
 psxy -R -JM -W1.8p/$thrst -Sf+0.7/5.0prt:5p -G$thrst -K -O << end >> $psfilep01
 -5.8 0.33
 -4.5 0.33
@@ -2574,6 +2579,20 @@ psxy -R -JM -W0.3p/$blck -G076/121/169 -K -O << end >> $psfilep01 # F - dark blu
 +3.2 -0.68
 +3.2 -0.45
 end
+psxy -R -JM -W0.3p/$blck -G171/123/085 -K -O << end >> $psfilep01 # dark brown
+-5.8 -0.75
+-5.0 -0.75
+-5.0 -0.98
+-5.8 -0.98
+-5.8 -0.75
+end
+psxy -R -JM -W0.3p/$blck -G$fill -K -O << end >> $psfilep01 # dotted
+-2.8 -0.75
+-2.0 -0.75
+-2.0 -0.98
+-2.8 -0.98
+-2.8 -0.75
+end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep01
 -4.3  0.40 10 0 0 TL main thrust fronts
@@ -2590,6 +2609,8 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep01
 +1.2 -0.5 10 0 0 TL ? (purple)
 +4.2 -0.2 10 0 0 TL ? (light blue)
 +4.2 -0.5 10 0 0 TL ? (dark blue)
+-4.8 -0.8 10 0 0 TL undeformed Adria
+-1.8 -0.8 10 0 0 TL deformed Adria
 end
 # end of the legend to map p01
 
@@ -3334,7 +3355,8 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep01.X -c "<</
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep13.X 2>&1 | grep %%BoundingBox
 
 # pngs are scaled by the bounding boxes given above and cropped in the Y dierction by different amounts as the legends are of different heights
-gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep01.X
+# take the upper limit minus lower limit of the bounding box and multiply *7; this gives the Y size in pixels
+gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3878 -c '<</Install {0  -40 translate}>> setpagedevice' -f $psfilep01.X
 #gs -o PAPER/p02AA+AdA+PCS.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep02.X
 #gs -o PAPER/p03AdAcolorTP.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep03.X
 #gs -o PAPER/p04AdriaDploy.png -sDEVICE=png16m -r504 -g4865x4102 -c '<</Install {0   -8 translate}>> setpagedevice' -f $psfilep04.X
