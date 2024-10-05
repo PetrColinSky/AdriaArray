@@ -161,7 +161,7 @@ pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all BB stations":
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB stations in subgroups":       -X+1.3 -Y+1.2  -W0.1p -K > $psfile03
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - coverage, R = 30 km":            -X+1.3 -Y+1.2  -W0.1p -K > $psfile04
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - coverage, R = 40 km":            -X+1.3 -Y+1.2  -W0.1p -K > $psfile05
-pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB stations simplified":         -X+1.3 -Y+1.2  -W0.1p -K > $psfile06
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all broadband stations":         -X+1.3 -Y+1.2  -W0.1p -K > $psfile06
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB in subgroups + mobile pools": -X+1.3 -Y+1.2  -W0.1p -K > $psfile07
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all BB stations simplified":     -X+1.3 -Y+1.2  -W0.1p -K > $psfile09
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all permanent stations":         -X+1.3 -Y+1.2  -W0.1p -K > $psfile10
@@ -207,7 +207,6 @@ grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfil
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile16
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile17
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile18
-#grdimage AUXI/AdAtopo.grd -R -JL -IAUXI/shadow.grd -K -O -CAUXI/bw.cpt >> $psfilep01 # shaded black-and-white topography
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep02
 grdimage AUXI/AdAtopo.grd -R -JL -IAUXI/shadow.grd -K -O -CAUXI/cl.cpt >> $psfilep03 # shaded colored topography
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfilep04
@@ -309,81 +308,78 @@ psxy AUXI/borderSeaA.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O
 psxy AUXI/borderSeaB.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep11
 psxy AUXI/borderSeaC.dat  -R           -JL         -W1.0p+t2.0_2.0:0/$olin -K -O >> $psfilep11
 
-# tectonics
 # tectonic units are polygons, plotted as clipped grd files to allow for including shades of topography into them
-#psxy AUXI/alcapadi_faults.gmt -R -JL -M -W1.3p/$BB60 -K -O >> $psfilep01 # by 4DMB
+#psxy AUXI/alcapadi_faults.gmt -R -JL -M -W1.3p/$BB60 -K -O >> $psfilep01 # faults by 4DMB
 awk '{print $1, $2, $3}' AUXI/units/fakegrid.txt | blockmedian -R-02.0/+34.0/33.0/52.5 -I0.01666666666666666666666 | surface -R-02.0/+34.0/33.0/52.5 -I0.01666666666666666666666 -GAUXI/units/fakegrid.grd
-psclip AUXI/units/wholeclip.txt               -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/white.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/NorthBrown.txt              -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/brown.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/TyrhenianBrown.txt          -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/brown.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/PannonianBrown.txt          -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/brown.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/AegeanBrown.txt             -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/brown.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/AfricaGreen.txt             -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/green.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/AtlasYellow.txt             -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/BeticsYellow.txt            -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/WestAlpsShortYellow.txt     -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/WestAlpsLongYellow.txt      -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/WestAlpsSmallYellow.txt     -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/DinaridesYellow.txt         -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/VranceaYellow.txt           -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/MediterYellow.txt           -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/yellw.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/LiguroAlgerianLightBlue.txt -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueL.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/VavilovLightBlue.txt        -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueL.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/MarsiliLightBlue.txt        -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueL.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/IonianSeaDarkBlue.txt       -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueD.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/EastSeaDarkBlue.txt         -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueD.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/BlackSeaDarkBlue.txt        -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/blueD.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/AnatoliaPurple.txt          -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/purpl.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-psclip AUXI/units/IberiaPink.txt              -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/pinks.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
-fill='p300/17:F150/150/150B-'
-psxy AUXI/units/AdriaDeformed.txt -R -JL   -G$fill                -K -O >> $psfilep01
-psclip AUXI/units/AdriaUndeforDarkBrown.txt   -R$mapborder -JL$mapproj -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL$mapproj -IAUXI/shadow.grd -K -O -CAUXI/units/browD.cpt >> $psfilep01
-psclip -C -O -K >> $psfilep01
+psclip AUXI/units/wholeclip.txt  -R$mapborder -JL$mapproj                        -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/gray.cpt  -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/IberAfri.txt   -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/pinks.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Africa.txt     -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/yellL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Atlas.txt      -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/yellw.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Betics.txt     -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/yellw.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/WestAlpsShort.txt -R -JL                                       -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
+psclip                                                             ý          -C -K -O >> $psfilep01
+psclip AUXI/units/Vrancea.txt    -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Mediter.txt    -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/MediterAdd.txt -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Iberia.txt     -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/pinks.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/EuropeDeformed.txt -R -JL                                      -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/AdriaDeformed.txt -R -JL                                       -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/AdriaUndefor.txt -R -JL                                        -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/browD.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Tauern.txt     -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Pyrenees.txt   -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/AnatoliaUndef.txt -R -JL                                       -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/AnatoliaDef.txt -R -JL                                         -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/yellw.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/LiguroAlgerian.txt -R -JL                                      -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Vavilov.txt    -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Marsili.txt    -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/IonianSea.txt  -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/EastSea.txt    -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/BlackSea.txt   -R -JL                                          -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
 
 pscoast                       -R -JL    -W0.3p -Di -N1/0.3p                      -K -O >> $psfilep01
 psxy AUXI/kosovo-border.dat   -R -JL    -W0.3p/0/0/0                             -K -O >> $psfilep01
@@ -413,38 +409,38 @@ pstext                        -R -JL    -G0/0/0                           -K -O 
 +0.6  +41.5 15 -10 1 MC IBERIA
 +8.7  +46.4 11  30 0 MC A l p i n e   A r c
 +18.0 +43.8 11 -42 0 MC D i n a r i d e s
++21.3 +40.1 11 -60 0 MC H e l l e n i d e s
 +20.0 +47.3 11   0 0 MC Pannonian
 +20.0 +46.6 11   0 0 MC Basin
-+24.0 +48.2 11 -37 0 MC C a r p a t h i a n s
++24.0 +48.0 11 -37 0 MC C a r p a t h i a n s
 +11.5 +44.1 11 -45 0 MC Northern Apennines
 +16.8 +41.1 11 -35 0 MC S. Apennines
- +9.6  49.2 11   0 0 MC Rhine
- +9.6  48.7 11   0 0 MC Graben
+ +9.65  49.2 11   0 0 MC Rhine
+ +9.65  48.7 11   0 0 MC Graben
 +25.1  46.0 11   0 0 MC Vrancea
  +5.5  42.6 11   0 0 MC Gulf of Lion
- +6.0  42.0 11   0 0 MC Liguro-Provencal
- +6.0  41.5 11   0 0 MC Basin
+ +6.0  41.0 11   0 0 MC Liguro-Provencal
+ +6.0  40.5 11   0 0 MC Basin
  +2.0  40.1 11 +35 0 MC Valencia Tr.
  +2.5  37.5 11   0 0 MC Algerian Basin
  +6.0  36.2 11   0 0 MC Tell
  +8.0  35.5 11   0 0 MC Tunisia
  +8.0  35.0 11   0 0 MC Atlas
  +3.5  34.9 11 +15 0 MC Sahara Atlas
-+13.4  35.7 11   0 0 MC Pelagian
-+13.4  35.2 11   0 0 MC block
++13.4  36.2 11   0 0 MC Pelagian
++13.4  35.7 11   0 0 MC block
 +10.6  42.5 11   0 0 MC Tuscan
 +10.6  42.0 11   0 0 MC Arch.
 +12.3  40.5 11   0 0 MC Tyrrhenian Sea
 +12.4  39.7 11   0 0 MC Vavilov
 +14.5  39.3 11   0 0 MC Marsili
-+14.5  38.6 11   0 0 MC Aeolian
 +14.0  37.7 11   0 0 MC Sicily
 +17.0  38.2 11 +50 0 MC Calabria
 +17.7  35.3 11   0 0 MC Ionian
 +17.7  34.8 11   0 0 MC Sea
 +20.2  35.5 11 -50 0 MC Mediterranean
 +19.9  35.0 11 -48 0 MC Ridge
-+25.2  36.8 11 -15 0 MC Aegean Sea
++25.2  36.4 11 -15 0 MC Aegean Sea
 +30.0  40.2 11 +20 0 MC North Anatolian Fault
 +31.6  43.0 11 +20 0 MC Black
 +31.6  42.4 11 +20 0 MC Sea
@@ -2523,42 +2519,42 @@ psxy -R -JM -W0.45p/$exten -Sf+0.3/4.0prb:5p         -K -O << end >> $psfilep01
 +2.2 0.03
 +3.5 0.03
 end
-psxy -R -JM -W0.3p/$blck -G255/255/255 -K -O << end >> $psfilep01 # A - white
+psxy -R -JM -W0.3p/$blck -G180/180/180 -K -O << end >> $psfilep01 # undeformed Eurasia
 -5.8 -0.15
 -5.0 -0.15
 -5.0 -0.38
 -5.8 -0.38
 -5.8 -0.15
 end
-psxy -R -JM -W0.3p/$blck -G228/205/170 -K -O << end >> $psfilep01 # B - brown
+psxy -R -JM -W0.3p/$blck -G191/217/206 -K -O << end >> $psfilep01 # deformed Eurasia
 -5.8 -0.45
 -5.0 -0.45
 -5.0 -0.68
 -5.8 -0.68
 -5.8 -0.45
 end
-psxy -R -JM -W0.3p/$blck -G179/213/150 -K -O << end >> $psfilep01 # C - green
+psxy -R -JM -W0.3p/$blck -G171/123/085 -K -O << end >> $psfilep01 # undeformed Adria
 -2.8 -0.15
 -2.0 -0.15
 -2.0 -0.38
 -2.8 -0.38
 -2.8 -0.15
 end
-psxy -R -JM -W0.3p/$blck -G237/237/132 -K -O << end >> $psfilep01 # D - yellow
+psxy -R -JM -W0.3p/$blck -G228/205/170 -K -O << end >> $psfilep01 # deformed Adria
 -2.8 -0.45
 -2.0 -0.45
 -2.0 -0.68
 -2.8 -0.68
 -2.8 -0.45
 end
-psxy -R -JM -W0.3p/$blck -G236/209/209 -K -O << end >> $psfilep01 # E - pink
+psxy -R -JM -W0.3p/$blck -G225/229/177 -K -O << end >> $psfilep01 # undeformed Africa
 +0.2 -0.15
 +1.0 -0.15
 +1.0 -0.38
 +0.2 -0.38
 +0.2 -0.15
 end
-psxy -R -JM -W0.3p/$blck -G166/162/209 -K -O << end >> $psfilep01 # F - purple
+psxy -R -JM -W0.3p/$blck -G217/217/112 -K -O << end >> $psfilep01 # deformed Afria+Iberia+Anatolia
 +0.2 -0.45
 +1.0 -0.45
 +1.0 -0.68
@@ -2579,14 +2575,14 @@ psxy -R -JM -W0.3p/$blck -G076/121/169 -K -O << end >> $psfilep01 # F - dark blu
 +3.2 -0.68
 +3.2 -0.45
 end
-psxy -R -JM -W0.3p/$blck -G171/123/085 -K -O << end >> $psfilep01 # dark brown
+psxy -R -JM -W0.3p/$blck -G236/209/209 -K -O << end >> $psfilep01 # undeformed Iberia
 -5.8 -0.75
 -5.0 -0.75
 -5.0 -0.98
 -5.8 -0.98
 -5.8 -0.75
 end
-psxy -R -JM -W0.3p/$blck -G$fill -K -O << end >> $psfilep01 # dotted
+psxy -R -JM -W0.3p/$blck -G166/162/209 -K -O << end >> $psfilep01 # undeformed Anatolia
 -2.8 -0.75
 -2.0 -0.75
 -2.0 -0.98
@@ -2595,22 +2591,23 @@ psxy -R -JM -W0.3p/$blck -G$fill -K -O << end >> $psfilep01 # dotted
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep01
--4.3  0.40 10 0 0 TL main thrust fronts
--4.3  0.10 10 0 0 TL other thrust faults
--0.3  0.40 10 0 0 TL main strike slip faults
--0.3  0.10 10 0 0 TL other strike slip faults
-+3.7  0.40 10 0 0 TL extensional faults
-+3.7  0.10 10 0 0 TL detachment faults
--4.8 -0.2 10 0 0 TL ? (white)
--4.8 -0.5 10 0 0 TL ? (brown)
--1.8 -0.2 10 0 0 TL ? (green)
--1.8 -0.5 10 0 0 TL ? (yellow)
-+1.2 -0.2 10 0 0 TL ? (pink)
-+1.2 -0.5 10 0 0 TL ? (purple)
-+4.2 -0.2 10 0 0 TL ? (light blue)
-+4.2 -0.5 10 0 0 TL ? (dark blue)
--4.8 -0.8 10 0 0 TL undeformed Adria
--1.8 -0.8 10 0 0 TL deformed Adria
+-4.3  0.4 10 0 0 TL main thrust fronts
+-4.3  0.1 10 0 0 TL other thrust faults
+-0.3  0.4 10 0 0 TL main strike slip faults
+-0.3  0.1 10 0 0 TL other strike slip faults
++3.7  0.4 10 0 0 TL extensional faults
++3.7  0.1 10 0 0 TL detachment faults
+-4.8 -0.2 10 0 0 TL undeformed Eurasia
+-4.8 -0.5 10 0 0 TL deformed Eurasia
+-1.8 -0.2 10 0 0 TL undeformed Adria
+-1.8 -0.5 10 0 0 TL deformed Adria
++1.2 -0.2 10 0 0 TL undeformed Africa
++1.2 -0.5 10 0 0 TL deformed Africa,
++1.2 -0.7 10 0 0 TL Iberia and Anatolia
++4.2 -0.2 10 0 0 TL young oceanic
++4.2 -0.5 10 0 0 TL old oceanic
+-4.8 -0.8 10 0 0 TL undeformed Iberia
+-1.8 -0.8 10 0 0 TL undeformed Anatolia
 end
 # end of the legend to map p01
 
@@ -3006,15 +3003,10 @@ end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep09
 -5.55  0.1 10 0 0 TL T >= 240s
-
 -3.55  0.1 10 0 0 TL 120s =< T < 240s
-
 -1.55  0.1 10 0 0 TL  60s =< T < 120s
-
 +0.45  0.1 10 0 0 TL  40s =< T <  60s
-
 +2.45  0.1 10 0 0 TL  T = 30s
-
 +4.45  0.1 10 0 0 TL not deployed yet
 end
 # end of the legend to map p09
@@ -3281,7 +3273,7 @@ end
 #gs -o MAPS/03AdriaBBsub.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile03
 #gs -o MAPS/04AdriaCrc30.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile04
 #gs -o MAPS/05AdriaCrc40.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile05
-#gs -o MAPS/06AdriaBBovr.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile06
+gs -o MAPS/06AdriaBBovr.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile06
 #gs -o MAPS/07AdriaMobil.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile07
 #gs -o MAPS/09AdriaCOST.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile09
 #gs -o MAPS/10AdriaTotPR.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile10
@@ -3311,7 +3303,7 @@ gs -o PAPER/p01AdAtectono.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPag
 #gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
 #gs -o MAPS/04AdriaCrc30.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile04
 #gs -o MAPS/05AdriaCrc40.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile05
-#gs -o MAPS/06AdriaBBovr.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile06
+gs -o MAPS/06AdriaBBovr.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile06
 #gs -o MAPS/07AdriaMobil.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile07
 #gs -o MAPS/09AdriaCOST.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile09
 #gs -o MAPS/10AdriaTotPR.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile10
