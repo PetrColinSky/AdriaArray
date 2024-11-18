@@ -89,112 +89,101 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23260">
-            <IconStyle id="23261">
+        <Style id="23530">
+            <IconStyle id="23531">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23262">
+                <Icon id="23532">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23525">
-            <IconStyle id="23526">
+        <Style id="23555">
+            <IconStyle id="23556">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23527">
+                <Icon id="23557">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23550">
-            <IconStyle id="23551">
+        <Style id="25780">
+            <IconStyle id="25781">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23552">
+                <Icon id="25782">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25775">
-            <IconStyle id="25776">
+        <Style id="25790">
+            <IconStyle id="25791">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25777">
+                <Icon id="25792">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25785">
-            <IconStyle id="25786">
+        <Style id="25800">
+            <IconStyle id="25801">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25787">
+                <Icon id="25802">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25795">
-            <IconStyle id="25796">
+        <Style id="25810">
+            <IconStyle id="25811">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25797">
+                <Icon id="25812">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25805">
-            <IconStyle id="25806">
+        <Style id="25820">
+            <IconStyle id="25821">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25807">
+                <Icon id="25822">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25815">
-            <IconStyle id="25816">
+        <Style id="25905">
+            <IconStyle id="25906">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25817">
+                <Icon id="25907">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25900">
-            <IconStyle id="25901">
+        <Style id="27240">
+            <IconStyle id="27241">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25902">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="27235">
-            <IconStyle id="27236">
-                <color>ff000000</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="27237">
+                <Icon id="27242">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
@@ -255,73 +244,66 @@
                 <coordinates>20.7703554348915,45.188620289546,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23259">
-            <name>SELS</name>
-            <styleUrl>#23260</styleUrl>
-            <Point id="23258">
-                <coordinates>21.120913,43.214253,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="23524">
+        <Placemark id="23529">
             <name>NSLU</name>
-            <styleUrl>#23525</styleUrl>
-            <Point id="23523">
+            <styleUrl>#23530</styleUrl>
+            <Point id="23528">
                 <coordinates>23.45661,48.19759,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23549">
+        <Placemark id="23554">
             <name>STZU</name>
-            <styleUrl>#23550</styleUrl>
-            <Point id="23548">
+            <styleUrl>#23555</styleUrl>
+            <Point id="23553">
                 <coordinates>22.62305,49.01619,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25774">
+        <Placemark id="25779">
             <name>MD01</name>
-            <styleUrl>#25775</styleUrl>
-            <Point id="25773">
+            <styleUrl>#25780</styleUrl>
+            <Point id="25778">
                 <coordinates>27.1119,48.0311,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25784">
+        <Placemark id="25789">
             <name>MD02</name>
-            <styleUrl>#25785</styleUrl>
-            <Point id="25783">
+            <styleUrl>#25790</styleUrl>
+            <Point id="25788">
                 <coordinates>28.3517,47.4524,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25794">
+        <Placemark id="25799">
             <name>MD03</name>
-            <styleUrl>#25795</styleUrl>
-            <Point id="25793">
+            <styleUrl>#25800</styleUrl>
+            <Point id="25798">
                 <coordinates>28.6553,46.3003,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25804">
+        <Placemark id="25809">
             <name>A290A</name>
-            <styleUrl>#25805</styleUrl>
-            <Point id="25803">
+            <styleUrl>#25810</styleUrl>
+            <Point id="25808">
                 <coordinates>10.928,46.5068,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25814">
+        <Placemark id="25819">
             <name>A291A</name>
-            <styleUrl>#25815</styleUrl>
-            <Point id="25813">
+            <styleUrl>#25820</styleUrl>
+            <Point id="25818">
                 <coordinates>11.8805,46.6246,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25899">
+        <Placemark id="25904">
             <name>RO08A</name>
-            <styleUrl>#25900</styleUrl>
-            <Point id="25898">
+            <styleUrl>#25905</styleUrl>
+            <Point id="25903">
                 <coordinates>24.545,47.841,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="27234">
+        <Placemark id="27239">
             <name>A012A</name>
-            <styleUrl>#27235</styleUrl>
-            <Point id="27233">
+            <styleUrl>#27240</styleUrl>
+            <Point id="27238">
                 <coordinates>15.585996,47.603986,0.0</coordinates>
             </Point>
         </Placemark>

@@ -970,7 +970,7 @@ psxy TEMP/bochD.txt -R -JL -St$sizes2 -G$bochclr         -K -O >> $psfilep04
 psxy TEMP/boch.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
 # Bochum + Uni Frankfurt - dots only
-psxy TEMP/frnkD.txt  -R -JL -Sc0.1    -G$frnkclr         -K -O >> $psfile13  # Bochum + Uni Frankfurt digitizers
+psxy TEMP/frnkD.txt  -R -JL -Sc0.1    -G$frnkclr         -K -O >> $psfile13   # Bochum + Uni Frankfurt digitizers
 psxy TEMP/frnkD.txt  -R -JL -Sc0.1    -G$frnkclr         -K -O >> $psfilep04  # Bochum + Uni Frankfurt digitizers
 
 # Bologna
@@ -1034,7 +1034,7 @@ psxy TEMP/helsD.txt -R -JL -St$sizes2 -G$helsclr         -K -O >> $psfilep04
 psxy TEMP/hels.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
 # Helsinki + IRSM CAS CZ - dots only
-psxy TEMP/irsmD.txt  -R -JL -Sc0.1    -G$irsmclr         -K -O >> $psfile13  # IRSM + Helsinki equipment
+psxy TEMP/irsmD.txt  -R -JL -Sc0.1    -G$irsmclr         -K -O >> $psfile13   # IRSM + Helsinki equipment
 psxy TEMP/irsmD.txt  -R -JL -Sc0.1    -G$irsmclr         -K -O >> $psfilep04  # IRSM + Helsinki equipment
 
 # IG CAS CZ
@@ -1088,7 +1088,7 @@ psxy TEMP/ouluD.txt -R -JL -St$sizes2 -G$ouluclr         -K -O >> $psfilep04
 psxy TEMP/oulu.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
 # Uni Oulu + Uni Wien at Oulu stations - dots only
-psxy TEMP/ouwiD.txt  -R -JL -Sc0.1    -G$wienclr         -K -O >> $psfile13  # Oulu + UniWien digitizers
+psxy TEMP/ouwiD.txt  -R -JL -Sc0.1    -G$wienclr         -K -O >> $psfile13   # Oulu + UniWien digitizers
 psxy TEMP/ouwiD.txt  -R -JL -Sc0.1    -G$wienclr         -K -O >> $psfilep04  # Oulu + UniWien digitizers
 
 # Geoazur + GIPP
@@ -1101,7 +1101,7 @@ psxy TEMP/gige.txt  -R -JL -St$sizes2 -W$ths2/$gigeclr   -K -O >> $psfilep04
 psxy TEMP/gigeD.txt -R -JL -St$sizes2 -G$gigeclr         -K -O >> $psfilep04
 psxy TEMP/gige.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
-#  Geoazur + GIPP - dots only
+# Geoazur + GIPP - dots only
 psxy TEMP/gige.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfile13  # Geoazur sensors + GIPP digitizers
 psxy TEMP/gige.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfilep04
 
