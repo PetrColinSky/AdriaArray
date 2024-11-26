@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="39">
-        <Style id="22265">
-            <IconStyle id="22266">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22267">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="22280">
-            <IconStyle id="22281">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22282">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="22295">
-            <IconStyle id="22296">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22297">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="22310">
-            <IconStyle id="22311">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22312">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="22325">
-            <IconStyle id="22326">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22327">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
-        <Style id="22340">
-            <IconStyle id="22341">
-                <color>ff870087</color>
-                <colorMode>normal</colorMode>
-                <scale>1</scale>
-                <heading>0</heading>
-                <Icon id="22342">
-                    <href>triangle.png</href>
-                </Icon>
-            </IconStyle>
-        </Style>
         <Style id="22355">
             <IconStyle id="22356">
                 <color>ff870087</color>
@@ -210,136 +144,202 @@
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="22264">
+        <Style id="22550">
+            <IconStyle id="22551">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22552">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="22565">
+            <IconStyle id="22566">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22567">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="22580">
+            <IconStyle id="22581">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22582">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="22595">
+            <IconStyle id="22596">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22597">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="22610">
+            <IconStyle id="22611">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22612">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="22625">
+            <IconStyle id="22626">
+                <color>ff870087</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="22627">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="22354">
             <name>BG06A</name>
-            <styleUrl>#22265</styleUrl>
-            <Point id="22263">
+            <styleUrl>#22355</styleUrl>
+            <Point id="22353">
                 <coordinates>23.6368,42.9913,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22279">
+        <Placemark id="22369">
             <name>BG07A</name>
-            <styleUrl>#22280</styleUrl>
-            <Point id="22278">
+            <styleUrl>#22370</styleUrl>
+            <Point id="22368">
                 <coordinates>24.4924,42.9658,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22294">
+        <Placemark id="22384">
             <name>BG08A</name>
-            <styleUrl>#22295</styleUrl>
-            <Point id="22293">
+            <styleUrl>#22385</styleUrl>
+            <Point id="22383">
                 <coordinates>24.7644,42.5995,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22309">
+        <Placemark id="22399">
             <name>BG09A</name>
-            <styleUrl>#22310</styleUrl>
-            <Point id="22308">
+            <styleUrl>#22400</styleUrl>
+            <Point id="22398">
                 <coordinates>25.3314,42.5315,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22324">
+        <Placemark id="22414">
             <name>BG10A</name>
-            <styleUrl>#22325</styleUrl>
-            <Point id="22323">
+            <styleUrl>#22415</styleUrl>
+            <Point id="22413">
                 <coordinates>25.8048,42.413,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22339">
+        <Placemark id="22429">
             <name>BG14A</name>
-            <styleUrl>#22340</styleUrl>
-            <Point id="22338">
+            <styleUrl>#22430</styleUrl>
+            <Point id="22428">
                 <coordinates>22.8315,42.2887,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22354">
+        <Placemark id="22444">
             <name>BG15A</name>
-            <styleUrl>#22355</styleUrl>
-            <Point id="22353">
+            <styleUrl>#22445</styleUrl>
+            <Point id="22443">
                 <coordinates>23.524965,42.047733,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22369">
+        <Placemark id="22459">
             <name>BG16A</name>
-            <styleUrl>#22370</styleUrl>
-            <Point id="22368">
+            <styleUrl>#22460</styleUrl>
+            <Point id="22458">
                 <coordinates>23.9861,42.1927,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22384">
+        <Placemark id="22474">
             <name>BG17A</name>
-            <styleUrl>#22385</styleUrl>
-            <Point id="22383">
+            <styleUrl>#22475</styleUrl>
+            <Point id="22473">
                 <coordinates>24.1448,41.7661,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22399">
+        <Placemark id="22489">
             <name>BG18A</name>
-            <styleUrl>#22400</styleUrl>
-            <Point id="22398">
+            <styleUrl>#22490</styleUrl>
+            <Point id="22488">
                 <coordinates>25.8063,41.5204,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22414">
+        <Placemark id="22504">
             <name>BG20A</name>
-            <styleUrl>#22415</styleUrl>
-            <Point id="22413">
+            <styleUrl>#22505</styleUrl>
+            <Point id="22503">
                 <coordinates>22.7977,43.88,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22429">
+        <Placemark id="22519">
             <name>BG21A</name>
-            <styleUrl>#22430</styleUrl>
-            <Point id="22428">
+            <styleUrl>#22520</styleUrl>
+            <Point id="22518">
                 <coordinates>23.1161,43.4054,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22444">
+        <Placemark id="22534">
             <name>BG22A</name>
-            <styleUrl>#22445</styleUrl>
-            <Point id="22443">
+            <styleUrl>#22535</styleUrl>
+            <Point id="22533">
                 <coordinates>24.0802,43.6474,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22459">
+        <Placemark id="22549">
             <name>DIM</name>
-            <styleUrl>#22460</styleUrl>
-            <Point id="22458">
+            <styleUrl>#22550</styleUrl>
+            <Point id="22548">
                 <coordinates>25.5778,42.0457,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22474">
+        <Placemark id="22564">
             <name>VLD</name>
-            <styleUrl>#22475</styleUrl>
-            <Point id="22473">
+            <styleUrl>#22565</styleUrl>
+            <Point id="22563">
                 <coordinates>23.4355,43.6898,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22489">
+        <Placemark id="22579">
             <name>RO10A</name>
-            <styleUrl>#22490</styleUrl>
-            <Point id="22488">
+            <styleUrl>#22580</styleUrl>
+            <Point id="22578">
                 <coordinates>21.7779,45.1565,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22504">
+        <Placemark id="22594">
             <name>RO11A</name>
-            <styleUrl>#22505</styleUrl>
-            <Point id="22503">
+            <styleUrl>#22595</styleUrl>
+            <Point id="22593">
                 <coordinates>22.8129,44.9836,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22519">
+        <Placemark id="22609">
             <name>RO19A</name>
-            <styleUrl>#22520</styleUrl>
-            <Point id="22518">
+            <styleUrl>#22610</styleUrl>
+            <Point id="22608">
                 <coordinates>23.3159,45.1523,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22534">
+        <Placemark id="22624">
             <name>RO20A</name>
-            <styleUrl>#22535</styleUrl>
-            <Point id="22533">
+            <styleUrl>#22625</styleUrl>
+            <Point id="22623">
                 <coordinates>22.0971,45.3879,0.0</coordinates>
             </Point>
         </Placemark>
