@@ -12,7 +12,7 @@ inventoryT   = pd.read_excel("InventoryTemporary.ods", header=[2]) # so the shee
 # it assumes that folders AUXI/ and GOOG/ are existing, as some other files need to be in these folders already beforehand for the GMT plotting
 
 ts = '1.5'  # text size of station-name labels for GMT
-#ts = '11'  # text size of station-name labels for GMT
+#ts = '9'  # text size of station-name labels for GMT
 kmlPerm030   = simplekml.Kml()
 kmlPerm040   = simplekml.Kml()
 kmlPerm060   = simplekml.Kml()
@@ -68,6 +68,10 @@ if not os.path.exists('PERM'):
 
 permBG     = open("PERM/permBG.txt"       , "w")
 permBGlabel= open("PERM/permBGLabel.txt"  , "w")
+permRO     = open("PERM/permRO.txt"       , "w")
+permROlabel= open("PERM/permROLabel.txt"  , "w")
+virtDiff     = open("PERM/virtDIFF.txt"     , "w")
+virtDifflabel= open("PERM/virtDIFFLabel.txt", "w")
 outBB30   = open("PERM/pBB30.txt"         , "w")  # output files for inputing to the GMT
 outBB3030 = open("PERM/circlesBB3030.txt" , "w")
 outBB3040 = open("PERM/circlesBB3040.txt" , "w")
@@ -143,6 +147,7 @@ p30io30   = open("PERM/perm30io30.txt"    , "w")
 p30io40   = open("PERM/perm30io40.txt"    , "w")
 listP     = open("PERM/listP.txt"         , "w")
 listALL   = open("AUXI/listALL.txt"       , "w")
+listALLcoor = open("AUXI/listALLcoor.txt" , "w")
 
 # BB30, BB40, BB60, UNKN, WHIT have two options based on column 0: inside or outside of the AdA area
 # SPOT, UPGR, NOSP dont have these options, because by definition, these are always inside
@@ -154,10 +159,16 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
         #for k in range(0,n): # for all the previous rows
         #    if inventoryP.iloc[n,2] == inventoryP.iloc[k,2]:
         #        print('DUPLICATED station name', inventoryP.iloc[n,2])
-        # BB10 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,7] == 'BG':
             permBG.write     ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
             permBGlabel.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,7] == 'RO':
+            permRO.write     ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            permROlabel.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,2])))
+        if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11]  < 30 and inventoryP.iloc[n,11] >= 10: # the difference between _ADARRAY and backbone
+            virtDiff.write     ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
+            virtDifflabel.write("%s\n" % (str(round(inventoryP.iloc[n,4],4)) + ' ' + str(round(inventoryP.iloc[n,3]-0.08,4)) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryP.iloc[n,1])+'.'+ str(inventoryP.iloc[n,2])))
+        # BB10 in
         if inventoryP.iloc[n,0] == 1 and inventoryP.iloc[n,11] >= 10 and inventoryP.iloc[n,11] < 30: # the 1st column (0th here) says, if it is IN the region (=1) or out (=0)
             p10plus.write  ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
         # BB30 in
@@ -182,6 +193,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
                 listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
                 listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -218,6 +230,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
                 listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
                 listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -258,6 +271,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
                 listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
                 listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -529,6 +543,10 @@ p30io40.close()
 listP.close()
 permBG.close()
 permBGlabel.close()
+permRO.close()
+permROlabel.close()
+virtDiff.close()
+virtDifflabel.close()
 
 # ----- TEMPORARY STATIONS -----
 
@@ -599,9 +617,14 @@ igcz       = open("TEMP/igcz.txt"          , "w")
 igczD      = open("TEMP/igczD.txt"         , "w")
 igczBG     = open("TEMP/igczBG.txt"        , "w")
 igczBGlabel= open("TEMP/igczBGLabel.txt"   , "w")
+igczRO     = open("TEMP/igczRO.txt"        , "w")
+igczROlabel= open("TEMP/igczROLabel.txt"   , "w")
+igczCZ     = open("TEMP/igczCZ.txt"        , "w")
+igczCZlabel= open("TEMP/igczCZLabel.txt"   , "w")
 aarh       = open("TEMP/aarh.txt"          , "w")
 aarhD      = open("TEMP/aarhD.txt"         , "w")
-aarhlabel  = open("TEMP/aarhLabel.txt"     , "w")
+aarhBGlabel = open("TEMP/aarhBGLabel.txt"  , "w")
+aarhROlabel = open("TEMP/aarhROLabel.txt"  , "w")
 barc       = open("TEMP/barc.txt"          , "w")
 barcD      = open("TEMP/barcD.txt"         , "w")
 boch       = open("TEMP/boch.txt"          , "w")
@@ -616,6 +639,8 @@ resf       = open("TEMP/resf.txt"          , "w")
 resfD      = open("TEMP/resfD.txt"         , "w")
 hels       = open("TEMP/hels.txt"          , "w")
 helsD      = open("TEMP/helsD.txt"         , "w")
+helsROmv   = open("TEMP/helsROmoved.txt"   , "w")
+helsROlabel = open("TEMP/helsROLabel.txt"  , "w")
 epss       = open("TEMP/epss.txt"          , "w")
 epssD      = open("TEMP/epssD.txt"         , "w")
 irsm       = open("TEMP/irsm.txt"          , "w")
@@ -640,10 +665,13 @@ ogsi       = open("TEMP/ogsi.txt"          , "w")
 ogsiD      = open("TEMP/ogsiD.txt"         , "w")
 oulu       = open("TEMP/oulu.txt"          , "w")
 ouluD      = open("TEMP/ouluD.txt"         , "w")
+ouluROlabel= open("TEMP/ouluROLabel.txt"   , "w")
 pola       = open("TEMP/pola.txt"          , "w")
 polaD      = open("TEMP/polaD.txt"         , "w")
+polaLabel  = open("TEMP/polaLabel.txt"     , "w")
 wien       = open("TEMP/wien.txt"          , "w")
 wienD      = open("TEMP/wienD.txt"         , "w")
+wienLabel  = open("TEMP/wienLabel.txt"     , "w")
 mnep       = open("TEMP/mnep.txt"          , "w")
 mnepD      = open("TEMP/mnepD.txt"         , "w")
 kosv       = open("TEMP/kosv.txt"          , "w")
@@ -654,6 +682,9 @@ kitp       = open("TEMP/kitp.txt"          , "w")
 kitpD      = open("TEMP/kitpD.txt"         , "w")
 gipp       = open("TEMP/gipp.txt"          , "w")
 gippD      = open("TEMP/gippD.txt"         , "w")
+gippRO     = open("TEMP/gippRO.txt"        , "w")
+gippROmv   = open("TEMP/gippROmoved.txt"   , "w")
+gippROlabel = open("TEMP/gippROLabel.txt"  , "w")
 jena       = open("TEMP/jena.txt"          , "w")
 jenaD      = open("TEMP/jenaD.txt"         , "w")
 rpBB       = open("TEMP/rpBB.txt"          , "w")
@@ -692,15 +723,19 @@ tEIDA30    = open("TEMP/tEIDA30.txt"       , "w")
 tEIDA40    = open("TEMP/tEIDA40.txt"       , "w")
 listT      = open("TEMP/listT.txt"         , "w")
 listTcoor  = open("TEMP/listTcoor.txt"     , "w")
+listTcoorD = open("TEMP/listTcoorD.txt"    , "w")
 listTnoCZ  = open("TEMP/listTnoCZ.txt"     , "w")
 
 for n in inventoryT.index:                        # loop over all lines in the xls/ods sheet
     if inventoryT.iloc[n,1] != '5B': # if it is not 5B network, which is not part of AdA (yet)
         listT.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0])) # list of temporary stations as code.name
         listTcoor.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy
+        if inventoryT.iloc[n,0] == 1:
+            listTcoorD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy    
         if inventoryT.iloc[n,16] != 'IG CAS CZ': # if it is not a MOBNET station
             listTnoCZ.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
         listALL.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0]))
+        listALLcoor.write ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]))) # list of all station coordinates
     if (not math.isnan(inventoryT.iloc[n,3])):    # the last loop is going over the last line
         # regional subgroups
         if inventoryT.iloc[n,24] == 'WEST' and inventoryT.iloc[n,0] != 4:
@@ -764,6 +799,12 @@ for n in inventoryT.index:                        # loop over all lines in the x
                     if inventoryT.iloc[n,7] == 'Bulgaria':            
                         igczBG.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                         igczBGlabel.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+                    if inventoryT.iloc[n,7] == 'Romania':            
+                        igczRO.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                        igczROlabel.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+                    if inventoryT.iloc[n,7] == 'CZ' or inventoryT.iloc[n,7] == 'Slovakia':
+                        igczCZ.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                        igczCZlabel.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
         if inventoryT.iloc[n,16] == 'Denmark':
             if inventoryT.iloc[n,0] != 4:
                 aarh.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -771,7 +812,10 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     aarhD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
-                    aarhlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+                    if inventoryT.iloc[n,7] == 'Bulgaria':            
+                        aarhBGlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+                    if inventoryT.iloc[n,7] == 'Romania':            
+                        aarhROlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext                        
         if inventoryT.iloc[n,16] == 'Barcelona':
             if inventoryT.iloc[n,0] != 4:
                 barc.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -826,6 +870,9 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     helsD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
+                    helsROlabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext                        
+            if inventoryT.iloc[n,0] == 4:
+                helsROmv.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'EPSS':
             if inventoryT.iloc[n,0] != 4:
                 epss.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -880,6 +927,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     ouluD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
+                    ouluROlabel.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
         if inventoryT.iloc[n,16] == 'Oulu+UniWien':
             if inventoryT.iloc[n,0] != 4:
                 ouwi.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -892,6 +940,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     polaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1            
+                    polaLabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext                        
         if inventoryT.iloc[n,16] == 'UniWien':
             if inventoryT.iloc[n,0] != 4:
                 wien.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -899,6 +948,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     wienD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1
+                    wienLabel.write  ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext                                            
         if inventoryT.iloc[n,16] == 'MNE pool':
             if inventoryT.iloc[n,0] != 4:
                 mnep.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -934,6 +984,12 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     gippD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                     counterDPLO = counterDPLO + 1                                                
+                    if inventoryT.iloc[n,7] == 'Romania':            
+                        gippRO.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
+                        gippROlabel.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]-0.08) + '\t' + ts + '\t' + '0' + '\t' + '1' + '\t' + 'TC' + '\t' + str(inventoryT.iloc[n,2]))) # station labels for GMT pstext
+            if inventoryT.iloc[n,0] == 4:
+                if inventoryT.iloc[n,7] == 'Romania':            
+                    gippROmv.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,16] == 'GIPP+CarP':
             if inventoryT.iloc[n,0] != 4:
                 gica.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -1087,9 +1143,14 @@ igcz.close()
 igczD.close()
 igczBG.close()
 igczBGlabel.close()
+igczRO.close()
+igczROlabel.close()
+igczCZ.close()
+igczCZlabel.close()
 aarh.close()
 aarhD.close()
-aarhlabel.close()
+aarhBGlabel.close()
+aarhROlabel.close()
 barc.close()
 barcD.close()
 boch.close()
@@ -1104,6 +1165,8 @@ resf.close()
 resfD.close()
 hels.close()
 helsD.close()
+helsROmv.close()
+helsROlabel.close()
 epss.close()
 epssD.close()
 irsm.close()
@@ -1128,10 +1191,13 @@ ogsi.close()
 ogsiD.close()
 oulu.close()
 ouluD.close()
+ouluROlabel.close()
 pola.close()
 polaD.close()
+polaLabel.close()
 wien.close()
 wienD.close()
+wienLabel.close()
 mnep.close()
 mnepD.close()
 kosv.close()
@@ -1142,6 +1208,9 @@ kitp.close()
 kitpD.close()
 gipp.close()
 gippD.close()
+gippRO.close()
+gippROmv.close()
+gippROlabel.close()
 jena.close()
 jenaD.close()
 rpBB.close()
@@ -1179,8 +1248,10 @@ tEIDA30.close()
 tEIDA40.close()
 listT.close()
 listTcoor.close()
+listTcoorD.close()
 listTnoCZ.close()
 listALL.close()
+listALLcoor.close()
 
 sumGROUPS = counterEAST + counterNORT + counterCENT + counterSTEA + counterWEST
 sumPOOLS  = counterIGCZ + counterAARH + counterBARC + counterBOCH + counterBOLO + counterCSSC + counterETHZ + counterRESF + counterHELS + counterEPSS + counterKIEL + counterMUNI + counterTWEN + counterBRZG + counterOGSI + counterOULU + counterPOLA + counterWIEN + counterMNEP + counterKOSV + counterNIEP + counterKITP + counterGIPP + counterJENA

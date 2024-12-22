@@ -124,7 +124,6 @@ brzgclr='000/150/000'     # Norwegian pool + Uni Zagreb
 kielclr='000/000/000'     # Uni Kiel
 bochclr='135/000/135'     # Uni Bochum
 municlr='255/255/000'     # Uni Munich
-barcclr='000/122/255'     # Barcelona
 resfclr='181/201/047'     # Resif-Sismob
 ogsiclr='166/016/076'     # OGS Italy
 ethzclr='250/080/120'     # ETH Zurich
@@ -484,6 +483,7 @@ grep -v "#" AUXI/gnss/HEPOS.gmt | awk '{print $1, $2}' | psxy -R -JL -O -K -Sc$s
 awk '{print $3, $2}' AUXI/gnss/epos-new.gmt            | psxy -R -JL -O -K -Sc$sizeC -G$bb60 -W$thps/$blck >> $psfile08 # stations in EPOS
 psclip -C -O -K >> $psfile08
 
+# seismic stations
 # SP/SM stations not suitable or available for upgrade
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile01
 psxy     PERM/pNOSP.txt               -R -JL -St$sizeps -G$nosp -W$thps/$blck -K -O >> $psfile10
@@ -948,16 +948,6 @@ psxy TEMP/aarh.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfile13
 psxy TEMP/aarh.txt  -R -JL -St$sizes2 -W$ths2/$aarhclr   -K -O >> $psfilep04
 psxy TEMP/aarhD.txt -R -JL -St$sizes2 -G$aarhclr         -K -O >> $psfilep04
 psxy TEMP/aarh.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
-
-# Barcelona
-psxy TEMP/barc.txt  -R -JL -Sc0.3     -W$thickE/$barcclr -K -O >> $psfile07
-psxy TEMP/barc.txt  -R -JL -Sc0.3     -W$thickE/$barcclr -K -O >> $psfile12
-psxy TEMP/barc.txt  -R -JL -St$sizes2 -W$ths2/$barcclr   -K -O >> $psfile13
-psxy TEMP/barcD.txt -R -JL -St$sizes2 -G$barcclr         -K -O >> $psfile13
-psxy TEMP/barc.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfile13
-psxy TEMP/barc.txt  -R -JL -St$sizes2 -W$ths2/$barcclr   -K -O >> $psfilep04
-psxy TEMP/barcD.txt -R -JL -St$sizes2 -G$barcclr         -K -O >> $psfilep04
-psxy TEMP/barc.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
 # Bochum
 psxy TEMP/boch.txt  -R -JL -Sc0.3     -W$thickE/$bochclr -K -O >> $psfile07
@@ -1858,45 +1848,42 @@ end
 # end of the legend to map 06
 
 # legend to map 07
-pscoast -R17.6/21.5/-8.8/7.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
+pscoast -R17.6/21.5/-8.8/7.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
 # temporary stations - circles
 psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile07 # Geoazur + GIPP
-17.95  7.5
-end
-psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile07 # Jena
 17.95  7.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$gippclr -K -O << end >> $psfile07 # GIPP
+psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile07 # Jena
 17.95  6.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$kitpclr -K -O << end >> $psfile07 # KIT
+psxy -R -JM -Sc$circsize -W$thickLC/$gippclr -K -O << end >> $psfile07 # GIPP
 17.95  6.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$niepclr -K -O << end >> $psfile07 # NIEP Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$kitpclr -K -O << end >> $psfile07 # KIT
 17.95  5.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$kosvclr -K -O << end >> $psfile07 # Kosovo Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$niepclr -K -O << end >> $psfile07 # NIEP Pool
 17.95  5.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$mnepclr -K -O << end >> $psfile07 # Montenegro Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$kosvclr -K -O << end >> $psfile07 # Kosovo Pool
 17.95  4.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$csscclr -K -O << end >> $psfile07 # CSS
+psxy -R -JM -Sc$circsize -W$thickLC/$mnepclr -K -O << end >> $psfile07 # Montenegro Pool
 17.95  4.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$boloclr -K -O << end >> $psfile07 # Bologna
+psxy -R -JM -Sc$circsize -W$thickLC/$csscclr -K -O << end >> $psfile07 # CSS
 17.95  3.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$ethzclr -K -O << end >> $psfile07 # ETH
+psxy -R -JM -Sc$circsize -W$thickLC/$boloclr -K -O << end >> $psfile07 # Bologna
 17.95  3.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$ogsiclr -K -O << end >> $psfile07 # OGS
+psxy -R -JM -Sc$circsize -W$thickLC/$ethzclr -K -O << end >> $psfile07 # ETH
 17.95  2.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$resfclr -K -O << end >> $psfile07 # France
+psxy -R -JM -Sc$circsize -W$thickLC/$ogsiclr -K -O << end >> $psfile07 # OGS
 17.95  2.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$barcclr -K -O << end >> $psfile07 # Barcelona
+psxy -R -JM -Sc$circsize -W$thickLC/$resfclr -K -O << end >> $psfile07 # France
 17.95  1.5
 end
 psxy -R -JM -Sc$circsize -W$thickLC/$wienclr -K -O << end >> $psfile07 # UniWien
@@ -1963,19 +1950,18 @@ psxy -R -JM -St$triasize -G$stea -W$thickL/$blck -K -O << end >> $psfile07
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile07
-18.3  7.6 7.5 0 0 TL Geoazur + GIPP
-18.3  7.1 7.5 0 0 TL Uni Jena, Germany
-18.3  6.6 7.5 0 0 TL GIPP, GFZ, Germany
-18.3  6.1 7.5 0 0 TL Karlsruhe IT, Germany
-18.3  5.6 7.5 0 0 TL NIEP Pool, Romania
-18.3  5.1 7.5 0 0 TL Kosovo Pool
-18.3  4.6 7.5 0 0 TL Montenegro Pool
-18.3  4.1 7.5 0 0 TL Croatia Seism. Survey
-18.3  3.6 7.5 0 0 TL INGV Bologna, Italy
-18.3  3.1 7.5 0 0 TL ETH Zurich, Switzerland
-18.3  2.6 7.5 0 0 TL OGS, Italy
-18.3  2.1 7.5 0 0 TL Resif-Sismob, France
-18.3  1.6 7.5 0 0 TL Barcelona, Spain
+18.3  7.1 7.5 0 0 TL Geoazur + GIPP
+18.3  6.6 7.5 0 0 TL Uni Jena, Germany
+18.3  6.1 7.5 0 0 TL GIPP, GFZ, Germany
+18.3  5.6 7.5 0 0 TL Karlsruhe IT, Germany
+18.3  5.1 7.5 0 0 TL NIEP Pool, Romania
+18.3  4.6 7.5 0 0 TL Kosovo Pool
+18.3  4.1 7.5 0 0 TL Montenegro Pool
+18.3  3.6 7.5 0 0 TL Croatia Seism. Survey
+18.3  3.1 7.5 0 0 TL INGV Bologna, Italy
+18.3  2.6 7.5 0 0 TL ETH Zurich, Switzerland
+18.3  2.1 7.5 0 0 TL OGS, Italy
+18.3  1.6 7.5 0 0 TL Resif-Sismob, France
 18.3  1.1 7.5 0 0 TL Uni Wien, Austria
 18.3  0.6 7.5 0 0 TL Uni Munich, Germany
 18.3  0.1 7.5 0 0 TL Uni Bochum, Germany
@@ -2112,45 +2098,42 @@ end
 # end of the legend to map 11
 
 # legend to map 12
-pscoast -R17.6/21.5/-7.8/6.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
+pscoast -R17.6/21.5/-7.8/6.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
 # temporary stations - circles
 psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile12 # Geoazur + GIPP
-17.95  6.5
-end
-psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile12 # Jena
 17.95  6.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$gippclr -K -O << end >> $psfile12 # GIPP
+psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile12 # Jena
 17.95  5.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$kitpclr -K -O << end >> $psfile12 # KIT
+psxy -R -JM -Sc$circsize -W$thickLC/$gippclr -K -O << end >> $psfile12 # GIPP
 17.95  5.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$niepclr -K -O << end >> $psfile12 # NIEP Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$kitpclr -K -O << end >> $psfile12 # KIT
 17.95  4.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$kosvclr -K -O << end >> $psfile12 # Kosovo Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$niepclr -K -O << end >> $psfile12 # NIEP Pool
 17.95  4.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$mnepclr -K -O << end >> $psfile12 # Montenegro Pool
+psxy -R -JM -Sc$circsize -W$thickLC/$kosvclr -K -O << end >> $psfile12 # Kosovo Pool
 17.95  3.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$csscclr -K -O << end >> $psfile12 # CSS
+psxy -R -JM -Sc$circsize -W$thickLC/$mnepclr -K -O << end >> $psfile12 # Montenegro Pool
 17.95  3.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$boloclr -K -O << end >> $psfile12 # Bologna
+psxy -R -JM -Sc$circsize -W$thickLC/$csscclr -K -O << end >> $psfile12 # CSS
 17.95  2.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$ethzclr -K -O << end >> $psfile12 # ETH
+psxy -R -JM -Sc$circsize -W$thickLC/$boloclr -K -O << end >> $psfile12 # Bologna
 17.95  2.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$ogsiclr -K -O << end >> $psfile12 # OGS
+psxy -R -JM -Sc$circsize -W$thickLC/$ethzclr -K -O << end >> $psfile12 # ETH
 17.95  1.5
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$resfclr -K -O << end >> $psfile12 # France
+psxy -R -JM -Sc$circsize -W$thickLC/$ogsiclr -K -O << end >> $psfile12 # OGS
 17.95  1.0
 end
-psxy -R -JM -Sc$circsize -W$thickLC/$barcclr -K -O << end >> $psfile12 # Barcelona
+psxy -R -JM -Sc$circsize -W$thickLC/$resfclr -K -O << end >> $psfile12 # France
 17.95  0.5
 end
 psxy -R -JM -Sc$circsize -W$thickLC/$wienclr -K -O << end >> $psfile12 # UniWien
@@ -2205,19 +2188,18 @@ psxy -R -JM -St$triasize -G$temp -W$thickL/$blck -K -O << end >> $psfile12
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile12
-18.3  6.6 7.5 0 0 TL Geoazur + GIPP
-18.3  6.1 7.5 0 0 TL Uni Jena, Germany
-18.3  5.6 7.5 0 0 TL GIPP, GFZ, Germany
-18.3  5.1 7.5 0 0 TL Karlsruhe IT, Germany
-18.3  4.6 7.5 0 0 TL NIEP Pool, Romania
-18.3  4.1 7.5 0 0 TL Kosovo Pool
-18.3  3.6 7.5 0 0 TL Montenegro Pool
-18.3  3.1 7.5 0 0 TL Croatia Seism. Survey
-18.3  2.6 7.5 0 0 TL INGV Bologna, Italy
-18.3  2.1 7.5 0 0 TL ETH Zurich, Switzerland
-18.3  1.6 7.5 0 0 TL OGS, Italy
-18.3  1.1 7.5 0 0 TL Resif-Sismob, France
-18.3  0.6 7.5 0 0 TL Barcelona, Spain
+18.3  6.1 7.5 0 0 TL Geoazur + GIPP
+18.3  5.6 7.5 0 0 TL Uni Jena, Germany
+18.3  5.1 7.5 0 0 TL GIPP, GFZ, Germany
+18.3  4.6 7.5 0 0 TL Karlsruhe IT, Germany
+18.3  4.1 7.5 0 0 TL NIEP Pool, Romania
+18.3  3.6 7.5 0 0 TL Kosovo Pool
+18.3  3.1 7.5 0 0 TL Montenegro Pool
+18.3  2.6 7.5 0 0 TL Croatia Seism. Survey
+18.3  2.1 7.5 0 0 TL INGV Bologna, Italy
+18.3  1.6 7.5 0 0 TL ETH Zurich, Switzerland
+18.3  1.1 7.5 0 0 TL OGS, Italy
+18.3  0.6 7.5 0 0 TL Resif-Sismob, France
 18.3  0.1 7.5 0 0 TL Uni Wien, Austria
 18.3 -0.4 7.5 0 0 TL Uni Munich, Germany
 18.3 -0.9 7.5 0 0 TL Uni Bochum, Germany
@@ -2238,60 +2220,57 @@ end
 # end of the legend to map 12
 
 # legend to map 13
-pscoast -R17.6/21.5/-8.3/7.9 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile13
+pscoast -R17.6/21.5/-8.3/7.4 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile13
 psxy -R -JM -St$triasize -G$gigeclr -W$thickL/$blck -K -O << end >> $psfile13 # Geoazur
-17.95  7.50
+17.95  7.0
 end
 psxy -R -JM -Sc0.16 -G$gippclr                      -K -O << end >> $psfile13 # Geoazur + GIPP
-17.95  7.50
+17.95  7.0
 end
 psxy -R -JM -St$triasize -G$jenaclr -W$thickL/$blck -K -O << end >> $psfile13 # Jena
-17.95  7.00
+17.95  6.5
 end
 psxy -R -JM -St$triasize -G$gippclr -W$thickL/$blck -K -O << end >> $psfile13 # GIPP
-17.95  6.50
+17.95  6.0
 end
 psxy -R -JM -St$triasize -G$gippclr -W$thickL/$blck -K -O << end >> $psfile13 # GIPP + IRSM
-17.95  6.00
+17.95  5.5
 end
 psxy -R -JM -Sc0.16 -G$irsmclr                      -K -O << end >> $psfile13 # GIPP + IRSM
-17.95  6.00
+17.95  5.5
 end
 psxy -R -JM -St$triasize -G$gippclr -W$thickL/$blck -K -O << end >> $psfile13 # GIPP + CarP
-17.95  5.50
+17.95  5.0
 end
 psxy -R -JM -Sc0.16 -G$jenaclr                      -K -O << end >> $psfile13 # GIPP + CarP
-17.95  5.50
+17.95  5.0
 end
 psxy -R -JM -St$triasize -G$kitpclr -W$thickL/$blck -K -O << end >> $psfile13 # KIT
-17.95  5.00
+17.95  4.5
 end
 psxy -R -JM -St$triasize -G$niepclr -W$thickL/$blck -K -O << end >> $psfile13 # NIEP Pool
-17.95  4.50
+17.95  4.0
 end
 psxy -R -JM -St$triasize -G$kosvclr -W$thickL/$blck -K -O << end >> $psfile13 # Kosovo Pool
-17.95  4.00
+17.95  3.5
 end
 psxy -R -JM -St$triasize -G$mnepclr -W$thickL/$blck -K -O << end >> $psfile13 # Montenegro Pool
-17.95  3.50
+17.95  3.0
 end
 psxy -R -JM -St$triasize -G$csscclr -W$thickL/$blck -K -O << end >> $psfile13 # CSS
-17.95  3.00
+17.95  2.5
 end
 psxy -R -JM -St$triasize -G$boloclr -W$thickL/$blck -K -O << end >> $psfile13 # Bologna
-17.95  2.50
+17.95  2.0
 end
 psxy -R -JM -St$triasize -G$ethzclr -W$thickL/$blck -K -O << end >> $psfile13 # ETH
-17.95  2.00
+17.95  1.5
 end
 psxy -R -JM -St$triasize -G$ogsiclr -W$thickL/$blck -K -O << end >> $psfile13 # OGS
-17.95  1.50
+17.95  1.0
 end
 psxy -R -JM -St$triasize -G$resfclr -W$thickL/$blck -K -O << end >> $psfile13 # France
-17.95  1.00
-end
-psxy -R -JM -St$triasize -G$barcclr -W$thickL/$blck -K -O << end >> $psfile13 # Barcelona
-17.95  0.50
+17.95  0.5
 end
 psxy -R -JM -St$triasize -G$wienclr -W$thickL/$blck -K -O << end >> $psfile13 # UniWien
 17.95  0.00
@@ -2352,21 +2331,20 @@ psxy -R -JM -St$triasize -G$grey    -W$thickL/$blck -K -O << end >> $psfile13
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile13
-18.3  7.60 7.5 0 0 TL Geoazur + GIPP
-18.3  7.10 7.5 0 0 TL Uni Jena, Germany
-18.3  6.60 7.5 0 0 TL GIPP, GFZ, Germany
-18.3  6.10 7.5 0 0 TL GIPP + IRSM
-18.3  5.60 7.5 0 0 TL GIPP + Carpathian Project
-18.3  5.10 7.5 0 0 TL Karlsruhe IT, Germany
-18.3  4.60 7.5 0 0 TL NIEP Pool, Romania
-18.3  4.10 7.5 0 0 TL Kosovo Pool
-18.3  3.60 7.5 0 0 TL Montenegro Pool
-18.3  3.10 7.5 0 0 TL Croatia Seism. Survey
-18.3  2.60 7.5 0 0 TL INGV Bologna, Italy
-18.3  2.10 7.5 0 0 TL ETH Zurich, Switzerland
-18.3  1.60 7.5 0 0 TL OGS, Italy
-18.3  1.10 7.5 0 0 TL Resif-Sismob, France
-18.3  0.60 7.5 0 0 TL Barcelona, Spain
+18.3  7.1 7.5 0 0 TL Geoazur + GIPP
+18.3  6.6 7.5 0 0 TL Uni Jena, Germany
+18.3  6.1 7.5 0 0 TL GIPP, GFZ, Germany
+18.3  5.6 7.5 0 0 TL GIPP + IRSM
+18.3  5.1 7.5 0 0 TL GIPP + Carpathian Project
+18.3  4.6 7.5 0 0 TL Karlsruhe IT, Germany
+18.3  4.1 7.5 0 0 TL NIEP Pool, Romania
+18.3  3.6 7.5 0 0 TL Kosovo Pool
+18.3  3.1 7.5 0 0 TL Montenegro Pool
+18.3  2.6 7.5 0 0 TL Croatia Seism. Survey
+18.3  2.1 7.5 0 0 TL INGV Bologna, Italy
+18.3  1.6 7.5 0 0 TL ETH Zurich, Switzerland
+18.3  1.1 7.5 0 0 TL OGS, Italy
+18.3  0.6 7.5 0 0 TL Resif-Sismob, France
 18.3  0.10 7.5 0 0 TL Uni Wien, Austria
 18.3 -0.40 7.5 0 0 TL Uni Munich, Germany
 18.3 -0.90 7.5 0 0 TL Uni Bochum, Germany
@@ -2799,29 +2777,26 @@ end
 psxy -R -JM -St$triasize -G$wienclr -W$thickL/$blck -K -O << end >> $psfilep04 # UniWien
 -2.8 -1.12
 end
-psxy -R -JM -St$triasize -G$barcclr -W$thickL/$blck -K -O << end >> $psfilep04 # Barcelona
+psxy -R -JM -St$triasize -G$resfclr -W$thickL/$blck -K -O << end >> $psfilep04 # France
 +0.2 +0.84
 end
-psxy -R -JM -St$triasize -G$resfclr -W$thickL/$blck -K -O << end >> $psfilep04 # France
+psxy -R -JM -St$triasize -G$ogsiclr -W$thickL/$blck -K -O << end >> $psfilep04 # OGS
 +0.2 +0.56
 end
-psxy -R -JM -St$triasize -G$ogsiclr -W$thickL/$blck -K -O << end >> $psfilep04 # OGS
+psxy -R -JM -St$triasize -G$ethzclr -W$thickL/$blck -K -O << end >> $psfilep04 # ETH
 +0.2 +0.28
 end
-psxy -R -JM -St$triasize -G$ethzclr -W$thickL/$blck -K -O << end >> $psfilep04 # ETH
-+0.2  0.00
-end
 psxy -R -JM -St$triasize -G$boloclr -W$thickL/$blck -K -O << end >> $psfilep04 # Bologna
-+0.2 -0.28
++0.2 0.00
 end
 psxy -R -JM -St$triasize -G$csscclr -W$thickL/$blck -K -O << end >> $psfilep04 # CSS
-+0.2 -0.56
++0.2 -0.28
 end
 psxy -R -JM -St$triasize -G$mnepclr -W$thickL/$blck -K -O << end >> $psfilep04 # Montenegro Pool
-+0.2 -0.84
++0.2 -0.56
 end
 psxy -R -JM -St$triasize -G$kosvclr -W$thickL/$blck -K -O << end >> $psfilep04 # Kosovo Pool
-+0.2 -1.12
++0.2 -0.84
 end
 psxy -R -JM -St$triasize -G$niepclr -W$thickL/$blck -K -O << end >> $psfilep04 # NIEP Pool
 +3.2  0.84
@@ -2871,14 +2846,13 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep04
 -2.6 -0.46 10 0 0 TL Uni Bochum + Uni Frankfurt
 -2.6 -0.74 10 0 0 TL Uni Munich, Germany
 -2.6 -1.02 10 0 0 TL Uni Wien, Austria
-+0.4 +0.94 10 0 0 TL Barcelona, Spain
-+0.4 +0.66 10 0 0 TL Resif-Sismob, France
-+0.4 +0.38 10 0 0 TL OGS, Italy
-+0.4 +0.10 10 0 0 TL ETH Zurich, Switzerland
-+0.4 -0.18 10 0 0 TL INGV Bologna, Italy
-+0.4 -0.46 10 0 0 TL Croatia Seism. Survey
-+0.4 -0.74 10 0 0 TL Montenegro Pool
-+0.4 -1.02 10 0 0 TL Kosovo Pool
++0.4 +0.94 10 0 0 TL Resif-Sismob, France
++0.4 +0.66 10 0 0 TL OGS, Italy
++0.4 +0.38 10 0 0 TL ETH Zurich, Switzerland
++0.4 +0.10 10 0 0 TL INGV Bologna, Italy
++0.4 -0.18 10 0 0 TL Croatia Seism. Survey
++0.4 -0.46 10 0 0 TL Montenegro Pool
++0.4 -0.74 10 0 0 TL Kosovo Pool
 +3.4 +0.94 10 0 0 TL NIEP Pool, Romania
 +3.4 +0.66 10 0 0 TL Karlsruhe IT, Germany
 +3.4 +0.38 10 0 0 TL GIPP + IRSM
