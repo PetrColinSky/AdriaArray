@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="17">
+        <Style id="3705">
+            <IconStyle id="3706">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="3707">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="5300">
+            <IconStyle id="5301">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="5302">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="15985">
+            <IconStyle id="15986">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="15987">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16135">
+            <IconStyle id="16136">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16137">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16195">
+            <IconStyle id="16196">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16197">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16200">
+            <IconStyle id="16201">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16202">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16405">
+            <IconStyle id="16406">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16407">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16440">
+            <IconStyle id="16441">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16442">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="16515">
+            <IconStyle id="16516">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="16517">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20300">
+            <IconStyle id="20301">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20302">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20305">
+            <IconStyle id="20306">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20307">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20390">
+            <IconStyle id="20391">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20392">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20395">
+            <IconStyle id="20396">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20397">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20470">
+            <IconStyle id="20471">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20472">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20480">
+            <IconStyle id="20481">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20482">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20525">
+            <IconStyle id="20526">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20527">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20535">
+            <IconStyle id="20536">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20537">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20540">
+            <IconStyle id="20541">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20542">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20545">
+            <IconStyle id="20546">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20547">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20550">
+            <IconStyle id="20551">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20552">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20555">
+            <IconStyle id="20556">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20557">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20560">
+            <IconStyle id="20561">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20562">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20570">
+            <IconStyle id="20571">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20572">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20675">
+            <IconStyle id="20676">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20677">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="20690">
+            <IconStyle id="20691">
+                <color>ff009600</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="20692">
+                    <href>triangle.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="3704">
+            <name>VALP</name>
+            <styleUrl>#3705</styleUrl>
+            <Point id="3703">
+                <coordinates>18.42,45.66,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5299">
+            <name>RENF</name>
+            <styleUrl>#5300</styleUrl>
+            <Point id="5298">
+                <coordinates>-1.6353,48.119,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15984">
+            <name>GILA</name>
+            <styleUrl>#15985</styleUrl>
+            <Point id="15983">
+                <coordinates>15.8878,47.6958,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16134">
+            <name>PITA</name>
+            <styleUrl>#16135</styleUrl>
+            <Point id="16133">
+                <coordinates>16.1894,47.718,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16194">
+            <name>SQMD</name>
+            <styleUrl>#16195</styleUrl>
+            <Point id="16193">
+                <coordinates>16.2594,48.0887,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16199">
+            <name>SQWN</name>
+            <styleUrl>#16200</styleUrl>
+            <Point id="16198">
+                <coordinates>16.1008,47.8186,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16404">
+            <name>HUNA</name>
+            <styleUrl>#16405</styleUrl>
+            <Point id="16403">
+                <coordinates>16.6814,47.9772,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16439">
+            <name>MARA</name>
+            <styleUrl>#16440</styleUrl>
+            <Point id="16438">
+                <coordinates>15.9505,47.5431,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16514">
+            <name>SINA</name>
+            <styleUrl>#16515</styleUrl>
+            <Point id="16513">
+                <coordinates>15.6229,48.5145,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20299">
+            <name>ARMA</name>
+            <styleUrl>#20300</styleUrl>
+            <Point id="20298">
+                <coordinates>-0.203,42.945,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20304">
+            <name>BENY</name>
+            <styleUrl>#20305</styleUrl>
+            <Point id="20303">
+                <coordinates>-0.449,49.258,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20389">
+            <name>Capraia-A317A</name>
+            <styleUrl>#20390</styleUrl>
+            <Point id="20388">
+                <coordinates>9.842445,43.049999,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20394">
+            <name>CHAL</name>
+            <styleUrl>#20395</styleUrl>
+            <Point id="20393">
+                <coordinates>7.539,47.811,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20469">
+            <name>Golyam</name>
+            <styleUrl>#20470</styleUrl>
+            <Point id="20468">
+                <coordinates>27.2252,42.1821,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20479">
+            <name>Grado</name>
+            <styleUrl>#20480</styleUrl>
+            <Point id="20478">
+                <coordinates>13.38436527777,45.682786,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20524">
+            <name>Montecristo-A316A</name>
+            <styleUrl>#20525</styleUrl>
+            <Point id="20523">
+                <coordinates>10.295717,42.333679,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20534">
+            <name>N19</name>
+            <styleUrl>#20535</styleUrl>
+            <Point id="20533">
+                <coordinates>3.366,50.21,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20539">
+            <name>N204</name>
+            <styleUrl>#20540</styleUrl>
+            <Point id="20538">
+                <coordinates>6.76,43.577,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20544">
+            <name>N75</name>
+            <styleUrl>#20545</styleUrl>
+            <Point id="20543">
+                <coordinates>2.467,42.824,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20549">
+            <name>OG27</name>
+            <styleUrl>#20550</styleUrl>
+            <Point id="20548">
+                <coordinates>6.509,44.393,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20554">
+            <name>OGRO</name>
+            <styleUrl>#20555</styleUrl>
+            <Point id="20553">
+                <coordinates>6.203,45.595,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20559">
+            <name>OSPF</name>
+            <styleUrl>#20560</styleUrl>
+            <Point id="20558">
+                <coordinates>9.191,41.663,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20569">
+            <name>PIANO</name>
+            <styleUrl>#20570</styleUrl>
+            <Point id="20568">
+                <coordinates>15.747887,42.225137,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20674">
+            <name>SMARH</name>
+            <styleUrl>#20675</styleUrl>
+            <Point id="20673">
+                <coordinates>3.467,48.318,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20689">
+            <name>URBF</name>
+            <styleUrl>#20690</styleUrl>
+            <Point id="20688">
+                <coordinates>6.933,47.875,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
