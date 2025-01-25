@@ -130,10 +130,8 @@ bochclr='135/000/135'     # Uni Bochum
 municlr='255/255/000'     # Uni Munich
 resfclr='181/201/047'     # Resif-Sismob
 ogsiclr='166/016/076'     # OGS Italy
-
 ethzclr='250/080/120'     # ETH Zurich
 gigeclr='255/000/000'     # Geoazur + GIPP
-
 boloclr='070/255/190'     # INGV Bologna
 csscclr='070/070/070'     # Croatian Seismological Survey
 mnepclr='135/162/235'     # Montenegro Pool
@@ -333,7 +331,7 @@ psclip AUXI/units/wholeclip.txt  -R$mapborder -JL$mapproj                       
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/gray.cpt  -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/AlKaPeCa-South.txt -R -JL                                      -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01 # = AlKaPeCa
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/Valencia.txt   -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/pinkD.cpt -K -O >> $psfilep01
@@ -354,7 +352,7 @@ psclip AUXI/units/Vrancea.txt    -R -JL                                         
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/Mediter.txt    -R -JL                                          -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01 ###
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/Iberia.txt     -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/pinkD.cpt -K -O >> $psfilep01
@@ -372,7 +370,7 @@ psclip AUXI/units/AdriaUndefor.txt -R -JL                                       
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/browD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/AlKaPeCa-Add.txt -R -JL                                        -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01 # = AlKaPeCa
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/AtlasSicily.txt -R -JL                                         -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/yellL.cpt -K -O >> $psfilep01
@@ -402,7 +400,7 @@ psclip AUXI/units/LiguroAlgerian.txt -R -JL                                     
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/AlKaPeCa-North.txt -R -JL                                      -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01 # = AlKaPeCa
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/Vavilov.txt    -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
@@ -414,9 +412,9 @@ psclip AUXI/units/IonianSea.txt  -R -JL                                         
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/MediterEast.txt -R -JL                                         -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01 ###
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
-psclip AUXI/units/Aegean-Add.txt -R -JL                                          -K -O >> $psfilep01 ###
+psclip AUXI/units/Aegean-Add.txt -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/EastSea.txt    -R -JL                                          -K -O >> $psfilep01
@@ -642,7 +640,6 @@ psxy     PERM/pCLOS.txt               -R -JL -St$sizepsA -G$blck    -W$thps/$blc
 psxy     PERM/pCLOSo.txt              -R -JL -St$sizepsA -G$outsA   -W$thps/$blck -K -O >> $psfilep02
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizepsA -G$blck    -W$thps/$blck -K -O >> $psfilep02
 psxy     TEMP/movedTemp.txt           -R -JL -St$sizepsA -G$blck    -W$thps/$blck -K -O >> $psfilep02
-
 
 # stations with unknown sensor
 #psxy     PERM/pUNKN.txt               -R -JL -St$sizeps -G$unkn -W$thps/$blck -K -O >> $psfile01
@@ -3434,71 +3431,71 @@ end
 # ----------- end of two coverage plots together ----------
 
 # saving pdf and png files
-#gs -o MAPS/01AdriaTotal.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile01
-#gs -o MAPS/02AdriaBBonl.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile02
-#gs -o MAPS/03AdriaBBsub.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile03
-#gs -o MAPS/04AdriaCrc30.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile04
-#gs -o MAPS/05AdriaCrc40.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile05
-#gs -o MAPS/06AdriaBBovr.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile06
-#gs -o MAPS/07AdriaMobil.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile07
-#gs -o MAPS/08AdriaGNSS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile08
-#gs -o MAPS/09AdriaCOST.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile09
-#gs -o MAPS/10AdriaTotPR.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile10
-#gs -o MAPS/11AdriaEIDA.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile11
-#gs -o MAPS/12AdriaMobRG.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile12
-#gs -o MAPS/13AdriaDploy.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile13
-#gs -o MAPS/14AA+AdA+PCS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile14
-#gs -o MAPS/15AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile15
-#gs -o MAPS/16AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile16
-#gs -o MAPS/17AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile17
-#gs -o MAPS/18AdAEIDAall.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile18
-#gs -o PAPER/p01AdAtectono.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep01
-#gs -o PAPER/p02AA+AdA+PCS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep02
-#gs -o PAPER/p03AdAcolorTP.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep03
-#gs -o PAPER/p04AdriaDploy.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep04
-#gs -o PAPER/p05AdAcoverP.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep05
-#gs -o PAPER/p06AdAcoverPT.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep06
-#gs -o PAPER/p07AdAcomplet.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep07
-#gs -o PAPER/p08AdAvirtual.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep08
-#gs -o PAPER/p09AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep09
-#gs -o PAPER/p10AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep10
-#gs -o PAPER/p11AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep11
-#gs -o PAPER/p12AdAhistory.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep12
-#gs -o PAPER/p13EFEHRhazar.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep13
-#gs -o PAPER/p14AdAcovTWO.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep14
-#gs -o MAPS/01AdriaTotal.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile01
-#gs -o MAPS/02AdriaBBonl.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile02
-#gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
-#gs -o MAPS/04AdriaCrc30.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile04
-#gs -o MAPS/05AdriaCrc40.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile05
-#gs -o MAPS/06AdriaBBovr.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile06
-#gs -o MAPS/07AdriaMobil.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile07
-#gs -o MAPS/08AdriaGNSS.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile08
-#gs -o MAPS/09AdriaCOST.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile09
-#gs -o MAPS/10AdriaTotPR.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile10
-#gs -o MAPS/11AdriaEIDA.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile11
-#gs -o MAPS/12AdriaMobRG.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile12
-#gs -o MAPS/13AdriaDploy.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile13
-#gs -o MAPS/14AA+AdA+PCS.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile14
-#gs -o MAPS/15AdAmembers.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile15
-#gs -o MAPS/16AdAnetwork.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile16
-#gs -o MAPS/17AdAcorners.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile17
-#gs -o MAPS/18AdAEIDAall.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile18
+gs -o MAPS/01AdriaTotal.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile01
+gs -o MAPS/02AdriaBBonl.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile02
+gs -o MAPS/03AdriaBBsub.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile03
+gs -o MAPS/04AdriaCrc30.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile04
+gs -o MAPS/05AdriaCrc40.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile05
+gs -o MAPS/06AdriaBBovr.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile06
+gs -o MAPS/07AdriaMobil.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile07
+gs -o MAPS/08AdriaGNSS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile08
+gs -o MAPS/09AdriaCOST.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile09
+gs -o MAPS/10AdriaTotPR.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile10
+gs -o MAPS/11AdriaEIDA.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile11
+gs -o MAPS/12AdriaMobRG.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile12
+gs -o MAPS/13AdriaDploy.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile13
+gs -o MAPS/14AA+AdA+PCS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile14
+gs -o MAPS/15AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile15
+gs -o MAPS/16AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile16
+gs -o MAPS/17AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile17
+gs -o MAPS/18AdAEIDAall.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfile18
+gs -o PAPER/p01AdAtectono.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep01
+gs -o PAPER/p02AA+AdA+PCS.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep02
+gs -o PAPER/p03AdAcolorTP.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep03
+gs -o PAPER/p04AdriaDploy.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep04
+gs -o PAPER/p05AdAcoverP.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep05
+gs -o PAPER/p06AdAcoverPT.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep06
+gs -o PAPER/p07AdAcomplet.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep07
+gs -o PAPER/p08AdAvirtual.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep08
+gs -o PAPER/p09AdAcorners.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep09
+gs -o PAPER/p10AdAnetwork.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep10
+gs -o PAPER/p11AdAmembers.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep11
+gs -o PAPER/p12AdAhistory.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep12
+gs -o PAPER/p13EFEHRhazar.pdf -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep13
+gs -o PAPER/p14AdAcovTWO.pdf  -sDEVICE=pdfwrite -r3600 -g29772x42084 -dPDFFitPage $psfilep14
+gs -o MAPS/01AdriaTotal.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile01
+gs -o MAPS/02AdriaBBonl.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile02
+gs -o MAPS/03AdriaBBsub.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile03
+gs -o MAPS/04AdriaCrc30.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile04
+gs -o MAPS/05AdriaCrc40.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile05
+gs -o MAPS/06AdriaBBovr.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile06
+gs -o MAPS/07AdriaMobil.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile07
+gs -o MAPS/08AdriaGNSS.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile08
+gs -o MAPS/09AdriaCOST.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile09
+gs -o MAPS/10AdriaTotPR.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile10
+gs -o MAPS/11AdriaEIDA.png  -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile11
+gs -o MAPS/12AdriaMobRG.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile12
+gs -o MAPS/13AdriaDploy.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile13
+gs -o MAPS/14AA+AdA+PCS.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile14
+gs -o MAPS/15AdAmembers.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile15
+gs -o MAPS/16AdAnetwork.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile16
+gs -o MAPS/17AdAcorners.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile17
+gs -o MAPS/18AdAEIDAall.png -sDEVICE=png16m -r500 -c '<</Orientation 3>> setpagedevice' -dDownScaleFactor=4 $psfile18
 
 # following ps --> ps is here just to rotate the image, otherwise the png is rotated wrongly
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep01.X -c "<</Orientation 3>> setpagedevice" -f $psfilep01
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep02.X -c "<</Orientation 3>> setpagedevice" -f $psfilep02
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep03.X -c "<</Orientation 3>> setpagedevice" -f $psfilep03
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep04.X -c "<</Orientation 3>> setpagedevice" -f $psfilep04
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep05.X -c "<</Orientation 3>> setpagedevice" -f $psfilep05
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep06.X -c "<</Orientation 3>> setpagedevice" -f $psfilep06
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep07.X -c "<</Orientation 3>> setpagedevice" -f $psfilep07
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep08.X -c "<</Orientation 3>> setpagedevice" -f $psfilep08
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep09.X -c "<</Orientation 3>> setpagedevice" -f $psfilep09
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep10.X -c "<</Orientation 3>> setpagedevice" -f $psfilep10
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep11.X -c "<</Orientation 3>> setpagedevice" -f $psfilep11
-##gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep12.X -c "<</Orientation 3>> setpagedevice" -f $psfilep12
-#gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep13.X -c "<</Orientation 3>> setpagedevice" -f $psfilep13
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep02.X -c "<</Orientation 3>> setpagedevice" -f $psfilep02
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep03.X -c "<</Orientation 3>> setpagedevice" -f $psfilep03
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep04.X -c "<</Orientation 3>> setpagedevice" -f $psfilep04
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep05.X -c "<</Orientation 3>> setpagedevice" -f $psfilep05
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep06.X -c "<</Orientation 3>> setpagedevice" -f $psfilep06
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep07.X -c "<</Orientation 3>> setpagedevice" -f $psfilep07
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep08.X -c "<</Orientation 3>> setpagedevice" -f $psfilep08
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep09.X -c "<</Orientation 3>> setpagedevice" -f $psfilep09
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep10.X -c "<</Orientation 3>> setpagedevice" -f $psfilep10
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep11.X -c "<</Orientation 3>> setpagedevice" -f $psfilep11
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep12.X -c "<</Orientation 3>> setpagedevice" -f $psfilep12
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep13.X -c "<</Orientation 3>> setpagedevice" -f $psfilep13
 
 # the bounding boxes are used to crop the image in the next section
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep01.X 2>&1 | grep %%BoundingBox
@@ -3519,16 +3516,16 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep01.X -c "<</
 # take the upper limit minus lower limit of the bounding box and multiply *7; this gives the Y size in pixels
 # in the next command, the Y starting point of boundingbox needs to be added with minus sign
 gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep01.X
-#gs -o PAPER/p02AA+AdA+PCS.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep02.X
-#gs -o PAPER/p03AdAcolorTP.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep03.X
-#gs -o PAPER/p04AdriaDploy.png -sDEVICE=png16m -r504 -g4865x4102 -c '<</Install {0   -8 translate}>> setpagedevice' -f $psfilep04.X
-#gs -o PAPER/p05AdAcoverP.png  -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep05.X
-#gs -o PAPER/p06AdAcoverPT.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep06.X
-#gs -o PAPER/p07AdAcomplet.png -sDEVICE=png16m -r504 -g4865x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep07.X
-#gs -o PAPER/p08AdAvirtual.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep08.X
-#gs -o PAPER/p09AdAcorners.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep09.X
-#gs -o PAPER/p10AdAnetwork.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep10.X
-#gs -o PAPER/p11AdAmembers.png -sDEVICE=png16m -r504 -g3731x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep11.X
-#gs -o PAPER/p12AdAhistory.png -sDEVICE=png16m -r504 -g4865x3206 -c '<</Install {0 -136 translate}>> setpagedevice' -f $psfilep12.X
-#gs -o PAPER/p13EFEHRhazar.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep13.X
-#gs -o PAPER/p14AdAcovTWO.png  -sDEVICE=png16m -r504 -g4865x6600 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep14
+gs -o PAPER/p02AA+AdA+PCS.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep02.X
+gs -o PAPER/p03AdAcolorTP.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep03.X
+gs -o PAPER/p04AdriaDploy.png -sDEVICE=png16m -r504 -g4865x4102 -c '<</Install {0   -8 translate}>> setpagedevice' -f $psfilep04.X
+gs -o PAPER/p05AdAcoverP.png  -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep05.X
+gs -o PAPER/p06AdAcoverPT.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep06.X
+gs -o PAPER/p07AdAcomplet.png -sDEVICE=png16m -r504 -g4865x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep07.X
+gs -o PAPER/p08AdAvirtual.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep08.X
+gs -o PAPER/p09AdAcorners.png -sDEVICE=png16m -r504 -g4865x3458 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep09.X
+gs -o PAPER/p10AdAnetwork.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep10.X
+gs -o PAPER/p11AdAmembers.png -sDEVICE=png16m -r504 -g3731x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep11.X
+gs -o PAPER/p12AdAhistory.png -sDEVICE=png16m -r504 -g4865x3206 -c '<</Install {0 -136 translate}>> setpagedevice' -f $psfilep12.X
+gs -o PAPER/p13EFEHRhazar.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep13.X
+gs -o PAPER/p14AdAcovTWO.png  -sDEVICE=png16m -r504 -g4865x6600 -c '<</Install {0 -100 translate}>> setpagedevice' -f $psfilep14
