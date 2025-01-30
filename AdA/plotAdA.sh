@@ -390,12 +390,6 @@ psclip                                                                        -C
 psclip AUXI/units/DeformedPyreEurope.txt -R -JL                                  -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/greeL.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
-psclip AUXI/units/AnatoliaUndef.txt -R -JL                                       -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
-psclip                                                                        -C -K -O >> $psfilep01
-psclip AUXI/units/AnatoliaDef.txt -R -JL                                         -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
-psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/LiguroAlgerian.txt -R -JL                                      -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueL.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
@@ -411,11 +405,11 @@ psclip                                                                        -C
 psclip AUXI/units/IonianSea.txt  -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
-psclip AUXI/units/MediterEast.txt -R -JL                                         -K -O >> $psfilep01
-grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
-psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/Aegean-Add.txt -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/brown.cpt -K -O >> $psfilep01
+psclip                                                                        -C -K -O >> $psfilep01
+psclip AUXI/units/Anatolia.txt -R -JL                                            -K -O >> $psfilep01
+grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/purpl.cpt -K -O >> $psfilep01
 psclip                                                                        -C -K -O >> $psfilep01
 psclip AUXI/units/EastSea.txt    -R -JL                                          -K -O >> $psfilep01
 grdimage AUXI/units/fakegrid.grd -R -JL -IAUXI/shadow.grd -CAUXI/units/blueD.cpt -K -O >> $psfilep01
