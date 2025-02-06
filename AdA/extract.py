@@ -148,6 +148,7 @@ p30io40   = open("PERM/perm30io40.txt"    , "w")
 listP     = open("PERM/listP.txt"         , "w")
 listALL   = open("AUXI/listALL.txt"       , "w")
 listALLcoor = open("AUXI/listALLcoor.txt" , "w")
+listALLb  = open("AUXI/listALLb.txt"      , "w")
 BG30      = open("AUXI/BG30.txt"          , "w")
 BG40      = open("AUXI/BG40.txt"          , "w")
 BG60      = open("AUXI/BG60.txt"          , "w")
@@ -209,9 +210,10 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
             if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
-                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
-                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name, selects only the name before slash
+                listALL.write     ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
                 listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -253,6 +255,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
                 listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
                 listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
                 listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -294,6 +297,7 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
                 listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
                 listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
                 listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -776,6 +780,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             listTnoCZ.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
         listALL.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0]))
         listALLcoor.write ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]))) # list of all station coordinates
+        listALLb.write    ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0] + '?' + str(inventoryT.iloc[n,4]) + '?' + str(inventoryT.iloc[n,3]))) # list of all station coordinates
     if inventoryT.iloc[n,0] != 4 and inventoryT.iloc[n,12] == 'PACASE': # former PACASE stations
         counterPCS = counterPCS + 1
     if inventoryT.iloc[n,0] != 4 and inventoryT.iloc[n,12] == 'PACASE' and inventoryT.iloc[n,28] == 1: # former AlpArray stations
@@ -1339,6 +1344,7 @@ listTcoorD.close()
 listTnoCZ.close()
 listALL.close()
 listALLcoor.close()
+listALLb.close()
 BG30.close()
 RO30.close()
 No30.close()
