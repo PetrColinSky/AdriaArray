@@ -209,11 +209,11 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
-                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name, selects only the name before slash
-                listALL.write     ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
-                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
-                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            #if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+            listP.write       ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name, selects only the name before slash
+            listALL.write     ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+            listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # 20th column (19th here) has a flag = 1 if in EIDA, = 0 if not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -251,11 +251,11 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red            
-            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
-                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
-                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
-                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
-                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            #if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+            listP.write       ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+            listALL.write     ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+            listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
             if inventoryP.iloc[n,19] == 0: # IN the region, corner period >= 40 and < 59 s, not in EIDA
                 counterEIDAnoBB = counterEIDAnoBB + 1
                 EIDAnoBB.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
@@ -293,11 +293,11 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             pnt = kmlPermAll.newpoint(name=str(inventoryP.iloc[n,2]), coords=[(inventoryP.iloc[n,4],inventoryP.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,0) # red
-            if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
-                listP.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
-                listALL.write ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
-                listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
-                listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            #if inventoryP.iloc[n,1] != 'nnn': # if the network code is not empty
+            listP.write       ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0])) # list of permanent stations as code.name
+            listALL.write     ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0]))
+            listALLcoor.write ("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
+            listALLb.write    ("%s\n" % (str(inventoryP.iloc[n,1]) + '.' + str(inventoryP.iloc[n,2]).partition("/")[0] + '?' + str(inventoryP.iloc[n,4]) + '?' + str(inventoryP.iloc[n,3]))) # list of all station coordinates
         # BB 60 out - includes all longer then 60s
         if inventoryP.iloc[n,0] == 0 and inventoryP.iloc[n,11] >= 59: # OUT of the region, corner period >= 59 s
             counterBB60o = counterBB60o + 1
@@ -778,7 +778,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             listTcoorD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))  # station coordinates for GMT psxy    
         if inventoryT.iloc[n,16] != 'IG CAS CZ': # if it is not a MOBNET station
             listTnoCZ.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))            
-        listALL.write ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0]))
+        listALL.write     ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0]))
         listALLcoor.write ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3]))) # list of all station coordinates
         listALLb.write    ("%s\n" % (str(inventoryT.iloc[n,1]) + '.' + str(inventoryT.iloc[n,2]).partition("/")[0] + '?' + str(inventoryT.iloc[n,4]) + '?' + str(inventoryT.iloc[n,3]))) # list of all station coordinates
     if inventoryT.iloc[n,0] != 4 and inventoryT.iloc[n,12] == 'PACASE': # former PACASE stations
@@ -1095,7 +1095,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
         if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'HL' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK' or inventoryT.iloc[n,1] == 'SJ' or inventoryT.iloc[n,1] == 'UT': # upgrades of permanent
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         # stations by corner period        
-        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
+        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
             tmpBB030.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             yesDepl.write      ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             pnt = kmlTemp030.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
@@ -1104,14 +1104,13 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta
-        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
             if inventoryT.iloc[n,7] == 'Bulgaria':
                 BG30.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,7] == 'Romania':
                 RO30.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,16] == 'IG CAS CZ' or inventoryT.iloc[n,16] == 'UniWien' or inventoryT.iloc[n,16] == 'PL' :
                 No30.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                
-        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  40 and inventoryT.iloc[n,11] <  60: # if the station is deployed already and corner is between 40 and 60 s
+        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  40 and inventoryT.iloc[n,11] <  60: # if the station is deployed already and corner is between 40 and 60 s
             tmpBB040.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             yesDepl.write      ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             pnt = kmlTemp040.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
@@ -1120,14 +1119,13 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
-        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  40 and inventoryT.iloc[n,11] <  60: # if the station is deployed already and corner is between 40 and 60 s
             if inventoryT.iloc[n,7] == 'Bulgaria':
                 BG40.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,7] == 'Romania':
                 RO40.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,16] == 'IG CAS CZ' or inventoryT.iloc[n,16] == 'UniWien' or inventoryT.iloc[n,16] == 'PL' :
                 No40.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                            
-        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >=  60 and inventoryT.iloc[n,11] < 120: # if the station is deployed already and corner is between 60 and 120 s
+        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  60 and inventoryT.iloc[n,11] < 120: # if the station is deployed already and corner is between 60 and 120 s
             tmpBB060.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             yesDepl.write      ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             pnt = kmlTemp060.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
@@ -1136,14 +1134,13 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
-        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  60 and inventoryT.iloc[n,11] < 120: # if the station is deployed already and corner is between 60 and 120 s
             if inventoryT.iloc[n,7] == 'Bulgaria':
                 BG60.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,7] == 'Romania':
                 RO60.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,16] == 'IG CAS CZ' or inventoryT.iloc[n,16] == 'UniWien' or inventoryT.iloc[n,16] == 'PL' :
                 No60.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                            
-        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 120 and inventoryT.iloc[n,11] < 240: # if the station is deployed already and corner is between 120 and 240 s
+        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >= 120 and inventoryT.iloc[n,11] < 240: # if the station is deployed already and corner is between 120 and 240 s
             tmpBB120.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             yesDepl.write      ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             pnt = kmlTemp120.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
@@ -1152,14 +1149,13 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
-        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >= 120 and inventoryT.iloc[n,11] < 240: # if the station is deployed already and corner is between 120 and 240 s
             if inventoryT.iloc[n,7] == 'Bulgaria':
                 BG120.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,7] == 'Romania':
                 RO120.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,16] == 'IG CAS CZ' or inventoryT.iloc[n,16] == 'UniWien' or inventoryT.iloc[n,16] == 'PL' :
                 No120.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                            
-        if inventoryT.iloc[n,0] == 1 and inventoryT.iloc[n,11] >= 240:                                 # if the station is deployed already and corner is 240 s and longer (which case does not exist)
+        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >= 240:                                 # if the station is deployed already and corner is 240 s and longer (which case does not exist)
             tmpBB240.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             yesDepl.write      ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             pnt = kmlTemp240.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
@@ -1168,7 +1164,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
             pnt = kmlTempDep.newpoint(name=str(inventoryT.iloc[n,2]), coords=[(inventoryT.iloc[n,4],inventoryT.iloc[n,3])])
             pnt.style.iconstyle.icon.href = "triangle.png"
             pnt.style.iconstyle.color = simplekml.Color.rgb(255,0,255) # magenta            
-        if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >= 240:                                 # if the station is deployed already and corner is 240 s and longer (which case does not exist)
             if inventoryT.iloc[n,7] == 'Bulgaria':
                 BG240.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
             if inventoryT.iloc[n,7] == 'Romania':

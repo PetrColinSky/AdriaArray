@@ -1378,6 +1378,11 @@ psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfile09 # Slovakia
 20.22 49.08 -12.0 270 80
 end
 
+#psxy -R -JL -Sa1.0 -G255/255/255 -W$thps/$blck <<end -K -O >> $psfile09 # San Servolo
+#12.357 45.419
+#end
+
+
 # station names - labels
 pstext PERM/pNOSPlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
 pstext PERM/pWHITlabel.txt          -R -JL -G$labcolorB -K -O >> $psfile01
