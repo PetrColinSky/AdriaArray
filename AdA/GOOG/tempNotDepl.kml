@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
     <Document id="45">
-        <Style id="22905">
-            <IconStyle id="22906">
+        <Style id="21370">
+            <IconStyle id="21371">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="22907">
+                <Icon id="21372">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="22915">
-            <IconStyle id="22916">
+        <Style id="21380">
+            <IconStyle id="21381">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="22917">
+                <Icon id="21382">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23450">
-            <IconStyle id="23451">
+        <Style id="21390">
+            <IconStyle id="21391">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23452">
+                <Icon id="21392">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="23460">
-            <IconStyle id="23461">
+        <Style id="21400">
+            <IconStyle id="21401">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="23462">
+                <Icon id="21402">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24960">
-            <IconStyle id="24961">
+        <Style id="21410">
+            <IconStyle id="21411">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24962">
+                <Icon id="21412">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24970">
-            <IconStyle id="24971">
+        <Style id="21420">
+            <IconStyle id="21421">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24972">
+                <Icon id="21422">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="24980">
-            <IconStyle id="24981">
+        <Style id="21430">
+            <IconStyle id="21431">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="24982">
+                <Icon id="21432">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Style id="25575">
-            <IconStyle id="25576">
+        <Style id="21440">
+            <IconStyle id="21441">
                 <color>ff000000</color>
                 <colorMode>normal</colorMode>
                 <scale>1</scale>
                 <heading>0</heading>
-                <Icon id="25577">
+                <Icon id="21442">
                     <href>triangle.png</href>
                 </Icon>
             </IconStyle>
         </Style>
-        <Placemark id="22904">
+        <Placemark id="21369">
             <name>HR16A</name>
-            <styleUrl>#22905</styleUrl>
-            <Point id="22903">
+            <styleUrl>#21370</styleUrl>
+            <Point id="21368">
                 <coordinates>18.404567,45.196685,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="22914">
+        <Placemark id="21379">
             <name>HR17A</name>
-            <styleUrl>#22915</styleUrl>
-            <Point id="22913">
+            <styleUrl>#21380</styleUrl>
+            <Point id="21378">
                 <coordinates>19.044115,45.325987,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23449">
+        <Placemark id="21389">
             <name>RS01A</name>
-            <styleUrl>#23450</styleUrl>
-            <Point id="23448">
+            <styleUrl>#21390</styleUrl>
+            <Point id="21388">
                 <coordinates>19.8,45.75,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="23459">
+        <Placemark id="21399">
             <name>SAMOS</name>
-            <styleUrl>#23460</styleUrl>
-            <Point id="23458">
+            <styleUrl>#21400</styleUrl>
+            <Point id="21398">
                 <coordinates>20.7703554348915,45.188620289546,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24959">
+        <Placemark id="21409">
             <name>MD01</name>
-            <styleUrl>#24960</styleUrl>
-            <Point id="24958">
+            <styleUrl>#21410</styleUrl>
+            <Point id="21408">
                 <coordinates>27.1119,48.0311,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24969">
+        <Placemark id="21419">
             <name>MD02</name>
-            <styleUrl>#24970</styleUrl>
-            <Point id="24968">
+            <styleUrl>#21420</styleUrl>
+            <Point id="21418">
                 <coordinates>28.3517,47.4524,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="24979">
+        <Placemark id="21429">
             <name>MD03</name>
-            <styleUrl>#24980</styleUrl>
-            <Point id="24978">
+            <styleUrl>#21430</styleUrl>
+            <Point id="21428">
                 <coordinates>28.6553,46.3003,0.0</coordinates>
             </Point>
         </Placemark>
-        <Placemark id="25574">
+        <Placemark id="21439">
             <name>RO08A</name>
-            <styleUrl>#25575</styleUrl>
-            <Point id="25573">
+            <styleUrl>#21440</styleUrl>
+            <Point id="21438">
                 <coordinates>24.545,47.841,0.0</coordinates>
             </Point>
         </Placemark>

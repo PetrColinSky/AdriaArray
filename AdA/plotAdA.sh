@@ -578,6 +578,10 @@ psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck   -W$thps/$blck
 psxy     PERM/pCLOS.txt               -R -JL -St$sizepsA -G$blck   -W$thps/$blck -K -O >> $psfile14
 psxy     PERM/pCLOSo.txt              -R -JL -St$sizepsA -G$outsA  -W$thps/$blck -K -O >> $psfile14
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizepsA -G$temp   -W$thps/$blck -K -O >> $psfile14 # closed temporary have the same color as other temporary, as in this map, many temporary are closed from the old experiments
+psxy     PERM/pCLOS.txt               -R -JL -St$sizetp  -G$topo   -W$thps/$blck -K -O >> $psfilep03
+psxy     PERM/pCLOSo.txt              -R -JL -St$sizetp  -G$topo   -W$thps/$blck -K -O >> $psfilep03
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizetp  -G$topo   -W$thps/$blck -K -O >> $psfilep03
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizetp  -G$topo   -W$thps/$blck -K -O >> $psfilep03
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfilep07
 psxy     PERM/pCLOSo.txt              -R -JL -St$sizeot            -W$thps/$blck -K -O >> $psfilep07
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb            -W$thmb/$blck -K -O >> $psfilep07
