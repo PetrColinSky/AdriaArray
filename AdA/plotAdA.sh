@@ -564,8 +564,8 @@ psxy     TEMP/closedTemp.txt          -R -JL -St$sizemb            -W$thmb/$blck
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps            -W$thps/$blck -K -O >> $psfile02
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile03
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile03
-psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile06
-psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile06
+psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$perm   -W$thps/$blck -K -O >> $psfile06 # can be also black as -G$blck
+psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$temp   -W$thps/$blck -K -O >> $psfile06
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile07
 psxy     TEMP/closedTemp.txt          -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile07
 psxy     PERM/pCLOS.txt               -R -JL -St$sizeps  -G$blck   -W$thps/$blck -K -O >> $psfile09
@@ -1862,26 +1862,26 @@ end
 # end of the legend to map 05
 
 # legend to map 06
-pscoast -R17.6/21.5/-1.4/1.0 -Dc -JM20/60/4.95c -G$graylg -S$graylg -Y+5.2 -X+23.1 -K -O >> $psfile06
+pscoast -R17.6/21.5/-1.4/0.5 -Dc -JM20/60/4.95c -G$graylg -S$graylg -Y+5.2 -X+23.1 -K -O >> $psfile06
 psxy -R -JM -St0.6 -G$perm -W$thickL/$blck -K -O << end >> $psfile06
-17.95  0.50
-end
-psxy -R -JM -St0.6 -G$futu -W$thickL/$blck -K -O << end >> $psfile06
 17.95  0.00
 end
-psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfile06
-17.95 -0.50
+psxy -R -JM -St0.6 -G$futu -W$thickL/$blck -K -O << end >> $psfile06
+17.95  -0.50
 end
+#psxy -R -JM -St0.6 -G$blck -W$thickL/$blck -K -O << end >> $psfile06
+#17.95 -0.50
+#end
 psxy -R -JM -St0.6 -G$temp -W$thickL/$blck -K -O << end >> $psfile06
 17.95 -1.00
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile06
-18.3  0.60 8 0 0 TL permanent BB stations
-18.3  0.10 8 0 0 TL planned permanent stations
-18.3 -0.27 8 0 0 TL stations operational after
-18.3 -0.50 8 0 0 TL May 2022 but closed now
-18.3 -0.90 8 0 0 TL temporary BB stations
+18.3   0.10 8 0 0 TL permanent BB stations
+18.3  -0.40 8 0 0 TL planned permanent stations
+#18.3 -0.27 8 0 0 TL stations operational after
+#18.3 -0.50 8 0 0 TL May 2022 but closed now
+18.3  -0.90 8 0 0 TL temporary BB stations
 end
 # end of the legend to map 06
 
