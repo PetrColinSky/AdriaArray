@@ -147,6 +147,10 @@ p30io10   = open("PERM/perm30io10.txt"    , "w")
 p30io20   = open("PERM/perm30io20.txt"    , "w")
 p30io30   = open("PERM/perm30io30.txt"    , "w")
 p30io40   = open("PERM/perm30io40.txt"    , "w")
+p30io10ut = open("PERM/perm30io10ut.txt"  , "w")
+p30io20ut = open("PERM/perm30io20ut.txt"  , "w")
+p30io30ut = open("PERM/perm30io30ut.txt"  , "w")
+p30io40ut = open("PERM/perm30io40ut.txt"  , "w")
 listP     = open("PERM/listP.txt"         , "w")
 listALL   = open("AUXI/listALL.txt"       , "w")
 listALLcoor = open("AUXI/listALLcoor.txt" , "w")
@@ -166,6 +170,7 @@ No40      = open("AUXI/No40.txt"          , "w")
 No60      = open("AUXI/No60.txt"          , "w")
 No120     = open("AUXI/No120.txt"         , "w")
 No240     = open("AUXI/No240.txt"         , "w")
+gigeD     = open("PERM/gigeD.txt"         , "w")
 
 # BB30, BB40, BB60, UNKN, WHIT have two options based on column 0: inside or outside of the AdA area
 # SPOT, UPGR, NOSP dont have these options, because by definition, these are always inside
@@ -466,11 +471,20 @@ for n in inventoryP.index:                     # loop over all lines in the xls/
             counterEIDAzz = counterEIDAzz + 1
             EIDAzz.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))
         # in EIDA, BB stations IN+OUT
-        if inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,19] == 1: # IN+OUT, BB, not ZZZ (unequipped spot), and in EIDA (includes closed)
+        if inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,1] != 'UT' and inventoryP.iloc[n,19] == 1: # IN+OUT, BB, not ZZZ (unequipped spot), not UT, and in EIDA (includes closed)
             p30io10.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 20 20' ))
             p30io20.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 40 40' ))
             p30io30.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 60 60' ))
             p30io40.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 80 80' ))
+        if inventoryP.iloc[n,11] >= 30 and inventoryP.iloc[n,1] != 'ZZZ' and inventoryP.iloc[n,1] == 'UT' and inventoryP.iloc[n,19] == 1: # IN+OUT, BB, not ZZZ (unequipped spot), only UT, and in EIDA (includes closed)
+            p30io10ut.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 20 20' ))
+            p30io20ut.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 40 40' ))
+            p30io30ut.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 60 60' ))
+            p30io40ut.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3]) + ' 0.0 80 80' ))
+
+
+        if inventoryP.iloc[n,1] == 'UT': # stations built in Ukraine using GIPP + GeoAzur equipment
+            gigeD.write("%s\n" % (str(inventoryP.iloc[n,4]) + ' ' + str(inventoryP.iloc[n,3])))                            
 # end of the loop over all the lines in the sheet
 
 sumcounter    = counterBB30 + counterBB30o + counterBB40 + counterBB40o + counterBB60 + counterBB60o + counterUNKN + counterUNKNo + counterSPOT + counterSPOTo + counterFUTU + counterFUTUo + counterUPGR + counterNOSP + counterWHIT + counterWHITo
@@ -589,6 +603,10 @@ p30io10.close()
 p30io20.close()
 p30io30.close()
 p30io40.close()
+p30io10ut.close()
+p30io20ut.close()
+p30io30ut.close()
+p30io40ut.close()
 listP.close()
 permBG.close()
 permBGlabel.close()
@@ -596,6 +614,7 @@ permRO.close()
 permROlabel.close()
 virtDiff.close()
 virtDifflabel.close()
+gigeD.close()
 
 # ----- TEMPORARY STATIONS -----
 
@@ -705,8 +724,6 @@ ouwi       = open("TEMP/ouwi.txt"          , "w")
 ouwiD      = open("TEMP/ouwiD.txt"         , "w")
 gica       = open("TEMP/gica.txt"          , "w")
 gicaD      = open("TEMP/gicaD.txt"         , "w")
-gige       = open("TEMP/gige.txt"          , "w")
-gigeD      = open("TEMP/gigeD.txt"         , "w")
 kiel       = open("TEMP/kiel.txt"          , "w")
 kielD      = open("TEMP/kielD.txt"         , "w")
 muni       = open("TEMP/muni.txt"          , "w")
@@ -1064,11 +1081,6 @@ for n in inventoryT.index:                        # loop over all lines in the x
                 gica.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
                 if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
                     gicaD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-        if inventoryT.iloc[n,16] == 'GIPP+GeoAz':
-            if inventoryT.iloc[n,0] != 4:
-                gige.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-                if inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 3:
-                    gigeD.write("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))                
         if inventoryT.iloc[n,16] == 'Jena':
             if inventoryT.iloc[n,0] != 4:
                 jena.write     ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
@@ -1106,7 +1118,7 @@ for n in inventoryT.index:                        # loop over all lines in the x
             netZ6.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         if inventoryT.iloc[n,1] == 'XP':
             netXP.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
-        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'HL' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK' or inventoryT.iloc[n,1] == 'SJ' or inventoryT.iloc[n,1] == 'UT': # upgrades of permanent
+        if inventoryT.iloc[n,1] == 'AC' or inventoryT.iloc[n,1] == 'HA' or inventoryT.iloc[n,1] == 'HL' or inventoryT.iloc[n,1] == 'TV' or inventoryT.iloc[n,1] == 'MK' or inventoryT.iloc[n,1] == 'SJ' or inventoryT.iloc[n,1] == 'UT' or inventoryT.iloc[n,1] == 'CR': # upgrades of permanent
             netXX.write    ("%s\n" % (str(inventoryT.iloc[n,4]) + ' ' + str(inventoryT.iloc[n,3])))
         # stations by corner period        
         if (inventoryT.iloc[n,0] == 1 or inventoryT.iloc[n,0] == 4 or inventoryT.iloc[n,0] == 3) and inventoryT.iloc[n,11] >=  30 and inventoryT.iloc[n,11] <  40: # if the station is deployed already and corner is between 30 and 40 s
@@ -1278,8 +1290,6 @@ ouwi.close()
 ouwiD.close()
 gica.close()
 gicaD.close()
-gige.close()
-gigeD.close()
 kiel.close()
 kielD.close()
 muni.close()

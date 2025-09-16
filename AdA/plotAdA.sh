@@ -79,8 +79,10 @@ circsize='0.4'            # size of circles in the legend
 triasize='0.5'            # size of triangles in the legend
 szexp='0.15'              # size of triangles for the complementary experiments
 olin='255/255/000'        # outline of the AdA region
-bb240='135/000/135'       # BB => 240s - purple
-bb120='166/016/076'       # BB => 120s - dark red
+#bb240='135/000/135'       # BB => 240s - purple
+bb240='125/000/125'       # BB => 240s - purple
+#bb120='166/016/076'       # BB => 120s - dark red
+bb120='150/000/000'       # BB => 120s - dark red
 bb60='255/000/000'        # BB =>  60s - red
 bb40='255/174/000'        # BB =   40s - orange
 bb30='255/255/000'        # BB =   30s - yellow
@@ -175,7 +177,7 @@ pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all permanent sta
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - permanent BB stations in EIDA":  -X+1.3 -Y+1.2  -W0.1p -K > $psfile11
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB + mobile pools":              -X+1.3 -Y+1.2  -W0.1p -K > $psfile12
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdA - deployed temp. stations                              ": -X+1.3 -Y+1.2 -W0.1p -K > $psfile13
-pscoast -R           -Di -JL$mapproj -B$mapnet/:."passive seismic experiments 2015 - 2025":     -X+1.3 -Y+1.2  -W0.1p -K > $psfile14
+pscoast -R           -Di -JL$mapproj -B$mapnet/:."passive seismic experiments 2015 - 2026":     -X+1.3 -Y+1.2  -W0.1p -K > $psfile14
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - temporary networks":             -X+1.3 -Y+1.2  -W0.1p -K > $psfile16
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - BB stations by corner period":   -X+1.3 -Y+1.2  -W0.1p -K > $psfile17
 pscoast -R           -Di -JL$mapproj -B$mapnet/:."AdriaArray - all BB stations in EIDA":        -X+1.3 -Y+1.2  -W0.1p -K > $psfile18
@@ -197,7 +199,8 @@ pscoast -R           -Di -JL$mapproB -B$mapneB/:."":                            
 # topography taken from https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/netcdf/
 #makecpt -CAUXI/twoshades -T-4000/+4000/1 -Z -V > AUXI/bw.cpt
 #makecpt -CAUXI/colortopo -T-5100/+5100/1 -Z -V > AUXI/cl.cpt
-#grdgradient AUXI/AdAtopo.grd -A135 -Ne0.3 -GAUXI/shadow.grd
+#grdgradient AUXI/AdAtopo.grd -A135 -Ne0.3 -GAUXI/shadow.grd # original
+grdgradient AUXI/AdAtopo.grd -A315 -Ne0.3 -GAUXI/shadow.grd # new
 grdimage AUXI/AdAtopo.grd -R$mapborder -JL$mapproj -K -O -CAUXI/bw.cpt >> $psfile01
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile02
 grdimage AUXI/AdAtopo.grd -R           -JL         -K -O -CAUXI/bw.cpt >> $psfile03
@@ -428,6 +431,7 @@ psxy AUXI/borderSeaB.dat      -R -JL    -W1.3p+t2.0_2.0:0/$blck                 
 psxy AUXI/borderSeaC.dat      -R -JL    -W1.3p+t2.0_2.0:0/$blck                  -K -O >> $psfilep01
 psxy AUXI/mainthrustR.dat     -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0prt:5p -G$thrst -K -O >> $psfilep01
 psxy AUXI/mainthrustL.dat     -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0plt:5p -G$thrst -K -O >> $psfilep01
+psxy AUXI/SavaSuture.dat      -R -JL -M -W6.0p+t3.0_3.0:0/$brzgclr               -K -O >> $psfilep01 # Sava Suture Zone, thick dashed line
 psxy AUXI/strikeslip.dat      -R -JL -M -W1.6p/$slips                            -K -O >> $psfilep01
 psxy AUXI/minorthrustR.dat    -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0prt:5p -G$thrst -K -O >> $psfilep01 # MediterraneanRidge-North only
 psxy AUXI/minorthrustL.dat    -R -JL -M -W1.6p/$thrst -Sf+0.7/5.0plt:5p -G$thrst -K -O >> $psfilep01 # Ligur only
@@ -444,14 +448,17 @@ pstext                        -R -JL    -G0/0/0                           -K -O 
 +29.0 +49.7 15 -30 1 MC EURASIA
 +30.4 +39.2 15 +15 1 MC ANATOLIA
 +0.6  +41.5 15 -10 1 MC IBERIA
-+8.7  +46.4 11  30 0 MC A l p i n e   A r c
++8.7  +46.1 11  22 0 MC A       l       p       s
 +18.0 +43.8 11 -42 0 MC D i n a r i d e s
 +21.3 +40.1 11 -60 0 MC H e l l e n i d e s
-+20.0 +47.3 11   0 0 MC Pannonian
-+20.0 +46.6 11   0 0 MC Basin
++20.1 +47.3 11   0 0 MC Pannonian
++20.2 +46.6 11   0 0 MC Basin
 +24.0 +48.0 11 -37 0 MC C a r p a t h i a n s
-+11.5 +44.1 11 -45 0 MC Northern Apennines
-+16.8 +41.1 11 -35 0 MC S. Apennines
++09.9 +44.4 11 -15 0 MC N. Apennines
++17.0 +40.8 11 -30 0 MC Apulia
++15.7 +40.3 11 -50 0 MC S. Apennines
++13.2 +42.7 11 -40 0 MC Central
++12.7 +42.4 11 -40 0 MC Apennines
  +9.65 49.2 11   0 0 MC Rhine
  +9.65 48.7 11   0 0 MC Graben
 +25.1  46.0 11   0 0 MC Vrancea
@@ -483,7 +490,10 @@ pstext                        -R -JL    -G0/0/0                           -K -O 
 +31.6  42.4 11 +20 0 MC Sea
 +19.7  38.4 11 +70 0 MC KTFZ
 +13.6  45.1 11   0 0 MC Istria
-+22.0  42.0 11 -61 0 MC Sava suture
++19.0  45.3 11   0 0 MC SZ
+ +2.0  45.0 11   0 0 MC Massif
+ +2.1  44.5 11   0 0 MC Central
++25.3  44.3 11   0 0 MC Moesian Platform
 end
 
 # GNSS
@@ -593,9 +603,9 @@ psxy     TEMP/movedTemp.txt           -R -JL -St$sizeps            -W$thps/$blck
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # Vrancea
 26.49 45.78 0.0 240 270
 end
-psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # Albania
-20.1 40.85 +30.0 120 160
-end
+#psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # Albania
+#20.1 40.85 +30.0 120 160
+#end
 psxy -R -JL -W$thickX/255/255/255  -SE <<end -K -O >> $psfilep04 # DuFAULT
 16.6 43.60 +30.0 110 250
 end
@@ -867,7 +877,7 @@ pstext -R -JL -G255/255/255 -K -O << end >> $psfile14
 end
 pstext -R -JL -G255/255/000 -K -O << end >> $psfile14
 19.0 36.3 20 0 0 MC AdriaArray
-19.0 35.3 16 0 0 MC 2022 - 2025
+19.0 35.3 16 0 0 MC 2022 - 2026
 end
 pstext -R -JL -G000/100/255 -K -O << end >> $psfilep02
 26.5 50.4 20 0 0 MC PACASE
@@ -879,7 +889,7 @@ pstext -R -JL -G255/255/255 -K -O << end >> $psfilep02
 end
 pstext -R -JL -G255/255/000 -K -O << end >> $psfilep02
 19.0 36.3 20 0 0 MC AdriaArray
-19.0 35.3 16 0 0 MC 2022 - 2025
+19.0 35.3 16 0 0 MC 2022 - 2026
 end
 
 # circles of 30 km radius
@@ -928,19 +938,23 @@ psxy AUXI/virtual-permanent.txt  -R -JL -St$sizeps -G$twenclr -W$thps/$blck -K -
 
 # coverage of all permanent and temporary stations in EIDA
 psxy PERM/perm30io40.txt    -R -JL -G$ci40 -SE                      -K -O >> $psfilep06
+psxy PERM/perm30io40ut.txt  -R -JL -G$ci40 -SE                      -K -O >> $psfilep06
 psxy TEMP/tEIDA40.txt       -R -JL -G$ci40 -SE                      -K -O >> $psfilep06
 psxy PERM/perm30io30.txt    -R -JL -G$ci30 -SE                      -K -O >> $psfilep06
+psxy PERM/perm30io30ut.txt  -R -JL -G$ci30 -SE                      -K -O >> $psfilep06
 psxy TEMP/tEIDA30.txt       -R -JL -G$ci30 -SE                      -K -O >> $psfilep06
 psxy PERM/perm30io20.txt    -R -JL -G$ci20 -SE                      -K -O >> $psfilep06
+psxy PERM/perm30io20ut.txt  -R -JL -G$ci20 -SE                      -K -O >> $psfilep06
 psxy TEMP/tEIDA20.txt       -R -JL -G$ci20 -SE                      -K -O >> $psfilep06
 psxy PERM/perm30io10.txt    -R -JL -G$ci10 -SE                      -K -O >> $psfilep06
+psxy PERM/perm30io10ut.txt  -R -JL -G$ci10 -SE                      -K -O >> $psfilep06
 psxy TEMP/tEIDA10.txt       -R -JL -G$ci10 -SE                      -K -O >> $psfilep06
 #psxy TEMP/tempEIDAno.txt    -R -JL -St$sizetp -G$blck -W$thps/$blck -K -O >> $psfilep06 # triangles for non-EIDA temporary stations
 #psxy PERM/EIDAnoBB.txt      -R -JL -St$sizetp -G$blck -W$thps/$blck -K -O >> $psfilep06 # triangles for non-EIDA permanent BB stations
 pscoast                     -R -JL -Di -N1/0.2p -W0.2p              -K -O >> $psfilep06
 psxy AUXI/kosovo-border.dat -R -JL -W0.2p/0/0/0                     -K -O >> $psfilep06
 
-# coverage of all permanent stations in EIDA - upper plot
+# coverage of all permanent stations in EIDA
 psxy PERM/perm30io40.txt  -R -JL -G$ci40 -SE                      -K -O >> $psfilep05
 psxy PERM/perm30io30.txt  -R -JL -G$ci30 -SE                      -K -O >> $psfilep05
 psxy PERM/perm30io20.txt  -R -JL -G$ci20 -SE                      -K -O >> $psfilep05
@@ -1117,18 +1131,14 @@ psxy TEMP/ouwiD.txt  -R -JL -Sc0.1    -G$wienclr         -K -O >> $psfile13   # 
 psxy TEMP/ouwiD.txt  -R -JL -Sc0.1    -G$wienclr         -K -O >> $psfilep04  # Oulu + UniWien digitizers
 
 # Geoazur + GIPP = Ukraine
-psxy TEMP/gige.txt  -R -JL -Sc0.3     -W$thickE/$gigeclr -K -O >> $psfile07
-psxy TEMP/gige.txt  -R -JL -Sc0.3     -W$thickE/$gigeclr -K -O >> $psfile12
-psxy TEMP/gige.txt  -R -JL -St$sizes2 -W$ths2/$gigeclr   -K -O >> $psfile13
-psxy TEMP/gigeD.txt -R -JL -St$sizes2 -G$gigeclr         -K -O >> $psfile13
-psxy TEMP/gige.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfile13
-psxy TEMP/gige.txt  -R -JL -St$sizes2 -W$ths2/$gigeclr   -K -O >> $psfilep04
-psxy TEMP/gigeD.txt -R -JL -St$sizes2 -G$gigeclr         -K -O >> $psfilep04
-psxy TEMP/gige.txt  -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
+psxy PERM/gigeD.txt -R -JL -St$sizes2 -G$gigeclr         -K -O >> $psfile13 # these are permanent, but built in the framework of AdriaArray
+psxy PERM/gigeD.txt -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfile13
+psxy PERM/gigeD.txt -R -JL -St$sizes2 -G$gigeclr         -K -O >> $psfilep04
+psxy PERM/gigeD.txt -R -JL -St$sizeps -W$thps/$blck      -K -O >> $psfilep04
 
 # Geoazur + GIPP - dots only
-psxy TEMP/gige.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfile13  # Geoazur sensors + GIPP digitizers
-psxy TEMP/gige.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfilep04
+psxy PERM/gigeD.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfile13  # Geoazur sensors + GIPP digitizers
+psxy PERM/gigeD.txt  -R -JL -Sc0.1    -G$gippclr         -K -O >> $psfilep04
 
 # Poland
 psxy TEMP/pola.txt  -R -JL -Sc0.3     -W$thickE/$polaclr -K -O >> $psfile07
@@ -1886,11 +1896,8 @@ end
 # end of the legend to map 06
 
 # legend to map 07
-pscoast -R17.6/21.5/-8.8/7.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
+pscoast -R17.6/21.5/-8.8/6.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile07
 # temporary stations - circles
-psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile07 # Geoazur + GIPP
-17.95  7.0
-end
 psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile07 # Jena
 17.95  6.5
 end
@@ -1988,7 +1995,6 @@ psxy -R -JM -St$triasize -G$stea -W$thickL/$blck -K -O << end >> $psfile07
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile07
-18.3  7.1 7.5 0 0 TL Geoazur + GIPP
 18.3  6.6 7.5 0 0 TL Uni Jena, Germany
 18.3  6.1 7.5 0 0 TL GIPP, GFZ, Germany
 18.3  5.6 7.5 0 0 TL Karlsruhe IT, Germany
@@ -2136,11 +2142,8 @@ end
 # end of the legend to map 11
 
 # legend to map 12
-pscoast -R17.6/21.5/-7.8/6.3 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
+pscoast -R17.6/21.5/-7.8/5.8 -Dc -JM20/60/4.3c -G$graylg -S$graylg -Y+0.2 -X+24.0 -K -O >> $psfile12
 # temporary stations - circles
-psxy -R -JM -Sc$circsize -W$thickLC/$gigeclr -K -O << end >> $psfile12 # Geoazur + GIPP
-17.95  6.0
-end
 psxy -R -JM -Sc$circsize -W$thickLC/$jenaclr -K -O << end >> $psfile12 # Jena
 17.95  5.5
 end
@@ -2226,7 +2229,6 @@ psxy -R -JM -St$triasize -G$temp -W$thickL/$blck -K -O << end >> $psfile12
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile12
-18.3  6.1 7.5 0 0 TL Geoazur + GIPP
 18.3  5.6 7.5 0 0 TL Uni Jena, Germany
 18.3  5.1 7.5 0 0 TL GIPP, GFZ, Germany
 18.3  4.6 7.5 0 0 TL Karlsruhe IT, Germany
@@ -2369,7 +2371,7 @@ psxy -R -JM -St$triasize -G$grey    -W$thickL/$blck -K -O << end >> $psfile13
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfile13
-18.3  7.1 7.5 0 0 TL Geoazur + GIPP
+18.3  7.1 7.5 0 0 TL Geoazur+GIPP UT perm.
 18.3  6.6 7.5 0 0 TL Uni Jena, Germany
 18.3  6.1 7.5 0 0 TL GIPP, GFZ, Germany
 18.3  5.6 7.5 0 0 TL GIPP + IRSM
@@ -2563,35 +2565,23 @@ end
 # end of the legend to map 18
 
 # legend to map p01 - TECTONICS - for paper
-pscoast -R-6.0/+6.0/-1.10/0.30 -Dc -JM0/0/23c -Bwesn -G$graylg -S$graylg -Y-3.40 -X+0.0 -K -O >> $psfilep01
-psxy -R -JM -W1.8p/$thrst -Sf+0.7/5.0prt:5p -G$thrst -K -O << end >> $psfilep01
--5.8 0.10
--4.5 0.10
+pscoast -R-6.0/+6.0/-1.10/0.25 -Dc -JM0/0/23c -Bwesn -G$graylg -S$graylg -Y-3.27 -X+0.0 -K -O >> $psfilep01
+psxy -R -JM -W1.8p/$thrst -Sf+0.6/5.0prt:5p -G$thrst -K -O << end >> $psfilep01
+-5.8 0.05
+-5.0 0.05
 end
-#psxy -R -JM -W0.9p/$thrst -Sf+0.3/3.0prt:5p -G$thrst -K -O << end >> $psfilep01
-#-5.8 0.03
-#-4.5 0.03
-#end
 psxy -R -JM -W1.8p/$slips                            -K -O << end >> $psfilep01
--1.8 0.10
--0.5 0.10
+-3.1 0.05
+-2.3 0.05
 end
-#psxy -R -JM -W0.9p/$slips                            -K -O << end >> $psfilep01
-#-1.8 0.03
-#-0.5 0.03
-#end
 psxy -R -JM -W1.2p/$exten -Sf+0.2/7.0prf:7p          -K -O << end >> $psfilep01
-+2.20 0.10
-+3.50 0.10
+-0.1 0.05
++0.7 0.05
 end
-#psxy -R -JM -W0.9p/$exten                            -K -O << end >> $psfilep01
-#+2.2 0.03
-#+3.5 0.03
-#end
-#psxy -R -JM -W0.45p/$exten -Sf+0.3/4.0prb:5p         -K -O << end >> $psfilep01
-#+2.2 0.03
-#+3.5 0.03
-#end
+psxy -R -JM -W7.0p+t3.0_3.0:0/$brzgclr               -K -O << end >> $psfilep01 # Sava Suture
++3.0 0.05
++3.8 0.05
+end
 psxy -R -JM -W0.3p/$blck -G196/149/149 -K -O << end >> $psfilep01 # undeformedIberia
 -5.8 -0.15
 -5.0 -0.15
@@ -2607,46 +2597,46 @@ psxy -R -JM -W0.3p/$blck -G236/209/209 -K -O << end >> $psfilep01 # deformed Ibe
 -5.8 -0.45
 end
 psxy -R -JM -W0.3p/$blck -G217/217/112 -K -O << end >> $psfilep01 # deformed Africa
--2.8 -0.15
--2.0 -0.15
--2.0 -0.38
--2.8 -0.38
--2.8 -0.15
+-3.1 -0.15
+-2.3 -0.15
+-2.3 -0.38
+-3.1 -0.38
+-3.1 -0.15
 end
 psxy -R -JM -W0.3p/$blck -G225/229/177 -K -O << end >> $psfilep01 # undeformed Africa
--2.8 -0.45
--2.0 -0.45
--2.0 -0.68
--2.8 -0.68
--2.8 -0.45
+-3.1 -0.45
+-2.3 -0.45
+-2.3 -0.68
+-3.1 -0.68
+-3.1 -0.45
 end
 psxy -R -JM -W0.3p/$blck -G171/123/085 -K -O << end >> $psfilep01 # undeformed Adria
-+0.2 -0.15
-+1.0 -0.15
-+1.0 -0.38
-+0.2 -0.38
-+0.2 -0.15
+-0.1 -0.15
++0.7 -0.15
++0.7 -0.38
+-0.1 -0.38
+-0.1 -0.15
 end
 psxy -R -JM -W0.3p/$blck -G228/205/170 -K -O << end >> $psfilep01 # deformed Adria
-+0.2 -0.45
-+1.0 -0.45
-+1.0 -0.68
-+0.2 -0.68
-+0.2 -0.45
+-0.1 -0.45
++0.7 -0.45
++0.7 -0.68
+-0.1 -0.68
+-0.1 -0.45
 end
 psxy -R -JM -W0.3p/$blck -G180/180/180 -K -O << end >> $psfilep01 # undeformed Eurasia
-+3.2 -0.15
-+4.0 -0.15
-+4.0 -0.38
-+3.2 -0.38
-+3.2 -0.15
++3.0 -0.15
++3.8 -0.15
++3.8 -0.38
++3.0 -0.38
++3.0 -0.15
 end
 psxy -R -JM -W0.3p/$blck -G191/217/206 -K -O << end >> $psfilep01 # deformed Eurasia
-+3.2 -0.45
-+4.0 -0.45
-+4.0 -0.68
-+3.2 -0.68
-+3.2 -0.45
++3.0 -0.45
++3.8 -0.45
++3.8 -0.68
++3.0 -0.68
++3.0 -0.45
 end
 psxy -R -JM -W0.3p/$blck -G145/160/153 -K -O << end >> $psfilep01 # AlKaPeCa
 -5.8 -0.75
@@ -2656,43 +2646,44 @@ psxy -R -JM -W0.3p/$blck -G145/160/153 -K -O << end >> $psfilep01 # AlKaPeCa
 -5.8 -0.75
 end
 psxy -R -JM -W0.3p/$blck -G075/180/233 -K -O << end >> $psfilep01 # E - light blue
--2.8 -0.75
--2.0 -0.75
--2.0 -0.98
--2.8 -0.98
--2.8 -0.75
+-3.1 -0.75
+-2.3 -0.75
+-2.3 -0.98
+-3.1 -0.98
+-3.1 -0.75
 end
 psxy -R -JM -W0.3p/$blck -G076/121/169 -K -O << end >> $psfilep01 # F - dark blue
-+0.2 -0.75
-+1.0 -0.75
-+1.0 -0.98
-+0.2 -0.98
-+0.2 -0.75
+-0.1 -0.75
++0.7 -0.75
++0.7 -0.98
+-0.1 -0.98
+-0.1 -0.75
 end
 psxy -R -JM -W0.3p/$blck -G166/162/209 -K -O << end >> $psfilep01 # Anatolia - purplish
-+3.2 -0.75
-+4.0 -0.75
-+4.0 -0.98
-+3.2 -0.98
-+3.2 -0.75
++3.0 -0.75
++3.8 -0.75
++3.8 -0.98
++3.0 -0.98
++3.0 -0.75
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep01
--4.3  0.17 10 0 0 TL main thrust fronts
--0.3  0.17 10 0 0 TL main strike slip faults
-+3.7  0.17 10 0 0 TL main extensional faults
+-4.8  0.1 10 0 0 TL main thrust fronts
+-2.1  0.1 10 0 0 TL main strike slip faults
++0.9  0.1 10 0 0 TL main extensional faults
++4.0  0.1 10 0 0 TL Sava Suture Zone (SZ)
 -4.8 -0.2 10 0 0 TL undeformed Iberia
 -4.8 -0.5 10 0 0 TL deformed Iberia
 -4.8 -0.8 10 0 0 TL AlKaPeCa
--1.8 -0.2 10 0 0 TL undeformed Africa
--1.8 -0.5 10 0 0 TL deformed Africa
--1.8 -0.8 10 0 0 TL young oceanic
-+1.2 -0.2 10 0 0 TL undeformed Adria
-+1.2 -0.5 10 0 0 TL deformed Adria
-+1.2 -0.8 10 0 0 TL old oceanic
-+4.2 -0.2 10 0 0 TL undeformed Eurasia
-+4.2 -0.5 10 0 0 TL deformed Eurasia
-+4.2 -0.8 10 0 0 TL Anatolia
+-2.1 -0.2 10 0 0 TL undeformed Africa
+-2.1 -0.5 10 0 0 TL deformed Africa
+-2.1 -0.8 10 0 0 TL young oceanic
++0.9 -0.2 10 0 0 TL undeformed Adria
++0.9 -0.5 10 0 0 TL deformed Adria
++0.9 -0.8 10 0 0 TL old oceanic
++4.0 -0.2 10 0 0 TL undeformed Eurasia
++4.0 -0.5 10 0 0 TL deformed Eurasia
++4.0 -0.8 10 0 0 TL Anatolia
 end
 # end of the legend to map p01
 
@@ -2746,7 +2737,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep02
 -5.55  0.33 10 0 0 TL in the AdriaArray region
 -2.55  0.43 10 0 0 TL planned permanent stations
 +0.45  0.53 10 0 0 TL perm. and temp. active after
-+0.45  0.33 10 0 0 TL May 2022, closed before Jan 2025
++0.45  0.33 10 0 0 TL May 2022, closed before July 2025
 +3.75  0.43 10 0 0 TL additional BB stations
 -5.55  0.08 10 0 0 TL active temporary AdriaArray
 -2.55  0.18 10 0 0 TL AlpArray and PACASE closed
@@ -2914,7 +2905,7 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep04
 +3.4 +0.10 10 0 0 TL GIPP + Carpathian Project
 +3.4 -0.18 10 0 0 TL GIPP, GFZ, Germany
 +3.4 -0.46 10 0 0 TL Uni Jena, Germany
-+3.4 -0.74 10 0 0 TL Geoazur + GIPP
++3.4 -0.74 10 0 0 TL Geoazur+GIPP UT permanent
 end
 # end of the legend to map p04
 
@@ -2988,47 +2979,47 @@ psxy -R -JM -St0.6 -G$pcse -W$thickLp/$blck  -K -O << end >> $psfilep07
 -2.8 -0.6
 end
 psxy -R -JM -St0.4 -W$thickLM/$westP -K -O << end >> $psfilep07
-+0.2  0.3
++0.6  0.3
 end
 psxy -R -JM -St0.4 -W$thickLM/$centP -K -O << end >> $psfilep07
-+0.2  0.00
++0.6  0.00
 end
 psxy -R -JM -St0.4 -W$thickLM/$nortP -K -O << end >> $psfilep07
-+0.2 -0.3
++0.6 -0.3
 end
 psxy -R -JM -St0.4 -W$thickLM/$eastP -K -O << end >> $psfilep07
-+0.2 -0.6
++0.6 -0.6
 end
 psxy -R -JM -St0.4 -W$thickLM/$steaP -K -O << end >> $psfilep07
-+3.2  0.3
++2.8  0.3
 end
 psxy -R -JM -St0.4 -W$thickLM/$blck -K -O << end >> $psfilep07
-+3.2 -0.15
++2.8 -0.15
 end
 psxy -R -JM -St0.4 -W$thickLM/$outs -K -O << end >> $psfilep07
-+3.2 -0.6
++2.8 -0.6
 end
 # temp stations - contours
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+0.2  0.3
++0.6  0.3
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+0.2  0.00
++0.6  0.00
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+0.2 -0.3
++0.6 -0.3
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+0.2 -0.6
++0.6 -0.6
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+3.2  0.3
++2.8  0.3
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+3.2 -0.15
++2.8 -0.15
 end
 psxy -R -JM -St0.6 -W$thickLp/$blck -K -O << end >> $psfilep07
-+3.2 -0.6
++2.8 -0.6
 end
 # text of the legend
 pstext -R -JM -G0/0/0 -K -O << end >> $psfilep07
@@ -3038,16 +3029,16 @@ pstext -R -JM -G0/0/0 -K -O << end >> $psfilep07
 -5.55 -0.50 10 0 0 TL permanent planned
 -2.55  0.40 10 0 0 TL permanent SM, SP, BB < 30s
 -2.55 +0.07 10 0 0 TL perm stations operational after
--2.55 -0.14 10 0 0 TL May 2022 but closed now
+-2.55 -0.14 10 0 0 TL May 2022, closed before July 2025
 -2.55 -0.50 10 0 0 TL PACASE used for AdriaArray
-+0.45  0.40 10 0 0 TL temporary West
-+0.45  0.10 10 0 0 TL temporary Center
-+0.45 -0.20 10 0 0 TL temporary North
-+0.45 -0.50 10 0 0 TL temporary East
-+3.45  0.40 10 0 0 TL temporary Southeast
-+3.45 +0.07 10 0 0 TL temp stations operational after
-+3.45 -0.14 10 0 0 TL May 2022 but closed now
-+3.45 -0.50 10 0 0 TL other temporary
++0.85  0.40 10 0 0 TL temporary West
++0.85  0.10 10 0 0 TL temporary Center
++0.85 -0.20 10 0 0 TL temporary North
++0.85 -0.50 10 0 0 TL temporary East
++3.05  0.40 10 0 0 TL temporary Southeast
++3.05 +0.07 10 0 0 TL temp stations operational after
++3.05 -0.14 10 0 0 TL May 2022, closed before July 2025
++3.05 -0.50 10 0 0 TL other temporary
 end
 # end of the legend to map p07
 
@@ -3369,12 +3360,16 @@ pscoast                     -R$mapborder -JL$mapproj -Di -B$mapnet/:."": -P -X+0
 grdimage AUXI/AdAtopo.grd   -R           -JL         -CAUXI/bw.cpt   -K -O >> $psfilep14
 # coverage of all permanent and temporary stations in EIDA - lower plot
 psxy PERM/perm30io40.txt    -R           -JL -G$ci40 -SE             -K -O >> $psfilep14
+psxy PERM/perm30io40ut.txt  -R           -JL -G$ci40 -SE             -K -O >> $psfilep14
 psxy TEMP/tEIDA40.txt       -R           -JL -G$ci40 -SE             -K -O >> $psfilep14
 psxy PERM/perm30io30.txt    -R           -JL -G$ci30 -SE             -K -O >> $psfilep14
+psxy PERM/perm30io30ut.txt  -R           -JL -G$ci30 -SE             -K -O >> $psfilep14
 psxy TEMP/tEIDA30.txt       -R           -JL -G$ci30 -SE             -K -O >> $psfilep14
 psxy PERM/perm30io20.txt    -R           -JL -G$ci20 -SE             -K -O >> $psfilep14
+psxy PERM/perm30io20ut.txt  -R           -JL -G$ci20 -SE             -K -O >> $psfilep14
 psxy TEMP/tEIDA20.txt       -R           -JL -G$ci20 -SE             -K -O >> $psfilep14
 psxy PERM/perm30io10.txt    -R           -JL -G$ci10 -SE             -K -O >> $psfilep14
+psxy PERM/perm30io10ut.txt  -R           -JL -G$ci10 -SE             -K -O >> $psfilep14
 psxy TEMP/tEIDA10.txt       -R           -JL -G$ci10 -SE             -K -O >> $psfilep14
 pscoast                     -R           -JL -Di -N1/0.2p -W0.2p     -K -O >> $psfilep14
 psxy AUXI/kosovo-border.dat -R           -JL -W0.2p/0/0/0            -K -O >> $psfilep14
@@ -3501,7 +3496,7 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep12.X -c "<</
 gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep13.X -c "<</Orientation 3>> setpagedevice" -f $psfilep13
 
 # the bounding boxes are used to crop the image in the next section
-#gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep01.X 2>&1 | grep %%BoundingBox
+gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep01.X 2>&1 | grep %%BoundingBox
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep02.X 2>&1 | grep %%BoundingBox
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep03.X 2>&1 | grep %%BoundingBox
 #gs -q -dBATCH -dNOPAUSE -sDEVICE=bbox -dLastPage=1 $psfilep04.X 2>&1 | grep %%BoundingBox
@@ -3518,7 +3513,7 @@ gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=ps2write -sOutputFile=$psfilep13.X -c "<</
 # pngs are scaled by the bounding boxes given above and cropped in the Y dierction by different amounts as the legends are of different heights
 # take the upper limit minus lower limit of the bounding box and multiply *7; this gives the Y size in pixels
 # in the next command, the Y starting point of boundingbox needs to be added with minus sign
-gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3766 -c '<</Install {0  -56 translate}>> setpagedevice' -f $psfilep01.X
+gs -o PAPER/p01AdAtectono.png -sDEVICE=png16m -r504 -g4865x3745 -c '<</Install {0  -59 translate}>> setpagedevice' -f $psfilep01.X
 gs -o PAPER/p02AA+AdA+PCS.png -sDEVICE=png16m -r504 -g4865x3647 -c '<</Install {0  -73 translate}>> setpagedevice' -f $psfilep02.X
 gs -o PAPER/p03AdAcolorTP.png -sDEVICE=png16m -r504 -g4865x3500 -c '<</Install {0  -94 translate}>> setpagedevice' -f $psfilep03.X
 gs -o PAPER/p04AdriaDploy.png -sDEVICE=png16m -r504 -g4865x4102 -c '<</Install {0   -8 translate}>> setpagedevice' -f $psfilep04.X
